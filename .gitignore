@@ -10,7 +10,6 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /[Uu]ser[Ss]ettings/
-/[Pp]roject[Ss]ettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -119,3 +118,6 @@ Assets/Screenshots/*
 Assets/Screenshots
 
 Assets/Screenshots*
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
+ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+ProjectSettings/TimelineSettings.asset
