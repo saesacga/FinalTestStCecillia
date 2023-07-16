@@ -5069,7 +5069,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134167001}
   m_LocalRotation: {x: 0.015367009, y: 0, z: 0, w: 0.9998819}
-  m_LocalPosition: {x: 0.019, y: -0.293, z: 0.95}
+  m_LocalPosition: {x: -0.381, y: -0.293, z: 0.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6061,7 +6061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToThrow: {fileID: 888546605707978222, guid: 1a269ab15c60efb45bf5bc04a792a3f2, type: 3}
-  force: 6.1
+  force: 20
   StartPosition: {fileID: 134167002}
 --- !u!114 &383736476
 MonoBehaviour:
@@ -6138,6 +6138,24 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.48074985
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.19107848
+        outWeight: 0.20415315
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -6204,7 +6222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419800940}
   m_LocalRotation: {x: 0.6987899, y: 0, z: 0, w: 0.715327}
-  m_LocalPosition: {x: 0, y: -0.29, z: 0.6}
+  m_LocalPosition: {x: -0.4, y: -0.29, z: 0.6}
   m_LocalScale: {x: 0.21, y: 0.35, z: 0.21}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6231,7 +6249,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8cb4d6fee77fd4ee6895f08b240d625f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

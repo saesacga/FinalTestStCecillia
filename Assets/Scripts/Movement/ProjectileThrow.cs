@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,7 +26,8 @@ public class ProjectileThrow : MonoBehaviour
 
     void Update()
     {
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasPerformedThisFrame()) { ThrowObject(); }
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasReleasedThisFrame()) { StartCoroutine(ThrowObject()); }
+        //if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed()) { Predict(); }
         Predict();
     }
 
@@ -48,9 +50,11 @@ public class ProjectileThrow : MonoBehaviour
         return properties;
     }
 
-    void ThrowObject()
+    private IEnumerator ThrowObject()
     {
         Rigidbody thrownObject = Instantiate(objectToThrow, StartPosition.position, Quaternion.identity);
         thrownObject.AddForce(StartPosition.forward * force, ForceMode.Impulse);
+        yield return new WaitForSeconds(3);
+        Destroy(thrownObject.gameObject);
     }
 }
