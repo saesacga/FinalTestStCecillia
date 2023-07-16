@@ -6065,6 +6065,7 @@ MonoBehaviour:
   _startPosition: {fileID: 134167002}
   _teleportProjectile: {fileID: 0}
   _player: {fileID: 1335997088}
+  _canThrow: 1
 --- !u!114 &383736476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6082,6 +6083,7 @@ MonoBehaviour:
   increment: 0.025
   rayOverlap: 1.1
   allowThrow: 0
+  _teleportArtifact: {fileID: 383736475}
   _canThrowColor:
     serializedVersion: 2
     key0: {r: 0.32300544, g: 1, b: 0, a: 1}
