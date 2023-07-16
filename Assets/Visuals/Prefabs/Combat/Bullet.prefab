@@ -148,15 +148,14 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 128
-  bounciness: 0
-  useGravity: 0
+  bounciness: 0.2
+  useGravity: 1
   explosionDamage: 1
   explosionRange: 0
-  maxCollisions: 100
-  maxLifeTime: 3
-  explodeOnTouch: 1
-  itsSticky: 0
-  enemy: {fileID: 4822495892654253831, guid: 7861153fa049dfe4086a7da24ef8b5c3, type: 3}
+  maxCollisions: 5
+  maxLifeTime: 5
+  explodeOnTouch: 0
+  itsSticky: 1
 --- !u!96 &-2706299966726930463
 TrailRenderer:
   serializedVersion: 2

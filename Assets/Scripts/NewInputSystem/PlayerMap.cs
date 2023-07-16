@@ -37,6 +37,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Trayectoria"",
+                    ""type"": ""Button"",
+                    ""id"": ""10b87814-1b75-4e79-b3ec-41d924ea1f6d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""bd70baec-e946-4257-a92e-7ad29693cb0a"",
@@ -225,6 +234,28 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""EnableCombat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df72f11e-b7b3-4cb1-940f-35971a7ff5a8"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Trayectoria"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afcee352-629c-4f14-8c87-a73197e06f6d"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Trayectoria"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1220,6 +1251,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         // Movimiento
         m_Movimiento = asset.FindActionMap("Movimiento", throwIfNotFound: true);
         m_Movimiento_Jumping = m_Movimiento.FindAction("Jumping", throwIfNotFound: true);
+        m_Movimiento_Trayectoria = m_Movimiento.FindAction("Trayectoria", throwIfNotFound: true);
         m_Movimiento_Move = m_Movimiento.FindAction("Move", throwIfNotFound: true);
         m_Movimiento_Look = m_Movimiento.FindAction("Look", throwIfNotFound: true);
         m_Movimiento_EnableFarming = m_Movimiento.FindAction("EnableFarming", throwIfNotFound: true);
@@ -1320,6 +1352,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Movimiento;
     private List<IMovimientoActions> m_MovimientoActionsCallbackInterfaces = new List<IMovimientoActions>();
     private readonly InputAction m_Movimiento_Jumping;
+    private readonly InputAction m_Movimiento_Trayectoria;
     private readonly InputAction m_Movimiento_Move;
     private readonly InputAction m_Movimiento_Look;
     private readonly InputAction m_Movimiento_EnableFarming;
@@ -1329,6 +1362,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         private @PlayerMap m_Wrapper;
         public MovimientoActions(@PlayerMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jumping => m_Wrapper.m_Movimiento_Jumping;
+        public InputAction @Trayectoria => m_Wrapper.m_Movimiento_Trayectoria;
         public InputAction @Move => m_Wrapper.m_Movimiento_Move;
         public InputAction @Look => m_Wrapper.m_Movimiento_Look;
         public InputAction @EnableFarming => m_Wrapper.m_Movimiento_EnableFarming;
@@ -1345,6 +1379,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Jumping.started += instance.OnJumping;
             @Jumping.performed += instance.OnJumping;
             @Jumping.canceled += instance.OnJumping;
+            @Trayectoria.started += instance.OnTrayectoria;
+            @Trayectoria.performed += instance.OnTrayectoria;
+            @Trayectoria.canceled += instance.OnTrayectoria;
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
@@ -1364,6 +1401,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Jumping.started -= instance.OnJumping;
             @Jumping.performed -= instance.OnJumping;
             @Jumping.canceled -= instance.OnJumping;
+            @Trayectoria.started -= instance.OnTrayectoria;
+            @Trayectoria.performed -= instance.OnTrayectoria;
+            @Trayectoria.canceled -= instance.OnTrayectoria;
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
@@ -1827,6 +1867,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     public interface IMovimientoActions
     {
         void OnJumping(InputAction.CallbackContext context);
+        void OnTrayectoria(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnEnableFarming(InputAction.CallbackContext context);

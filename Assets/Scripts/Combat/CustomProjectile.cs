@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class CustomProjectile : MonoBehaviour
 {
+    #region Declarations
+
     public Rigidbody rigidBody;
-    //public GameObject explosion;
     public LayerMask whatIsEnemies;
 
     //Stats
@@ -25,6 +26,8 @@ public class CustomProjectile : MonoBehaviour
 
     int collisions;
     PhysicMaterial newPhysicsMat;
+
+    #endregion
     
     private void Start()
     {
@@ -43,17 +46,12 @@ public class CustomProjectile : MonoBehaviour
 
     private void Explode()
     {
-        //Instantiate explosion
-        //if (explosion != null)
-        //{
-            //Instantiate(explosion, transform.position, Quaternion.identity);
-            //Check for enemies
-            Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies);
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                enemies[i].GetComponent<Enemy>().EnemyDamage(explosionDamage);
-            }
-        //}
+        Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies); 
+        for (int i = 0; i < enemies.Length; i++) 
+        { 
+            enemies[i].GetComponent<Enemy>().EnemyDamage(explosionDamage);
+        }
+     
         //Delay for evasion of bugs
         Invoke("Delay", 0.05f);
     }
@@ -76,7 +74,10 @@ public class CustomProjectile : MonoBehaviour
 
         if (!collision.collider.CompareTag("Player") && itsSticky == true)
         {
-            rigidBody.isKinematic = true;
+            rigidBody.useGravity = false;
+            rigidBody.drag = 10;
+            rigidBody.constraints = RigidbodyConstraints.FreezePosition;
+            //rigidBody.isKinematic = true;
             if (collision.collider.CompareTag("Enemy")) 
             {
                 Transform transformSticky = collision.collider.GetComponent<Transform>();
@@ -97,11 +98,5 @@ public class CustomProjectile : MonoBehaviour
 
         //Set gravity
         rigidBody.useGravity = useGravity;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, explosionRange);
     }
 }

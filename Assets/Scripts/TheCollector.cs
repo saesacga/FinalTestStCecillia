@@ -106,6 +106,7 @@ public class TheCollector : MonoBehaviour
             _ejectedInstances.GetComponent<EjectedMaterial>().targetPoint = targetPoint;
         }
     }
+    
     private void MoveObjects()
     {
         Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -134,6 +135,7 @@ public class TheCollector : MonoBehaviour
             OnMoving?.Invoke(false);
         }
     }
+    
     private void SelectToEject(ItemData itemData)
     {
         if (itemData != null)
@@ -143,6 +145,7 @@ public class TheCollector : MonoBehaviour
             _itemDataSelected = itemData;
         }
     }
+    
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
