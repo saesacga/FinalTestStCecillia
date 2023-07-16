@@ -31,7 +31,7 @@ public class CustomProjectile : MonoBehaviour
     
     private void Start()
     {
-        Setup();
+        //Setup();
     }
 
     private void Update()

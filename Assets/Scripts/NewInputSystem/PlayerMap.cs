@@ -37,15 +37,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Trayectoria"",
-                    ""type"": ""Button"",
-                    ""id"": ""10b87814-1b75-4e79-b3ec-41d924ea1f6d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""bd70baec-e946-4257-a92e-7ad29693cb0a"",
@@ -234,28 +225,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""EnableCombat"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""df72f11e-b7b3-4cb1-940f-35971a7ff5a8"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Trayectoria"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""afcee352-629c-4f14-8c87-a73197e06f6d"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Trayectoria"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1184,6 +1153,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Trayectoria"",
+                    ""type"": ""Button"",
+                    ""id"": ""ec51b7f3-ca38-4c5e-b0b8-23808df3c6dd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1206,6 +1184,28 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13ad44b8-d987-4bfa-8f0e-b45e2c6afada"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Trayectoria"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0132016-b480-4f66-9636-2f2d79f07a09"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Trayectoria"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1251,7 +1251,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         // Movimiento
         m_Movimiento = asset.FindActionMap("Movimiento", throwIfNotFound: true);
         m_Movimiento_Jumping = m_Movimiento.FindAction("Jumping", throwIfNotFound: true);
-        m_Movimiento_Trayectoria = m_Movimiento.FindAction("Trayectoria", throwIfNotFound: true);
         m_Movimiento_Move = m_Movimiento.FindAction("Move", throwIfNotFound: true);
         m_Movimiento_Look = m_Movimiento.FindAction("Look", throwIfNotFound: true);
         m_Movimiento_EnableFarming = m_Movimiento.FindAction("EnableFarming", throwIfNotFound: true);
@@ -1290,6 +1289,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         // MovimientoAvanzado
         m_MovimientoAvanzado = asset.FindActionMap("MovimientoAvanzado", throwIfNotFound: true);
         m_MovimientoAvanzado_Dash = m_MovimientoAvanzado.FindAction("Dash", throwIfNotFound: true);
+        m_MovimientoAvanzado_Trayectoria = m_MovimientoAvanzado.FindAction("Trayectoria", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1352,7 +1352,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Movimiento;
     private List<IMovimientoActions> m_MovimientoActionsCallbackInterfaces = new List<IMovimientoActions>();
     private readonly InputAction m_Movimiento_Jumping;
-    private readonly InputAction m_Movimiento_Trayectoria;
     private readonly InputAction m_Movimiento_Move;
     private readonly InputAction m_Movimiento_Look;
     private readonly InputAction m_Movimiento_EnableFarming;
@@ -1362,7 +1361,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         private @PlayerMap m_Wrapper;
         public MovimientoActions(@PlayerMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jumping => m_Wrapper.m_Movimiento_Jumping;
-        public InputAction @Trayectoria => m_Wrapper.m_Movimiento_Trayectoria;
         public InputAction @Move => m_Wrapper.m_Movimiento_Move;
         public InputAction @Look => m_Wrapper.m_Movimiento_Look;
         public InputAction @EnableFarming => m_Wrapper.m_Movimiento_EnableFarming;
@@ -1379,9 +1377,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Jumping.started += instance.OnJumping;
             @Jumping.performed += instance.OnJumping;
             @Jumping.canceled += instance.OnJumping;
-            @Trayectoria.started += instance.OnTrayectoria;
-            @Trayectoria.performed += instance.OnTrayectoria;
-            @Trayectoria.canceled += instance.OnTrayectoria;
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
@@ -1401,9 +1396,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Jumping.started -= instance.OnJumping;
             @Jumping.performed -= instance.OnJumping;
             @Jumping.canceled -= instance.OnJumping;
-            @Trayectoria.started -= instance.OnTrayectoria;
-            @Trayectoria.performed -= instance.OnTrayectoria;
-            @Trayectoria.canceled -= instance.OnTrayectoria;
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
@@ -1796,11 +1788,13 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_MovimientoAvanzado;
     private List<IMovimientoAvanzadoActions> m_MovimientoAvanzadoActionsCallbackInterfaces = new List<IMovimientoAvanzadoActions>();
     private readonly InputAction m_MovimientoAvanzado_Dash;
+    private readonly InputAction m_MovimientoAvanzado_Trayectoria;
     public struct MovimientoAvanzadoActions
     {
         private @PlayerMap m_Wrapper;
         public MovimientoAvanzadoActions(@PlayerMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Dash => m_Wrapper.m_MovimientoAvanzado_Dash;
+        public InputAction @Trayectoria => m_Wrapper.m_MovimientoAvanzado_Trayectoria;
         public InputActionMap Get() { return m_Wrapper.m_MovimientoAvanzado; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1813,6 +1807,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
+            @Trayectoria.started += instance.OnTrayectoria;
+            @Trayectoria.performed += instance.OnTrayectoria;
+            @Trayectoria.canceled += instance.OnTrayectoria;
         }
 
         private void UnregisterCallbacks(IMovimientoAvanzadoActions instance)
@@ -1820,6 +1817,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
+            @Trayectoria.started -= instance.OnTrayectoria;
+            @Trayectoria.performed -= instance.OnTrayectoria;
+            @Trayectoria.canceled -= instance.OnTrayectoria;
         }
 
         public void RemoveCallbacks(IMovimientoAvanzadoActions instance)
@@ -1867,7 +1867,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     public interface IMovimientoActions
     {
         void OnJumping(InputAction.CallbackContext context);
-        void OnTrayectoria(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnEnableFarming(InputAction.CallbackContext context);
@@ -1912,5 +1911,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     public interface IMovimientoAvanzadoActions
     {
         void OnDash(InputAction.CallbackContext context);
+        void OnTrayectoria(InputAction.CallbackContext context);
     }
 }

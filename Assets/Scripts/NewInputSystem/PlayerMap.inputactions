@@ -15,15 +15,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Trayectoria",
-                    "type": "Button",
-                    "id": "10b87814-1b75-4e79-b3ec-41d924ea1f6d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Move",
                     "type": "Value",
                     "id": "bd70baec-e946-4257-a92e-7ad29693cb0a",
@@ -212,28 +203,6 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "EnableCombat",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "df72f11e-b7b3-4cb1-940f-35971a7ff5a8",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Trayectoria",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "afcee352-629c-4f14-8c87-a73197e06f6d",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Trayectoria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1162,6 +1131,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Trayectoria",
+                    "type": "Button",
+                    "id": "ec51b7f3-ca38-4c5e-b0b8-23808df3c6dd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1184,6 +1162,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "13ad44b8-d987-4bfa-8f0e-b45e2c6afada",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trayectoria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0132016-b480-4f66-9636-2f2d79f07a09",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Trayectoria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
