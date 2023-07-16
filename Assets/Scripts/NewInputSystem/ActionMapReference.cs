@@ -65,11 +65,19 @@ public class ActionMapReference : MonoBehaviour
         {
             _gameplaySchemes[0].SetActive(true);
             _gameplaySchemes[1].SetActive(false);
+            _gameplaySchemes[2].SetActive(false);
         }
         else if (playerMap.Movimiento.EnableFarming.WasPerformedThisFrame())
         {
             _gameplaySchemes[1].SetActive(true);
             _gameplaySchemes[0].SetActive(false);
+            _gameplaySchemes[2].SetActive(false);
+        }
+        else if (playerMap.Movimiento.EnableAdvanceMovement.WasPerformedThisFrame())
+        {
+            _gameplaySchemes[2].SetActive(true);
+            _gameplaySchemes[0].SetActive(false);
+            _gameplaySchemes[1].SetActive(false);
         }
     }
 }

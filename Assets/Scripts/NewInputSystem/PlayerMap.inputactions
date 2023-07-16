@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EnableAdvanceMovement",
+                    "type": "Button",
+                    "id": "9109d6a5-1b6d-49ac-a7d3-2866af7d08bd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -203,6 +212,28 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "EnableCombat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0a6b708-0ce9-454d-8ce2-815caf2be5dd",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "EnableAdvanceMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ed51a5e-ec4f-42cf-a373-5da5e44f0de3",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "EnableAdvanceMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1140,6 +1171,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ActivarTeleport",
+                    "type": "Button",
+                    "id": "acd839c8-d498-4f33-b303-c315996f3c40",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1168,7 +1208,7 @@
                 {
                     "name": "",
                     "id": "13ad44b8-d987-4bfa-8f0e-b45e2c6afada",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -1184,6 +1224,28 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Trayectoria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36a74479-7a71-4a53-b8e1-09ac3f8dae4f",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ActivarTeleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "607ae14b-cb85-4b3c-bc9f-563894ed114d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ActivarTeleport",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

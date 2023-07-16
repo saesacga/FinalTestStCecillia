@@ -71,6 +71,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EnableAdvanceMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""9109d6a5-1b6d-49ac-a7d3-2866af7d08bd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -225,6 +234,28 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""EnableCombat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0a6b708-0ce9-454d-8ce2-815caf2be5dd"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""EnableAdvanceMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ed51a5e-ec4f-42cf-a373-5da5e44f0de3"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""EnableAdvanceMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1162,6 +1193,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActivarTeleport"",
+                    ""type"": ""Button"",
+                    ""id"": ""acd839c8-d498-4f33-b303-c315996f3c40"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1190,7 +1230,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""13ad44b8-d987-4bfa-8f0e-b45e2c6afada"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -1206,6 +1246,28 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Trayectoria"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36a74479-7a71-4a53-b8e1-09ac3f8dae4f"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ActivarTeleport"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""607ae14b-cb85-4b3c-bc9f-563894ed114d"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""ActivarTeleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1255,6 +1317,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         m_Movimiento_Look = m_Movimiento.FindAction("Look", throwIfNotFound: true);
         m_Movimiento_EnableFarming = m_Movimiento.FindAction("EnableFarming", throwIfNotFound: true);
         m_Movimiento_EnableCombat = m_Movimiento.FindAction("EnableCombat", throwIfNotFound: true);
+        m_Movimiento_EnableAdvanceMovement = m_Movimiento.FindAction("EnableAdvanceMovement", throwIfNotFound: true);
         // Combate
         m_Combate = asset.FindActionMap("Combate", throwIfNotFound: true);
         m_Combate_Fire = m_Combate.FindAction("Fire", throwIfNotFound: true);
@@ -1290,6 +1353,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         m_MovimientoAvanzado = asset.FindActionMap("MovimientoAvanzado", throwIfNotFound: true);
         m_MovimientoAvanzado_Dash = m_MovimientoAvanzado.FindAction("Dash", throwIfNotFound: true);
         m_MovimientoAvanzado_Trayectoria = m_MovimientoAvanzado.FindAction("Trayectoria", throwIfNotFound: true);
+        m_MovimientoAvanzado_ActivarTeleport = m_MovimientoAvanzado.FindAction("ActivarTeleport", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1356,6 +1420,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movimiento_Look;
     private readonly InputAction m_Movimiento_EnableFarming;
     private readonly InputAction m_Movimiento_EnableCombat;
+    private readonly InputAction m_Movimiento_EnableAdvanceMovement;
     public struct MovimientoActions
     {
         private @PlayerMap m_Wrapper;
@@ -1365,6 +1430,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Movimiento_Look;
         public InputAction @EnableFarming => m_Wrapper.m_Movimiento_EnableFarming;
         public InputAction @EnableCombat => m_Wrapper.m_Movimiento_EnableCombat;
+        public InputAction @EnableAdvanceMovement => m_Wrapper.m_Movimiento_EnableAdvanceMovement;
         public InputActionMap Get() { return m_Wrapper.m_Movimiento; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1389,6 +1455,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @EnableCombat.started += instance.OnEnableCombat;
             @EnableCombat.performed += instance.OnEnableCombat;
             @EnableCombat.canceled += instance.OnEnableCombat;
+            @EnableAdvanceMovement.started += instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.performed += instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.canceled += instance.OnEnableAdvanceMovement;
         }
 
         private void UnregisterCallbacks(IMovimientoActions instance)
@@ -1408,6 +1477,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @EnableCombat.started -= instance.OnEnableCombat;
             @EnableCombat.performed -= instance.OnEnableCombat;
             @EnableCombat.canceled -= instance.OnEnableCombat;
+            @EnableAdvanceMovement.started -= instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.performed -= instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.canceled -= instance.OnEnableAdvanceMovement;
         }
 
         public void RemoveCallbacks(IMovimientoActions instance)
@@ -1789,12 +1861,14 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private List<IMovimientoAvanzadoActions> m_MovimientoAvanzadoActionsCallbackInterfaces = new List<IMovimientoAvanzadoActions>();
     private readonly InputAction m_MovimientoAvanzado_Dash;
     private readonly InputAction m_MovimientoAvanzado_Trayectoria;
+    private readonly InputAction m_MovimientoAvanzado_ActivarTeleport;
     public struct MovimientoAvanzadoActions
     {
         private @PlayerMap m_Wrapper;
         public MovimientoAvanzadoActions(@PlayerMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Dash => m_Wrapper.m_MovimientoAvanzado_Dash;
         public InputAction @Trayectoria => m_Wrapper.m_MovimientoAvanzado_Trayectoria;
+        public InputAction @ActivarTeleport => m_Wrapper.m_MovimientoAvanzado_ActivarTeleport;
         public InputActionMap Get() { return m_Wrapper.m_MovimientoAvanzado; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1810,6 +1884,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Trayectoria.started += instance.OnTrayectoria;
             @Trayectoria.performed += instance.OnTrayectoria;
             @Trayectoria.canceled += instance.OnTrayectoria;
+            @ActivarTeleport.started += instance.OnActivarTeleport;
+            @ActivarTeleport.performed += instance.OnActivarTeleport;
+            @ActivarTeleport.canceled += instance.OnActivarTeleport;
         }
 
         private void UnregisterCallbacks(IMovimientoAvanzadoActions instance)
@@ -1820,6 +1897,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Trayectoria.started -= instance.OnTrayectoria;
             @Trayectoria.performed -= instance.OnTrayectoria;
             @Trayectoria.canceled -= instance.OnTrayectoria;
+            @ActivarTeleport.started -= instance.OnActivarTeleport;
+            @ActivarTeleport.performed -= instance.OnActivarTeleport;
+            @ActivarTeleport.canceled -= instance.OnActivarTeleport;
         }
 
         public void RemoveCallbacks(IMovimientoAvanzadoActions instance)
@@ -1871,6 +1951,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnEnableFarming(InputAction.CallbackContext context);
         void OnEnableCombat(InputAction.CallbackContext context);
+        void OnEnableAdvanceMovement(InputAction.CallbackContext context);
     }
     public interface ICombateActions
     {
@@ -1912,5 +1993,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     {
         void OnDash(InputAction.CallbackContext context);
         void OnTrayectoria(InputAction.CallbackContext context);
+        void OnActivarTeleport(InputAction.CallbackContext context);
     }
 }
