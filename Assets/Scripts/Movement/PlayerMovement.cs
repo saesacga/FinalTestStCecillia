@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float airSpeedReduction = 7f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
-    [SerializeField] private float _dashSpeed;
+    [SerializeField] private AnimationCurve _dashSpeedCurve;
+    private float _dashSpeed;
     [SerializeField] private float _dashTime;
     [SerializeField] private float _dashCooldown;
     private bool _inDash = false;
@@ -119,13 +120,15 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        float _dashSpeedOverTime = 0f;
         float startTime = Time.time;
         
         while (Time.time <= startTime + _dashTime && move != new Vector3(0f,0f,0f))
         {
-            if (Time.time >= startTime + _dashTime) { _inDash = false; }
-            else { _inDash = true; }
-            
+            _inDash = true;
+            velocity.y = 0;
+            _dashSpeed = _dashSpeedCurve.Evaluate(_dashSpeedOverTime);
+            _dashSpeedOverTime+=0.01f;
             controller.Move(move * _dashSpeed * Time.deltaTime);
             _dashContador = 0;
 
@@ -146,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
             
             yield return null;
         }
+        _inDash = false;
     }
 
     private void WallJump()
