@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
+using Pathfinding;
 
 public class Destructible : MonoBehaviour, IDestructible
 {
     [SerializeField] private GameObject _lootPrefab;
     [SerializeField] private float _objectHealth;
     private Vector3 _lootSpawn;
-    
+
     public void Destruct(int damage)
     {
         _objectHealth -= damage*Time.deltaTime;

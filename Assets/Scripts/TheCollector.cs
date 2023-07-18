@@ -18,7 +18,6 @@ public class TheCollector : MonoBehaviour
     
     private ItemData _itemDataSelected;
     private bool _canCollect = false;
-    
     public static event Action<bool> OnMoving;
     
     private void OnEnable()
@@ -50,7 +49,7 @@ public class TheCollector : MonoBehaviour
             }
         }
         else if (ActionMapReference.playerMap.Farming.MoveObject.IsPressed() || ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
-        {
+        { 
             MoveObjects();
         }
     }
@@ -115,7 +114,6 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Moveable"))
             {
-                GameObject moveable = hit.collider.gameObject;
                 if (ActionMapReference.playerMap.Farming.MoveObject.IsPressed())
                 {
                     OnMoving?.Invoke(true);

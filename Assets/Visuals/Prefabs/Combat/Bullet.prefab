@@ -154,7 +154,7 @@ MonoBehaviour:
   explosionRange: 0
   maxCollisions: 5
   maxLifeTime: 5
-  explodeOnTouch: 0
+  explodeOnTouch: 1
   itsSticky: 1
 --- !u!96 &-2706299966726930463
 TrailRenderer:
