@@ -20,6 +20,8 @@ public class TrajectoryPredictor : MonoBehaviour
     [SerializeField] private TeleportArtifact _teleportArtifact;
     [SerializeField] private Gradient _canThrowColor;
     [SerializeField] private Gradient _cannotThrowColor;
+
+    [SerializeField] private GravityAttractor _gravityAttractor;
     #endregion
 
     private void Start()
@@ -78,7 +80,11 @@ public class TrajectoryPredictor : MonoBehaviour
 
     private Vector3 CalculateNewVelocity(Vector3 velocity, float drag, float increment)
     {
-        velocity += Physics.gravity * increment;
+        //velocity += Physics.gravity * increment; RESTAURAR IF NECESSARY
+        
+        Vector3 gravityUp = (this.transform.position - _gravityAttractor.transform.position).normalized; //Eliminar si es necesario
+        velocity += -gravityUp; //Eliminar si es necesario
+        
         velocity *= Mathf.Clamp01(1f - drag * increment);
         return velocity;
     }
