@@ -11,9 +11,9 @@ public class GravityAttractor : MonoBehaviour
     {
         gravityUp = (body.position - transform.position).normalized;
         Vector3 bodyUp = body.up;
-        
-        body.GetComponent<Rigidbody>().AddForce(gravityUp * _gravity);
 
+        body.GetComponent<Rigidbody>().AddForce(gravityUp * _gravity, ForceMode.Acceleration);
+        
         Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravityUp) * body.rotation;
         body.rotation = Quaternion.Slerp(body.rotation, targetRotation, 50 * Time.deltaTime);
     }

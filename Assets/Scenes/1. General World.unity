@@ -167,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &467495131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26664
+  m_Name: pb_Mesh-1246
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -614,11 +614,15 @@ PrefabInstance:
       objectReference: {fileID: 1599969147}
     - target: {fileID: 1873448876035567873, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
       propertyPath: m_VersionIndex
-      value: 108
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 1873448876035567930, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
       propertyPath: m_Name
       value: Luna
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873448876035567930, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
+      propertyPath: m_TagString
+      value: TeleportSurface
       objectReference: {fileID: 0}
     - target: {fileID: 1873448876035567932, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
       propertyPath: m_Mesh
@@ -804,6 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254afd99e645e564c83bcc24dbf20458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startPosition: {fileID: 4281200259855204692}
   hitMarker: {fileID: 4281200261495543505}
   maxPoints: 50
   increment: 0.025
@@ -1064,7 +1069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4281200259855204692}
   m_Layer: 3
-  m_Name: AttackPoint
+  m_Name: StartPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

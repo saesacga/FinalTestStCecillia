@@ -84,9 +84,9 @@ public class TeleportArtifact : MonoBehaviour
     {
         if (_teleportProjectile == null || _teleportProjectile.GetComponent<TeleportProjectile>().allowedToTeleport == false) { return; } //No hay proyectil o no está preparado para el teleport
         
-        _player.GetComponent<CharacterController>().enabled = false;
+        //_player.GetComponent<CharacterController>().enabled = false;
         _player.transform.position = _teleportProjectile.transform.position;
-        _player.GetComponent<CharacterController>().enabled = true;
+        //_player.GetComponent<CharacterController>().enabled = true;
         _canThrow = true;
         Destroy(_teleportProjectile);
     }

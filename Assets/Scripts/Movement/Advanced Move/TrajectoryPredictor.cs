@@ -7,6 +7,7 @@ public class TrajectoryPredictor : MonoBehaviour
 {
     #region Members
     LineRenderer trajectoryLine;
+    [SerializeField] private Transform _startPosition;
     [Tooltip("The marker will show where the projectile will hit")]
     public Transform hitMarker;
     [SerializeField, Range(10, 100), Tooltip("The maximum number of points the LineRenderer can have")]
@@ -81,10 +82,9 @@ public class TrajectoryPredictor : MonoBehaviour
     private Vector3 CalculateNewVelocity(Vector3 velocity, float drag, float increment)
     {
         //velocity += Physics.gravity * increment; RESTAURAR IF NECESSARY
-        
-        Vector3 gravityUp = (this.transform.position - _gravityAttractor.transform.position).normalized; //Eliminar si es necesario
-        velocity += -gravityUp; //Eliminar si es necesario
-        
+        Vector3 gravityUp = (_startPosition.position - _gravityAttractor.transform.position).normalized;
+        velocity += gravityUp * (-10 * increment);
+
         velocity *= Mathf.Clamp01(1f - drag * increment);
         return velocity;
     }
