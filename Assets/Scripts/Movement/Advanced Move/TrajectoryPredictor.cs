@@ -83,7 +83,7 @@ public class TrajectoryPredictor : MonoBehaviour
     {
         //velocity += Physics.gravity * increment; RESTAURAR IF NECESSARY
         Vector3 gravityUp = (_startPosition.position - _gravityAttractor.transform.position).normalized;
-        velocity += gravityUp * (-10 * increment);
+        velocity += gravityUp * (_gravityAttractor.gravity * increment);
 
         velocity *= Mathf.Clamp01(1f - drag * increment);
         return velocity;

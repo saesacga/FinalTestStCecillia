@@ -6,6 +6,7 @@ using UnityEngine;
 public class GravityBody : MonoBehaviour
 {
     [SerializeField] private GravityAttractor _gravityAttractor;
+    [SerializeField] private float _gravityMultiplier = 1f;
     private Transform _transform;
 
     private void Start()
@@ -17,6 +18,6 @@ public class GravityBody : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _gravityAttractor.GravityAttraction(this._transform);
+        _gravityAttractor.GravityAttraction(this._transform, this._gravityMultiplier);
     }
 }
