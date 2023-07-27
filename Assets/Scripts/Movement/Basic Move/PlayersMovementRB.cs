@@ -8,7 +8,8 @@ public class PlayersMovementRB : MonoBehaviour
     #region Members
     
     #region For Movement
-    
+
+    [SerializeField] private Transform _orientation;
     [SerializeField] private float _speed;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private GravityAttractor _gravityAttractor;
@@ -90,17 +91,21 @@ public class PlayersMovementRB : MonoBehaviour
         #endregion
         
         #region Movimiento
-
-        Vector3 moveDir = new Vector3(currentInputVector.x, 0f, currentInputVector.z);
-        _rigidbody.MovePosition(_rigidbody.position + transform.TransformDirection(moveDir) * _speed * Time.deltaTime);
         
-        #region Intento con velocity (falló)
+        #region Usando velocity
         
-        /*Vector3 targetVelocity = new Vector3(currentInputVector.x, 0f, currentInputVector.z);
-        targetVelocity *= _speed;
-        targetVelocity = transform.TransformDirection(targetVelocity);
-        _rigidbody.velocity = targetVelocity;*/
+        float verticalSpeed = Vector3.Dot(transform.up, _rigidbody.velocity);
 
+        _rigidbody.velocity = (_orientation.right * (currentInputVector.x * _speed)) + (transform.up * verticalSpeed) + (_orientation.forward * (currentInputVector.z * _speed));
+        //_rigidbody.velocity = (transform.right * (currentInputVector.x * _speed)) + (transform.up * verticalSpeed) + (transform.forward * (currentInputVector.z * _speed));
+
+        #endregion
+
+        #region Intento con MovePosition (Problemas con las colisiones)
+
+        //Vector3 moveDir = new Vector3(currentInputVector.x, 0f, currentInputVector.z);
+        //_rigidbody.MovePosition(_rigidbody.position + transform.TransformDirection(moveDir) * _speed * Time.deltaTime);
+        
         #endregion
         
         #region Intento con addforce (falló)

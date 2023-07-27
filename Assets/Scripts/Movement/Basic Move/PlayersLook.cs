@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class PlayersLook : MonoBehaviour
 {
-    //private PlayerMap playerInput;
     public float mouseSensitivity = 100f;
 
     public Transform playerBody;
-
+    [SerializeField] private Transform _orientation;
+    
     private float xRotation = 0f;
 
     //For smoothness
@@ -29,6 +29,7 @@ public class PlayersLook : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); 
-        playerBody.Rotate(Vector3.up * currentInputMouseVector.x);
+        _orientation.Rotate(Vector3.up * currentInputMouseVector.x);
+        //playerBody.Rotate(Vector3.up * currentInputMouseVector.x);
     }
 }
