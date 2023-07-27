@@ -34099,5 +34099,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea16f41cf5eb7b47bd401def08ef362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -15
+  gravity: -10
   gravityUp: {x: -0.23444623, y: 0.9719986, z: -0.015931701}

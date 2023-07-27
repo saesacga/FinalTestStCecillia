@@ -28,6 +28,15 @@ public class PlayersMovementRB : MonoBehaviour
     private bool _exitSlope;
 
     #endregion
+
+    #region For WallJump
+
+    private bool _allowWallJump;
+    private bool _inTheAir;
+    private float _wallJumpContador;
+    private GameObject _currentWall;
+
+    #endregion
     
     #region For Smothness
     
@@ -58,6 +67,23 @@ public class PlayersMovementRB : MonoBehaviour
         
         #endregion
 
+        #region Wall Jump Related
+
+        _inTheAir = !Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+        
+        switch (_wallJumpContador)
+        {
+            case <= 1.5f:
+                _wallJumpContador += Time.deltaTime;
+                break;
+            case >= 1.5f:
+                _allowWallJump = false;
+                _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
+                break;
+        }
+
+        #endregion
+
         if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame())
         {
             _jumpPerformed = true;
@@ -70,10 +96,11 @@ public class PlayersMovementRB : MonoBehaviour
         
         Vector3 jumpForces = Vector3.zero;
 
-        if (_isGrounded)
+        if (_isGrounded || _allowWallJump)
         {
             jumpForces = Vector3.up * _jumpForce;
             _rigidbody.AddRelativeForce(jumpForces, ForceMode.VelocityChange);
+            _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
         }
         
         _jumpPerformed = false;
@@ -140,6 +167,33 @@ public class PlayersMovementRB : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        #region Slopes
+
         if (collision.collider.CompareTag("Slope")) { _exitSlope = false; }
+        
+        #endregion
+
+        #region Wall Jump
+
+        if (_inTheAir == false) { _currentWall = null; }
+        
+        if (_currentWall == collision.collider.gameObject) { return; }
+        
+        _currentWall = collision.collider.gameObject;
+        
+        if (collision.collider.CompareTag("WallJump") && _inTheAir)
+        {
+            _wallJumpContador = 0;
+            _allowWallJump = true;
+            _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        }
+
+        #endregion
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        _allowWallJump = false;
+        _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
     }
 }
