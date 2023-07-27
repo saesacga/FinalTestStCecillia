@@ -17,6 +17,16 @@ public class PlayersMovementRB : MonoBehaviour
     
     #endregion
     
+    #region For Dash
+
+    [SerializeField] private AnimationCurve _dashSpeedMultiplierCurve;
+    private float _dashSpeed = 1;
+    [SerializeField] private float _dashTime;
+    [SerializeField] private float _dashCooldown;
+    private float _dashContador = 99;
+
+    #endregion
+    
     #region For Jump
     
     [SerializeField] private float _jumpForce;
@@ -25,7 +35,13 @@ public class PlayersMovementRB : MonoBehaviour
     private bool _isGrounded;
     private bool _jumpPerformed;
     private float _groundDistance = 0.4f;
+    
+    #endregion
+
+    #region For Slopes
+
     private bool _exitSlope;
+    [SerializeField] private PhysicMaterial _playerPhysicMaterial;
 
     #endregion
 
@@ -84,27 +100,20 @@ public class PlayersMovementRB : MonoBehaviour
 
         #endregion
 
+        #region Dash Related
+
+        if (_dashContador <= _dashCooldown) { _dashContador += Time.deltaTime; }
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown)
+        {
+            StartCoroutine(Dash());
+        }
+
+        #endregion
+
         if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame())
         {
             _jumpPerformed = true;
         }
-    }
-    
-    private void Jump()
-    {
-        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-        
-        Vector3 jumpForces = Vector3.zero;
-
-        if (_isGrounded || _allowWallJump)
-        {
-            jumpForces = Vector3.up * _jumpForce;
-            _rigidbody.AddRelativeForce(jumpForces, ForceMode.VelocityChange);
-            _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
-        }
-        
-        _jumpPerformed = false;
-        _exitSlope = true;
     }
     
     private void Move()
@@ -125,7 +134,7 @@ public class PlayersMovementRB : MonoBehaviour
         #region Usando velocity
         
         float verticalSpeed = Vector3.Dot(transform.up, _rigidbody.velocity);
-        _rigidbody.velocity = (_orientation.right * (currentInputVector.x * _speed)) + (transform.up * verticalSpeed) + (_orientation.forward * (currentInputVector.z * _speed));
+        _rigidbody.velocity = (_orientation.right * (currentInputVector.x * _speed * _dashSpeed * (Time.deltaTime * 100))) + (transform.up * verticalSpeed) + (_orientation.forward * (currentInputVector.z * _speed * _dashSpeed * (Time.deltaTime * 100)));
         //_rigidbody.velocity = (transform.right * (currentInputVector.x * _speed)) + (transform.up * verticalSpeed) + (transform.forward * (currentInputVector.z * _speed));
         
         #endregion
@@ -160,11 +169,60 @@ public class PlayersMovementRB : MonoBehaviour
         
         #endregion
     }
+    
+    private void Jump()
+    {
+        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+        
+        Vector3 jumpForces = Vector3.zero;
+
+        if (_isGrounded || _allowWallJump)
+        {
+            jumpForces = Vector3.up * _jumpForce;
+            _rigidbody.AddRelativeForce(jumpForces, ForceMode.VelocityChange);
+            _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
+        }
+        
+        _jumpPerformed = false;
+        _exitSlope = true;
+    }
+    
+    private IEnumerator Dash()
+    {
+        float _dashSpeedOverTime = 0f;
+        float startTime = Time.time;
+        
+        while (Time.time <= startTime + _dashTime && currentInputVector != new Vector3(0f,0f,0f))
+        {
+            _dashSpeed = _dashSpeedMultiplierCurve.Evaluate(_dashSpeedOverTime);
+            _dashSpeedOverTime+=0.01f;
+            _dashContador = 0;
+
+            #region Raycast
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+            
+            if (Physics.Raycast(ray, out hit, 2f))
+            {
+                if (hit.transform.CompareTag("Crossable"))
+                {
+                    hit.collider.isTrigger = true; 
+                    yield return new WaitForSeconds(_dashTime); 
+                    hit.collider.isTrigger = false;
+                }
+            }
+            #endregion
+            
+            yield return null;
+        }
+        _dashSpeed = 1;
+    }
+    
     private void OnCollisionStay(Collision collision)
     {
         if (collision.collider.CompareTag("Slope") && currentInputVector != new Vector3(0f,0f,0f) && _exitSlope == false) { _rigidbody.AddForce(new Vector3(0f, -_slopeForce, 0f)); }
+        if(collision.collider.CompareTag("Slope")){ GetComponent<Collider>().material = null; }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         #region Slopes
@@ -190,10 +248,14 @@ public class PlayersMovementRB : MonoBehaviour
 
         #endregion
     }
-
-    private void OnCollisionExit(Collision other)
+    private void OnCollisionExit(Collision collision)
     {
         _allowWallJump = false;
-        _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
+        if (collision.collider.CompareTag("WallJump"))
+        {
+            _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
+        }
+        
+        GetComponent<Collider>().material = _playerPhysicMaterial;
     }
 }
