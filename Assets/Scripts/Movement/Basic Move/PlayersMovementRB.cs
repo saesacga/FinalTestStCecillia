@@ -8,9 +8,10 @@ public class PlayersMovementRB : MonoBehaviour
     #region Members
     
     #region For Movement
-
-    [SerializeField] private Transform _orientation;
+    
     [SerializeField] private float _speed;
+    [SerializeField] private float _slopeForce;
+    [SerializeField] private Transform _orientation;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private GravityAttractor _gravityAttractor;
     
@@ -24,6 +25,7 @@ public class PlayersMovementRB : MonoBehaviour
     private bool _isGrounded;
     private bool _jumpPerformed;
     private float _groundDistance = 0.4f;
+    private bool _exitSlope;
 
     #endregion
     
@@ -73,11 +75,12 @@ public class PlayersMovementRB : MonoBehaviour
             jumpForces = Vector3.up * _jumpForce;
             _rigidbody.AddRelativeForce(jumpForces, ForceMode.VelocityChange);
         }
-
+        
         _jumpPerformed = false;
+        _exitSlope = true;
     }
     
-    public void Move()
+    private void Move()
     {
         #region Gravedad
 
@@ -95,10 +98,9 @@ public class PlayersMovementRB : MonoBehaviour
         #region Usando velocity
         
         float verticalSpeed = Vector3.Dot(transform.up, _rigidbody.velocity);
-
         _rigidbody.velocity = (_orientation.right * (currentInputVector.x * _speed)) + (transform.up * verticalSpeed) + (_orientation.forward * (currentInputVector.z * _speed));
         //_rigidbody.velocity = (transform.right * (currentInputVector.x * _speed)) + (transform.up * verticalSpeed) + (transform.forward * (currentInputVector.z * _speed));
-
+        
         #endregion
 
         #region Intento con MovePosition (Problemas con las colisiones)
@@ -130,5 +132,14 @@ public class PlayersMovementRB : MonoBehaviour
         #endregion
         
         #endregion
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("Slope") && currentInputVector != new Vector3(0f,0f,0f) && _exitSlope == false) { _rigidbody.AddForce(new Vector3(0f, -_slopeForce, 0f)); }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Slope")) { _exitSlope = false; }
     }
 }

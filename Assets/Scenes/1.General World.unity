@@ -148,9 +148,9 @@ GameObject:
   - component: {fileID: 415003657}
   - component: {fileID: 415003656}
   - component: {fileID: 415003655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Prism
-  m_TagString: Untagged
+  m_TagString: Slope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 1895445190}
-  m_VersionIndex: 3281
+  m_VersionIndex: 3296
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -690,7 +690,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-19972
+  m_Name: pb_Mesh53040
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1035,7 +1035,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh40098
+  m_Name: pb_Mesh53044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1414,7 +1414,19 @@ PrefabInstance:
       objectReference: {fileID: 1599969147}
     - target: {fileID: 1873448876035567873, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
       propertyPath: m_VersionIndex
-      value: 120
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873448876035567875, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
+      propertyPath: gravityUp.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873448876035567875, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
+      propertyPath: gravityUp.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873448876035567875, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
+      propertyPath: gravityUp.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1873448876035567930, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
       propertyPath: m_Name
@@ -2232,7 +2244,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 3
+  m_CollisionDetection: 1
 --- !u!4 &4281200260789062188
 Transform:
   m_ObjectHideFlags: 0
@@ -2283,8 +2295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae848589f2b1b9c44bab3da8bc89a5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _orientation: {fileID: 998410417}
   _speed: 15
+  _slopeForce: 50
+  _orientation: {fileID: 998410417}
   _rigidbody: {fileID: 4281200260789062187}
   _gravityAttractor: {fileID: 405433890}
   _jumpForce: 5

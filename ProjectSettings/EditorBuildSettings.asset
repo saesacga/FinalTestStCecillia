@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/1. Prototype Assets/Scenes/Prototyping.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/1. General World.unity
-    guid: 4c27a542fd426cf40836bb905a48fdea
+    path: Assets/Scenes/1.General World.unity
+    guid: fd7e4b4d4621acf4f9b2dfe7580fe3ad
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b4a21451414aceb47946f5aa124712aa, type: 2}
