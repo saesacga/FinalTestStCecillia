@@ -1,48 +1,41 @@
+using System;
 using UnityEngine;
 
 public class SpriteDirectionalController : MonoBehaviour
 {
-    [SerializeField] Transform player;
-    [SerializeField] Animator animator;
-
-    private Vector3 myPosition;
-    private Vector3 playerPosition;
-
+    [Range(0f, 180f)][SerializeField] private float _backAngle = 65f;
+    [SerializeField] private Transform _mainTransform;
+    private Animator _animator;
     private Vector3 currentPosition;
     private bool isMoving;
-
-    private float angle;
-    [SerializeField] private float stopFollowingValue;
-
+    private float animAngle;
+    
     private void Start()
     {
+        _animator = GetComponent<Animator>();
         currentPosition = transform.position;
     }
+    
     void LateUpdate()
     {
         if (currentPosition != transform.position) { isMoving = true; currentPosition = transform.position; }
         else { isMoving = false; currentPosition = transform.position; }
 
-        myPosition = new Vector3(transform.position.x, 0f, transform.position.z);
-        playerPosition = new Vector3(player.transform.position.x, 0f, (player.transform.position.z+stopFollowingValue));
+        Vector3 camForwardVector = new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z);
 
-        if (myPosition.x > playerPosition.x && myPosition.z > playerPosition.z)
+        float signedAngle = Vector3.SignedAngle(_mainTransform.forward, camForwardVector, Vector3.up);
+        
+        float angle = Mathf.Abs(signedAngle);
+
+        if (angle < _backAngle)
         {
-            angle = -90f;
+            this.animAngle = 90f;
         }
-        else if (myPosition.x < playerPosition.x && myPosition.z > playerPosition.z)
+        else
         {
-            angle = -45f;
+            this.animAngle = -90f;
         }
-        else if (myPosition.x > playerPosition.x && myPosition.z < playerPosition.z)
-        {
-            angle = 45f;
-        }
-        else if (myPosition.x < playerPosition.x && myPosition.z < playerPosition.z)
-        {
-            angle = 90f;
-        }
-        animator.SetBool("isMoving", isMoving);
-        animator.SetFloat("angle", angle);
+        _animator.SetBool("isMoving", isMoving);
+        _animator.SetFloat("angle", this.animAngle);
     }
 }

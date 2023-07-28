@@ -74,6 +74,11 @@ public class PlayersMovementRB : MonoBehaviour
 
     void Update()
     {
+        if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPerformedThisFrame())
+        {
+            Debug.Log(transform.forward);
+        }
+
         #region Input para movimiento
         
         myInput.x = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x;

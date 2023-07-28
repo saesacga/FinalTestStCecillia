@@ -1,17 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class FriendlyNPC : MonoBehaviour
-{   
-    [SerializeField]private bool interactuarFlag = false;
+{
+    [SerializeField] private SpriteRenderer _interactSprite;
+    private Fungus.Flowchart _currentFlowchart;
 
-    public SpriteRenderer interactSprite;
-    public Fungus.Flowchart myFlowchart;
+    private bool interactuarFlag = false;
+    private bool inDialog = false;
 
-    public bool inDialog = false;
-    
+    private void Start()
+    {
+        _currentFlowchart = GetComponentInChildren<Fungus.Flowchart>();
+    }
+
     void Update()
     {
         if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPressedThisFrame() && interactuarFlag)
@@ -19,14 +24,15 @@ public class FriendlyNPC : MonoBehaviour
             ActionMapReference.playerMap.Movimiento.Disable();
             ActionMapReference.playerMap.Combate.Disable();
             ActionMapReference.playerMap.PauseMap.Disable();
-            myFlowchart.ExecuteBlock("Dialog");
+            _currentFlowchart.ExecuteBlock("DeafultBlock");
+            
             inDialog = true;
         }
 
         if (interactuarFlag == true)
         {
             float fade = Mathf.Lerp(1f, 0f, 0.2f);
-            interactSprite.color = new Color(1, 1, 1, fade);
+            _interactSprite.color = new Color(1, 1, 1, fade);
         }
     }
     
@@ -38,7 +44,7 @@ public class FriendlyNPC : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) { interactuarFlag = false; }
             float fade = Mathf.Lerp(0f, 1f, 0.2f);
-        interactSprite.color = new Color(1, 1, 1, fade);
+        _interactSprite.color = new Color(1, 1, 1, fade);
     }
 
     public void ExitBlock()
