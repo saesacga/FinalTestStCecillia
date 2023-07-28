@@ -41,6 +41,8 @@ public class PlayersMovementRB : MonoBehaviour
     #region For Slopes
 
     private bool _exitSlope;
+    private float _surfaceAngle;
+    [SerializeField] private Transform _frontRayPosition;
     [SerializeField] private PhysicMaterial _playerPhysicMaterial;
 
     #endregion
@@ -74,11 +76,6 @@ public class PlayersMovementRB : MonoBehaviour
 
     void Update()
     {
-        if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPerformedThisFrame())
-        {
-            Debug.Log(transform.forward);
-        }
-
         #region Input para movimiento
         
         myInput.x = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x;
@@ -119,6 +116,8 @@ public class PlayersMovementRB : MonoBehaviour
         {
             _jumpPerformed = true;
         }
+        
+        GetAngle();
     }
     
     private void Move()
@@ -221,6 +220,33 @@ public class PlayersMovementRB : MonoBehaviour
             yield return null;
         }
         _dashSpeed = 1;
+    }
+
+    private void GetAngle()
+    {
+        _frontRayPosition.rotation = Quaternion.Euler(-gameObject.transform.rotation.x, 0f, 0f);
+
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 20f))
+        {
+            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal); //Parece funcionar, seguir haciendo pruebas
+            _surfaceAngle = Vector3.Angle(localNormal, Vector3.up);
+            Debug.Log(_surfaceAngle);
+        }
+        else
+        {
+            _surfaceAngle = 0f;
+            Debug.Log(_surfaceAngle);   
+        }
+        /*RaycastHit frontHit;
+        if (Physics.Raycast(_frontRayPosition.position, _frontRayPosition.TransformDirection(-Vector3.forward), out frontHit,Mathf.Infinity))
+        {
+            Debug.DrawRay(_frontRayPosition.position, _frontRayPosition.TransformDirection(-Vector3.forward) * frontHit.distance, Color.yellow);
+            _surfaceAngle = Vector3.Angle(frontHit.normal, Vector3.up);
+            Debug.Log(_surfaceAngle);
+        }*/
     }
     
     private void OnCollisionStay(Collision collision)

@@ -171,12 +171,12 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastPivotPosition",
-                "value": "{\"m_Value\":{\"x\":6.610401153564453,\"y\":-5.835625648498535,\"z\":-0.519881546497345}}"
+                "value": "{\"m_Value\":{\"x\":-7.696441650390625,\"y\":-5.2757697105407719,\"z\":8.698715209960938}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize",
-                "value": "{\"m_Value\":{\"x\":-13.277267456054688,\"y\":11.67129135131836,\"z\":1.0442047119140626}}"
+                "value": "{\"m_Value\":{\"x\":15.652227401733399,\"y\":10.551509857177735,\"z\":-17.690547943115236}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -216,6 +216,11 @@
             {
                 "type": "UnityEngine.ProBuilder.Shapes.Shape, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.Prism",
+                "value": "{}"
+            },
+            {
+                "type": "UnityEngine.ProBuilder.Shapes.Shape, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                "key": "ShapeBuilder.Pipe",
                 "value": "{}"
             },
             {
