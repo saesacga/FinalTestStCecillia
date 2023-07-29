@@ -10,7 +10,6 @@ public class PlayersMovementRB : MonoBehaviour
     #region For Movement
     
     [SerializeField] private float _speed;
-    [SerializeField] private float _slopeForce;
     [SerializeField] private Transform _orientation;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private GravityAttractor _gravityAttractor;
@@ -39,11 +38,13 @@ public class PlayersMovementRB : MonoBehaviour
     #endregion
 
     #region For Slopes
-
-    private bool _exitSlope;
+    
+    private float _slopeForce;
     private float _surfaceAngle;
-    [SerializeField] private Transform _frontRayPosition;
-    [SerializeField] private PhysicMaterial _playerPhysicMaterial;
+
+    [SerializeField] private float _rayLenght;
+    [SerializeField] private LayerMask _slopeRayMask;
+    [SerializeField] private Transform _slopeRayPosition;
 
     #endregion
 
@@ -88,18 +89,22 @@ public class PlayersMovementRB : MonoBehaviour
         #region Wall Jump Related
 
         _inTheAir = !Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-        
-        switch (_wallJumpContador)
-        {
-            case <= 1.5f:
-                _wallJumpContador += Time.deltaTime;
-                break;
-            case >= 1.5f:
-                _allowWallJump = false;
-                _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
-                break;
-        }
+        if (_inTheAir == false) { _currentWall = null; }
 
+        if (_allowWallJump)
+        {
+            switch (_wallJumpContador)
+            {
+                case <= 1.5f:
+                    _wallJumpContador += Time.deltaTime;
+                    break;
+                case >= 1.5f:
+                    _allowWallJump = false;
+                    _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
+                    break;
+            }
+        }
+        
         #endregion
 
         #region Dash Related
@@ -124,11 +129,11 @@ public class PlayersMovementRB : MonoBehaviour
     {
         #region Gravedad
 
-        Vector3 gravity = (transform.position - _gravityAttractor.transform.position).normalized;
-        GetComponent<Rigidbody>().AddForce(gravity * _gravityAttractor.gravity, ForceMode.Acceleration);
+        Vector3 gravityUp = (transform.position - _gravityAttractor.transform.position).normalized;
+        GetComponent<Rigidbody>().AddForce(gravityUp * (_gravityAttractor.gravity * _slopeForce), ForceMode.Acceleration);
 
         Vector3 bodyUp = transform.up;
-        Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravity) * transform.rotation;
+        Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravityUp) * transform.rotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 50 * Time.deltaTime);
 
         #endregion
@@ -188,7 +193,6 @@ public class PlayersMovementRB : MonoBehaviour
         }
         
         _jumpPerformed = false;
-        _exitSlope = true;
     }
     
     private IEnumerator Dash()
@@ -224,69 +228,51 @@ public class PlayersMovementRB : MonoBehaviour
 
     private void GetAngle()
     {
-        _frontRayPosition.rotation = Quaternion.Euler(-gameObject.transform.rotation.x, 0f, 0f);
-
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
+        
+        if (Physics.Raycast(_slopeRayPosition.position, _slopeRayPosition.forward, out hit, _rayLenght, _slopeRayMask))
+        {
+            Debug.DrawRay(_slopeRayPosition.position, _slopeRayPosition.forward * hit.distance, Color.yellow);
+            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
+            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
+            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+        }
+        else { _surfaceAngle = 0; }
 
-        if (Physics.Raycast(ray, out hit, 20f))
-        {
-            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal); //Parece funcionar, seguir haciendo pruebas
-            _surfaceAngle = Vector3.Angle(localNormal, Vector3.up);
-            Debug.Log(_surfaceAngle);
-        }
-        else
-        {
-            _surfaceAngle = 0f;
-            Debug.Log(_surfaceAngle);   
-        }
-        /*RaycastHit frontHit;
-        if (Physics.Raycast(_frontRayPosition.position, _frontRayPosition.TransformDirection(-Vector3.forward), out frontHit,Mathf.Infinity))
-        {
-            Debug.DrawRay(_frontRayPosition.position, _frontRayPosition.TransformDirection(-Vector3.forward) * frontHit.distance, Color.yellow);
-            _surfaceAngle = Vector3.Angle(frontHit.normal, Vector3.up);
-            Debug.Log(_surfaceAngle);
-        }*/
+        if (_surfaceAngle > 45f && currentInputVector != new Vector3(0f,0f,0f)) { _slopeForce = 10; }
+        else { _slopeForce = 1; }
     }
     
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.CompareTag("Slope") && currentInputVector != new Vector3(0f,0f,0f) && _exitSlope == false) { _rigidbody.AddForce(new Vector3(0f, -_slopeForce, 0f)); }
-        if(collision.collider.CompareTag("Slope")){ GetComponent<Collider>().material = null; }
-    }
     private void OnCollisionEnter(Collision collision)
     {
-        #region Slopes
-
-        if (collision.collider.CompareTag("Slope")) { _exitSlope = false; }
-        
-        #endregion
-
         #region Wall Jump
-
-        if (_inTheAir == false) { _currentWall = null; }
         
-        if (_currentWall == collision.collider.gameObject) { return; }
-        
-        _currentWall = collision.collider.gameObject;
-        
-        if (collision.collider.CompareTag("WallJump") && _inTheAir)
+        if (collision.collider.CompareTag("WallJump"))
         {
-            _wallJumpContador = 0;
-            _allowWallJump = true;
-            _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            if (_currentWall == collision.collider.gameObject) { return; }
+            _currentWall = collision.collider.gameObject;
+            
+            if (_inTheAir)
+            {
+                _wallJumpContador = 0;
+                _allowWallJump = true;
+                _rigidbody.constraints = RigidbodyConstraints.FreezeAll;  
+            }
         }
 
         #endregion
     }
     private void OnCollisionExit(Collision collision)
     {
-        _allowWallJump = false;
+        #region Wall Jump
+        
         if (collision.collider.CompareTag("WallJump"))
-        {
+        {   
+            _allowWallJump = false;
             _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
         }
+
+        #endregion
         
-        GetComponent<Collider>().material = _playerPhysicMaterial;
     }
 }
