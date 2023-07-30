@@ -41,7 +41,11 @@ public class PlayersMovementRB : MonoBehaviour
     
     private float _slopeForce;
     private float _surfaceAngle;
+    private enum SlopeState{normal,front,right,left,back}
+    private SlopeState _slopeState;
+    private bool _onSlope;
 
+    [SerializeField] private float _slopeExtraGravity;
     [SerializeField] private float _rayLenght;
     [SerializeField] private LayerMask _slopeRayMask;
     [SerializeField] private Transform _slopeRayPosition;
@@ -68,6 +72,11 @@ public class PlayersMovementRB : MonoBehaviour
     
     #endregion
 
+    private void Start()
+    {
+        _slopeState = SlopeState.normal;
+    }
+
     private void FixedUpdate()
     {
         Move();
@@ -77,12 +86,39 @@ public class PlayersMovementRB : MonoBehaviour
 
     void Update()
     {
-        #region Input para movimiento
+        GetAngle();
         
-        myInput.x = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x;
-        myInput.z = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y;
-
-        currentInputVector = Vector3.SmoothDamp(currentInputVector, myInput, ref smoothInputVelocity, smoothInputSpeed);
+        #region Movimiento state machine
+        
+        switch (_slopeState)
+        {
+            default:
+            case SlopeState.normal:
+                myInput.x = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x; 
+                myInput.z = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y;
+                currentInputVector = Vector3.SmoothDamp(currentInputVector, myInput, ref smoothInputVelocity, smoothInputSpeed);
+                break;
+            case SlopeState.front:
+                myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -0.3f, 0.3f); 
+                myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y, -1f, 0f);
+                currentInputVector = myInput;
+                break;
+            case SlopeState.back:
+                myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -0.3f, 0.3f); 
+                myInput.z = Mathf.Clamp01(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y);
+                currentInputVector = myInput;
+                break;
+            case SlopeState.right:
+                myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -1f, 0f);
+                myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y,-0.3f, 0.3f);
+                currentInputVector = myInput;
+                break;
+            case SlopeState.left:
+                myInput.x = Mathf.Clamp01(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x);
+                myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y,-0.3f, 0.3f);
+                currentInputVector = myInput;
+                break;
+        }
         
         #endregion
 
@@ -121,8 +157,6 @@ public class PlayersMovementRB : MonoBehaviour
         {
             _jumpPerformed = true;
         }
-        
-        GetAngle();
     }
     
     private void Move()
@@ -183,16 +217,17 @@ public class PlayersMovementRB : MonoBehaviour
     {
         _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
         
+        _jumpPerformed = false;
+        //_exitingSlope = true;
+        
         Vector3 jumpForces = Vector3.zero;
-
+        
         if (_isGrounded || _allowWallJump)
         {
             jumpForces = Vector3.up * _jumpForce;
             _rigidbody.AddRelativeForce(jumpForces, ForceMode.VelocityChange);
             _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
         }
-        
-        _jumpPerformed = false;
     }
     
     private IEnumerator Dash()
@@ -229,17 +264,53 @@ public class PlayersMovementRB : MonoBehaviour
     private void GetAngle()
     {
         RaycastHit hit;
-        
-        if (Physics.Raycast(_slopeRayPosition.position, _slopeRayPosition.forward, out hit, _rayLenght, _slopeRayMask))
+
+        if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, _slopeRayPosition.forward, out hit, _rayLenght, _slopeRayMask))
         {
-            Debug.DrawRay(_slopeRayPosition.position, _slopeRayPosition.forward * hit.distance, Color.yellow);
             Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
             if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
             else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            
+            if (_surfaceAngle > 50f) { _slopeState = SlopeState.front; }
+            else { _slopeState = SlopeState.normal; }
         }
-        else { _surfaceAngle = 0; }
-
-        if (_surfaceAngle > 45f && currentInputVector != new Vector3(0f,0f,0f)) { _slopeForce = 10; }
+        else if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, -_slopeRayPosition.forward, out hit,  _rayLenght, _slopeRayMask))
+        {
+            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
+            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
+            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            
+            if (_surfaceAngle > 50f) { _slopeState = SlopeState.back; }
+            else { _slopeState = SlopeState.normal; }
+        }
+        else if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, _slopeRayPosition.right, out hit, _rayLenght, _slopeRayMask))
+        {
+            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
+            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
+            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            
+            if (_surfaceAngle > 50f) { _slopeState = SlopeState.right; }
+            else { _slopeState = SlopeState.normal; }
+        }
+        else if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, -_slopeRayPosition.right, out hit, _rayLenght, _slopeRayMask))
+        {
+            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
+            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
+            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            
+            if (_surfaceAngle > 50f) { _slopeState = SlopeState.left; }
+            else { _slopeState = SlopeState.normal; }
+        }
+        else if (Physics.Raycast(_slopeRayPosition.position, -_slopeRayPosition.up, out hit, 10, _slopeRayMask))
+        {
+            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
+            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
+            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            _slopeState = SlopeState.normal;
+        }
+        else { _surfaceAngle = 0; _slopeState = SlopeState.normal; }
+        
+        if (_surfaceAngle is < 50f and > 1f && currentInputVector != new Vector3(0f, 0f, 0f)) { _slopeForce = _slopeExtraGravity; }
         else { _slopeForce = 1; }
     }
     
@@ -273,6 +344,5 @@ public class PlayersMovementRB : MonoBehaviour
         }
 
         #endregion
-        
     }
 }
