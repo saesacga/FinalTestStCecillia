@@ -334,4 +334,14 @@ public class PlayersMovementRB : MonoBehaviour
 
         #endregion
     }
+
+    public void FreezePlayer()
+    {
+        _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    public void UnFreeze()
+    {
+        _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
+    }
 }

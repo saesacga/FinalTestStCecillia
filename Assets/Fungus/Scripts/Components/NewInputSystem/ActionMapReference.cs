@@ -8,18 +8,9 @@ using UnityEngine.EventSystems;
 public class ActionMapReference : MonoBehaviour
 {
     #region Singleton
+    
     static public PlayerMap playerMap;
-    /*private void Awake()
-    {
-        if (playerMap != null && playerMap != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }*/
+    
     #endregion
 
     [SerializeField] private List<GameObject> _gameplaySchemes = new List<GameObject>();
@@ -28,7 +19,7 @@ public class ActionMapReference : MonoBehaviour
     {
         Cursor.visible = false;
         playerMap = new PlayerMap();
-        ActivateMaps();
+        //ActivateAllMaps();
     }
 
     private void Update()
@@ -36,7 +27,7 @@ public class ActionMapReference : MonoBehaviour
         ChangeGameplaySchemes();
     }
 
-    public static void ActivateMaps() //NOTA: NUNCA ACTIVAR TODOS LOS MAPAS: playerMap.Enable();
+    public static void ActivateAllMaps() //NOTA: NUNCA ACTIVAR TODOS LOS MAPAS: playerMap.Enable();
     {
         Cursor.visible = false;
         playerMap.Combate.Enable();
@@ -45,6 +36,17 @@ public class ActionMapReference : MonoBehaviour
         playerMap.MovimientoAvanzado.Enable();
         playerMap.Interaccion.Enable();
         playerMap.PauseMap.Enable();
+        playerMap.UI.Disable();
+    }
+    
+    public static void EnterInteraction() //NOTA: NUNCA ACTIVAR TODOS LOS MAPAS: playerMap.Enable();
+    {
+        playerMap.Combate.Disable();
+        playerMap.Farming.Disable();
+        playerMap.Movimiento.Disable();
+        playerMap.MovimientoAvanzado.Disable();
+        playerMap.Interaccion.Enable();
+        playerMap.PauseMap.Disable();
         playerMap.UI.Disable();
     }
 

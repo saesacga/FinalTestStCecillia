@@ -108,7 +108,7 @@ public class Inventory : MonoBehaviour
             inventoryOpen = !inventoryOpen;
             EventSystem.current.SetSelectedGameObject(null);
             ActionMapReference.playerMap.PauseMap.Pause.Enable();
-            ActionMapReference.ActivateMaps();
+            ActionMapReference.ActivateAllMaps();
         }
     }
 }

@@ -17,6 +17,8 @@ public class PlayersLook : MonoBehaviour
     private Vector3 smoothInputVelocity;
     private Vector3 myMouseInput;
     [SerializeField] private float smoothInputSpeedForCamera;
+
+    public static bool cinematicCamera = true;
     
     void Update()
     {
@@ -27,9 +29,10 @@ public class PlayersLook : MonoBehaviour
 
         xRotation -= currentInputMouseVector.y;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
+        
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); 
         _orientation.Rotate(Vector3.up * currentInputMouseVector.x);
+        
         //playerBody.Rotate(Vector3.up * currentInputMouseVector.x);
     }
 }

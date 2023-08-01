@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     {
         pause = false;
         pauseMenuObject.SetActive(false);
-        ActionMapReference.ActivateMaps();
+        ActionMapReference.ActivateAllMaps();
     }
     public void SetSelectObject(int i) 
     {
@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuObject.SetActive(false);
             ActionMapReference.playerMap.PauseMap.Inventory.Enable();
-            ActionMapReference.ActivateMaps();
+            ActionMapReference.ActivateAllMaps();
         }
     }
 }

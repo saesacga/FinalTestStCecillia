@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SayDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SayDialog.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/MoveCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/MoveCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersLook.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersMovementRB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersMovementRB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +118,7 @@
       <workItem from="1690475020272" duration="27531000" />
       <workItem from="1690653840383" duration="9599000" />
       <workItem from="1690669055176" duration="25469000" />
-      <workItem from="1690835969817" duration="10551000" />
+      <workItem from="1690835969817" duration="23116000" />
     </task>
     <servers />
   </component>
