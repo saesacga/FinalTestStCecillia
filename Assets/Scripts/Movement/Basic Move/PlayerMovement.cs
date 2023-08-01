@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
-            if (inTheAir == true)
+            if (inTheAir)
             {
                 speed += airSpeedReduction;
                 inTheAir = false;

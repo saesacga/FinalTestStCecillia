@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1071188393118609961}
   - component: {fileID: 1071188393118609967}
-  - component: {fileID: 7792023001165605700}
-  - component: {fileID: 1071188393118609960}
-  - component: {fileID: 5661344427088632769}
+  - component: {fileID: 2560865794959344550}
+  - component: {fileID: 5061214464934781169}
   m_Layer: 0
   m_Name: "\xC1rbol nube"
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071188393118609962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.699997, z: 0}
+  m_LocalPosition: {x: -0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,8 +85,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!54 &7792023001165605700
+  m_SpriteSortPoint: 1
+--- !u!54 &2560865794959344550
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,25 +97,12 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &1071188393118609960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071188393118609962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40cdf31cec223fe4e98cc0069bfff927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateBillboard: 1
---- !u!114 &5661344427088632769
+--- !u!114 &5061214464934781169
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071188394486004449}
-  - component: {fileID: 1071188394486004450}
+  - component: {fileID: 2203661954328777064}
   m_Layer: 0
   m_Name: Arbol
   m_TagString: Untagged
@@ -164,16 +150,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1071188394486004450
-BoxCollider:
+--- !u!114 &2203661954328777064
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071188394486004451}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.037018, y: 9.413452, z: 0.1}
-  m_Center: {x: -0.2994461, y: -0.020065308, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40cdf31cec223fe4e98cc0069bfff927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateBillboard: 1

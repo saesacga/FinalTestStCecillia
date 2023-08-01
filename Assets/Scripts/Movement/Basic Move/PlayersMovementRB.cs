@@ -33,22 +33,23 @@ public class PlayersMovementRB : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;
     private bool _isGrounded;
     private bool _jumpPerformed;
-    private float _groundDistance = 0.4f;
+    private float _groundDistance = 0.5f;
+    private float _jumpCooldown = 0.5f;
     
     #endregion
 
     #region For Slopes
     
-    private float _slopeForce;
+    [SerializeField] private float _slownessOnCollision;
+    [SerializeField] private float _slopeExtraGravity;
+    [SerializeField] private LayerMask _slopeRayMask;
+    [SerializeField] private PhysicMaterial _playerMaterial;
+    [SerializeField] private Transform _slopeRayPosition;
+    private float _rayLenght = 0.7f;
     private float _surfaceAngle;
     private enum SlopeState{normal,front,right,left,back}
     private SlopeState _slopeState;
-    private bool _onSlope;
-
-    [SerializeField] private float _slopeExtraGravity;
-    [SerializeField] private float _rayLenght;
-    [SerializeField] private LayerMask _slopeRayMask;
-    [SerializeField] private Transform _slopeRayPosition;
+    private bool _exitSlope;
 
     #endregion
 
@@ -66,7 +67,7 @@ public class PlayersMovementRB : MonoBehaviour
     private Vector3 currentInputVector;
     private Vector3 smoothInputVelocity;
     private Vector3 myInput;
-    [SerializeField] private float smoothInputSpeed;
+    private float smoothInputSpeed = 0.1f;
     
     #endregion
     
@@ -88,6 +89,8 @@ public class PlayersMovementRB : MonoBehaviour
     {
         GetAngle();
         
+        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+        
         #region Movimiento state machine
         
         switch (_slopeState)
@@ -99,23 +102,23 @@ public class PlayersMovementRB : MonoBehaviour
                 currentInputVector = Vector3.SmoothDamp(currentInputVector, myInput, ref smoothInputVelocity, smoothInputSpeed);
                 break;
             case SlopeState.front:
-                myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -0.3f, 0.3f); 
+                myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -_slownessOnCollision, _slownessOnCollision); 
                 myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y, -1f, 0f);
                 currentInputVector = myInput;
                 break;
             case SlopeState.back:
-                myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -0.3f, 0.3f); 
+                myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -_slownessOnCollision, _slownessOnCollision); 
                 myInput.z = Mathf.Clamp01(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y);
                 currentInputVector = myInput;
                 break;
             case SlopeState.right:
                 myInput.x = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x, -1f, 0f);
-                myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y,-0.3f, 0.3f);
+                myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y,-_slownessOnCollision, _slownessOnCollision);
                 currentInputVector = myInput;
                 break;
             case SlopeState.left:
                 myInput.x = Mathf.Clamp01(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x);
-                myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y,-0.3f, 0.3f);
+                myInput.z = Mathf.Clamp(ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y,-_slownessOnCollision, _slownessOnCollision);
                 currentInputVector = myInput;
                 break;
         }
@@ -123,15 +126,14 @@ public class PlayersMovementRB : MonoBehaviour
         #endregion
 
         #region Wall Jump Related
-
-        _inTheAir = !Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-        if (_inTheAir == false) { _currentWall = null; }
+        
+        if (_isGrounded) { _currentWall = null; }
 
         if (_allowWallJump)
         {
             switch (_wallJumpContador)
             {
-                case <= 1.5f:
+                case < 1.5f:
                     _wallJumpContador += Time.deltaTime;
                     break;
                 case >= 1.5f:
@@ -153,10 +155,21 @@ public class PlayersMovementRB : MonoBehaviour
 
         #endregion
 
-        if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame())
-        {
-            _jumpPerformed = true;
+        #region Jump Related
+        
+        switch (_jumpCooldown)
+        { 
+            case < 0.5f: 
+                _jumpCooldown += Time.deltaTime; 
+                break;
+            case >= 0.5f:
+                if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame()) { _jumpPerformed = true; }
+                _exitSlope = false;
+                break;
         }
+        
+        #endregion
+        
     }
     
     private void Move()
@@ -164,8 +177,17 @@ public class PlayersMovementRB : MonoBehaviour
         #region Gravedad
 
         Vector3 gravityUp = (transform.position - _gravityAttractor.transform.position).normalized;
-        GetComponent<Rigidbody>().AddForce(gravityUp * (_gravityAttractor.gravity * _slopeForce), ForceMode.Acceleration);
-
+        if (_surfaceAngle is < 50f and > 1f && _exitSlope == false && _jumpPerformed == false) //On slope gravity
+        {
+            GetComponent<Rigidbody>().AddForce(gravityUp * (_gravityAttractor.gravity * _slopeExtraGravity), ForceMode.Acceleration);
+            GetComponent<Collider>().material = null;
+        }
+        else //Normal gravity
+        {
+            GetComponent<Rigidbody>().AddForce(gravityUp * _gravityAttractor.gravity, ForceMode.Acceleration);
+            GetComponent<Collider>().material = _playerMaterial;
+        }
+        
         Vector3 bodyUp = transform.up;
         Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravityUp) * transform.rotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 50 * Time.deltaTime);
@@ -215,19 +237,17 @@ public class PlayersMovementRB : MonoBehaviour
     
     private void Jump()
     {
-        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-        
-        _jumpPerformed = false;
-        //_exitingSlope = true;
-        
         Vector3 jumpForces = Vector3.zero;
         
         if (_isGrounded || _allowWallJump)
         {
+            _jumpCooldown = 0f;
+            _exitSlope = true;
             jumpForces = Vector3.up * _jumpForce;
             _rigidbody.AddRelativeForce(jumpForces, ForceMode.VelocityChange);
             _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
         }
+        _jumpPerformed = false;
     }
     
     private IEnumerator Dash()
@@ -301,7 +321,7 @@ public class PlayersMovementRB : MonoBehaviour
             if (_surfaceAngle > 50f) { _slopeState = SlopeState.left; }
             else { _slopeState = SlopeState.normal; }
         }
-        else if (Physics.Raycast(_slopeRayPosition.position, -_slopeRayPosition.up, out hit, 10, _slopeRayMask))
+        else if (Physics.Raycast(_slopeRayPosition.position, -_slopeRayPosition.up, out hit, 1f, _slopeRayMask))
         {
             Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
             if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
@@ -309,9 +329,9 @@ public class PlayersMovementRB : MonoBehaviour
             _slopeState = SlopeState.normal;
         }
         else { _surfaceAngle = 0; _slopeState = SlopeState.normal; }
-        
-        if (_surfaceAngle is < 50f and > 1f && currentInputVector != new Vector3(0f, 0f, 0f)) { _slopeForce = _slopeExtraGravity; }
-        else { _slopeForce = 1; }
+
+        //if (_surfaceAngle is < 50f and > 1f && _exitSlope == false) { _slopeForce = _slopeExtraGravity; GetComponent<Collider>().material = null; }
+        //else { _slopeForce = 1; GetComponent<Collider>().material = _playerMaterial; }
     }
     
     private void OnCollisionEnter(Collision collision)
