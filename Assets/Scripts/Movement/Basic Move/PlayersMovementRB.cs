@@ -180,7 +180,9 @@ public class PlayersMovementRB : MonoBehaviour
         if (_surfaceAngle is < 50f and > 1f && _exitSlope == false && _jumpPerformed == false) //On slope gravity
         {
             GetComponent<Rigidbody>().AddForce(gravityUp * (_gravityAttractor.gravity * _slopeExtraGravity), ForceMode.Acceleration);
-            GetComponent<Collider>().material = null;
+            
+            if (myInput == new Vector3()) { GetComponent<Collider>().material = null; }
+            else { GetComponent<Collider>().material = _playerMaterial; }
         }
         else //Normal gravity
         {
@@ -196,41 +198,8 @@ public class PlayersMovementRB : MonoBehaviour
         
         #region Movimiento
         
-        #region Usando velocity
-        
         float verticalSpeed = Vector3.Dot(transform.up, _rigidbody.velocity);
         _rigidbody.velocity = (_orientation.right * (currentInputVector.x * _speed * _dashSpeed * (Time.deltaTime * 100))) + (transform.up * verticalSpeed) + (_orientation.forward * (currentInputVector.z * _speed * _dashSpeed * (Time.deltaTime * 100)));
-        //_rigidbody.velocity = (transform.right * (currentInputVector.x * _speed)) + (transform.up * verticalSpeed) + (transform.forward * (currentInputVector.z * _speed));
-        
-        #endregion
-
-        #region Intento con MovePosition (Problemas con las colisiones)
-
-        //Vector3 moveDir = new Vector3(currentInputVector.x, 0f, currentInputVector.z);
-        //_rigidbody.MovePosition(_rigidbody.position + transform.TransformDirection(moveDir) * _speed * Time.deltaTime);
-        
-        #endregion
-        
-        #region Intento con addforce (falló)
-        /*
-        //Find target velocity
-        Vector3 currentVelocity = _rigidbody.velocity;
-        Vector3 targetVelocity = new Vector3(currentInputVector.x, 0f, currentInputVector.z);
-        targetVelocity *= _speed;
-       
-        //Align direction
-        targetVelocity = transform.TransformDirection(targetVelocity);
-       
-        //Calculate forces
-        Vector3 _velocityChange = (targetVelocity - currentVelocity); 
-        _velocityChange = new Vector3(_velocityChange.x , (gravity.y * _gravityAttractor.gravity), _velocityChange.z);
-       
-        //Limit force
-        Vector3.ClampMagnitude(_velocityChange, _maxForce);
-       
-        _rigidbody.AddForce(_velocityChange, ForceMode.VelocityChange);
-        */
-        #endregion
         
         #endregion
     }
@@ -255,7 +224,7 @@ public class PlayersMovementRB : MonoBehaviour
         float _dashSpeedOverTime = 0f;
         float startTime = Time.time;
         
-        while (Time.time <= startTime + _dashTime && currentInputVector != new Vector3(0f,0f,0f))
+        while (Time.time <= startTime + _dashTime && myInput != new Vector3(0f,0f,0f))
         {
             _dashSpeed = _dashSpeedMultiplierCurve.Evaluate(_dashSpeedOverTime);
             _dashSpeedOverTime+=0.01f;

@@ -26707,8 +26707,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865730124}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -177.21, y: 193.31, z: 81.5}
+  m_LocalRotation: {x: 0.33533847, y: -0.5815626, z: 0.17815958, w: 0.7194389}
+  m_LocalPosition: {x: -173.39882, y: 190.81326, z: 73.99586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32865,8 +32865,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4281200260789062190}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -174.5, y: 192, z: 68.5}
+  m_LocalRotation: {x: 0.33533847, y: -0.5815626, z: 0.17815958, w: 0.7194389}
+  m_LocalPosition: {x: -171.9436, y: 189.27835, z: 73.38013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32875,7 +32875,7 @@ Transform:
   - {fileID: 998410417}
   m_Father: {fileID: 923010457}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4281200260789062190
 GameObject:
   m_ObjectHideFlags: 0
@@ -32961,14 +32961,12 @@ MonoBehaviour:
   _groundMask:
     serializedVersion: 2
     m_Bits: 65600
-  _groundDistance: 0.5
   _slownessOnCollision: 0.15
-  _playerMaterial: {fileID: 13400000, guid: 651988e6f657faf4da81a03348bf3e3c, type: 2}
-  _slopeExtraGravity: 20
-  _rayLenght: 0.7
+  _slopeExtraGravity: 30
   _slopeRayMask:
     serializedVersion: 2
     m_Bits: 50295
+  _playerMaterial: {fileID: 13400000, guid: 651988e6f657faf4da81a03348bf3e3c, type: 2}
   _slopeRayPosition: {fileID: 1825651591}
 --- !u!65 &4281200260789062192
 BoxCollider:
