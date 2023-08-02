@@ -1,7 +1,12 @@
+using System;
 using UnityEngine;
 using TMPro;
+using Random = UnityEngine.Random;
+
 public class ProjectileGun : MonoBehaviour
 {
+    #region Members
+    
     public GameObject bullet;
 
     public float shootForce, upwardForce;
@@ -15,13 +20,23 @@ public class ProjectileGun : MonoBehaviour
 
     public Camera fpsCam;
     public Transform attackPoint;
+    
+    public TextMeshProUGUI ammunitionDisplay;
+    [SerializeField] private GameObject _canvas;
 
-    //Graphics
-    //public GameObject muzzleFlash;
-    public TextMeshProUGUI ammunitionDisplay; 
-
-    //bug fixing
     public bool allowInvoke = true;
+    
+    #endregion
+
+    private void OnEnable()
+    {
+        _canvas.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        _canvas.SetActive(false);
+    }
 
     private void Start()
     {

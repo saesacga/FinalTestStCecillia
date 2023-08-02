@@ -40,12 +40,12 @@ public class FriendlyNPC : MonoBehaviour
 
     public void OnInteraction()
     {
-        PlayersLook.cinematicCamera = true;
+        PlayersLook._cutsceneInProgress = true;
         ActionMapReference.EnterInteraction();
     }
     public void ExitBlock()
     {
-        PlayersLook.cinematicCamera = false;
+        PlayersLook._cutsceneInProgress = false;
         _interactSprite.enabled = true;
         ActionMapReference.ActivateAllMaps();
     }

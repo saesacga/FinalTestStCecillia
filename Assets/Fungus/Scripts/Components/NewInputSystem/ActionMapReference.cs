@@ -17,7 +17,8 @@ public class ActionMapReference : MonoBehaviour
 
     private void Start()
     {
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         playerMap = new PlayerMap();
         //ActivateAllMaps();
     }

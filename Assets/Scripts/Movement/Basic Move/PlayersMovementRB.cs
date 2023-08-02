@@ -122,7 +122,7 @@ public class PlayersMovementRB : MonoBehaviour
                 currentInputVector = myInput;
                 break;
         }
-        
+
         #endregion
 
         #region Wall Jump Related
@@ -333,15 +333,5 @@ public class PlayersMovementRB : MonoBehaviour
         }
 
         #endregion
-    }
-
-    public void FreezePlayer()
-    {
-        _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-    }
-
-    public void UnFreeze()
-    {
-        _rigidbody.constraints &= ~RigidbodyConstraints.FreezePosition;
     }
 }

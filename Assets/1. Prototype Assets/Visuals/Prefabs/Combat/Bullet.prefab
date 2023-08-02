@@ -149,13 +149,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   bounciness: 0.2
-  useGravity: 1
+  useGravity: 0
   explosionDamage: 1
   explosionRange: 0
   maxCollisions: 5
-  maxLifeTime: 5
+  maxLifeTime: 10
   explodeOnTouch: 1
-  itsSticky: 1
+  itsSticky: 0
 --- !u!96 &-2706299966726930463
 TrailRenderer:
   serializedVersion: 2

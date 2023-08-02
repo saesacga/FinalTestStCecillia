@@ -15,6 +15,7 @@ public class TheCollector : MonoBehaviour
     [SerializeField] private GameObject _ejectedObject;
     [Range(0f,15f)]
     [SerializeField] private float _attractVelocity;
+    [SerializeField] private GameObject _canvas;
     
     private ItemData _itemDataSelected;
     private bool _canCollect = false;
@@ -23,11 +24,14 @@ public class TheCollector : MonoBehaviour
     private void OnEnable()
     {
         InventorySlot.OnUseButton += SelectToEject;
+        _canvas.SetActive(true);
     }
     private void OnDisable()
     {
         InventorySlot.OnUseButton -= SelectToEject;
         OnMoving?.Invoke(false);
+        _canvas.SetActive(false);
+
     }
 
     private void Update()
