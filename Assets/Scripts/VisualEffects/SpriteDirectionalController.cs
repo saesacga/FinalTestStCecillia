@@ -7,7 +7,7 @@ public class SpriteDirectionalController : MonoBehaviour
     [SerializeField] private Transform _mainTransform;
     private Animator _animator;
     private Vector3 currentPosition;
-    private bool isMoving;
+    [SerializeField] private bool isMoving;
     private float animAngle;
     
     private void Start()
@@ -18,9 +18,6 @@ public class SpriteDirectionalController : MonoBehaviour
     
     void LateUpdate()
     {
-        if (currentPosition != transform.position) { isMoving = true; currentPosition = transform.position; }
-        else { isMoving = false; currentPosition = transform.position; }
-
         Vector3 camForwardVector = new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z);
 
         float signedAngle = Vector3.SignedAngle(_mainTransform.forward, camForwardVector, Vector3.up);

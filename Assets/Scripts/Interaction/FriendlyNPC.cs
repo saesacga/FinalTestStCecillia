@@ -21,13 +21,14 @@ public class FriendlyNPC : MonoBehaviour
 
     #region For Movement
 
-    [SerializeField] private bool _autoMove;
+    public bool autoMove;
     private AIDestinationSetter _aiDestination;
     private Vector3 _startingPosition;
     private Vector3 _roamPosition;
-    private float _counterToNextPos = 0f;
+    private float _counterToNextPos = 20f;
     private enum State { roaming, stand }
     private State _moveState;
+    public Animator animator;
 
     #endregion
 
@@ -42,7 +43,7 @@ public class FriendlyNPC : MonoBehaviour
 
         _startingPosition = transform.position;
         _aiDestination = GetComponent<AIDestinationSetter>();
-        if (_autoMove)
+        if (autoMove)
         {
             _moveState = State.roaming;
         }
@@ -70,7 +71,7 @@ public class FriendlyNPC : MonoBehaviour
                 }
                 break;
             case State.stand:
-                if (_autoMove) { _aiDestination.ai.destination = transform.position; }
+                if (autoMove) { _aiDestination.ai.destination = transform.position; }
                 break;       
         }
         
@@ -111,10 +112,11 @@ public class FriendlyNPC : MonoBehaviour
         ActionMapReference.ActivateAllMaps();
     }
 
-    public void GoToPosition(Vector3 positionToGo)
+    public void StartRoaming()
     {
-        _autoMove = false;
-        _aiDestination.ai.destination = positionToGo;
+        _startingPosition = transform.position;
+        autoMove = true;
+        _moveState = State.roaming;
     }
     
     private Vector3 GetRoamingPosition()
@@ -127,12 +129,12 @@ public class FriendlyNPC : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             interactuarFlag = true;
-            if (_autoMove) { _moveState = State.stand; }
+            if (autoMove) { _moveState = State.stand; }
         }
     }
     private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player")) interactuarFlag = false; 
-        if(_autoMove) _moveState = State.roaming;
+        if(autoMove) _moveState = State.roaming;
     }
 }
