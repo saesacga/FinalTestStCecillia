@@ -40,15 +40,16 @@ public class ActionMapReference : MonoBehaviour
         playerMap.UI.Disable();
     }
     
-    public static void EnterInteraction() //NOTA: NUNCA ACTIVAR TODOS LOS MAPAS: playerMap.Enable();
+    public static void EnterInteraction(bool inCutscene) //NOTA: NUNCA ACTIVAR TODOS LOS MAPAS: playerMap.Enable();
     {
         playerMap.Combate.Disable();
         playerMap.Farming.Disable();
         playerMap.Movimiento.Disable();
         playerMap.MovimientoAvanzado.Disable();
-        playerMap.Interaccion.Enable();
         playerMap.PauseMap.Disable();
         playerMap.UI.Disable();
+        if (inCutscene == false) { playerMap.Movimiento.Look.Enable(); }
+        playerMap.Interaccion.Enable();
     }
 
     public static void ActivateUINavigation()

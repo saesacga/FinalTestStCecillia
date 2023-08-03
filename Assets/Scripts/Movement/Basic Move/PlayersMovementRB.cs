@@ -122,6 +122,8 @@ public class PlayersMovementRB : MonoBehaviour
                 currentInputVector = myInput;
                 break;
         }
+        
+        //Debug.Log(_slopeState);
 
         #endregion
 

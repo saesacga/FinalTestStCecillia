@@ -20,6 +20,7 @@ public class ProjectileGun : MonoBehaviour
 
     public Camera fpsCam;
     public Transform attackPoint;
+    [SerializeField] private LayerMask _rayCastLayerMaskIgnore;
     
     public TextMeshProUGUI ammunitionDisplay;
     [SerializeField] private GameObject _canvas;
@@ -92,7 +93,7 @@ public class ProjectileGun : MonoBehaviour
         RaycastHit hit;
         //check if raycast hits something
         Vector3 targetPoint;
-        if(Physics.Raycast(ray, out hit))
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity, _rayCastLayerMaskIgnore))
         {
             targetPoint = hit.point;
         }

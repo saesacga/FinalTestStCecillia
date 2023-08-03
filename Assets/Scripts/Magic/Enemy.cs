@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviour
     public int health;
     CustomProjectile customProjectile;
     private AIDestinationSetter _aiDestination;
-    
-    private Vector3 _lastposition;
+
+    private float _counterToNextPos;
     private State _state;
     
     private void Start()
@@ -20,9 +20,7 @@ public class Enemy : MonoBehaviour
         _aiDestination = GetComponent<AIDestinationSetter>();
         startingPosition = transform.position;
         roamPosition = GetRoamingPosition();
-        _state = State.Roaming; 
-
-        _lastposition = transform.position;
+        _state = State.Roaming;
     }
 
     private void Update()
@@ -31,8 +29,12 @@ public class Enemy : MonoBehaviour
         {
             default:
             case State.Roaming:
-                if (transform.position == _lastposition) { roamPosition = GetRoamingPosition(); }
-                _lastposition = transform.position;
+                if (_counterToNextPos < 10f) { _counterToNextPos += Time.deltaTime; }
+                else
+                {
+                    roamPosition = GetRoamingPosition();
+                    _counterToNextPos = 0f;
+                }
         
                 if (_aiDestination.target == null && _aiDestination.ai != null) { _aiDestination.ai.destination = roamPosition; }
                 if (Vector3.Distance(transform.position,roamPosition) < 1f) { roamPosition = GetRoamingPosition(); }

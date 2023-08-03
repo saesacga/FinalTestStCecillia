@@ -1,24 +1,83 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
+using Pathfinding;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FriendlyNPC : MonoBehaviour
 {
+    #region Members
+
+    #region For Interaction
+
     [SerializeField] private SpriteRenderer _interactSprite;
     private Fungus.Flowchart _currentFlowchart;
-
     private bool interactuarFlag = false;
+    
+    #endregion
+
+    #region For Movement
+
+    [SerializeField] private bool _autoMove;
+    private AIDestinationSetter _aiDestination;
+    private Vector3 _startingPosition;
+    private Vector3 _roamPosition;
+    private float _counterToNextPos = 0f;
+    private enum State { roaming, stand }
+    private State _moveState;
+
+    #endregion
+
+    #endregion
+    
 
     private void Start()
     {
         _currentFlowchart = GetComponentInChildren<Fungus.Flowchart>();
+
+        #region For Movement
+
+        _startingPosition = transform.position;
+        _aiDestination = GetComponent<AIDestinationSetter>();
+        if (_autoMove)
+        {
+            _moveState = State.roaming;
+        }
+        else
+        {
+            _moveState = State.stand;
+        }
+
+        #endregion
+        
     }
 
     void Update()
     {
+        #region For Movement
+
+        switch (_moveState)
+        {
+            case State.roaming:
+                if (_counterToNextPos < 20f) { _counterToNextPos += Time.deltaTime; }
+                else 
+                { 
+                    _aiDestination.ai.destination = GetRoamingPosition(); 
+                    _counterToNextPos = Random.Range(0f, 15f); 
+                }
+                break;
+            case State.stand:
+                if (_autoMove) { _aiDestination.ai.destination = transform.position; }
+                break;       
+        }
+        
+        #endregion
+
+        #region Interaction
+
         if (interactuarFlag == true)
         {
             float fade = Mathf.Lerp(1f, 0f, 0.2f);
@@ -26,7 +85,7 @@ public class FriendlyNPC : MonoBehaviour
             
             if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPressedThisFrame())
             {
-                ActionMapReference.EnterInteraction();
+                ActionMapReference.EnterInteraction(false);
                 _interactSprite.enabled = false;
                 _currentFlowchart.ExecuteBlock("DeafultBlock");
             }
@@ -36,12 +95,14 @@ public class FriendlyNPC : MonoBehaviour
             float fade = Mathf.Lerp(0f, 1f, 0.2f); 
             _interactSprite.color = new Color(1, 1, 1, fade);
         }
-    }
 
-    public void OnInteraction()
+        #endregion
+    }
+    
+    public void OnCutscene()
     {
         PlayersLook._cutsceneInProgress = true;
-        ActionMapReference.EnterInteraction();
+        ActionMapReference.EnterInteraction(true);
     }
     public void ExitBlock()
     {
@@ -49,14 +110,29 @@ public class FriendlyNPC : MonoBehaviour
         _interactSprite.enabled = true;
         ActionMapReference.ActivateAllMaps();
     }
+
+    public void GoToPosition(Vector3 positionToGo)
+    {
+        _autoMove = false;
+        _aiDestination.ai.destination = positionToGo;
+    }
+    
+    private Vector3 GetRoamingPosition()
+    {
+        return _startingPosition + Enemy.GetRandomDir() * Random.Range(5f, 20f);
+    }
     
     private void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player")) interactuarFlag = true;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            interactuarFlag = true;
+            if (_autoMove) { _moveState = State.stand; }
+        }
     }
-
     private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player")) interactuarFlag = false; 
+        if(_autoMove) _moveState = State.roaming;
     }
 }
