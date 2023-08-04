@@ -200,16 +200,6 @@ namespace Pathfinding {
 		/// <summary>\copydoc Pathfinding::IAstarAI::reachedEndOfPath</summary>
 		public bool reachedEndOfPath { get; protected set; }
 
-		private new void Update()
-		{
-			if (GetComponent<FriendlyNPC>() != null && GetComponent<FriendlyNPC>().animator != null && GetComponent<FriendlyNPC>().autoMove)
-			{
-				GetComponent<FriendlyNPC>().animator.SetBool("isMoving", !reachedEndOfPath);
-				Debug.Log("Ejecutandose");
-			}
-
-		}
-
 		/// <summary>\copydoc Pathfinding::IAstarAI::hasPath</summary>
 		public bool hasPath {
 			get {

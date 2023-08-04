@@ -19,14 +19,20 @@ public class PlayersLook : MonoBehaviour
     [SerializeField] private float smoothInputSpeedForCamera;
     [SerializeField] private Camera _cinematicCamera;
     public static bool _cutsceneInProgress = true;
+    [HideInInspector] public float mouseSensitivityAimAssist;
+
+    private void Start()
+    {
+        mouseSensitivityAimAssist = mouseSensitivity;
+    }
 
     void Update()
     {
         if (_cutsceneInProgress) { _cinematicCamera.enabled = true; GetComponent<Camera>().enabled = false; }
         else { _cinematicCamera.enabled = false; GetComponent<Camera>().enabled = true; }
         
-        myMouseInput.x = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
-        myMouseInput.y = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
+        myMouseInput.x = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().x * mouseSensitivityAimAssist * Time.deltaTime;
+        myMouseInput.y = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().y * mouseSensitivityAimAssist * Time.deltaTime;
 
         currentInputMouseVector = Vector3.SmoothDamp(currentInputMouseVector, myMouseInput, ref smoothInputVelocity, smoothInputSpeedForCamera);
 

@@ -16,6 +16,7 @@ TagManager:
   - Crossable
   - TeleportSurface
   - Slope
+  - Star
   layers:
   - Default
   - TransparentFX

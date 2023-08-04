@@ -23,6 +23,8 @@ public class ProjectileGun : MonoBehaviour
     [SerializeField] private LayerMask _rayCastLayerMaskIgnore;
     
     public TextMeshProUGUI ammunitionDisplay;
+    [SerializeField] private PlayersLook _playersLook;
+    [SerializeField] private float _aimAssistValue;
     [SerializeField] private GameObject _canvas;
 
     public bool allowInvoke = true;
@@ -33,7 +35,6 @@ public class ProjectileGun : MonoBehaviour
     {
         _canvas.SetActive(true);
     }
-
     private void OnDisable()
     {
         _canvas.SetActive(false);
@@ -48,6 +49,7 @@ public class ProjectileGun : MonoBehaviour
     private void Update()
     {
         MyInput();
+        ShootRayCheck();
         
         //Set ammo display
         if (ammunitionDisplay != null)
@@ -83,23 +85,40 @@ public class ProjectileGun : MonoBehaviour
             Reload();
         }
     }
+    
 
-    private void Shoot()
+    #region For Shooting
+
+    private Vector3 targetPoint;
+    private void ShootRayCheck()
     {
-        readyToShoot = false;
-
-        //find hit position
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
-        //check if raycast hits something
-        Vector3 targetPoint;
+        
         if(Physics.Raycast(ray, out hit, Mathf.Infinity, _rayCastLayerMaskIgnore))
         {
             targetPoint = hit.point;
+            if (hit.collider.CompareTag("Star") || hit.collider.CompareTag("Enemy"))
+            {
+                Debug.Log("Star or enemy");
+                _playersLook.mouseSensitivityAimAssist =  _playersLook.mouseSensitivity - Mathf.Clamp(_aimAssistValue, 0, (_playersLook.mouseSensitivity - 10));
+            }
+            else
+            {
+                _playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
+            }
         }
-        //if not then pick a point far away from the player
-        else { targetPoint = ray.GetPoint(75); }
-
+        else
+        {
+            targetPoint = ray.GetPoint(75);
+            _playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
+        }
+    }
+    
+    private void Shoot()
+    {
+        readyToShoot = false;
+        
         //calculate direction from attackPoint to targetPoint
         Vector3 directionWithoutSpread = targetPoint - attackPoint.position;
 
@@ -142,6 +161,8 @@ public class ProjectileGun : MonoBehaviour
         }
     }
 
+    #endregion
+    
     private void ResetShot()
     {
         readyToShoot = true;

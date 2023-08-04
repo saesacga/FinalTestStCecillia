@@ -28,7 +28,6 @@ public class FriendlyNPC : MonoBehaviour
     private float _counterToNextPos = 20f;
     private enum State { roaming, stand }
     private State _moveState;
-    public Animator animator;
 
     #endregion
 
@@ -53,7 +52,6 @@ public class FriendlyNPC : MonoBehaviour
         }
 
         #endregion
-        
     }
 
     void Update()
@@ -66,7 +64,7 @@ public class FriendlyNPC : MonoBehaviour
                 if (_counterToNextPos < 20f) { _counterToNextPos += Time.deltaTime; }
                 else 
                 { 
-                    _aiDestination.ai.destination = GetRoamingPosition(); 
+                    _aiDestination.ai.destination = GetRoamingPosition();
                     _counterToNextPos = Random.Range(0f, 15f); 
                 }
                 break;
@@ -74,6 +72,16 @@ public class FriendlyNPC : MonoBehaviour
                 if (autoMove) { _aiDestination.ai.destination = transform.position; }
                 break;       
         }
+
+        #region For Move Animation
+
+        if (GetComponentInChildren<Animator>() != null && autoMove) 
+        { 
+            GetComponentInChildren<Animator>().SetBool("isMoving", !GetComponent<AIPath>().reachedEndOfPath); 
+            Debug.Log("Ejecutandose"); 
+        }
+
+        #endregion
         
         #endregion
 
