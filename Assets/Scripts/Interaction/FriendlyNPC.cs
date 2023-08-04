@@ -77,8 +77,7 @@ public class FriendlyNPC : MonoBehaviour
 
         if (GetComponentInChildren<Animator>() != null && autoMove) 
         { 
-            GetComponentInChildren<Animator>().SetBool("isMoving", !GetComponent<AIPath>().reachedEndOfPath); 
-            Debug.Log("Ejecutandose"); 
+            GetComponentInChildren<Animator>().SetBool("isMoving", !GetComponent<AIPath>().reachedEndOfPath);
         }
 
         #endregion
