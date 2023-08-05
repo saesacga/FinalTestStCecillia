@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1071188393118609961}
   - component: {fileID: 1071188393118609967}
-  - component: {fileID: 2560865794959344550}
-  - component: {fileID: 5061214464934781169}
-  m_Layer: 0
+  - component: {fileID: 5717808518100287145}
+  m_Layer: 21
   m_Name: "\xC1rbol nube"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b4949fc9fc4f8e44a025a26f8cb809a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42ee0e24271b1124da2baea69053afd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,23 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!54 &2560865794959344550
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071188393118609962}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!114 &5061214464934781169
+--- !u!114 &5717808518100287145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,12 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071188393118609962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab04b893a3a3594cae15a07e653c815, type: 3}
+  m_Script: {fileID: 11500000, guid: 40cdf31cec223fe4e98cc0069bfff927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravityAttractor: {fileID: 1873448876035567875, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
-  _customProperties: 1
-  _gravityMultiplier: 1
+  activateBillboard: 1
 --- !u!1 &1071188394486004451
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,9 +107,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071188394486004449}
-  - component: {fileID: 2203661954328777064}
-  m_Layer: 0
-  m_Name: Arbol
+  - component: {fileID: 8757890178055676150}
+  - component: {fileID: 18162725301095667}
+  - component: {fileID: 3113607367566902092}
+  m_Layer: 21
+  m_Name: Arbol Mirador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +133,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2203661954328777064
+--- !u!65 &8757890178055676150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071188394486004451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7553542, y: 0.70780563, z: 0.20000005}
+  m_Center: {x: -0.9389505, y: -4.263533, z: 0.0000038215703}
+--- !u!54 &18162725301095667
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071188394486004451}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &3113607367566902092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +171,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071188394486004451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40cdf31cec223fe4e98cc0069bfff927, type: 3}
+  m_Script: {fileID: 11500000, guid: eab04b893a3a3594cae15a07e653c815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateBillboard: 1
+  _gravityAttractor: {fileID: 1873448876035567875, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
+  _customProperties: 1
+  _gravityMultiplier: 1
