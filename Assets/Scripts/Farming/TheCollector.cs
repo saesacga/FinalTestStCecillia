@@ -15,6 +15,7 @@ public class TheCollector : MonoBehaviour
     [SerializeField] private GameObject _ejectedObject;
     [Range(0f,15f)]
     [SerializeField] private float _attractVelocity;
+    [SerializeField] private LayerMask _rayCastLayerMaskIgnore;
     [SerializeField] private GameObject _canvas;
     
     private ItemData _itemDataSelected;
@@ -40,7 +41,7 @@ public class TheCollector : MonoBehaviour
         {
             DestroyObjects();
         }
-        else if (ActionMapReference.playerMap.Farming.Collect.IsPressed())
+        else if (ActionMapReference.playerMap.Farming.Collect.IsPressed() || ActionMapReference.playerMap.Farming.Collect.WasReleasedThisFrame())
         {
             AttractObjects();
             _canCollect = ActionMapReference.playerMap.Farming.Collect.IsPressed();
@@ -67,25 +68,60 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Destructable"))
             {
-                hit.collider.gameObject.GetComponent<IDestructible>().Destruct(_damage);
+                StartCoroutine(hit.collider.gameObject.GetComponent<IDestructible>().Destruct(_damage));
             }
         }
     }
-
+    
     private void AttractObjects()
     {
         Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
-        if (Physics.SphereCast(ray, _attractRadius, out hit, 15f))
+        if (Physics.SphereCast(ray, _attractRadius, out hit, 15f,_rayCastLayerMaskIgnore))
         {
             if (hit.transform.CompareTag("Loot"))
             {
                 GameObject attractable = hit.collider.gameObject;
-                attractable.transform.position = Vector3.Lerp(attractable.transform.position,this.transform.position,_attractVelocity * Time.deltaTime);
+                attractable.GetComponent<GravityBody>().useCustomGravity = false;
+                attractable.transform.position = Vector3.MoveTowards(attractable.transform.position,this.transform.position,_attractVelocity * Time.deltaTime);
+                
+                if (ActionMapReference.playerMap.Farming.Collect.WasReleasedThisFrame())
+                {
+                    attractable.GetComponent<GravityBody>().useCustomGravity = true;
+                }
             }
         }
     }
 
+    /*private void EjectItems(ItemData itemData)
+    {
+        Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+        Vector3 targetPoint;
+        if (Physics.Raycast(ray, out hit, 20f))
+        {
+            if (hit.collider.CompareTag("Constructible"))
+            {
+                if (Inventory._itemDictionary.TryGetValue(itemData, out InventoryItem item))
+                {
+                    _inventory.RemoveItem(itemData);
+                    GameObject _ejectedInstances = Instantiate(_ejectedObject, transform.position, transform.rotation);
+                    _ejectedInstances.GetComponent<SpriteRenderer>().sprite = itemData.icon;
+                    _ejectedInstances.GetComponent<SpriteRenderer>().enabled = true;
+                    _ejectedInstances.GetComponent<EjectedMaterial>().itemData = itemData;
+
+                    targetPoint = hit.point; 
+
+                    _ejectedInstances.GetComponent<EjectedMaterial>().targetPoint = targetPoint;
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("No le di a nada.");
+        }
+    }*/
+    
     private void EjectItems(ItemData itemData)
     {
         if (Inventory._itemDictionary.TryGetValue(itemData, out InventoryItem item))

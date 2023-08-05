@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IDestructible
 {
-    public void Destruct(int damage);
+    public IEnumerator Destruct(int damage);
 }

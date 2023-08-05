@@ -9,15 +9,21 @@ public class Destructible : MonoBehaviour, IDestructible
 {
     [SerializeField] private GameObject _lootPrefab;
     [SerializeField] private float _objectHealth;
+    private float _objectHealthForCode;
     private Vector3 _lootSpawn;
 
-    public void Destruct(int damage)
+    private void OnEnable()
     {
-        _objectHealth -= damage*Time.deltaTime;
-        if(_objectHealth<=0)
+        _objectHealthForCode = _objectHealth;
+    }
+
+    public IEnumerator Destruct(int damage)
+    {
+        _objectHealthForCode -= damage*Time.deltaTime;
+        if(_objectHealthForCode<=0)
         {
             int _lootAmount = Random.Range(3, 10);
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
             for (int i = 0; i <= _lootAmount; i++)
             {
                 #region Loot Spawn Declaration
@@ -25,6 +31,10 @@ public class Destructible : MonoBehaviour, IDestructible
                 #endregion
                 GameObject.Instantiate(_lootPrefab, _lootSpawn, this.transform.rotation);
             }
+            
+            yield return new WaitForSeconds(Random.Range(60f,200f));
+            gameObject.SetActive(true);
+            
         }
     }
 }

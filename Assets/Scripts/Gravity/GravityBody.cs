@@ -8,6 +8,7 @@ public class GravityBody : MonoBehaviour
     [SerializeField] private GravityAttractor _gravityAttractor;
     [SerializeField] private bool _customProperties;
     [SerializeField] private float _gravityMultiplier = 1f;
+    [HideInInspector] public bool useCustomGravity;
     private Transform _transform;
 
     private void Start()
@@ -17,8 +18,16 @@ public class GravityBody : MonoBehaviour
         this._transform = transform;
     }
 
+    private void OnEnable()
+    {
+        useCustomGravity = true;
+    }
+
     private void FixedUpdate()
     {
-        _gravityAttractor.GravityAttraction(this._transform, this._gravityMultiplier);
+        if (useCustomGravity)
+        {
+            _gravityAttractor.GravityAttraction(this._transform, this._gravityMultiplier);
+        }
     }
 }

@@ -17,6 +17,7 @@ TagManager:
   - TeleportSurface
   - Slope
   - Star
+  - Constructible
   layers:
   - Default
   - TransparentFX

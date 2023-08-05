@@ -20,7 +20,7 @@ public class Constructible : MonoBehaviour, IConstruible
             if (_amountProgress == _amountRequired)
             {
                 GetComponent<MeshRenderer>().material = _targetMaterial;
-                GetComponent<BoxCollider>().isTrigger = false;
+                GetComponent<Collider>().isTrigger = false;
             }
         } 
     }
