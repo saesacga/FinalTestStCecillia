@@ -32,7 +32,7 @@ public class Destructible : MonoBehaviour, IDestructible
                 GameObject.Instantiate(_lootPrefab, _lootSpawn, this.transform.rotation);
             }
             
-            yield return new WaitForSeconds(Random.Range(60f,200f));
+            yield return new WaitForSeconds(Random.Range(90f,200f));
             gameObject.SetActive(true);
             
         }

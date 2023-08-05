@@ -53,33 +53,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""EnableFarming"",
-                    ""type"": ""Button"",
-                    ""id"": ""ebde22af-d60a-44c7-a859-bcc29b4c0dc8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""EnableCombat"",
-                    ""type"": ""Button"",
-                    ""id"": ""fad94d26-42e6-4e26-87a7-f62b5fce2e80"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""EnableAdvanceMovement"",
-                    ""type"": ""Button"",
-                    ""id"": ""9109d6a5-1b6d-49ac-a7d3-2866af7d08bd"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -190,72 +163,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Jumping"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""00bc6631-1159-45e4-99f7-aabbe637d5a4"",
-                    ""path"": ""<Gamepad>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""EnableFarming"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2f760087-78fe-4507-b117-a99ea18d82d0"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""EnableFarming"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""40c24590-729a-40c7-9a14-51e3ca849f50"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""EnableCombat"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b67a2b89-a61d-4c1f-a92e-eb19de479281"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""EnableCombat"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a0a6b708-0ce9-454d-8ce2-815caf2be5dd"",
-                    ""path"": ""<Gamepad>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""EnableAdvanceMovement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7ed51a5e-ec4f-42cf-a373-5da5e44f0de3"",
-                    ""path"": ""<Keyboard>/3"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""EnableAdvanceMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1303,6 +1210,107 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""ChangeSchemes"",
+            ""id"": ""1f653380-8c0b-4aeb-a3e6-8d5e2d9b07f0"",
+            ""actions"": [
+                {
+                    ""name"": ""EnableAdvanceMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""3de9b659-080e-4a1c-86b0-9ecbe04b0d7b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EnableFarming"",
+                    ""type"": ""Button"",
+                    ""id"": ""7956eaa8-5995-442d-813a-e02648915d74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EnableCombat"",
+                    ""type"": ""Button"",
+                    ""id"": ""67bae39e-2362-4d09-918d-75d7754ec369"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""cfc66220-a07c-412b-9de6-ea5b620eb467"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""EnableCombat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d36efdc-111b-40d8-b498-423511f9e7f7"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""EnableCombat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a490d65-6893-4ab4-92f7-3673ec042bd8"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""EnableFarming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a0298b3-5896-4ac9-9379-f95ee70c0414"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""EnableFarming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ecd244e0-48f7-4dd7-ab53-4b23fd6aaaa9"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""EnableAdvanceMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d33854a2-b29f-416d-83fa-77c51aae8552"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""EnableAdvanceMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1346,9 +1354,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         m_Movimiento_Jumping = m_Movimiento.FindAction("Jumping", throwIfNotFound: true);
         m_Movimiento_Move = m_Movimiento.FindAction("Move", throwIfNotFound: true);
         m_Movimiento_Look = m_Movimiento.FindAction("Look", throwIfNotFound: true);
-        m_Movimiento_EnableFarming = m_Movimiento.FindAction("EnableFarming", throwIfNotFound: true);
-        m_Movimiento_EnableCombat = m_Movimiento.FindAction("EnableCombat", throwIfNotFound: true);
-        m_Movimiento_EnableAdvanceMovement = m_Movimiento.FindAction("EnableAdvanceMovement", throwIfNotFound: true);
         // Combate
         m_Combate = asset.FindActionMap("Combate", throwIfNotFound: true);
         m_Combate_Fire = m_Combate.FindAction("Fire", throwIfNotFound: true);
@@ -1386,6 +1391,11 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         m_MovimientoAvanzado_Dash = m_MovimientoAvanzado.FindAction("Dash", throwIfNotFound: true);
         m_MovimientoAvanzado_Trayectoria = m_MovimientoAvanzado.FindAction("Trayectoria", throwIfNotFound: true);
         m_MovimientoAvanzado_ActivarTeleport = m_MovimientoAvanzado.FindAction("ActivarTeleport", throwIfNotFound: true);
+        // ChangeSchemes
+        m_ChangeSchemes = asset.FindActionMap("ChangeSchemes", throwIfNotFound: true);
+        m_ChangeSchemes_EnableAdvanceMovement = m_ChangeSchemes.FindAction("EnableAdvanceMovement", throwIfNotFound: true);
+        m_ChangeSchemes_EnableFarming = m_ChangeSchemes.FindAction("EnableFarming", throwIfNotFound: true);
+        m_ChangeSchemes_EnableCombat = m_ChangeSchemes.FindAction("EnableCombat", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1450,9 +1460,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movimiento_Jumping;
     private readonly InputAction m_Movimiento_Move;
     private readonly InputAction m_Movimiento_Look;
-    private readonly InputAction m_Movimiento_EnableFarming;
-    private readonly InputAction m_Movimiento_EnableCombat;
-    private readonly InputAction m_Movimiento_EnableAdvanceMovement;
     public struct MovimientoActions
     {
         private @PlayerMap m_Wrapper;
@@ -1460,9 +1467,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         public InputAction @Jumping => m_Wrapper.m_Movimiento_Jumping;
         public InputAction @Move => m_Wrapper.m_Movimiento_Move;
         public InputAction @Look => m_Wrapper.m_Movimiento_Look;
-        public InputAction @EnableFarming => m_Wrapper.m_Movimiento_EnableFarming;
-        public InputAction @EnableCombat => m_Wrapper.m_Movimiento_EnableCombat;
-        public InputAction @EnableAdvanceMovement => m_Wrapper.m_Movimiento_EnableAdvanceMovement;
         public InputActionMap Get() { return m_Wrapper.m_Movimiento; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1481,15 +1485,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
-            @EnableFarming.started += instance.OnEnableFarming;
-            @EnableFarming.performed += instance.OnEnableFarming;
-            @EnableFarming.canceled += instance.OnEnableFarming;
-            @EnableCombat.started += instance.OnEnableCombat;
-            @EnableCombat.performed += instance.OnEnableCombat;
-            @EnableCombat.canceled += instance.OnEnableCombat;
-            @EnableAdvanceMovement.started += instance.OnEnableAdvanceMovement;
-            @EnableAdvanceMovement.performed += instance.OnEnableAdvanceMovement;
-            @EnableAdvanceMovement.canceled += instance.OnEnableAdvanceMovement;
         }
 
         private void UnregisterCallbacks(IMovimientoActions instance)
@@ -1503,15 +1498,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
-            @EnableFarming.started -= instance.OnEnableFarming;
-            @EnableFarming.performed -= instance.OnEnableFarming;
-            @EnableFarming.canceled -= instance.OnEnableFarming;
-            @EnableCombat.started -= instance.OnEnableCombat;
-            @EnableCombat.performed -= instance.OnEnableCombat;
-            @EnableCombat.canceled -= instance.OnEnableCombat;
-            @EnableAdvanceMovement.started -= instance.OnEnableAdvanceMovement;
-            @EnableAdvanceMovement.performed -= instance.OnEnableAdvanceMovement;
-            @EnableAdvanceMovement.canceled -= instance.OnEnableAdvanceMovement;
         }
 
         public void RemoveCallbacks(IMovimientoActions instance)
@@ -1957,6 +1943,68 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         }
     }
     public MovimientoAvanzadoActions @MovimientoAvanzado => new MovimientoAvanzadoActions(this);
+
+    // ChangeSchemes
+    private readonly InputActionMap m_ChangeSchemes;
+    private List<IChangeSchemesActions> m_ChangeSchemesActionsCallbackInterfaces = new List<IChangeSchemesActions>();
+    private readonly InputAction m_ChangeSchemes_EnableAdvanceMovement;
+    private readonly InputAction m_ChangeSchemes_EnableFarming;
+    private readonly InputAction m_ChangeSchemes_EnableCombat;
+    public struct ChangeSchemesActions
+    {
+        private @PlayerMap m_Wrapper;
+        public ChangeSchemesActions(@PlayerMap wrapper) { m_Wrapper = wrapper; }
+        public InputAction @EnableAdvanceMovement => m_Wrapper.m_ChangeSchemes_EnableAdvanceMovement;
+        public InputAction @EnableFarming => m_Wrapper.m_ChangeSchemes_EnableFarming;
+        public InputAction @EnableCombat => m_Wrapper.m_ChangeSchemes_EnableCombat;
+        public InputActionMap Get() { return m_Wrapper.m_ChangeSchemes; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ChangeSchemesActions set) { return set.Get(); }
+        public void AddCallbacks(IChangeSchemesActions instance)
+        {
+            if (instance == null || m_Wrapper.m_ChangeSchemesActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ChangeSchemesActionsCallbackInterfaces.Add(instance);
+            @EnableAdvanceMovement.started += instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.performed += instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.canceled += instance.OnEnableAdvanceMovement;
+            @EnableFarming.started += instance.OnEnableFarming;
+            @EnableFarming.performed += instance.OnEnableFarming;
+            @EnableFarming.canceled += instance.OnEnableFarming;
+            @EnableCombat.started += instance.OnEnableCombat;
+            @EnableCombat.performed += instance.OnEnableCombat;
+            @EnableCombat.canceled += instance.OnEnableCombat;
+        }
+
+        private void UnregisterCallbacks(IChangeSchemesActions instance)
+        {
+            @EnableAdvanceMovement.started -= instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.performed -= instance.OnEnableAdvanceMovement;
+            @EnableAdvanceMovement.canceled -= instance.OnEnableAdvanceMovement;
+            @EnableFarming.started -= instance.OnEnableFarming;
+            @EnableFarming.performed -= instance.OnEnableFarming;
+            @EnableFarming.canceled -= instance.OnEnableFarming;
+            @EnableCombat.started -= instance.OnEnableCombat;
+            @EnableCombat.performed -= instance.OnEnableCombat;
+            @EnableCombat.canceled -= instance.OnEnableCombat;
+        }
+
+        public void RemoveCallbacks(IChangeSchemesActions instance)
+        {
+            if (m_Wrapper.m_ChangeSchemesActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IChangeSchemesActions instance)
+        {
+            foreach (var item in m_Wrapper.m_ChangeSchemesActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_ChangeSchemesActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public ChangeSchemesActions @ChangeSchemes => new ChangeSchemesActions(this);
     private int m_GamepadSchemeIndex = -1;
     public InputControlScheme GamepadScheme
     {
@@ -1989,9 +2037,6 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         void OnJumping(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
-        void OnEnableFarming(InputAction.CallbackContext context);
-        void OnEnableCombat(InputAction.CallbackContext context);
-        void OnEnableAdvanceMovement(InputAction.CallbackContext context);
     }
     public interface ICombateActions
     {
@@ -2035,5 +2080,11 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnTrayectoria(InputAction.CallbackContext context);
         void OnActivarTeleport(InputAction.CallbackContext context);
+    }
+    public interface IChangeSchemesActions
+    {
+        void OnEnableAdvanceMovement(InputAction.CallbackContext context);
+        void OnEnableFarming(InputAction.CallbackContext context);
+        void OnEnableCombat(InputAction.CallbackContext context);
     }
 }

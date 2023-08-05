@@ -31,33 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "EnableFarming",
-                    "type": "Button",
-                    "id": "ebde22af-d60a-44c7-a859-bcc29b4c0dc8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "EnableCombat",
-                    "type": "Button",
-                    "id": "fad94d26-42e6-4e26-87a7-f62b5fce2e80",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "EnableAdvanceMovement",
-                    "type": "Button",
-                    "id": "9109d6a5-1b6d-49ac-a7d3-2866af7d08bd",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -168,72 +141,6 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Jumping",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "00bc6631-1159-45e4-99f7-aabbe637d5a4",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "EnableFarming",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2f760087-78fe-4507-b117-a99ea18d82d0",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "EnableFarming",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "40c24590-729a-40c7-9a14-51e3ca849f50",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "EnableCombat",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b67a2b89-a61d-4c1f-a92e-eb19de479281",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "EnableCombat",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a0a6b708-0ce9-454d-8ce2-815caf2be5dd",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "EnableAdvanceMovement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7ed51a5e-ec4f-42cf-a373-5da5e44f0de3",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "EnableAdvanceMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1277,6 +1184,107 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "ActivarTeleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ChangeSchemes",
+            "id": "1f653380-8c0b-4aeb-a3e6-8d5e2d9b07f0",
+            "actions": [
+                {
+                    "name": "EnableAdvanceMovement",
+                    "type": "Button",
+                    "id": "3de9b659-080e-4a1c-86b0-9ecbe04b0d7b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EnableFarming",
+                    "type": "Button",
+                    "id": "7956eaa8-5995-442d-813a-e02648915d74",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EnableCombat",
+                    "type": "Button",
+                    "id": "67bae39e-2362-4d09-918d-75d7754ec369",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cfc66220-a07c-412b-9de6-ea5b620eb467",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "EnableCombat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d36efdc-111b-40d8-b498-423511f9e7f7",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "EnableCombat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a490d65-6893-4ab4-92f7-3673ec042bd8",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "EnableFarming",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a0298b3-5896-4ac9-9379-f95ee70c0414",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "EnableFarming",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ecd244e0-48f7-4dd7-ab53-4b23fd6aaaa9",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "EnableAdvanceMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d33854a2-b29f-416d-83fa-77c51aae8552",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "EnableAdvanceMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

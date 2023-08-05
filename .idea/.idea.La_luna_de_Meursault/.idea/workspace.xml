@@ -6,18 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Loot/CuerdaIcon.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Loot/CuerdaIcon.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Luna.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Luna.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Arbol Farmeo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Arbol Farmeo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FriendlyCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FriendlyCharacter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Construible/Constructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Construible/Constructible.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/IDestructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/IDestructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gravity/GravityBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gravity/GravityBody.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,8 @@
       <workItem from="1690918132598" duration="20911000" />
       <workItem from="1691002836691" duration="26631000" />
       <workItem from="1691086318791" duration="14443000" />
-      <workItem from="1691175366714" duration="9575000" />
+      <workItem from="1691175366714" duration="9602000" />
+      <workItem from="1691263213030" duration="2050000" />
     </task>
     <servers />
   </component>

@@ -34,6 +34,10 @@ public class ActionMapReference : MonoBehaviour
         playerMap.Combate.Enable();
         playerMap.Farming.Enable();
         playerMap.Movimiento.Enable();
+        playerMap.ChangeSchemes.EnableCombat.Enable();
+        
+        playerMap.ChangeSchemes.EnableFarming.Enable();
+        playerMap.ChangeSchemes.EnableAdvanceMovement.Enable();
         playerMap.MovimientoAvanzado.Enable();
         playerMap.Interaccion.Enable();
         playerMap.PauseMap.Enable();
@@ -65,19 +69,19 @@ public class ActionMapReference : MonoBehaviour
 
     private void ChangeGameplaySchemes()
     {
-        if (playerMap.Movimiento.EnableCombat.WasPerformedThisFrame())
+        if (playerMap.ChangeSchemes.EnableCombat.WasPerformedThisFrame())
         {
             _gameplaySchemes[0].SetActive(true);
             _gameplaySchemes[1].SetActive(false);
             _gameplaySchemes[2].SetActive(false);
         }
-        else if (playerMap.Movimiento.EnableFarming.WasPerformedThisFrame())
+        else if (playerMap.ChangeSchemes.EnableFarming.WasPerformedThisFrame())
         {
             _gameplaySchemes[1].SetActive(true);
             _gameplaySchemes[0].SetActive(false);
             _gameplaySchemes[2].SetActive(false);
         }
-        else if (playerMap.Movimiento.EnableAdvanceMovement.WasPerformedThisFrame())
+        else if (playerMap.ChangeSchemes.EnableAdvanceMovement.WasPerformedThisFrame())
         {
             _gameplaySchemes[2].SetActive(true);
             _gameplaySchemes[0].SetActive(false);
