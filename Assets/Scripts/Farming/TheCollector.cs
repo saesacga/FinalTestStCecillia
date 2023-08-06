@@ -53,9 +53,13 @@ public class TheCollector : MonoBehaviour
                 EjectItems(_itemDataSelected);
             }
         }
-        else if (ActionMapReference.playerMap.Farming.MoveObject.IsPressed() || ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
+        else if (ActionMapReference.playerMap.Farming.MoveObject.IsPressed())
         { 
             MoveObjects();
+        }
+        else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
+        {
+            OnMoving?.Invoke(false);
         }
     }
 
@@ -126,24 +130,9 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Moveable"))
             {
-                if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
-                {
-                    hit.collider.GetComponent<Moveable>().Moving(true);
-                    _collectorStep5Completed = true;
-                }
-                else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
-                {
-                    OnMoving?.Invoke(false);
-                }
+                hit.collider.GetComponent<Moveable>().Moving(true);
+                _collectorStep5Completed = true;
             }
-            else
-            { 
-                OnMoving?.Invoke(false);
-            }
-        }
-        else
-        {
-            OnMoving?.Invoke(false);
         }
     }
     

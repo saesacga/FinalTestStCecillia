@@ -6,10 +6,15 @@ using UnityEngine;
 
 public class Moveable : MonoBehaviour
 {
+    #region Members
+
     [SerializeField] private Transform _objectGrabPoint;
     [SerializeField] private float _pickUpForce = 150;
     private Rigidbody _rigidbody;
     private bool moving;
+
+    #endregion
+    
     private void OnEnable()
     {
         TheCollector.OnMoving += Moving;
@@ -24,18 +29,12 @@ public class Moveable : MonoBehaviour
     {
         if (moving)
         {
-            _rigidbody.MovePosition(_objectGrabPoint.position);            
+            Vector3 direction = _objectGrabPoint.position - transform.position;
+            if (Vector3.Distance(transform.position, _objectGrabPoint.position) > 0.5f)
+            {
+                _rigidbody.AddForce(direction.normalized * 10, ForceMode.VelocityChange);   
+            }
         }
-
-    }
-
-    private void MoveObject()
-    {
-        if (Vector3.Distance(transform.position, _objectGrabPoint.position) > 0.1f)
-        {
-            Vector3 moveDirection = (_objectGrabPoint.position - transform.position);
-            _rigidbody.AddForce(moveDirection * _pickUpForce);
-        }   
     }
 
     public virtual void Moving(bool moving)
@@ -43,17 +42,12 @@ public class Moveable : MonoBehaviour
         if (moving)
         {
             this.moving = true;
-            //transform.parent = _objectGrabPoint; 
-            //_rigidbody.useGravity = false;
             _rigidbody.drag = 10; 
             GetComponent<GravityBody>().useCustomGravity = false; 
-            MoveObject(); //Cute animation
         }
         else
         { 
             this.moving = false;
-            //transform.parent = null; 
-            //GetComponent<Rigidbody>().useGravity = true;
             _rigidbody.drag = 1;
             GetComponent<GravityBody>().useCustomGravity = true;
         }
