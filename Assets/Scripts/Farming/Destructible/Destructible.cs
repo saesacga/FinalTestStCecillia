@@ -11,6 +11,7 @@ public class Destructible : MonoBehaviour, IDestructible
     [SerializeField] private float _objectHealth;
     private float _objectHealthForCode;
     private Vector3 _lootSpawn;
+    public static bool _collectorStep2Completed;
 
     private void OnEnable()
     {
@@ -22,6 +23,7 @@ public class Destructible : MonoBehaviour, IDestructible
         _objectHealthForCode -= damage*Time.deltaTime;
         if(_objectHealthForCode<=0)
         {
+            _collectorStep2Completed = true;
             int _lootAmount = Random.Range(3, 10);
             gameObject.SetActive(false);
             for (int i = 0; i <= _lootAmount; i++)

@@ -31,7 +31,7 @@ public class FriendlyNPC : MonoBehaviour
 
     #endregion
 
-    #region For unlockables
+    #region For Unlockables
 
     public static bool unlockCollector;
     public static bool unlockAdvanceMovement;
@@ -112,15 +112,6 @@ public class FriendlyNPC : MonoBehaviour
         }
 
         #endregion
-
-        #region For Tutorials
-
-        if (ActionMapReference.playerMap.ChangeSchemes.EnableFarming.WasPerformedThisFrame())
-        {
-            _currentFlowchart.SetBooleanVariable("collectorUsed", true);
-        }
-
-        #endregion
     }
     
     public void OnCutscene()
@@ -133,13 +124,16 @@ public class FriendlyNPC : MonoBehaviour
     {
         if (farming)
         {
-            unlockCollector = true;
+            unlockCollector = true; 
+            ActionMapReference.playerMap.Farming.Enable();
             ActionMapReference.playerMap.ChangeSchemes.EnableFarming.Enable();
         }
 
         if (advanceMove)
         {
             unlockAdvanceMovement = true;
+            ActionMapReference.playerMap.MovimientoAvanzado.Enable();
+            ActionMapReference.playerMap.ChangeSchemes.EnableAdvanceMovement.Enable();
         }
     }
     

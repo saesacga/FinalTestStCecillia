@@ -92,35 +92,6 @@ public class TheCollector : MonoBehaviour
             }
         }
     }
-
-    /*private void EjectItems(ItemData itemData)
-    {
-        Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        RaycastHit hit;
-        Vector3 targetPoint;
-        if (Physics.Raycast(ray, out hit, 20f))
-        {
-            if (hit.collider.CompareTag("Constructible"))
-            {
-                if (Inventory._itemDictionary.TryGetValue(itemData, out InventoryItem item))
-                {
-                    _inventory.RemoveItem(itemData);
-                    GameObject _ejectedInstances = Instantiate(_ejectedObject, transform.position, transform.rotation);
-                    _ejectedInstances.GetComponent<SpriteRenderer>().sprite = itemData.icon;
-                    _ejectedInstances.GetComponent<SpriteRenderer>().enabled = true;
-                    _ejectedInstances.GetComponent<EjectedMaterial>().itemData = itemData;
-
-                    targetPoint = hit.point; 
-
-                    _ejectedInstances.GetComponent<EjectedMaterial>().targetPoint = targetPoint;
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("No le di a nada.");
-        }
-    }*/
     
     private void EjectItems(ItemData itemData)
     {
@@ -145,7 +116,8 @@ public class TheCollector : MonoBehaviour
             _ejectedInstances.GetComponent<EjectedMaterial>().targetPoint = targetPoint;
         }
     }
-    
+
+    public static bool _collectorStep5Completed;
     private void MoveObjects()
     {
         Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -154,11 +126,12 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Moveable"))
             {
-                if (ActionMapReference.playerMap.Farming.MoveObject.IsPressed())
+                if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
                 {
-                    OnMoving?.Invoke(true);
+                    hit.collider.GetComponent<Moveable>().Moving(true);
+                    _collectorStep5Completed = true;
                 }
-                else
+                else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
                 {
                     OnMoving?.Invoke(false);
                 }
@@ -183,11 +156,13 @@ public class TheCollector : MonoBehaviour
             _itemDataSelected = itemData;
         }
     }
-    
+
+    public static bool _collectorStep3Completed;
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
         {
+            _collectorStep3Completed = true;
             collider.GetComponent<IAttractable>().CollectOnAttract();
         }
     }

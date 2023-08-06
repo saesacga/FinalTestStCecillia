@@ -8,6 +8,7 @@ public class Constructible : MonoBehaviour, IConstruible
     [SerializeField] private int _amountRequired;
     [SerializeField] private Material _targetMaterial;
     private int _amountProgress = 0;
+    public static bool _collectorStep4Completed;
     
     public void Consturct(ItemData itemData)
     {
@@ -19,6 +20,7 @@ public class Constructible : MonoBehaviour, IConstruible
             }
             if (_amountProgress == _amountRequired)
             {
+                _collectorStep4Completed = true;
                 GetComponent<MeshRenderer>().material = _targetMaterial;
                 GetComponent<Collider>().isTrigger = false;
             }

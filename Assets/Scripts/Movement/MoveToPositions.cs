@@ -49,6 +49,7 @@ public class MoveToPositions : MonoBehaviour
             }
             else
             {
+                //Intentar Look at player para tratar de evitar bugs visuales
                 _move = false;
                 GetComponentInChildren<Animator>().SetBool("isMoving", false);
                 if (_moveAtEnd)

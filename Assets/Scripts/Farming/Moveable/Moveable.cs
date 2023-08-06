@@ -6,34 +6,56 @@ using UnityEngine;
 
 public class Moveable : MonoBehaviour
 {
+    [SerializeField] private Transform _objectGrabPoint;
+    [SerializeField] private float _pickUpForce = 150;
+    private Rigidbody _rigidbody;
+    private bool moving;
     private void OnEnable()
     {
         TheCollector.OnMoving += Moving;
+        _rigidbody = GetComponent<Rigidbody>();
     }
     private void OnDisable()
     {
         TheCollector.OnMoving -= Moving;
     }
     
-    [SerializeField] private GameObject _moveWith;
-    //protected static GameObject moveWithStatic;
-    //private void Start() { moveWithStatic = _moveWith; }
-
-    protected virtual void Moving(bool moving)
+    private void FixedUpdate()
     {
         if (moving)
         {
-            transform.SetParent(_moveWith.transform);
-            GetComponent<Rigidbody>().useGravity = false;
-            GetComponent<Rigidbody>().drag = 10;
-            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            _rigidbody.MovePosition(_objectGrabPoint.position);            
+        }
+
+    }
+
+    private void MoveObject()
+    {
+        if (Vector3.Distance(transform.position, _objectGrabPoint.position) > 0.1f)
+        {
+            Vector3 moveDirection = (_objectGrabPoint.position - transform.position);
+            _rigidbody.AddForce(moveDirection * _pickUpForce);
+        }   
+    }
+
+    public virtual void Moving(bool moving)
+    {
+        if (moving)
+        {
+            this.moving = true;
+            //transform.parent = _objectGrabPoint; 
+            //_rigidbody.useGravity = false;
+            _rigidbody.drag = 10; 
+            GetComponent<GravityBody>().useCustomGravity = false; 
+            MoveObject(); //Cute animation
         }
         else
-        {
-            transform.SetParent(null);
-            GetComponent<Rigidbody>().useGravity = true;
-            GetComponent<Rigidbody>().drag = 1;
-            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        { 
+            this.moving = false;
+            //transform.parent = null; 
+            //GetComponent<Rigidbody>().useGravity = true;
+            _rigidbody.drag = 1;
+            GetComponent<GravityBody>().useCustomGravity = true;
         }
     }
 }

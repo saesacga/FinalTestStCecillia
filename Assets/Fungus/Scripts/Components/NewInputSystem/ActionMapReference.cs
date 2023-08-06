@@ -32,15 +32,12 @@ public class ActionMapReference : MonoBehaviour
     {
         Cursor.visible = false;
         playerMap.Combate.Enable();
-        playerMap.Farming.Enable();
         playerMap.Movimiento.Enable();
         playerMap.ChangeSchemes.EnableCombat.Enable();
-        
-        playerMap.ChangeSchemes.EnableFarming.Enable();
-        playerMap.ChangeSchemes.EnableAdvanceMovement.Enable();
-        playerMap.MovimientoAvanzado.Enable();
         playerMap.Interaccion.Enable();
         playerMap.PauseMap.Enable();
+        if (FriendlyNPC.unlockCollector) { playerMap.ChangeSchemes.EnableFarming.Enable(); playerMap.Farming.Enable(); }
+        if (FriendlyNPC.unlockAdvanceMovement) { playerMap.ChangeSchemes.EnableAdvanceMovement.Enable(); playerMap.MovimientoAvanzado.Enable(); }
         playerMap.UI.Disable();
     }
     
@@ -50,6 +47,7 @@ public class ActionMapReference : MonoBehaviour
         playerMap.Farming.Disable();
         playerMap.Movimiento.Disable();
         playerMap.MovimientoAvanzado.Disable();
+        playerMap.ChangeSchemes.Disable();
         playerMap.PauseMap.Disable();
         playerMap.UI.Disable();
         if (inCutscene == false) { playerMap.Movimiento.Look.Enable(); }
@@ -63,6 +61,7 @@ public class ActionMapReference : MonoBehaviour
         playerMap.Farming.Disable();
         playerMap.Movimiento.Disable();
         playerMap.MovimientoAvanzado.Disable();
+        playerMap.ChangeSchemes.Disable();
         playerMap.Interaccion.Disable();
         playerMap.UI.Enable();
     }
