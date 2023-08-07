@@ -9,9 +9,10 @@ public class Moveable : MonoBehaviour
     #region Members
 
     [SerializeField] private Transform _objectGrabPoint;
-    [SerializeField] private float _pickUpForce = 150;
+    private static Transform _objectGrabPointStatic;
+    [SerializeField] private GameObject _moveable;
     private Rigidbody _rigidbody;
-    private bool moving;
+    private bool _moving;
 
     #endregion
     
@@ -24,30 +25,57 @@ public class Moveable : MonoBehaviour
     {
         TheCollector.OnMoving -= Moving;
     }
-    
+
+    private void Update()
+    {
+        if (_objectGrabPoint != null)
+        {
+            _objectGrabPointStatic = _objectGrabPoint;
+        }
+    }
+
     private void FixedUpdate()
     {
-        if (moving)
+        if (_moving)
         {
-            Vector3 direction = _objectGrabPoint.position - transform.position;
-            if (Vector3.Distance(transform.position, _objectGrabPoint.position) > 0.5f)
+            Vector3 direction = _objectGrabPointStatic.position - transform.position;
+            if (Vector3.Distance(transform.position, _objectGrabPointStatic.position) > 0.5f)
             {
                 _rigidbody.AddForce(direction.normalized * 10, ForceMode.VelocityChange);   
             }
         }
     }
 
+    private static GameObject _cubeInstanceObject;
+    private static GameObject _currentCube;
     public virtual void Moving(bool moving)
     {
         if (moving)
         {
-            this.moving = true;
+            if (gameObject == _cubeInstanceObject)
+            {
+                Destroy(_currentCube);
+                _currentCube = _cubeInstanceObject;
+                _cubeInstanceObject = null;
+            }
+
+            if (_currentCube == null) { _currentCube = gameObject; }
+            if (_cubeInstanceObject == null) { _cubeInstanceObject = Instantiate(_moveable, new Vector3(-56.2f,177f,-283.2f), Quaternion.identity); }
+            
+            _moving = true;
             _rigidbody.drag = 10; 
             GetComponent<GravityBody>().useCustomGravity = false; 
         }
         else
-        { 
-            this.moving = false;
+        {
+            if (gameObject == _cubeInstanceObject)
+            {
+                if (gameObject != _cubeInstanceObject)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            _moving = false;
             _rigidbody.drag = 1;
             GetComponent<GravityBody>().useCustomGravity = true;
         }

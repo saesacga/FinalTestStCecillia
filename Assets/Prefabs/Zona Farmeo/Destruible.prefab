@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1b61a7c97f917ab418b087c962f6177e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f4dc5541082d9941b2761054dd1deaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -145,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7364893, y: 4.898098, z: 0.20000005}
-  m_Center: {x: -0.31475714, y: -2.1684456, z: -0.0000024006513}
+  m_Size: {x: 1.986536, y: 4.8980975, z: 0.20000005}
+  m_Center: {x: 0.35243344, y: -2.1684475, z: -0.0000016270172}
 --- !u!65 &2800351741846454700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -158,8 +158,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.389242, y: 3.7010598, z: 0.20000005}
-  m_Center: {x: -0.76642704, y: 1.0713933, z: 0.00000026162007}
+  m_Size: {x: 4.9853125, y: 3.335968, z: 0.20000005}
+  m_Center: {x: -0.064463146, y: 0.17354178, z: -0.0000001424218}
 --- !u!114 &2380176474743543076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,9 +217,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.19339621, b: 0.6263772, a: 1}
-  m_Intensity: 1.5
-  m_Range: 15
+  m_Color: {r: 1, g: 0.4292453, b: 0.9604099, a: 1}
+  m_Intensity: 3
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
