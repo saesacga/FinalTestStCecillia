@@ -9,15 +9,18 @@ public class PlayersMovementRB : MonoBehaviour
     
     #region For Movement
     
+    [Header("Movement related")]
     [SerializeField] private float _speed;
     [SerializeField] private Transform _orientation;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private GravityAttractor _gravityAttractor;
+    private float _currentSpeed;
     
     #endregion
     
     #region For Dash
 
+    [Header("Dash related")]
     [SerializeField] private AnimationCurve _dashSpeedMultiplierCurve;
     private float _dashSpeed = 1;
     [SerializeField] private float _dashTime;
@@ -28,18 +31,22 @@ public class PlayersMovementRB : MonoBehaviour
     
     #region For Jump
     
+    [Header("Jump related")]
     [SerializeField] private float _jumpForce;
+    [SerializeField] private AnimationCurve _speedInTheAirCurve;
+    private float _speedInTheAirOverTime;
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private LayerMask _groundMask;
     private bool _isGrounded;
     private bool _jumpPerformed;
-    private float _groundDistance = 0.5f;
+    private float _groundDistance = 0.8f;
     private float _jumpCooldown = 0.5f;
     
     #endregion
 
     #region For Slopes
     
+    [Header("Slopes related")]
     [SerializeField] private float _slownessOnCollision;
     [SerializeField] private float _slopeExtraGravity;
     [SerializeField] private LayerMask _slopeRayMask;
@@ -54,7 +61,8 @@ public class PlayersMovementRB : MonoBehaviour
     #endregion
 
     #region For WallJump
-
+    
+    [Header("WallJump related")]
     private bool _allowWallJump;
     private bool _inTheAir;
     private float _wallJumpContador;
@@ -90,6 +98,20 @@ public class PlayersMovementRB : MonoBehaviour
         GetAngle();
         
         _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+        if (_isGrounded) 
+        { 
+            _currentSpeed = _speed;
+            _speedInTheAirOverTime = 0;
+        }
+        else 
+        { 
+            if (_speedInTheAirOverTime <= 2f)
+            { 
+                _currentSpeed = _speedInTheAirCurve.Evaluate(_speedInTheAirOverTime); 
+                _speedInTheAirOverTime+=Time.deltaTime; 
+            } 
+        }
+        Debug.Log(_currentSpeed);
         
         #region Movimiento state machine
         
@@ -122,8 +144,6 @@ public class PlayersMovementRB : MonoBehaviour
                 currentInputVector = myInput;
                 break;
         }
-        
-        //Debug.Log(_slopeState);
 
         #endregion
 
@@ -201,7 +221,7 @@ public class PlayersMovementRB : MonoBehaviour
         #region Movimiento
         
         float verticalSpeed = Vector3.Dot(transform.up, _rigidbody.velocity);
-        _rigidbody.velocity = (_orientation.right * (currentInputVector.x * _speed * _dashSpeed * (Time.deltaTime * 100))) + (transform.up * verticalSpeed) + (_orientation.forward * (currentInputVector.z * _speed * _dashSpeed * (Time.deltaTime * 100)));
+        _rigidbody.velocity = (_orientation.right * (currentInputVector.x * _currentSpeed * _dashSpeed * (Time.deltaTime * 100))) + (transform.up * verticalSpeed) + (_orientation.forward * (currentInputVector.z * _currentSpeed * _dashSpeed * (Time.deltaTime * 100)));
         
         #endregion
     }
@@ -300,9 +320,6 @@ public class PlayersMovementRB : MonoBehaviour
             _slopeState = SlopeState.normal;
         }
         else { _surfaceAngle = 0; _slopeState = SlopeState.normal; }
-
-        //if (_surfaceAngle is < 50f and > 1f && _exitSlope == false) { _slopeForce = _slopeExtraGravity; GetComponent<Collider>().material = null; }
-        //else { _slopeForce = 1; GetComponent<Collider>().material = _playerMaterial; }
     }
     
     private void OnCollisionEnter(Collision collision)

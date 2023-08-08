@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Materials/Suelo1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Materials/Suelo1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Materials/SueloPlantas.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Materials/SueloPlantas.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Prueba.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Prueba.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Suelo2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Suelo2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/SueloPlantas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/SueloPlantas.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/SueloPrueba.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/SueloPrueba.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Luna.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Luna.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Arbol Farmeo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Arbol Farmeo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Destruible.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Destruible.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Moveable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Moveable.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Ilustracion_sin_titulo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Ilustracion_sin_titulo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Stars.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Stars/EstrellaLinda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Stars/EstrellaLinda.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +118,8 @@
       <workItem from="1691175366714" duration="9602000" />
       <workItem from="1691263213030" duration="19413000" />
       <workItem from="1691354436988" duration="12494000" />
+      <workItem from="1691434096774" duration="1000" />
+      <workItem from="1691434116430" duration="20000" />
     </task>
     <servers />
   </component>
