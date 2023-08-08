@@ -111,7 +111,6 @@ public class PlayersMovementRB : MonoBehaviour
                 _speedInTheAirOverTime+=Time.deltaTime; 
             } 
         }
-        Debug.Log(_currentSpeed);
         
         #region Movimiento state machine
         

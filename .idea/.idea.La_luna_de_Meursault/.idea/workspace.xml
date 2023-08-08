@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersMovementRB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersMovementRB.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Builds/StCecilia.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Builds\StCecilia.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\samue\Documents\Samuel_U\TDG\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -120,6 +121,7 @@
       <workItem from="1691354436988" duration="12494000" />
       <workItem from="1691434096774" duration="1000" />
       <workItem from="1691434116430" duration="20000" />
+      <workItem from="1691434167268" duration="7376000" />
     </task>
     <servers />
   </component>
