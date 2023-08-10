@@ -71,6 +71,7 @@ public class ProjectileGun : MonoBehaviour
         //shooting
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
+            GetComponentInChildren<Animator>().Play("ShootAnimation");
             bulletsShot = 0;
             Shoot();
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5409085960967893505}
   - component: {fileID: 5276129589765887820}
   - component: {fileID: 3371213510994645041}
-  m_Layer: 16
+  m_Layer: 22
   m_Name: Moveable
   m_TagString: Moveable
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 6335075642453519928}
   - component: {fileID: 6335075642453519922}
   - component: {fileID: 6335075642453519931}
-  m_Layer: 16
+  m_Layer: 22
   m_Name: Moveable
   m_TagString: Moveable
   m_Icon: {fileID: 0}

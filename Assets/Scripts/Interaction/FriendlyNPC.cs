@@ -95,8 +95,7 @@ public class FriendlyNPC : MonoBehaviour
 
         if (interactuarFlag == true)
         {
-            float fade = Mathf.Lerp(1f, 0f, 0.2f);
-            _interactSprite.color = new Color(1, 1, 1, fade);
+            _interactSprite.enabled = true;
             
             if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPressedThisFrame())
             {
@@ -107,8 +106,7 @@ public class FriendlyNPC : MonoBehaviour
         }
         else
         {
-            float fade = Mathf.Lerp(0f, 1f, 0.2f); 
-            _interactSprite.color = new Color(1, 1, 1, fade);
+            _interactSprite.enabled = false;
         }
 
         #endregion
