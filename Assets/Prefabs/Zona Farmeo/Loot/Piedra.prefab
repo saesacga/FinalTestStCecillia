@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d1f3b05f09a16374fa55aa743ffacd9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7465dba21fd12b143a82203178032750, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,10 +109,10 @@ GameObject:
   - component: {fileID: 4614877487189304977}
   - component: {fileID: -2765463344691685039}
   - component: {fileID: 8283121753151538102}
-  - component: {fileID: 3842211396207077571}
+  - component: {fileID: 7946640251799445158}
   - component: {fileID: 2667065090512387225}
   m_Layer: 11
-  m_Name: Cuerda
+  m_Name: Piedra
   m_TagString: Loot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ CapsuleCollider:
   m_Height: 0.64
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3842211396207077571
+--- !u!114 &7946640251799445158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,10 +173,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7699822805399918671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd3d24930334b44ea69a26f147c6c7f, type: 3}
+  m_Script: {fileID: 11500000, guid: a2297209294614040aa18659eadec943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ropeData: {fileID: 11400000, guid: a3a789345ab691e409f869ef94be8ae7, type: 2}
+  itemData: {fileID: 11400000, guid: 004291c57399aa94a829f90239331d84, type: 2}
 --- !u!114 &2667065090512387225
 MonoBehaviour:
   m_ObjectHideFlags: 0

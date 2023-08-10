@@ -80,4 +80,12 @@ public class Moveable : MonoBehaviour
             GetComponent<GravityBody>().useCustomGravity = true;
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("Player") && _moving)
+        {
+            _moving = false;
+        }
+    }
 }

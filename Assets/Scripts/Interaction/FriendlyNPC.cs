@@ -37,7 +37,7 @@ public class FriendlyNPC : MonoBehaviour
     public static bool unlockAdvanceMovement;
 
     #endregion
-
+    
     #endregion
     
 
@@ -77,7 +77,7 @@ public class FriendlyNPC : MonoBehaviour
                 break;
             case State.stand:
                 if (autoMove) { _aiDestination.ai.destination = transform.position; }
-                break;       
+                break;
         }
 
         #region For Move Animation

@@ -53,7 +53,7 @@ public class TheCollector : MonoBehaviour
                 EjectItems(_itemDataSelected);
             }
         }
-        else if (ActionMapReference.playerMap.Farming.MoveObject.IsPressed())
+        else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
         { 
             MoveObjects();
         }

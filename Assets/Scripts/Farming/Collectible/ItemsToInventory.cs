@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class ItemsToInventory : MonoBehaviour
+public class ItemsToInventory : MonoBehaviour, IAttractable
 {
     public static event Action<ItemData> OnItemCollected;
     public void GetInventoryValues(ItemData itemData)
@@ -25,5 +25,12 @@ public class ItemsToInventory : MonoBehaviour
             Destroy(gameObject); 
             OnItemCollected?.Invoke(itemData);
         }
+    }
+    
+    public ItemData itemData;
+    
+    public void CollectOnAttract()
+    {
+        GetInventoryValues(itemData);
     }
 }

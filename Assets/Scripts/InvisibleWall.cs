@@ -15,4 +15,9 @@ public class InvisibleWall : MonoBehaviour
             _flowchart.ExecuteBlock("InvisibleWallHit");
         }
     }
+
+    public void DisableInvisibleWall()
+    {
+        GetComponent<Collider>().isTrigger = true;
+    }
 }

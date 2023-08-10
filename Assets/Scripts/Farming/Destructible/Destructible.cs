@@ -24,7 +24,7 @@ public class Destructible : MonoBehaviour, IDestructible
         if(_objectHealthForCode<=0)
         {
             _collectorStep2Completed = true;
-            int _lootAmount = Random.Range(3, 10);
+            int _lootAmount = Random.Range(4, 10);
             gameObject.SetActive(false);
             for (int i = 0; i <= _lootAmount; i++)
             {
@@ -34,7 +34,7 @@ public class Destructible : MonoBehaviour, IDestructible
                 GameObject.Instantiate(_lootPrefab, _lootSpawn, this.transform.rotation);
             }
             
-            yield return new WaitForSeconds(Random.Range(90f,200f));
+            yield return new WaitForSeconds(Random.Range(30f,150f));
             gameObject.SetActive(true);
             
         }

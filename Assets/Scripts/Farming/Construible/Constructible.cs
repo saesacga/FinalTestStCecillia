@@ -7,10 +7,12 @@ public class Constructible : MonoBehaviour, IConstruible
     [SerializeField] private ItemData _materialNeed;
     [SerializeField] private int _amountRequired;
     [SerializeField] private Material _targetMaterial;
+    [SerializeField] private GameObject _bubbleMaterial;
     private int _amountProgress = 0;
     public static bool _collectorStep4Completed;
-    
-    public void Consturct(ItemData itemData)
+    [HideInInspector] public bool constructed;
+
+        public void Consturct(ItemData itemData)
     {
         if (itemData == _materialNeed)
         {
@@ -23,6 +25,8 @@ public class Constructible : MonoBehaviour, IConstruible
                 _collectorStep4Completed = true;
                 GetComponent<MeshRenderer>().material = _targetMaterial;
                 GetComponent<Collider>().isTrigger = false;
+                _bubbleMaterial.SetActive(false);
+                constructed = true;
             }
         } 
     }
