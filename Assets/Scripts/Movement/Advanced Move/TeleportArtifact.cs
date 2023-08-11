@@ -20,7 +20,7 @@ public class TeleportArtifact : MonoBehaviour
 
     [SerializeField] private GameObject _player;
 
-    [HideInInspector] public bool _canThrow = true;
+    public static bool _canThrow = true;
 
     #endregion
 
@@ -34,15 +34,13 @@ public class TeleportArtifact : MonoBehaviour
 
     void Update()
     {
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed()) { Predict(); }
         if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasReleasedThisFrame()) 
         {
             ThrowObject(); 
             trajectoryPredictor.hitMarker.gameObject.SetActive(false);
             GetComponent<LineRenderer>().positionCount = 0;
         }
-        
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed()) { Predict(); }
-
         if (ActionMapReference.playerMap.MovimientoAvanzado.ActivarTeleport.WasPerformedThisFrame()) { Teleport(); }
     }
 
@@ -65,10 +63,13 @@ public class TeleportArtifact : MonoBehaviour
         return properties;
     }
 
+    public static bool amaStep4Completed;
     private void ThrowObject()
     {
         if (_canThrow && trajectoryPredictor.allowThrow)
         {
+            amaStep4Completed = true;
+            GetComponentInChildren<Animator>().Play("AmaShoot");
             Rigidbody thrownObject = Instantiate(_objectToThrow, _startPosition.position, Quaternion.identity);
             _teleportProjectile = thrownObject.gameObject;
             thrownObject.AddForce(_startPosition.forward * _force, ForceMode.Impulse);
@@ -80,13 +81,13 @@ public class TeleportArtifact : MonoBehaviour
         }
     }
 
+    public static bool amaStep5Completed;
     private void Teleport()
     {
         if (_teleportProjectile == null || _teleportProjectile.GetComponent<TeleportProjectile>().allowedToTeleport == false) { return; } //No hay proyectil o no está preparado para el teleport
         
-        //_player.GetComponent<CharacterController>().enabled = false;
+        amaStep5Completed = true;
         _player.transform.position = _teleportProjectile.transform.position;
-        //_player.GetComponent<CharacterController>().enabled = true;
         _canThrow = true;
         Destroy(_teleportProjectile);
     }

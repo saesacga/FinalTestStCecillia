@@ -43,6 +43,8 @@ public class TheCollector : MonoBehaviour
         }
         else if (ActionMapReference.playerMap.Farming.Collect.IsPressed() || ActionMapReference.playerMap.Farming.Collect.WasReleasedThisFrame())
         {
+            if (ActionMapReference.playerMap.Farming.Collect.IsPressed()) { GetComponentInChildren<Animator>().Play("CollectorSuck"); }
+            else { GetComponentInChildren<Animator>().Play("CollectorIdleanim"); }
             AttractObjects();
             _canCollect = ActionMapReference.playerMap.Farming.Collect.IsPressed();
         }
@@ -54,14 +56,17 @@ public class TheCollector : MonoBehaviour
             }
         }
         else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
-        { 
+        {
+            _moveObject = true;
             MoveObjects();
         }
         else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
         {
+            GetComponentInChildren<Animator>().Play("CollectorIdleanim");
             OnMoving?.Invoke(false);
         }
     }
+    private bool _moveObject = false;
 
     private void DestroyObjects()
     {
@@ -72,8 +77,17 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Destructable"))
             {
+                GetComponentInChildren<Animator>().Play("DestroyCollector");
                 StartCoroutine(hit.collider.gameObject.GetComponent<IDestructible>().Destruct(_damage));
             }
+            else
+            {
+                GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+            }
+        }
+        else
+        {
+            GetComponentInChildren<Animator>().Play("CollectorIdleanim");
         }
     }
     
@@ -106,6 +120,7 @@ public class TheCollector : MonoBehaviour
             _ejectedInstances.GetComponent<SpriteRenderer>().sprite = itemData.icon;
             _ejectedInstances.GetComponent<SpriteRenderer>().enabled = true;
             _ejectedInstances.GetComponent<EjectedMaterial>().itemData = itemData;
+            GetComponentInChildren<Animator>().Play("ThrowCollector");
             
             #region Objetivo a seguir
 
@@ -130,9 +145,18 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Moveable"))
             {
+                GetComponentInChildren<Animator>().Play("MoveCollector");
                 hit.collider.GetComponent<Moveable>().Moving(true);
                 _collectorStep5Completed = true;
             }
+            else
+            {
+                GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+            }
+        }
+        else
+        {
+            GetComponentInChildren<Animator>().Play("CollectorIdleanim");
         }
     }
     

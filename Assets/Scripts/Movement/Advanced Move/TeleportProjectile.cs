@@ -17,6 +17,8 @@ public class TeleportProjectile : MonoBehaviour
         }
         else
         {
+            Debug.Log("ItWasDestroy");
+                TeleportArtifact._canThrow = true;
             Destroy(this.gameObject);
         }
     }

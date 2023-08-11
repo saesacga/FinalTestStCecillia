@@ -18,7 +18,6 @@ public class TrajectoryPredictor : MonoBehaviour
     float rayOverlap = 1.1f;
 
     [HideInInspector] public bool allowThrow;
-    [SerializeField] private TeleportArtifact _teleportArtifact;
     [SerializeField] private Gradient _canThrowColor;
     [SerializeField] private Gradient _cannotThrowColor;
 
@@ -56,7 +55,7 @@ public class TrajectoryPredictor : MonoBehaviour
             {
                 UpdateLineRender(i, (i - 1, hit.point));
                 MoveHitMarker(hit);
-                if (hit.collider.CompareTag("TeleportSurface") && _teleportArtifact._canThrow)
+                if (hit.collider.CompareTag("TeleportSurface") && TeleportArtifact._canThrow)
                 {
                     trajectoryLine.colorGradient = _canThrowColor;
                     allowThrow = true;

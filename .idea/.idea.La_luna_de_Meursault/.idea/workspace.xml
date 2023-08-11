@@ -6,82 +6,46 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Galileo_1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Galileo_1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Down Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Down Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Down Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Down Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Down.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Down.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Up Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Up Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Up Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Up Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Up.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Idle Up.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Inicio reversa.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Inicio reversa.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Inicio.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Inicio.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Down Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Down Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Down Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Down Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Down.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Down.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Up Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Up Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Up Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Up Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Up.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/Player animations/Walk Up.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/PlayerGeneral.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Player/PlayerGeneral.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Combat/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Combat/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Movement/TeleportProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Movement/TeleportProjectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Amigo/Amigo.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Amigo/Amigo.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Amigo/LlegarAlPueblo.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Amigo/LlegarAlPueblo.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FriendlyCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FriendlyCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Moveable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zona Farmeo/Moveable.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.General World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperator-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperator-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperator8 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperator8 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperator8-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperator8-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorHB SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorHB SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorHB8 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorHB8 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorHBSC SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorHBSC SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Construible/Constructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Construible/Constructible.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Advanced Move/TeleportArtifact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Advanced Move/TeleportArtifact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Advanced Move/TeleportProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Advanced Move/TeleportProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Advanced Move/TrajectoryPredictor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Advanced Move/TrajectoryPredictor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersMovementRB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/PlayersMovementRB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono8 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/PixelOperator/PixelOperatorMono8 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Inventor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Inventor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Mago.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Mago.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Matriarca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Matriarca.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Ociosa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Ociosa.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Yerbatera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Yerbatera.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Montana.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Montana.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Mountain - Copy.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Mountain - Copy.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Mountain.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Mountain.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Mountain2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/Mountain2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/MountainFinal.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Borrar soon/MountainFinal.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Ilustracion_sin_titulo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Ilustracion_sin_titulo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox2Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox2Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/Skybox5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/SkyboxMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/SkyboxMat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/SkyboxMat3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/SkyboxMat3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/SkyboxMat5.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas/SkyboxMat5.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +55,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afb51423a29947c09a21689e8d96b70a1a000/8a/4421637c/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afb51423a29947c09a21689e8d96b70a1a000/cd/b05fdc65/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Estatua.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/samue/Documents/Samuel_U/TDG/Proyecto/UnityProject/La_luna_de_Meursault/Assets/Scenes/1.General World.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Magic/Constellations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Magic/StarMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/Basic Move/MoveCamera.cs" root0="FORCE_HIGHLIGHTING" />
@@ -125,7 +91,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Builds/StCecilia.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Builds/La Luna de Meursault/FinalPresentacion\La Luna de Meursault.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\samue\Documents\Samuel_U\TDG\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -200,6 +166,7 @@
       <workItem from="1691610150715" duration="10180000" />
       <workItem from="1691646733435" duration="3615000" />
       <workItem from="1691658977241" duration="616000" />
+      <workItem from="1691720794118" duration="15149000" />
     </task>
     <servers />
   </component>

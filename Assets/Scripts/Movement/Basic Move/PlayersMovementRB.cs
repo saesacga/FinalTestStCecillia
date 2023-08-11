@@ -61,10 +61,10 @@ public class PlayersMovementRB : MonoBehaviour
     #endregion
 
     #region For WallJump
-    
-    [Header("WallJump related")]
+
+    [Header("WallJump related")] 
+    [SerializeField] private GameObject _amaGameObject;
     private bool _allowWallJump;
-    private bool _inTheAir;
     private float _wallJumpContador;
     private GameObject _currentWall;
 
@@ -98,7 +98,7 @@ public class PlayersMovementRB : MonoBehaviour
         GetAngle();
         
         _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-        if (_isGrounded) 
+        if (_isGrounded || _amaGameObject.activeInHierarchy) 
         { 
             _currentSpeed = _speed;
             _speedInTheAirOverTime = 0;
@@ -169,7 +169,7 @@ public class PlayersMovementRB : MonoBehaviour
         #region Dash Related
 
         if (_dashContador <= _dashCooldown) { _dashContador += Time.deltaTime; }
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown)
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown && _amaGameObject.activeInHierarchy)
         {
             StartCoroutine(Dash());
         }
@@ -239,7 +239,8 @@ public class PlayersMovementRB : MonoBehaviour
         }
         _jumpPerformed = false;
     }
-    
+
+    public static bool amaStep2Completed;
     private IEnumerator Dash()
     {
         float _dashSpeedOverTime = 0f;
@@ -259,6 +260,7 @@ public class PlayersMovementRB : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Crossable"))
                 {
+                    amaStep2Completed = true;
                     hit.collider.isTrigger = true; 
                     yield return new WaitForSeconds(_dashTime); 
                     hit.collider.isTrigger = false;
@@ -278,8 +280,7 @@ public class PlayersMovementRB : MonoBehaviour
         if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, _slopeRayPosition.forward, out hit, _rayLenght, _slopeRayMask))
         {
             Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
-            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
-            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); 
             
             if (_surfaceAngle > 50f) { _slopeState = SlopeState.front; }
             else { _slopeState = SlopeState.normal; }
@@ -287,8 +288,7 @@ public class PlayersMovementRB : MonoBehaviour
         else if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, -_slopeRayPosition.forward, out hit,  _rayLenght, _slopeRayMask))
         {
             Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
-            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
-            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); 
             
             if (_surfaceAngle > 50f) { _slopeState = SlopeState.back; }
             else { _slopeState = SlopeState.normal; }
@@ -296,17 +296,15 @@ public class PlayersMovementRB : MonoBehaviour
         else if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, _slopeRayPosition.right, out hit, _rayLenght, _slopeRayMask))
         {
             Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
-            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
-            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            _surfaceAngle = Vector3.Angle(localNormal, Vector3.up);
             
             if (_surfaceAngle > 50f) { _slopeState = SlopeState.right; }
             else { _slopeState = SlopeState.normal; }
         }
         else if (Physics.SphereCast(_slopeRayPosition.position, 0.5f, -_slopeRayPosition.right, out hit, _rayLenght, _slopeRayMask))
         {
-            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
-            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
-            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal); 
+            _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); 
             
             if (_surfaceAngle > 50f) { _slopeState = SlopeState.left; }
             else { _slopeState = SlopeState.normal; }
@@ -314,24 +312,25 @@ public class PlayersMovementRB : MonoBehaviour
         else if (Physics.Raycast(_slopeRayPosition.position, -_slopeRayPosition.up, out hit, 1f, _slopeRayMask))
         {
             Vector3 localNormal = hit.transform.InverseTransformDirection(hit.normal);
-            if (hit.collider.CompareTag("WallJump")) { _surfaceAngle = 0f; }
-            else { _surfaceAngle = Vector3.Angle(localNormal, Vector3.up); }
+            _surfaceAngle = Vector3.Angle(localNormal, Vector3.up);
             _slopeState = SlopeState.normal;
         }
         else { _surfaceAngle = 0; _slopeState = SlopeState.normal; }
     }
-    
+
+    public static bool amaStep3Completed;
     private void OnCollisionEnter(Collision collision)
     {
         #region Wall Jump
         
-        if (collision.collider.CompareTag("WallJump"))
+        if (collision.collider.CompareTag("WallJump") && _amaGameObject.activeInHierarchy)
         {
             if (_currentWall == collision.collider.gameObject) { return; }
             _currentWall = collision.collider.gameObject;
             
-            if (_inTheAir)
+            if (_isGrounded == false)
             {
+                amaStep3Completed = true;
                 _wallJumpContador = 0;
                 _allowWallJump = true;
                 _rigidbody.constraints = RigidbodyConstraints.FreezeAll;  

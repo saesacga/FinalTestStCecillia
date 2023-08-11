@@ -19,6 +19,7 @@ public class Constructible : MonoBehaviour, IConstruible
             if (_amountProgress < _amountRequired)
             {
                 _amountProgress++;
+                GetComponent<Animator>().Play("MaterialRecived");
             }
             if (_amountProgress == _amountRequired)
             {
