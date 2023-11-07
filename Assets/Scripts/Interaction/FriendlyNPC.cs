@@ -114,7 +114,7 @@ public class FriendlyNPC : MonoBehaviour
     
     public void OnCutscene()
     {
-        PlayersLook._cutsceneInProgress = true;
+        //PlayersLook._cutsceneInProgress = true;
         ActionMapReference.EnterInteraction(true);
     }
 
@@ -137,7 +137,7 @@ public class FriendlyNPC : MonoBehaviour
     
     public void ExitBlock()
     {
-        PlayersLook._cutsceneInProgress = false;
+        //PlayersLook._cutsceneInProgress = false;
         _interactSprite.enabled = true;
         ActionMapReference.ActivateAllMaps();
     }

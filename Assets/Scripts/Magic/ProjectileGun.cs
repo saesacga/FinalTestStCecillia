@@ -22,7 +22,7 @@ public class ProjectileGun : MonoBehaviour
     public Transform attackPoint;
     [SerializeField] private LayerMask _rayCastLayerMaskIgnore;
     
-    public TextMeshProUGUI ammunitionDisplay;
+    //public TextMeshProUGUI ammunitionDisplay;
     [SerializeField] private PlayersLook _playersLook;
     [SerializeField] private float _aimAssistValue;
     [SerializeField] private GameObject _canvas;
@@ -51,11 +51,11 @@ public class ProjectileGun : MonoBehaviour
         MyInput();
         ShootRayCheck();
         
-        //Set ammo display
+        /*Set ammo display
         if (ammunitionDisplay != null)
         {
             ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
-        }
+        }*/
     }
     private void MyInput()
     {

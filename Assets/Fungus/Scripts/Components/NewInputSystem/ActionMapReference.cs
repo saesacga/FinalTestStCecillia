@@ -19,6 +19,7 @@ public class ActionMapReference : MonoBehaviour
     {
         Cursor.visible = false;
         playerMap = new PlayerMap();
+        ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
     }
 
     private void Update()

@@ -8,7 +8,6 @@ public class PlayersLook : MonoBehaviour
     public float mouseSensitivity = 100f;
 
     public Transform playerBody;
-    [SerializeField] private Transform _orientation;
     
     private float xRotation = 0f;
 
@@ -17,10 +16,16 @@ public class PlayersLook : MonoBehaviour
     private Vector3 smoothInputVelocity;
     private Vector3 myMouseInput;
     [SerializeField] private float smoothInputSpeedForCamera;
-    [SerializeField] private Camera _cinematicCamera;
-    public static bool _cutsceneInProgress = true;
     [HideInInspector] public float mouseSensitivityAimAssist;
 
+    #region Necesario para planeta
+
+    //[SerializeField] private Transform _orientation; PARA PLANETA
+    //[SerializeField] private Camera _cinematicCamera;
+    //public static bool _cutsceneInProgress = true;
+
+    #endregion
+    
     private void Start()
     {
         mouseSensitivityAimAssist = mouseSensitivity;
@@ -28,9 +33,6 @@ public class PlayersLook : MonoBehaviour
 
     void Update()
     {
-        if (_cutsceneInProgress) { _cinematicCamera.enabled = true; GetComponent<Camera>().enabled = false; }
-        else { _cinematicCamera.enabled = false; GetComponent<Camera>().enabled = true; }
-        
         myMouseInput.x = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().x * mouseSensitivityAimAssist * Time.deltaTime;
         myMouseInput.y = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().y * mouseSensitivityAimAssist * Time.deltaTime;
 
@@ -40,6 +42,14 @@ public class PlayersLook : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); 
-        _orientation.Rotate(Vector3.up * currentInputMouseVector.x);
+        playerBody.Rotate(Vector3.up * currentInputMouseVector.x);
+        
+        #region Necesario para planeta
+        
+        //if (_cutsceneInProgress) { _cinematicCamera.enabled = true; GetComponent<Camera>().enabled = false; } PARA PLANETA
+        //else { _cinematicCamera.enabled = false; GetComponent<Camera>().enabled = true; } 
+        //_orientation.Rotate(Vector3.up * currentInputMouseVector.x);
+        
+        #endregion
     }
 }

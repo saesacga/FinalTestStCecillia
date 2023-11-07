@@ -57,7 +57,7 @@ public class TheCollector : MonoBehaviour
         }
         else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
         {
-            _moveObject = true;
+            //_moveObject = true;
             MoveObjects();
         }
         else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
@@ -66,7 +66,7 @@ public class TheCollector : MonoBehaviour
             OnMoving?.Invoke(false);
         }
     }
-    private bool _moveObject = false;
+    //private bool _moveObject = false;
 
     private void DestroyObjects()
     {
