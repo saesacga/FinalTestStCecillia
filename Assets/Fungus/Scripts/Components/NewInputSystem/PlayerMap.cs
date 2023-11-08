@@ -47,7 +47,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Look"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""853fd48b-9f95-45ea-ae12-17d1f5373147"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -138,7 +138,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""id"": ""04e88cf6-3dd8-4e43-94e9-c4cfb1d4aecb"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=0.1,y=0.1)"",
                     ""groups"": ""Mouse"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
