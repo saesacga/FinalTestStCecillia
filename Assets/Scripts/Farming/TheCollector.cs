@@ -100,12 +100,12 @@ public class TheCollector : MonoBehaviour
             if (hit.transform.CompareTag("Loot"))
             {
                 GameObject attractable = hit.collider.gameObject;
-                attractable.GetComponent<GravityBody>().useCustomGravity = false;
+                attractable.GetComponent<Rigidbody>().useGravity = false;
                 attractable.transform.position = Vector3.MoveTowards(attractable.transform.position,this.transform.position,_attractVelocity * Time.deltaTime);
                 
                 if (ActionMapReference.playerMap.Farming.Collect.WasReleasedThisFrame())
                 {
-                    attractable.GetComponent<GravityBody>().useCustomGravity = true;
+                    attractable.GetComponent<Rigidbody>().useGravity = true;
                 }
             }
         }
@@ -175,7 +175,7 @@ public class TheCollector : MonoBehaviour
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
         {
-            _collectorStep3Completed = true;
+            //_collectorStep3Completed = true;
             collider.GetComponent<IAttractable>().CollectOnAttract();
         }
     }

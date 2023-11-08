@@ -12,7 +12,7 @@ public class Constructible : MonoBehaviour, IConstruible
     public static bool _collectorStep4Completed;
     [HideInInspector] public bool constructed;
 
-        public void Consturct(ItemData itemData)
+    public void Consturct(ItemData itemData)
     {
         if (itemData == _materialNeed)
         {

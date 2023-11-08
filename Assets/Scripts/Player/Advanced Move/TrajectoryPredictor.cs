@@ -7,7 +7,6 @@ public class TrajectoryPredictor : MonoBehaviour
 {
     #region Members
     LineRenderer trajectoryLine;
-    [SerializeField] private Transform _startPosition;
     [Tooltip("The marker will show where the projectile will hit")]
     public Transform hitMarker;
     [SerializeField, Range(10, 100), Tooltip("The maximum number of points the LineRenderer can have")]
@@ -18,10 +17,9 @@ public class TrajectoryPredictor : MonoBehaviour
     float rayOverlap = 1.1f;
 
     [HideInInspector] public bool allowThrow;
+    [SerializeField] private TeleportArtifact _teleportArtifact;
     [SerializeField] private Gradient _canThrowColor;
     [SerializeField] private Gradient _cannotThrowColor;
-
-    [SerializeField] private GravityAttractor _gravityAttractor;
     #endregion
 
     private void Start()
@@ -80,10 +78,7 @@ public class TrajectoryPredictor : MonoBehaviour
 
     private Vector3 CalculateNewVelocity(Vector3 velocity, float drag, float increment)
     {
-        //velocity += Physics.gravity * increment; RESTAURAR IF NECESSARY
-        Vector3 gravityUp = (_startPosition.position - _gravityAttractor.transform.position).normalized;
-        velocity += gravityUp * (_gravityAttractor.gravity * increment);
-
+        velocity += Physics.gravity * increment;
         velocity *= Mathf.Clamp01(1f - drag * increment);
         return velocity;
     }
@@ -101,6 +96,6 @@ public class TrajectoryPredictor : MonoBehaviour
     public void SetTrajectoryVisible(bool visible)
     {
         trajectoryLine.enabled = visible;
-        hitMarker.gameObject.SetActive(visible);
+        //hitMarker.gameObject.SetActive(visible);
     }
 }

@@ -101,17 +101,17 @@ public class ProjectileGun : MonoBehaviour
             targetPoint = hit.point;
             if (hit.collider.CompareTag("Star") || hit.collider.CompareTag("Enemy"))
             {
-                _playersLook.mouseSensitivityAimAssist =  _playersLook.mouseSensitivity - Mathf.Clamp(_aimAssistValue, 0, (_playersLook.mouseSensitivity - 10));
+                //_playersLook.mouseSensitivityAimAssist =  _playersLook.mouseSensitivity - Mathf.Clamp(_aimAssistValue, 0, (_playersLook.mouseSensitivity - 10));
             }
             else
             {
-                _playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
+                //_playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
             }
         }
         else
         {
             targetPoint = ray.GetPoint(75);
-            _playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
+            //_playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
         }
     }
     

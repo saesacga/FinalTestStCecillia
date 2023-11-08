@@ -60,11 +60,11 @@ public class Moveable : MonoBehaviour
             }
 
             if (_currentCube == null) { _currentCube = gameObject; }
-            if (_cubeInstanceObject == null) { _cubeInstanceObject = Instantiate(_moveable, new Vector3(-56.2f,177f,-283.2f), Quaternion.identity); }
+            if (_cubeInstanceObject == null) { _cubeInstanceObject = Instantiate(_moveable, new Vector3(0f,50f,0f), Quaternion.identity); }
             
             _moving = true;
             _rigidbody.drag = 10; 
-            GetComponent<GravityBody>().useCustomGravity = false; 
+            _rigidbody.useGravity = false; 
         }
         else
         {
@@ -77,7 +77,7 @@ public class Moveable : MonoBehaviour
             }
             _moving = false;
             _rigidbody.drag = 1;
-            GetComponent<GravityBody>().useCustomGravity = true;
+            _rigidbody.useGravity = true;
         }
     }
 

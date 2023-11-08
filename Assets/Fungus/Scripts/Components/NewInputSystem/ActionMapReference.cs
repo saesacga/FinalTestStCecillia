@@ -35,8 +35,19 @@ public class ActionMapReference : MonoBehaviour
         playerMap.ChangeSchemes.EnableCombat.Enable();
         playerMap.Interaccion.Enable();
         playerMap.PauseMap.Enable();
-        if (FriendlyNPC.unlockCollector) { playerMap.ChangeSchemes.EnableFarming.Enable(); playerMap.Farming.Enable(); }
-        if (FriendlyNPC.unlockAdvanceMovement) { playerMap.ChangeSchemes.EnableAdvanceMovement.Enable(); playerMap.MovimientoAvanzado.Enable(); }
+        
+        //PARA TESTEO
+        
+        playerMap.ChangeSchemes.EnableFarming.Enable(); 
+        playerMap.Farming.Enable();
+        playerMap.ChangeSchemes.EnableAdvanceMovement.Enable(); 
+        playerMap.MovimientoAvanzado.Enable();
+        
+        //FINAL DEL TESTEO
+        
+        //if (FriendlyNPC.unlockCollector) { playerMap.ChangeSchemes.EnableFarming.Enable(); playerMap.Farming.Enable(); }
+        //if (FriendlyNPC.unlockAdvanceMovement) { playerMap.ChangeSchemes.EnableAdvanceMovement.Enable(); playerMap.MovimientoAvanzado.Enable(); }
+        
         playerMap.UI.Disable();
     }
     

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,6 +46,12 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
+        #region Rotation in Y axis
+
+        transform.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
+        
+        #endregion
+        
         #region Wall Jump
         
         switch (_wallJumpContador)
@@ -133,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
             _dashContador = 0;
 
             #region Raycast
-            Ray ray = GetComponentInChildren<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
             
             if (Physics.Raycast(ray, out hit, 2f))
