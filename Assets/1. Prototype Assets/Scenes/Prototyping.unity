@@ -12548,6 +12548,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   _dashTime: 0.5
   _dashCooldown: 2
+  _amaGameObject: {fileID: 383736473}
   groundCheck: {fileID: 860376610}
   groundDistance: 0.4
   groundMask:

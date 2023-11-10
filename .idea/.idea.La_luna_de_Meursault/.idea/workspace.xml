@@ -7,27 +7,7 @@
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Scenes/Prototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Scenes/Prototyping.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AMAIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AMAIdle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AmaShoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AmaShoot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorIdleanim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorIdleanim.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorSuck.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorSuck.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/DestroyCollector.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/DestroyCollector.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/MoveCollector.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/MoveCollector.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/ThrowCollector.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/ThrowCollector.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/GaunletIdleAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/GaunletIdleAnimation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/ShootAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/ShootAnimation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +130,8 @@
       <workItem from="1696381695304" duration="1883000" />
       <workItem from="1699336265849" duration="2850000" />
       <workItem from="1699400998472" duration="11668000" />
-      <workItem from="1699416227937" duration="3103000" />
+      <workItem from="1699416227937" duration="3185000" />
+      <workItem from="1699559913866" duration="2862000" />
     </task>
     <servers />
   </component>

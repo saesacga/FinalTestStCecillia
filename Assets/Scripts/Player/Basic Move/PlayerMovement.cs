@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     #region Members
 
+    #region For Movement
+
     public CharacterController controller;
     private Vector3 move;
 
@@ -15,33 +17,50 @@ public class PlayerMovement : MonoBehaviour
     public float airSpeedReduction = 7f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+
+    #endregion
+    
+    #region For Dash
+    
     [SerializeField] private AnimationCurve _dashSpeedCurve;
     private float _dashSpeed;
     [SerializeField] private float _dashTime;
     [SerializeField] private float _dashCooldown;
     private bool _inDash = false;
+    private float _dashContador = 0;
+    [SerializeField] private GameObject _amaGameObject;
+    
+    #endregion
+
+    #region For Jump
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
     private Vector3 velocity;
-    
-    bool isGrounded;
+    private bool _isGrounded;
     private bool inTheAir = false;
 
-    //For Smothness
+    #endregion
+
+    #region For Smothness
+    
     private Vector3 currentInputVector;
     private Vector3 smoothInputVelocity;
     private Vector3 myInput;
     [SerializeField] private float smoothInputSpeed;
+    
+    #endregion
+
+    #region For WallJump
 
     private bool wallJumpFlag = false;
     private bool wallJump = true;
-
-    private float _dashContador = 0;
+    private GameObject _currentWall;
     private float _wallJumpContador = 0;
-
+    
+    #endregion
+    
     #endregion
     
     void Update()
@@ -53,13 +72,15 @@ public class PlayerMovement : MonoBehaviour
         #endregion
         
         #region Wall Jump
+
+        if (_isGrounded) { _currentWall = null; }
         
         switch (_wallJumpContador)
         {
-            case <= 3:
+            case <= 1.5f:
                 _wallJumpContador += Time.deltaTime;
                 break;
-            case >= 3:
+            case >= 1.5f:
                 wallJumpFlag = false;
                 break;
         }
@@ -72,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
         #region Jump
         
-        else if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() == true && isGrounded)
+        else if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() == true && _isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             speed -= airSpeedReduction;
@@ -84,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         #region Dash
         
         if (_dashContador <= _dashCooldown) { _dashContador += Time.deltaTime; }
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown)
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown && _amaGameObject.activeInHierarchy)
         {
             StartCoroutine(Dash());
         }
@@ -93,8 +114,8 @@ public class PlayerMovement : MonoBehaviour
 
         #region GroundCheck
         
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if (isGrounded && velocity.y < 0)
+        _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (_isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
             if (inTheAir)
@@ -168,8 +189,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("WallJump") && inTheAir)
+        if (collision.collider.CompareTag("WallJump") && inTheAir && _amaGameObject.activeInHierarchy)
         {
+            if (_currentWall == collision.collider.gameObject) { return; }
+            _currentWall = collision.collider.gameObject;
+            
             _wallJumpContador = 0;
             wallJumpFlag = true;
             velocity.y = 0f;
