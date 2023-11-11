@@ -10,7 +10,6 @@ public class TheCollector : MonoBehaviour
     [SerializeField] private Camera _fpsCamera;
     [SerializeField] private int _damage;
     [SerializeField] private float _attractRadius;
-    [SerializeField] private Inventory _inventory;
     [SerializeField] private Image _objectToEjectSelected;
     [SerializeField] private GameObject _ejectedObject;
     [Range(0f,15f)]
@@ -18,25 +17,34 @@ public class TheCollector : MonoBehaviour
     [SerializeField] private LayerMask _rayCastLayerMaskIgnore;
     [SerializeField] private GameObject _canvas;
     
-    private ItemData _itemDataSelected;
+    private ItemData _currentItemData;
+    private int _stackSize = 0;
+    [SerializeField] private TextMeshProUGUI _stackSizeDisplay;
     private bool _canCollect = false;
     public static event Action<bool> OnMoving;
     
     private void OnEnable()
     {
-        InventorySlot.OnUseButton += SelectToEject;
+        ItemsToInventory.OnItemCollected += InfoToEject;
         _canvas.SetActive(true);
     }
     private void OnDisable()
     {
-        InventorySlot.OnUseButton -= SelectToEject;
+        ItemsToInventory.OnItemCollected -= InfoToEject;
         OnMoving?.Invoke(false);
         _canvas.SetActive(false);
 
     }
 
+    private void Start()
+    {
+        _currentItemData = null;
+    }
+
     private void Update()
     {
+        _stackSizeDisplay.SetText(_stackSize.ToString());
+        
         if (ActionMapReference.playerMap.Farming.Destroy.IsPressed())
         {
             DestroyObjects();
@@ -50,9 +58,9 @@ public class TheCollector : MonoBehaviour
         }
         else if (ActionMapReference.playerMap.Farming.Eject.WasPressedThisFrame())
         {
-            if (_itemDataSelected != null)
+            if (_currentItemData != null)
             {
-                EjectItems(_itemDataSelected);
+                EjectItems(_currentItemData);
             }
         }
         else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
@@ -66,7 +74,6 @@ public class TheCollector : MonoBehaviour
             OnMoving?.Invoke(false);
         }
     }
-    //private bool _moveObject = false;
 
     private void DestroyObjects()
     {
@@ -113,26 +120,33 @@ public class TheCollector : MonoBehaviour
     
     private void EjectItems(ItemData itemData)
     {
-        if (Inventory._itemDictionary.TryGetValue(itemData, out InventoryItem item))
+        if (_stackSize > 0)
         {
-            _inventory.RemoveItem(itemData);
-            GameObject _ejectedInstances = Instantiate(_ejectedObject, transform.position, transform.rotation);
-            _ejectedInstances.GetComponent<SpriteRenderer>().sprite = itemData.icon;
-            _ejectedInstances.GetComponent<SpriteRenderer>().enabled = true;
-            _ejectedInstances.GetComponent<EjectedMaterial>().itemData = itemData;
+            GameObject _ejectedInstances = Instantiate(_ejectedObject, transform.position, transform.rotation); 
+            _ejectedInstances.GetComponent<SpriteRenderer>().sprite = itemData.icon; 
+            _ejectedInstances.GetComponent<SpriteRenderer>().enabled = true; 
+            _ejectedInstances.GetComponent<EjectedMaterial>().itemData = itemData; 
             GetComponentInChildren<Animator>().Play("ThrowCollector");
             
             #region Objetivo a seguir
-
-            Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            RaycastHit hit;
-            Vector3 targetPoint;
+        
+            Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); 
+            RaycastHit hit; 
+            Vector3 targetPoint; 
             if(Physics.Raycast(ray, out hit, 20f)) { targetPoint = hit.point; }
             else { targetPoint = ray.GetPoint(75); }
-
+        
             #endregion
-
+        
             _ejectedInstances.GetComponent<EjectedMaterial>().targetPoint = targetPoint;
+            
+            _stackSize--;
+            if (_stackSize <= 0)
+            {
+                _currentItemData = null;
+                _objectToEjectSelected.sprite = null;
+                _objectToEjectSelected.enabled = false;
+            }
         }
     }
 
@@ -159,15 +173,25 @@ public class TheCollector : MonoBehaviour
             GetComponentInChildren<Animator>().Play("CollectorIdleanim");
         }
     }
+
     
-    private void SelectToEject(ItemData itemData)
+    private void InfoToEject(ItemData itemData)
     {
-        if (itemData != null)
+        if (_currentItemData != itemData || _currentItemData == null)
         {
             _objectToEjectSelected.sprite = itemData.icon;
             _objectToEjectSelected.enabled = true;
-            _itemDataSelected = itemData;
         }
+        
+        if (_currentItemData == itemData || _currentItemData == null)
+        {
+            _stackSize++;
+        }
+        else if (_currentItemData != itemData)
+        {
+            _stackSize = 1;
+        }
+        _currentItemData = itemData;
     }
 
     public static bool _collectorStep3Completed;

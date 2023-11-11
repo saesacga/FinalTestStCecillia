@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: -2765463344691685039}
   - component: {fileID: 8283121753151538102}
   - component: {fileID: 7946640251799445158}
-  - component: {fileID: 2667065090512387225}
   m_Layer: 11
   m_Name: Piedra
   m_TagString: Loot
@@ -177,19 +176,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 004291c57399aa94a829f90239331d84, type: 2}
---- !u!114 &2667065090512387225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7699822805399918671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab04b893a3a3594cae15a07e653c815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gravityAttractor: {fileID: 1873448876035567875, guid: 453eae540660b7b43aff056716dd13f8, type: 3}
-  _customProperties: 0
-  _gravityMultiplier: 1
-  useCustomGravity: 0

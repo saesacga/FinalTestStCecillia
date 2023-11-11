@@ -5,5 +5,4 @@ using UnityEngine;
 public interface IAttractable
 {
     public void CollectOnAttract();
-    public void GetInventoryValues(ItemData itemData);
 }

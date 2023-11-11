@@ -15,7 +15,7 @@ public class Flower : ItemsToInventory, ICollectible
     {
         if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPressedThisFrame() && _collectButtonFlag)
         {
-            GetInventoryValues(flowerData);
+            //GetInventoryValues(flowerData);
         }
     }
     

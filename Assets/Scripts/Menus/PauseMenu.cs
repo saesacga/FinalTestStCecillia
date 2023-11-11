@@ -16,7 +16,6 @@ public class PauseMenu : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Inventory.inventoryItems.Clear();
     }
     public void BackToMainMenu()
     {
