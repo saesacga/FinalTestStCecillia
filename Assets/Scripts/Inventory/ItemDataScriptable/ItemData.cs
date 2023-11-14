@@ -7,6 +7,4 @@ public class ItemData : ScriptableObject
 {
     public string displayName;
     public Sprite icon;
-    public int stackLimit = 32;
-    public bool itsStackeable;
 }
