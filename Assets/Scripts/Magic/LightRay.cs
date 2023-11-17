@@ -5,7 +5,7 @@ using Fungus;
 using UnityEngine;
 using Collision = UnityEngine.Collision;
 
-public class Constellations : MonoBehaviour
+public class LightRay : MonoBehaviour
 {
     [SerializeField] private Collider _invisibleWall;
 
@@ -18,6 +18,10 @@ public class Constellations : MonoBehaviour
     {
         if (_starsRequired == _starsInPosition && _alreadyExecuted == false)
         {
+            GetComponent<Animator>().SetBool("activateRay", true);
+            
+            GetComponent<MoveToPositions>()._move = true;
+            
             _invisibleWall.isTrigger = true;
             _alreadyExecuted = true;
         }

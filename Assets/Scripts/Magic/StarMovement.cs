@@ -6,17 +6,17 @@ using UnityEngine;
 public class StarMovement : MonoBehaviour
 {
     [SerializeField] private Vector3 _finalPosition;
-    [SerializeField] private float _starVelocity;
+    private float _starVelocity = 0f;
     [SerializeField] private AnimationCurve _starVelocityCurve;
     private float _starVelocityOverTime;
-    [SerializeField] private Constellations _constellation;
+    [SerializeField] private LightRay _lightRay;
     [SerializeField] private Sprite _shineStarSprite;
     private bool _activated;
     private bool _finalPositionReached;
 
     private void Update()
     {
-        if (_constellation._starsCount == _constellation._starsRequired)
+        if (_lightRay._starsCount == _lightRay._starsRequired)
         {
             #region Velocity Curve
 
@@ -29,15 +29,15 @@ public class StarMovement : MonoBehaviour
             #endregion
 
             transform.position = Vector3.MoveTowards(transform.position, _finalPosition, _starVelocity * Time.deltaTime);
-            
-            if (transform.position == _finalPosition && _finalPositionReached == false)
+
+            if (Vector3.Distance(transform.position, _finalPosition) < 1f && _finalPositionReached == false)
             {
-                _constellation._starsInPosition++;
-                _finalPositionReached = true;
+                _lightRay._starsInPosition++;
+                _finalPositionReached = true;               
             }
         }
 
-        if (_constellation._starsRequired == _constellation._starsInPosition) { gameObject.SetActive(false); }
+        if (_lightRay._starsRequired == _lightRay._starsInPosition) { gameObject.SetActive(false); }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -45,7 +45,7 @@ public class StarMovement : MonoBehaviour
         if (collision.collider.CompareTag("Bullet") && _activated == false)
         {
             GetComponent<SpriteRenderer>().sprite = _shineStarSprite;
-            _constellation._starsCount++;
+            _lightRay._starsCount++;
             _activated = true;
         }
     }

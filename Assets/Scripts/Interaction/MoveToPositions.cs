@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,7 @@ public class MoveToPositions : MonoBehaviour
     [SerializeField] private AnimationCurve _velocityCurve;
     private float _velocity;
     private float _velocityOverTime;
-    private bool _moveAtEnd;
-    private bool _move;
+    [HideInInspector] public bool _move;
     private int _listPosition;
     private int _endOfPath;
 
@@ -22,7 +22,6 @@ public class MoveToPositions : MonoBehaviour
         if (_move)
         {
             MoveTo(_listPosition, _endOfPath);
-            GetComponentInChildren<Animator>().SetBool("isMoving", true);
         }
     }
 
@@ -44,28 +43,22 @@ public class MoveToPositions : MonoBehaviour
         {
             if (_listPosition != end)
             {
-                _listPosition++;     
-                transform.LookAt(_positionsToGo[i]);
+                _listPosition++;
             }
             else
             {
-                //Intentar Look at player para tratar de evitar bugs visuales
                 _move = false;
-                GetComponentInChildren<Animator>().SetBool("isMoving", false);
-                if (_moveAtEnd)
-                {
-                    GetComponent<FriendlyNPC>().StartRoaming();
-                }
             }
         }
     }
 
-    public void MoveToData(int listPosition, int endOfList, bool moveAtEnd)
+    private void OnTriggerEnter(Collider collision)
     {
-        this._listPosition = listPosition;
-        this._endOfPath = endOfList;
-        transform.LookAt(_positionsToGo[listPosition]);
-        _move = true;
-        this._moveAtEnd = moveAtEnd;
+        if(_listPosition >= 1)
+        { 
+            _listPosition++;
+            _endOfPath++;
+            _move = true;
+        }
     }
 }

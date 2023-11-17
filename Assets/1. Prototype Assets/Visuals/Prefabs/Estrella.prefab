@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38b3c1632033044a855a0dab524f481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _finalPosition: {x: 0, y: 0, z: 0}
+  _finalPosition: {x: -440.4, y: 209.4, z: 10.2}
   _starVelocity: 0
   _starVelocityCurve:
     serializedVersion: 2
