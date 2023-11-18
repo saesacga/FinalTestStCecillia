@@ -1,4 +1,0 @@
-repository "La_luna_de_Meursault@sacostag12@cloud"
-  path "/"
-    br "/main"
-    co "/main"
