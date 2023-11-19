@@ -7,11 +7,13 @@ using Collision = UnityEngine.Collision;
 
 public class LightRay : MonoBehaviour
 {
+    private int _nextPosCount;
     [SerializeField] private Collider _invisibleWall;
-
-    public int _starsRequired;
+    [SerializeField] private Animator _cinemachineBlend;
+    [SerializeField] private bool _moving;
     [HideInInspector] public int _starsCount;
     [HideInInspector] public int _starsInPosition;
+    public int _starsRequired;
     private bool _alreadyExecuted;
 
     private void Update()
@@ -19,11 +21,21 @@ public class LightRay : MonoBehaviour
         if (_starsRequired == _starsInPosition && _alreadyExecuted == false)
         {
             GetComponent<Animator>().SetBool("activateRay", true);
-            
-            GetComponent<MoveToPositions>()._move = true;
-            
             _invisibleWall.isTrigger = true;
             _alreadyExecuted = true;
+        }
+
+        if (_moving) { _cinemachineBlend.Play("LightBeamCam"); }
+        else { _cinemachineBlend.Play("POVCam"); }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            _nextPosCount++;
+            GetComponent<Animator>().SetInteger("nextPosition", _nextPosCount);
+            Debug.Log(_nextPosCount);            
         }
     }
 }
