@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,6 +11,8 @@ public class ActionMapReference : MonoBehaviour
     #region Singleton
     
     static public PlayerMap playerMap;
+    [SerializeField] private CinemachineInputProvider _cinemachineInputRef;
+    public static CinemachineInputProvider cinemachineInputProvider;
     
     #endregion
 
@@ -17,6 +20,7 @@ public class ActionMapReference : MonoBehaviour
 
     private void Start()
     {
+        cinemachineInputProvider = _cinemachineInputRef; 
         Cursor.visible = false;
         playerMap = new PlayerMap();
         ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
@@ -44,9 +48,6 @@ public class ActionMapReference : MonoBehaviour
         playerMap.MovimientoAvanzado.Enable();
         
         //FINAL DEL TESTEO
-        
-        //if (FriendlyNPC.unlockCollector) { playerMap.ChangeSchemes.EnableFarming.Enable(); playerMap.Farming.Enable(); }
-        //if (FriendlyNPC.unlockAdvanceMovement) { playerMap.ChangeSchemes.EnableAdvanceMovement.Enable(); playerMap.MovimientoAvanzado.Enable(); }
         
         playerMap.UI.Disable();
     }

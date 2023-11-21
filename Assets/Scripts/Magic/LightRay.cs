@@ -25,8 +25,16 @@ public class LightRay : MonoBehaviour
             _alreadyExecuted = true;
         }
 
-        if (_moving) { _cinemachineBlend.Play("LightBeamCam"); }
-        else { _cinemachineBlend.Play("POVCam"); }
+        if (_moving)
+        {
+            _cinemachineBlend.Play("LightBeamCam");
+            ActionMapReference.cinemachineInputProvider.enabled = false;
+        }
+        else
+        {
+            _cinemachineBlend.Play("POVCam");
+            ActionMapReference.cinemachineInputProvider.enabled = true;
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
