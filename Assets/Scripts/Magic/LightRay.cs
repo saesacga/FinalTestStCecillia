@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Fungus;
 using UnityEngine;
 using Collision = UnityEngine.Collision;
@@ -15,7 +16,7 @@ public class LightRay : MonoBehaviour
     [HideInInspector] public int _starsInPosition;
     public int _starsRequired;
     private bool _alreadyExecuted;
-
+    
     private void Update()
     {
         if (_starsRequired == _starsInPosition && _alreadyExecuted == false)
@@ -27,13 +28,13 @@ public class LightRay : MonoBehaviour
 
         if (_moving)
         {
+            StartCoroutine(ActionMapReference.ActivateLooking(false));
             _cinemachineBlend.Play("LightBeamCam");
-            ActionMapReference.cinemachineInputProvider.enabled = false;
         }
         else
         {
             _cinemachineBlend.Play("POVCam");
-            ActionMapReference.cinemachineInputProvider.enabled = true;
+            StartCoroutine(ActionMapReference.ActivateLooking(true));
         }
     }
 
@@ -43,7 +44,7 @@ public class LightRay : MonoBehaviour
         {
             _nextPosCount++;
             GetComponent<Animator>().SetInteger("nextPosition", _nextPosCount);
-            Debug.Log(_nextPosCount);            
+            Debug.Log(_nextPosCount);
         }
     }
 }

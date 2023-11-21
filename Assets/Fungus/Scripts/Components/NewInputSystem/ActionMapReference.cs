@@ -12,7 +12,7 @@ public class ActionMapReference : MonoBehaviour
     
     static public PlayerMap playerMap;
     [SerializeField] private CinemachineInputProvider _cinemachineInputRef;
-    public static CinemachineInputProvider cinemachineInputProvider;
+    private static CinemachineInputProvider _cinemachineInputProvider;
     
     #endregion
 
@@ -20,7 +20,7 @@ public class ActionMapReference : MonoBehaviour
 
     private void Start()
     {
-        cinemachineInputProvider = _cinemachineInputRef; 
+        _cinemachineInputProvider = _cinemachineInputRef;
         Cursor.visible = false;
         playerMap = new PlayerMap();
         ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
@@ -96,6 +96,20 @@ public class ActionMapReference : MonoBehaviour
             _gameplaySchemes[2].SetActive(true);
             _gameplaySchemes[0].SetActive(false);
             _gameplaySchemes[1].SetActive(false);
+        }
+    }
+
+    public static IEnumerator ActivateLooking(bool state)
+    {
+        if (state) 
+        {
+            yield return new WaitForSeconds(1f);
+            _cinemachineInputProvider.enabled = true;
+        }
+        else
+        {
+            _cinemachineInputProvider.enabled = false;
+            yield return new WaitForSeconds(3f);
         }
     }
 }
