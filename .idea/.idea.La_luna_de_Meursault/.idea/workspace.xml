@@ -6,197 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/Enemy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/Enemy.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/LineRenderer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/LineRenderer.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/PlayerMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/PlayerMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Box_13-color.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Box_13-color.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Box_13no.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Box_13no.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Plane-color.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Plane-color.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Plane.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/Plane.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/casajej-Box_13.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/casajej-Box_13.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/casajej-Plane.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/3D Models/Materials/casajej-Plane.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GaunletGraphic.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GaunletGraphic.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/2Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/2Pos.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/HideLightBeam.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/HideLightBeam.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/Materials/Mountain.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/Materials/Mountain.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/Materials/ParedHojas.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/Materials/ParedHojas.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/MountainMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/MountainMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/ParedHojasMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/ParedHojasMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/PruebaInternet.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/PruebaInternet.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/PuenteMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/PuenteMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/RocaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/RocaMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/RocaMat2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/RocaMat2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Suelo Luna/SueloLunaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Suelo Luna/SueloLunaMat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_1K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_1K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_2K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_2K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_4K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Pink_4K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Back_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Back_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Down_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Down_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Front_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Front_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Left_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Left_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Right_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Right_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Up_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/1K_Resolution/Up_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Back_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Back_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Down_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Down_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Front_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Front_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Left_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Left_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Right_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Right_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Up_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/2K_Resolution/Up_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Back_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Back_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Down_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Down_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Front_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Front_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Left_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Left_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Right_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Right_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Up_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_1/Textures/4K_Resolution/Up_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_1K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_1K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_2K_Resoution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_2K_Resoution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_4K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Green_4K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Back_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Back_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Down_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Down_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Front_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Front_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Left_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Left_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Right_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Right_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Up_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/1K_Resolution/Up_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Back_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Back_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Down_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Down_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Front_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Front_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Left_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Left_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Right_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Right_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Up_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/2K_Resolution/Up_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Back_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Back_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Down_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Down_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Front_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Front_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Left_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Left_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Right_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Right_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Up_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_2/Textures/4K_Resolution/Up_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_1K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_1K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_4K_Resolution.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Purple_4K_Resolution.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Back_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Back_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Down_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Down_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Front_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Front_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Left_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Left_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Right_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Right_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Up_1K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Up_1K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Back_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Back_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Down_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Down_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Front_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Front_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Left_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Left_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Right_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Right_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Up_2K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/2K_Resolution/Up_2K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Back_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Back_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Down_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Down_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Front_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Front_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Left_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Left_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Right_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Right_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Up_4K_TEX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceSkies Free/Skybox_3/Textures/4K_Resolution/Up_4K_TEX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Materials/CasaVoxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Materials/CasaVoxMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Materials/MountVoxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Materials/MountVoxMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Gauntlet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Gauntlet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Idle/Ilustración_sin_título-6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Gaunlet/Shoot/Ilustración_sin_título-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/Pruebas.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Resources/SpriteGlow/Shaders/SpriteGlow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Resources/SpriteGlow/Shaders/SpriteGlow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Resources/SpriteGlow/Shaders/SpriteOutline.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Resources/SpriteGlow/Shaders/SpriteOutline.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Runtime/SpriteGlowEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Runtime/SpriteGlowEffect.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,6 +147,7 @@
       <workItem from="1699983253463" duration="425000" />
       <workItem from="1700346772562" duration="6279000" />
       <workItem from="1700527858098" duration="8003000" />
+      <workItem from="1700592067211" duration="13860000" />
     </task>
     <servers />
   </component>

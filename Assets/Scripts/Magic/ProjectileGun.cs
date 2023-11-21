@@ -1,4 +1,5 @@
 using System;
+using SpriteGlow;
 using UnityEngine;
 using TMPro;
 using Random = UnityEngine.Random;
@@ -30,7 +31,7 @@ public class ProjectileGun : MonoBehaviour
     public bool allowInvoke = true;
     
     #endregion
-
+    
     private void OnEnable()
     {
         _canvas.SetActive(true);

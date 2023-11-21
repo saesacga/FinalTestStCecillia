@@ -109,7 +109,6 @@ public class ActionMapReference : MonoBehaviour
         else
         {
             _cinemachineInputProvider.enabled = false;
-            yield return new WaitForSeconds(3f);
         }
     }
 }
