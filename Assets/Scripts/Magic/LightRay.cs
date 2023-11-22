@@ -52,7 +52,6 @@ public class LightRay : MonoBehaviour
         {
             StartCoroutine(ActionMapReference.ActivateLooking(false));
             _cinemachineBlend.Play("LightBeamCam");
-            StartCoroutine(SpriteGlowEffect.ToggleGlow(1f));
         }
         else //El rayo se dejó de mover
         {

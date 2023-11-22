@@ -120,13 +120,13 @@ namespace SpriteGlow
         }
         public static IEnumerator ToggleGlow(float fadeTime)
         {
-            for (float alpha = 0f; alpha <= 1; alpha += 0.1f)
+            for (float alpha = 0f; alpha <= 1; alpha += 0.001f)
             {
                 _glowcolorStatic.a = alpha;
                 yield return new WaitForSeconds(fadeTime);
             }
-            yield return new WaitForSeconds(10);
-            for (float alpha = 1f; alpha >= 0; alpha -= 0.1f)
+            //yield return new WaitForSeconds(10);
+            for (float alpha = 1f; alpha >= 0; alpha -= 0.001f)
             {
                 _glowcolorStatic.a = alpha;
                 yield return new WaitForSeconds(fadeTime);
