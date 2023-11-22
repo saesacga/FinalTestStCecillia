@@ -6,51 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AMAIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AMAIdle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AmaShoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/AMA/AmaShoot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorIdleanim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorIdleanim.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorSuck.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorSuck.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/DestroyCollector.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/DestroyCollector.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/MoveCollector.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/MoveCollector.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/ThrowCollector.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/ThrowCollector.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/GaunletIdleAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/GaunletIdleAnimation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/ShootAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/ShootAnimation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GaunletGraphic.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GaunletGraphic.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Idle/Throw-6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/AMA/Throw/Throw-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Destroy/Destroy_-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Destroy/Destroy_-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Destroy/Destroy_-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Destroy/Destroy_-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Destroy/Destroy_-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Destroy/Destroy_-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Idle/Idle_Collector-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Move/Move-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Move/Move-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Move/Move-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Move/Move-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Move/Move-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Move/Move-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Suck/Suck-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Artifacts/Superrecolectora/Throw/Throw-6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Runtime/SpriteGlowEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/SpriteGlow/Runtime/SpriteGlowEffect.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +144,7 @@
       <workItem from="1700592067211" duration="13860000" />
       <workItem from="1700619827590" duration="561000" />
       <workItem from="1700620476669" duration="3155000" />
+      <workItem from="1700675604945" duration="3627000" />
     </task>
     <servers />
   </component>

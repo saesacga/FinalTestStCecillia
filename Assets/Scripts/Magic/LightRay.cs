@@ -1,11 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
-using Fungus;
-using SpriteGlow;
 using UnityEngine;
-using Collision = UnityEngine.Collision;
+using UnityEngine.Playables;
 
 public class LightRay : MonoBehaviour
 {
@@ -19,12 +13,14 @@ public class LightRay : MonoBehaviour
     public int _starsRequired;
     private bool _starsInPositionHasRun;
     private Animator _lightBeamAnimator;
+    private PlayableDirector _lightBeamTimeline;
 
     #endregion
     
     private void OnEnable()
     {
         _lightBeamAnimator = GetComponent<Animator>();
+        _lightBeamTimeline = GetComponent<PlayableDirector>();
     }
 
     private void Update()
@@ -32,6 +28,7 @@ public class LightRay : MonoBehaviour
         if (_starsRequired == _starsInPosition && _starsInPositionHasRun == false)
         {
             _lightBeamAnimator.SetBool("activateRay", true);
+            _lightBeamTimeline.Play();
             _invisibleWall.isTrigger = true;
             _starsInPositionHasRun = true;
         }
