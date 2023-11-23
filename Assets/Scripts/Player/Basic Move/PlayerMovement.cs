@@ -55,11 +55,10 @@ public class PlayerMovement : MonoBehaviour
 
     #region For WallJump
 
-    private bool wallJumpFlag = false;
-    private bool wallJump = true;
+    private bool wallJumpFlag;
+    private bool _allowWallJumpInput;
     private GameObject _currentWall;
-    private float _wallJumpContador = 0;
-    
+
     #endregion
     
     #endregion
@@ -76,18 +75,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isGrounded) { _currentWall = null; }
         
-        switch (_wallJumpContador)
+        if (wallJumpFlag && velocity.y < -2.5f && inTheAir) //Cuando la velocity.y es menor a -2.5 es porque el jugador está cayendo: -3,-4.-10
         {
-            case <= 1.5f:
-                _wallJumpContador += Time.deltaTime;
-                break;
-            case >= 1.5f:
-                wallJumpFlag = false;
-                break;
+            velocity.y = 0f;
+            _allowWallJumpInput = true;
+            _wallJumpTimerRoutine = null;
+            _wallJumpTimerRoutine = WallJumpTimer(1.5f);
+            StartCoroutine(_wallJumpTimerRoutine);
+            Debug.Log("Me ejecuto bien");
         }
-        if (wallJumpFlag == true && wallJump == true && inTheAir == true && ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame())
+        if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _allowWallJumpInput)
         {
-            WallJump();
+            WallJump();                
         }
         
         #endregion
@@ -136,13 +135,13 @@ public class PlayerMovement : MonoBehaviour
         currentInputVector = Vector3.SmoothDamp(currentInputVector, myInput, ref smoothInputVelocity, smoothInputSpeed);
         move = transform.right * currentInputVector.x + transform.forward * currentInputVector.z;
 
-        if (wallJumpFlag == false)
+        if (_allowWallJumpInput == false)
         {
             controller.Move(move * speed * Time.deltaTime); //Movimiento horizontal (Caminar)
             controller.Move(velocity * Time.deltaTime); //Movimiento vertical (Salto)
         }
 
-        if (wallJumpFlag == false && _inDash == false) { velocity.y += gravity * Time.deltaTime; }
+        if (_allowWallJumpInput == false && _inDash == false) { velocity.y += gravity * Time.deltaTime; }
         
         #endregion
     }
@@ -184,26 +183,36 @@ public class PlayerMovement : MonoBehaviour
     private void WallJump()
     {
         wallJumpFlag = false;
-        wallJump = false;
-        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        _allowWallJumpInput = false;
+        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); //Hacer un salto
+        StopCoroutine(_wallJumpTimerRoutine);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private IEnumerator _wallJumpTimerRoutine;
+    private IEnumerator WallJumpTimer(float time)
     {
-        if (collision.collider.CompareTag("WallJump") && inTheAir && _amaGameObject.activeInHierarchy)
+        yield return new WaitForSeconds(time);
+        wallJumpFlag = false;
+        _allowWallJumpInput = false;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("WallJump") && _amaGameObject.activeInHierarchy)
         {
             if (_currentWall == collision.collider.gameObject) { Debug.Log("Misma superficie"); return; }
             _currentWall = collision.collider.gameObject;
             
-            _wallJumpContador = 0;
             wallJumpFlag = true;
-            velocity.y = 0f;
         }
-        else { wallJumpFlag = false; }
     }
+
     private void OnCollisionExit(Collision collision)
     {
-        wallJump = true;
-        wallJumpFlag = false;
+        if (collision.collider.CompareTag("WallJump") && _amaGameObject.activeInHierarchy)
+        {
+            wallJumpFlag = false;
+            _allowWallJumpInput = false;
+        }
     }
 }
