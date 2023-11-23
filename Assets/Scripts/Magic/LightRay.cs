@@ -9,7 +9,8 @@ public class LightRay : MonoBehaviour
     [SerializeField] private Animator _cinemachineBlend;
     [HideInInspector] public int _starsCount;
     [HideInInspector] public int _starsInPosition;
-    private int _nextPosCount;
+    private bool _nextPos;
+    private bool _canGoToNextPos;
     public int _starsRequired;
     private bool _starsInPositionHasRun;
     private Animator _lightBeamAnimator;
@@ -34,24 +35,28 @@ public class LightRay : MonoBehaviour
         }
     }
     
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerStay(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
-            _nextPosCount++;
-            _lightBeamAnimator.SetInteger("nextPosition", _nextPosCount);
+            if (_canGoToNextPos) { _nextPos = true; }
+            _lightBeamAnimator.SetBool("nextPosition", _nextPos);
         }
+        
     }
     
     private void ControlCameraBlends(int moving)
     {
         if (moving == 0) //El rayo se está moviendo
         {
+            _nextPos = false;
+            _canGoToNextPos = false;
             StartCoroutine(ActionMapReference.ActivateLooking(false));
             _cinemachineBlend.Play("LightBeamCam");
         }
         else //El rayo se dejó de mover
         {
+            _canGoToNextPos = true;
             _cinemachineBlend.Play("POVCam");
             StartCoroutine(ActionMapReference.ActivateLooking(true));
         }

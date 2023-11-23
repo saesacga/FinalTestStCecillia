@@ -6,12 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GaunletGraphic.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GaunletGraphic.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/Enemy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Materials/Enemy.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/MountainMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/MountainMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/RocaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enviroment/Farming/RocaMat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/WallJump.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/WallJump.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +149,7 @@
       <workItem from="1700619827590" duration="561000" />
       <workItem from="1700620476669" duration="3155000" />
       <workItem from="1700675604945" duration="3627000" />
+      <workItem from="1700708366606" duration="5807000" />
     </task>
     <servers />
   </component>

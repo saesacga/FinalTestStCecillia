@@ -192,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.collider.CompareTag("WallJump") && inTheAir && _amaGameObject.activeInHierarchy)
         {
-            if (_currentWall == collision.collider.gameObject) { return; }
+            if (_currentWall == collision.collider.gameObject) { Debug.Log("Misma superficie"); return; }
             _currentWall = collision.collider.gameObject;
             
             _wallJumpContador = 0;
