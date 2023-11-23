@@ -29,11 +29,6 @@ public class CustomProjectile : MonoBehaviour
 
     #endregion
     
-    private void Start()
-    {
-        //Setup();
-    }
-
     private void Update()
     {
         //When to explode

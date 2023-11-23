@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(TrajectoryPredictor))]
@@ -22,6 +23,8 @@ public class TeleportArtifact : MonoBehaviour
 
     public static bool _canThrow = true;
 
+    [SerializeField] private Image _allowedToTeleportUI;
+
     #endregion
 
     void OnEnable()
@@ -34,6 +37,9 @@ public class TeleportArtifact : MonoBehaviour
 
     void Update()
     {
+        if (TeleportProjectile.allowedToTeleport) { _allowedToTeleportUI.color = Color.green; }
+        else { _allowedToTeleportUI.color = Color.red; }
+        
         if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed()) { Predict(); }
         if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasReleasedThisFrame()) 
         {
@@ -84,8 +90,10 @@ public class TeleportArtifact : MonoBehaviour
     public static bool amaStep5Completed;
     private void Teleport()
     {
-        if (_teleportProjectile == null || _teleportProjectile.GetComponent<TeleportProjectile>().allowedToTeleport == false) { return; } //No hay proyectil o no está preparado para el teleport
-        
+        if (_teleportProjectile == null || TeleportProjectile.allowedToTeleport == false) { return; } //No hay proyectil o no está preparado para el teleport
+
+        TeleportProjectile.allowedToTeleport = false;
+        TeleportProjectile.animatorCanChangeValues = false;
         _player.GetComponent<CharacterController>().enabled = false;
         _player.transform.position = _teleportProjectile.transform.position;
         _player.GetComponent<CharacterController>().enabled = true;

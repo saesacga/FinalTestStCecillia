@@ -82,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
             _wallJumpTimerRoutine = null;
             _wallJumpTimerRoutine = WallJumpTimer(1.5f);
             StartCoroutine(_wallJumpTimerRoutine);
-            Debug.Log("Me ejecuto bien");
         }
         if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _allowWallJumpInput)
         {
@@ -200,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.collider.CompareTag("WallJump") && _amaGameObject.activeInHierarchy)
         {
-            if (_currentWall == collision.collider.gameObject) { Debug.Log("Misma superficie"); return; }
+            if (_currentWall == collision.collider.gameObject) { return; }
             _currentWall = collision.collider.gameObject;
             
             wallJumpFlag = true;
