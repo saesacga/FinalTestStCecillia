@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="" />
+    <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TPSurface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TPSurface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +145,8 @@
       <workItem from="1700620476669" duration="3155000" />
       <workItem from="1700675604945" duration="3627000" />
       <workItem from="1700708366606" duration="13709000" />
-      <workItem from="1700765761778" duration="6159000" />
+      <workItem from="1700765761778" duration="6160000" />
+      <workItem from="1700806316996" duration="2910000" />
     </task>
     <servers />
   </component>
