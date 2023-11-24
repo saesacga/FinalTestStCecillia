@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TPSurface : MonoBehaviour
 {
-    [HideInInspector] public bool canChangeValues;
+    public bool canChangeValues;
     private void AllowTPAnimator(int allow)
     {
         if (canChangeValues && TeleportProjectile.animatorCanChangeValues)

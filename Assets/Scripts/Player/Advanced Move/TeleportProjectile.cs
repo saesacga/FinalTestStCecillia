@@ -7,7 +7,7 @@ public class TeleportProjectile : MonoBehaviour
 { 
     public static bool allowedToTeleport;
     public static bool animatorCanChangeValues;
-    private TPSurface _tpSurface;
+    private static GameObject _tpSurface;
     
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,17 +24,14 @@ public class TeleportProjectile : MonoBehaviour
                 animatorCanChangeValues = true; 
                 if (_tpSurface == null)
                 {
-                    collision.collider.GetComponent<TPSurface>().canChangeValues = true;
-                    _tpSurface = collision.collider.GetComponent<TPSurface>();
+                    _tpSurface = collision.collider.gameObject;
+                    _tpSurface.GetComponent<TPSurface>().canChangeValues = true;
                 }
-                else
+                else if (collision.collider.gameObject != _tpSurface)
                 {
-                    if (collision.collider.GetComponent<TPSurface>() != _tpSurface)
-                    {
-                        _tpSurface.canChangeValues = false; 
-                        _tpSurface = collision.collider.GetComponent<TPSurface>();
-                        _tpSurface.canChangeValues = true;
-                    }
+                    _tpSurface.GetComponent<TPSurface>().canChangeValues = false; 
+                    _tpSurface = collision.collider.gameObject; 
+                    _tpSurface.GetComponent<TPSurface>().canChangeValues = true;
                 }
             }
         }
