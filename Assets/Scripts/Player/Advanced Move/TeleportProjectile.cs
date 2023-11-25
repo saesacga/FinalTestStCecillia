@@ -37,7 +37,17 @@ public class TeleportProjectile : MonoBehaviour
         }
         else
         {
-            Debug.Log("ItWasDestroy");
+            allowedToTeleport = false;
+            animatorCanChangeValues = false;
+            TeleportArtifact._canThrow = true;
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (ActionMapReference.playerMap.MovimientoAvanzado.DestruirTeleport.WasPerformedThisFrame())
+        {
             allowedToTeleport = false;
             animatorCanChangeValues = false;
             TeleportArtifact._canThrow = true;

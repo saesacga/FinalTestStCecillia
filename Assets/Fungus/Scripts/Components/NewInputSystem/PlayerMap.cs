@@ -1140,6 +1140,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DestruirTeleport"",
+                    ""type"": ""Button"",
+                    ""id"": ""a7d8c655-a55c-4451-8686-219bff834522"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1206,6 +1215,28 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""ActivarTeleport"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6a6cb32-90f9-416d-a679-39633acabb3a"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DestruirTeleport"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""957e3b77-8555-45c5-90f0-0aa2a2e84f10"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DestruirTeleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1391,6 +1422,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         m_MovimientoAvanzado_Dash = m_MovimientoAvanzado.FindAction("Dash", throwIfNotFound: true);
         m_MovimientoAvanzado_Trayectoria = m_MovimientoAvanzado.FindAction("Trayectoria", throwIfNotFound: true);
         m_MovimientoAvanzado_ActivarTeleport = m_MovimientoAvanzado.FindAction("ActivarTeleport", throwIfNotFound: true);
+        m_MovimientoAvanzado_DestruirTeleport = m_MovimientoAvanzado.FindAction("DestruirTeleport", throwIfNotFound: true);
         // ChangeSchemes
         m_ChangeSchemes = asset.FindActionMap("ChangeSchemes", throwIfNotFound: true);
         m_ChangeSchemes_EnableAdvanceMovement = m_ChangeSchemes.FindAction("EnableAdvanceMovement", throwIfNotFound: true);
@@ -1888,6 +1920,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_MovimientoAvanzado_Dash;
     private readonly InputAction m_MovimientoAvanzado_Trayectoria;
     private readonly InputAction m_MovimientoAvanzado_ActivarTeleport;
+    private readonly InputAction m_MovimientoAvanzado_DestruirTeleport;
     public struct MovimientoAvanzadoActions
     {
         private @PlayerMap m_Wrapper;
@@ -1895,6 +1928,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_MovimientoAvanzado_Dash;
         public InputAction @Trayectoria => m_Wrapper.m_MovimientoAvanzado_Trayectoria;
         public InputAction @ActivarTeleport => m_Wrapper.m_MovimientoAvanzado_ActivarTeleport;
+        public InputAction @DestruirTeleport => m_Wrapper.m_MovimientoAvanzado_DestruirTeleport;
         public InputActionMap Get() { return m_Wrapper.m_MovimientoAvanzado; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1913,6 +1947,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @ActivarTeleport.started += instance.OnActivarTeleport;
             @ActivarTeleport.performed += instance.OnActivarTeleport;
             @ActivarTeleport.canceled += instance.OnActivarTeleport;
+            @DestruirTeleport.started += instance.OnDestruirTeleport;
+            @DestruirTeleport.performed += instance.OnDestruirTeleport;
+            @DestruirTeleport.canceled += instance.OnDestruirTeleport;
         }
 
         private void UnregisterCallbacks(IMovimientoAvanzadoActions instance)
@@ -1926,6 +1963,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             @ActivarTeleport.started -= instance.OnActivarTeleport;
             @ActivarTeleport.performed -= instance.OnActivarTeleport;
             @ActivarTeleport.canceled -= instance.OnActivarTeleport;
+            @DestruirTeleport.started -= instance.OnDestruirTeleport;
+            @DestruirTeleport.performed -= instance.OnDestruirTeleport;
+            @DestruirTeleport.canceled -= instance.OnDestruirTeleport;
         }
 
         public void RemoveCallbacks(IMovimientoAvanzadoActions instance)
@@ -2080,6 +2120,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnTrayectoria(InputAction.CallbackContext context);
         void OnActivarTeleport(InputAction.CallbackContext context);
+        void OnDestruirTeleport(InputAction.CallbackContext context);
     }
     public interface IChangeSchemesActions
     {

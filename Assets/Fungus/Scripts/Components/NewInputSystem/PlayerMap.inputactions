@@ -1118,6 +1118,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DestruirTeleport",
+                    "type": "Button",
+                    "id": "a7d8c655-a55c-4451-8686-219bff834522",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1184,6 +1193,28 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "ActivarTeleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6a6cb32-90f9-416d-a679-39633acabb3a",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DestruirTeleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "957e3b77-8555-45c5-90f0-0aa2a2e84f10",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DestruirTeleport",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
