@@ -24,6 +24,7 @@ public class ActionMapReference : MonoBehaviour
         Cursor.visible = false;
         playerMap = new PlayerMap();
         ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
