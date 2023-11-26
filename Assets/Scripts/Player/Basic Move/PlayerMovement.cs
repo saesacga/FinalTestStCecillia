@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SpriteGlow;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _inDash = false;
     private float _dashContador = 0;
     [SerializeField] private GameObject _amaGameObject;
+    [SerializeField] private Image _dashAvailableImage;
     
     #endregion
 
@@ -75,13 +77,22 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isGrounded) { _currentWall = null; }
         
-        if (wallJumpFlag && velocity.y < -2.5f && inTheAir) //Cuando la velocity.y es menor a -2.5 es porque el jugador está cayendo: -3,-4.-10
+        if (wallJumpFlag && inTheAir) 
         {
-            velocity.y = 0f;
-            _allowWallJumpInput = true;
-            _wallJumpTimerRoutine = null;
-            _wallJumpTimerRoutine = WallJumpTimer(1.5f);
-            StartCoroutine(_wallJumpTimerRoutine);
+            if (velocity.y < -2.5f || _inDash)
+            {
+                if (_inDash)
+                {
+                    StopCoroutine(_dashRoutine);
+                    _inDash = false;
+                    if (_crossable != null) { _crossable.isTrigger = false; }
+                }
+                velocity.y = 0f;
+                _allowWallJumpInput = true;
+                _wallJumpTimerRoutine = null;
+                _wallJumpTimerRoutine = WallJumpTimer(1.5f);
+                StartCoroutine(_wallJumpTimerRoutine);
+            }
         }
         if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _allowWallJumpInput)
         {
@@ -92,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
         #region Jump
         
-        else if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() == true && _isGrounded)
+        else if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             speed -= airSpeedReduction;
@@ -103,10 +114,20 @@ public class PlayerMovement : MonoBehaviour
         
         #region Dash
         
-        if (_dashContador <= _dashCooldown) { _dashContador += Time.deltaTime; }
+        if (_dashContador <= _dashCooldown) 
+        { 
+            _dashContador += Time.deltaTime; 
+            _dashAvailableImage.color = Color.red; 
+        } 
+        else
+        {
+            if (_amaGameObject.activeInHierarchy) { _dashAvailableImage.color = Color.yellow; }
+        }
         if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown && _amaGameObject.activeInHierarchy)
         {
-            StartCoroutine(Dash());
+            _dashRoutine = null;
+            _dashRoutine = Dash();
+            StartCoroutine(_dashRoutine);
         }
         
         #endregion
@@ -145,18 +166,20 @@ public class PlayerMovement : MonoBehaviour
         #endregion
     }
 
+    private static Collider _crossable;
+    private IEnumerator _dashRoutine;
     private IEnumerator Dash()
     {
+        _inDash = true;
         float _dashSpeedOverTime = 0f;
         float startTime = Time.time;
         
-        while (Time.time <= startTime + _dashTime && move != new Vector3(0f,0f,0f))
+        while (Time.time <= startTime + _dashTime && move != new Vector3(0f,0f,0f) && _allowWallJumpInput == false)
         {
-            _inDash = true;
             velocity.y = 0;
             _dashSpeed = _dashSpeedCurve.Evaluate(_dashSpeedOverTime);
             _dashSpeedOverTime+=0.01f;
-            controller.Move(move * _dashSpeed * Time.deltaTime);
+            controller.Move(move * (_dashSpeed * Time.deltaTime));
             _dashContador = 0;
 
             #region Raycast
@@ -167,9 +190,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Crossable"))
                 {
-                    hit.collider.isTrigger = true; 
-                    yield return new WaitForSeconds(_dashTime); 
-                    hit.collider.isTrigger = false;
+                    _crossable = hit.collider;
+                    _crossable.isTrigger = true;
                 }
             }
             #endregion
@@ -177,6 +199,7 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         _inDash = false;
+        if (_crossable != null) { _crossable.isTrigger = false; }
     }
 
     private void WallJump()

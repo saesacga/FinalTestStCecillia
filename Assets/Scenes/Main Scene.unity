@@ -1877,7 +1877,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89601404}
-  m_LocalRotation: {x: -0.02116892, y: -0.6567029, z: -0.018446393, w: 0.7536266}
+  m_LocalRotation: {x: -0.021168921, y: -0.6567029, z: -0.018446393, w: 0.7536265}
   m_LocalPosition: {x: 351.29, y: 38.896, z: -82.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7273,6 +7273,7 @@ RectTransform:
   m_Children:
   - {fileID: 831127704}
   - {fileID: 330593926}
+  - {fileID: 633245490}
   m_Father: {fileID: 383736474}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12335,6 +12336,82 @@ Transform:
   m_Father: {fileID: 2104489584}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &633245489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633245490}
+  - component: {fileID: 633245492}
+  - component: {fileID: 633245491}
+  m_Layer: 5
+  m_Name: DashAvailable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &633245490
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633245489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -21.465261}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 472348469}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -883, y: -409}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &633245491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633245489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.046096165, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &633245492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633245489}
+  m_CullTransparentMesh: 1
 --- !u!1 &638014264
 GameObject:
   m_ObjectHideFlags: 0
@@ -22105,38 +22182,30 @@ MonoBehaviour:
       inWeight: 1
       outWeight: 0.22434613
     - serializedVersion: 3
-      time: 0.22921164
-      value: 39.99859
-      inSlope: 0.55980486
-      outSlope: 0.55980486
+      time: 0.4542101
+      value: 36.35138
+      inSlope: -11.62406
+      outSlope: -11.62406
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.6609571
     - serializedVersion: 3
-      time: 0.39550224
-      value: 28.535105
-      inSlope: -106.86986
-      outSlope: -106.86986
+      time: 0.7
+      value: 20
+      inSlope: -167.37749
+      outSlope: -167.37749
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.12205626
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.5
-      value: 10
-      inSlope: -0.4
-      outSlope: -0.4
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.11148384
+      inWeight: 0.04824937
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _dashTime: 0.5
+  _dashTime: 0.7
   _dashCooldown: 2
   _amaGameObject: {fileID: 383736473}
+  _dashAvailableImage: {fileID: 633245491}
   groundCheck: {fileID: 860376610}
   groundDistance: 0.4
   groundMask:
