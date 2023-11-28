@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isGrounded) { _currentWall = null; }
         
-        if (wallJumpFlag && inTheAir) 
+        if (wallJumpFlag && _isGrounded == false) 
         {
             if (velocity.y < -2.5f || _inDash)
             {
@@ -207,6 +207,7 @@ public class PlayerMovement : MonoBehaviour
         wallJumpFlag = false;
         _allowWallJumpInput = false;
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); //Hacer un salto
+        _dashContador = _dashCooldown;
         StopCoroutine(_wallJumpTimerRoutine);
     }
 
