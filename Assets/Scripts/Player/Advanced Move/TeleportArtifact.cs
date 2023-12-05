@@ -17,11 +17,9 @@ public class TeleportArtifact : MonoBehaviour
 
     [SerializeField] private Transform _startPosition;
 
-    [SerializeField] private GameObject _teleportProjectile;
+    [SerializeField] private static GameObject _teleportProjectile;
 
     [SerializeField] private GameObject _player;
-
-    public static bool _canThrow = true;
 
     [SerializeField] private Image _allowedToTeleportUI;
 
@@ -72,14 +70,18 @@ public class TeleportArtifact : MonoBehaviour
     public static bool amaStep4Completed;
     private void ThrowObject()
     {
-        if (_canThrow && trajectoryPredictor.allowThrow)
+        if (trajectoryPredictor.allowThrow)
         {
-            amaStep4Completed = true;
+            if (_teleportProjectile != null)
+            {
+                Destroy(_teleportProjectile);
+                TeleportProjectile.allowedToTeleport = false;
+                TeleportProjectile.animatorCanChangeValues = false;
+            }
             GetComponentInChildren<Animator>().Play("AmaShoot");
             Rigidbody thrownObject = Instantiate(_objectToThrow, _startPosition.position, Quaternion.identity);
             _teleportProjectile = thrownObject.gameObject;
             thrownObject.AddForce(_startPosition.forward * _force, ForceMode.Impulse);
-            _canThrow = false;
         }
         else
         {
@@ -97,7 +99,6 @@ public class TeleportArtifact : MonoBehaviour
         _player.GetComponent<CharacterController>().enabled = false;
         _player.transform.position = _teleportProjectile.transform.position;
         _player.GetComponent<CharacterController>().enabled = true;
-        _canThrow = true;
         Destroy(_teleportProjectile);
 
         #region Para planeta

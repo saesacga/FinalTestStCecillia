@@ -39,7 +39,6 @@ public class TeleportProjectile : MonoBehaviour
         {
             allowedToTeleport = false;
             animatorCanChangeValues = false;
-            TeleportArtifact._canThrow = true;
             Destroy(this.gameObject);
         }
     }
@@ -50,7 +49,6 @@ public class TeleportProjectile : MonoBehaviour
         {
             allowedToTeleport = false;
             animatorCanChangeValues = false;
-            TeleportArtifact._canThrow = true;
             Destroy(this.gameObject);
         }
     }
