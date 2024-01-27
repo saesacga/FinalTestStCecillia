@@ -21,13 +21,11 @@ public class ForestGate : MonoBehaviour
     {
         if (cameraBlend == "ForestGate1Cam")
         {
-            StartCoroutine(ActionMapReference.ActivateLooking(false));
-            _cinemachineBlend.Play(cameraBlend);
+            StartCoroutine(ActionMapReference.ActivateLooking(false, cameraBlend));
         }
         else if (cameraBlend == "POVCam")
         {
-            _cinemachineBlend.Play(cameraBlend);
-            StartCoroutine(ActionMapReference.ActivateLooking(true));
+            StartCoroutine(ActionMapReference.ActivateLooking(true, cameraBlend));
         }
         
     }

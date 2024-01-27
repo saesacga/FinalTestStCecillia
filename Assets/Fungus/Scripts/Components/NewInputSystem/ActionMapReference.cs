@@ -17,10 +17,13 @@ public class ActionMapReference : MonoBehaviour
     #endregion
 
     [SerializeField] private List<GameObject> _gameplaySchemes = new List<GameObject>();
+    [SerializeField] private Animator _cinemachineBlendRef;
+    private static Animator _cinemachineBlend;
 
     private void Start()
     {
         _cinemachineInputProvider = _cinemachineInputRef;
+        _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
         playerMap = new PlayerMap();
         ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
@@ -100,16 +103,19 @@ public class ActionMapReference : MonoBehaviour
         }
     }
 
-    public static IEnumerator ActivateLooking(bool state)
+    public static IEnumerator ActivateLooking(bool state, string camBlendName)
     {
         if (state) 
         {
-            yield return new WaitForSeconds(1f);
+            _cinemachineBlend.Play(camBlendName);
+            yield return new WaitForSeconds(0.3f);
             _cinemachineInputProvider.enabled = true;
         }
         else
         {
             _cinemachineInputProvider.enabled = false;
+            yield return new WaitForSeconds(0.1f);
+            _cinemachineBlend.Play(camBlendName);
         }
     }
 }

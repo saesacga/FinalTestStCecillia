@@ -6,7 +6,7 @@ public class LightRay : MonoBehaviour
     #region Members
 
     [SerializeField] private Collider _invisibleWall;
-    [SerializeField] private Animator _cinemachineBlend;
+    
     [HideInInspector] public int _starsCount;
     [HideInInspector] public int _starsInPosition;
     private bool _nextPos;
@@ -51,14 +51,14 @@ public class LightRay : MonoBehaviour
         {
             _nextPos = false;
             _canGoToNextPos = false;
-            StartCoroutine(ActionMapReference.ActivateLooking(false));
-            _cinemachineBlend.Play("LightBeamCam");
+            StartCoroutine(ActionMapReference.ActivateLooking(false, "LightBeamCam"));
+//            _cinemachineBlend.Play("LightBeamCam");
         }
         else //El rayo se dejó de mover
         {
             _canGoToNextPos = true;
-            _cinemachineBlend.Play("POVCam");
-            StartCoroutine(ActionMapReference.ActivateLooking(true));
+//            _cinemachineBlend.Play("POVCam");
+            StartCoroutine(ActionMapReference.ActivateLooking(true, "POVCam"));
         }
     }
 }

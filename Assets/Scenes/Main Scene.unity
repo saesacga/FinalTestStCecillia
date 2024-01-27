@@ -2265,7 +2265,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89601404}
-  m_LocalRotation: {x: 0.018889444, y: -0.65715116, z: 0.016477538, w: 0.7533419}
+  m_LocalRotation: {x: 0.018889481, y: -0.65715134, z: 0.016477577, w: 0.75334185}
   m_LocalPosition: {x: 572.79, y: 95.496, z: -111.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7679,7 +7679,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353512998}
-  m_LocalRotation: {x: 0.0008946459, y: 0.7094503, z: -0.00090060727, w: 0.70475435}
+  m_LocalRotation: {x: 0.00089462724, y: 0.70945036, z: -0.00090058864, w: 0.70475423}
   m_LocalPosition: {x: 572.79, y: 95.496, z: -111.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22953,7 +22953,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.37374038, y: 0.5999445, z: -0.37309048, w: 0.6009895}
+  m_LocalRotation: {x: 0.0008857293, y: 0.7094505, z: -0.0008916315, w: 0.70475423}
   m_LocalPosition: {x: 575.5, y: 97.619, z: -87.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22980,7 +22980,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 1
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -23642,7 +23642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RecenterTarget: 0
   m_VerticalAxis:
-    Value: 63.752903
+    Value: 0.14401767
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.15
@@ -23666,7 +23666,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_HorizontalAxis:
-    Value: 89.90028
+    Value: 90.38053
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.15
@@ -34857,7 +34857,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _invisibleWall: {fileID: 1688904641}
-  _cinemachineBlend: {fileID: 1630120630}
   _starsCount: 0
   _starsInPosition: 0
   _starsRequired: 5
@@ -47823,7 +47822,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025067463}
-  m_LocalRotation: {x: 0.37374038, y: 0.5999445, z: -0.37309048, w: 0.6009895}
+  m_LocalRotation: {x: 0.0008857293, y: 0.7094505, z: -0.0008916315, w: 0.70475423}
   m_LocalPosition: {x: 572.79, y: 95.496, z: -111.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -49252,6 +49251,10 @@ PrefabInstance:
       propertyPath: _eventReference
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3522502949641836076, guid: 95afdf536801b4c46981637b9ae51ef3, type: 3}
+      propertyPath: _cinemachineBlendRef
+      value: 
+      objectReference: {fileID: 1630120630}
     - target: {fileID: 3522502949641836076, guid: 95afdf536801b4c46981637b9ae51ef3, type: 3}
       propertyPath: _cinemachineInputRef
       value: 
