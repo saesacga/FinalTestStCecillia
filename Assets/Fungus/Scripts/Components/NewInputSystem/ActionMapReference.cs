@@ -108,12 +108,12 @@ public class ActionMapReference : MonoBehaviour
         if (state) 
         {
             _cinemachineBlend.Play(camBlendName);
-            yield return new WaitForSeconds(0.3f);
-            _cinemachineInputProvider.enabled = true;
+            yield return new WaitForSeconds(0.1f);
+            playerMap.Movimiento.Look.Enable();
         }
         else
         {
-            _cinemachineInputProvider.enabled = false;
+            playerMap.Movimiento.Look.Disable();
             yield return new WaitForSeconds(0.1f);
             _cinemachineBlend.Play(camBlendName);
         }
