@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MoveCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MoveCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MoveCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MoveCamera.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +26,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/23/bfc0d15f/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Magic/StarMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/CinemachineSceneTools.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Core/CinemachineCore.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Helpers/CinemachineInputProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Helpers/CinemachineTouchInputMapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2T1tiaE62aNz6TFRLUDRxczI3Vm" />
@@ -157,6 +158,8 @@
       <workItem from="1701753770136" duration="2313000" />
       <workItem from="1701805422706" duration="596000" />
       <workItem from="1706310550727" duration="17218000" />
+      <workItem from="1706381928236" duration="8357000" />
+      <workItem from="1706567607475" duration="2927000" />
     </task>
     <servers />
   </component>

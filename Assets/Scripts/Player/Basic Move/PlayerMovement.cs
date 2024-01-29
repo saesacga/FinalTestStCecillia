@@ -67,12 +67,6 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        #region Rotation in Y axis
-
-        transform.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
-        
-        #endregion
-        
         #region Wall Jump
 
         if (_isGrounded) { _currentWall = null; }

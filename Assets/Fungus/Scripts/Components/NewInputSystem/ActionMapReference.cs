@@ -11,18 +11,16 @@ public class ActionMapReference : MonoBehaviour
     #region Singleton
     
     static public PlayerMap playerMap;
-    [SerializeField] private CinemachineInputProvider _cinemachineInputRef;
-    private static CinemachineInputProvider _cinemachineInputProvider;
     
     #endregion
 
     [SerializeField] private List<GameObject> _gameplaySchemes = new List<GameObject>();
     [SerializeField] private Animator _cinemachineBlendRef;
     private static Animator _cinemachineBlend;
+    public static bool camTransitioning;
 
     private void Start()
     {
-        _cinemachineInputProvider = _cinemachineInputRef;
         _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
         playerMap = new PlayerMap();
@@ -108,11 +106,13 @@ public class ActionMapReference : MonoBehaviour
         if (state) 
         {
             _cinemachineBlend.Play(camBlendName);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(1.6f);
+            camTransitioning = false;
             playerMap.Movimiento.Look.Enable();
         }
         else
         {
+            camTransitioning = true;
             playerMap.Movimiento.Look.Disable();
             yield return new WaitForSeconds(0.1f);
             _cinemachineBlend.Play(camBlendName);
