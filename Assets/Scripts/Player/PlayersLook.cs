@@ -41,7 +41,7 @@ public class PlayersLook : MonoBehaviour
         }
         else
         {
-            //_playerBody.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
+            _playerBody.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
         }
     }
 }
