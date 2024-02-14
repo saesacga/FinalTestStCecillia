@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ForestGate : MonoBehaviour
-{ 
-    [SerializeField] private Animator _cinemachineBlend;
+{
     [SerializeField] private Transform _playerPos;
     [SerializeField] private Vector3 _newPosition;
 
@@ -13,6 +12,11 @@ public class ForestGate : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
+            if (gameObject.tag == "Salida")
+            {
+                GetComponent<Animator>().Play("Entrada");
+                return;
+            }
             GetComponent<Animator>().SetBool("EnterForest", true);
         }
     }

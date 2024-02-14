@@ -18,6 +18,7 @@ TagManager:
   - Slope
   - Star
   - Constructible
+  - Salida
   layers:
   - Default
   - TransparentFX
