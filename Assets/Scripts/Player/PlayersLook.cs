@@ -35,13 +35,17 @@ public class PlayersLook : MonoBehaviour
         {
             xRotation -= currentInputMouseVector.y;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); //Referencia para la cámara arriba y abajo
+            
+            transform.Rotate(Vector3.left * currentInputMouseVector.y); //Referencia para la cámara arriba y abajo
             _playerBody.Rotate(Vector3.up * currentInputMouseVector.x); //Mover jugador de izquierda a derecha
         }
-        else
+        else //Igualar la rotación del POV con los movimientos de cámara
         {
+            
+            transform.localRotation = Quaternion.Euler(Camera.main.transform.rotation.eulerAngles.x, 0f, 0f);
+            
             _playerBody.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
+            
         }
     }
 }
