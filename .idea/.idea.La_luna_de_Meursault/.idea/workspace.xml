@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Estrella.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Estrella.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +157,8 @@
       <workItem from="1706838826683" duration="1177000" />
       <workItem from="1707892660255" duration="1265000" />
       <workItem from="1708573903248" duration="1266000" />
-      <workItem from="1708655255611" duration="10410000" />
+      <workItem from="1708655255611" duration="11047000" />
+      <workItem from="1708718015309" duration="8022000" />
     </task>
     <servers />
   </component>
