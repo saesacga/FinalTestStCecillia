@@ -10,15 +10,7 @@ using Random = UnityEngine.Random;
 public class FriendlyNPC : MonoBehaviour
 {
     #region Members
-
-    #region For Interaction
-
-    [SerializeField] private SpriteRenderer _interactSprite;
-    private Fungus.Flowchart _currentFlowchart;
-    private bool interactuarFlag = false;
     
-    #endregion
-
     #region For Movement
 
     public bool autoMove;
@@ -30,21 +22,11 @@ public class FriendlyNPC : MonoBehaviour
     private State _moveState;
 
     #endregion
-
-    #region For Unlockables
-
-    public static bool unlockCollector;
-    public static bool unlockAdvanceMovement;
-
-    #endregion
     
     #endregion
     
-
     private void Start()
     {
-        _currentFlowchart = GetComponentInChildren<Fungus.Flowchart>();
-
         #region For Movement
 
         _startingPosition = transform.position;
@@ -93,7 +75,7 @@ public class FriendlyNPC : MonoBehaviour
 
         #region Interaction
 
-        if (interactuarFlag == true)
+        /*if (interactuarFlag == true)
         {
             _interactSprite.enabled = true;
             
@@ -107,7 +89,7 @@ public class FriendlyNPC : MonoBehaviour
         else
         {
             _interactSprite.enabled = false;
-        }
+        }*/
 
         #endregion
     }
@@ -122,26 +104,17 @@ public class FriendlyNPC : MonoBehaviour
     {
         if (farming)
         {
-            unlockCollector = true; 
             ActionMapReference.playerMap.Farming.Enable();
             ActionMapReference.playerMap.ChangeSchemes.EnableFarming.Enable();
         }
 
         if (advanceMove)
         {
-            unlockAdvanceMovement = true;
             ActionMapReference.playerMap.MovimientoAvanzado.Enable();
             ActionMapReference.playerMap.ChangeSchemes.EnableAdvanceMovement.Enable();
         }
     }
     
-    public void ExitBlock()
-    {
-        //PlayersLook._cutsceneInProgress = false;
-        _interactSprite.enabled = true;
-        ActionMapReference.ActivateAllMaps();
-    }
-
     public void StartRoaming()
     {
         _startingPosition = transform.position;
@@ -156,15 +129,11 @@ public class FriendlyNPC : MonoBehaviour
     
     private void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            interactuarFlag = true;
-            if (autoMove) { _moveState = State.stand; }
-        }
+        if (collision.gameObject.CompareTag("Player")) { if (autoMove) { _moveState = State.stand; } }
     }
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player")) interactuarFlag = false; 
+        //if (collision.gameObject.CompareTag("Player")) interactuarFlag = false; 
         if(autoMove) _moveState = State.roaming;
     }
 }
