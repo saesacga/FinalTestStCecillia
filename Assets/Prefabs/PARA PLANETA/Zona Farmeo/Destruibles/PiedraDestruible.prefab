@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1071188393118609967}
   - component: {fileID: 5717808518100287145}
   m_Layer: 14
-  m_Name: "\xC1rbol nube"
+  m_Name: Sprite
   m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,7 +8,7 @@ public class LightRay : MonoBehaviour
     [SerializeField] private Collider _invisibleWall;
     [SerializeField] private GameObject _personajes;
 
-        [HideInInspector] public int _starsCount;
+    [HideInInspector] public int _starsCount;
     [HideInInspector] public int _starsInPosition;
     //private bool _nextPos;
     private int _nextPos;

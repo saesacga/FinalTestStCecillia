@@ -6,8 +6,136 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Matriarca/MatriarcaController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Matriarca/MatriarcaController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/CharacterGraphics.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/CharacterGraphics.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cinemachine/Cinemachine Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cinemachine/Cinemachine Animator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cinemachine/Main Camera Blend.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cinemachine/Main Camera Blend.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForestGate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForestGate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TPSurface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TPSurface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-19.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-20.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-21.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-22.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-23.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-24.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-25.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-26.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-27.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-28.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-29.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-30.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-31.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-32.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-33.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-34.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-35.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-36.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-37.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-38.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-39.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-40.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-41.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-42.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-43.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-44.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-45.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-46.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-47.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-48.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-49.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-50.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-51.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-52.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-53.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-54.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-55.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-56.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-57.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-58.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Characters/Palomas/Palomas animated/Palomas_Move-9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +286,7 @@
       <workItem from="1707892660255" duration="1265000" />
       <workItem from="1708573903248" duration="1266000" />
       <workItem from="1708655255611" duration="11047000" />
-      <workItem from="1708718015309" duration="8022000" />
+      <workItem from="1708718015309" duration="17175000" />
     </task>
     <servers />
   </component>

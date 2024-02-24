@@ -72,26 +72,6 @@ public class FriendlyNPC : MonoBehaviour
         #endregion
         
         #endregion
-
-        #region Interaction
-
-        /*if (interactuarFlag == true)
-        {
-            _interactSprite.enabled = true;
-            
-            if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPressedThisFrame())
-            {
-                ActionMapReference.EnterInteraction(false);
-                _interactSprite.enabled = false;
-                _currentFlowchart.ExecuteBlock("DeafultBlock");
-            }
-        }
-        else
-        {
-            _interactSprite.enabled = false;
-        }*/
-
-        #endregion
     }
     
     public void OnCutscene()
@@ -133,7 +113,6 @@ public class FriendlyNPC : MonoBehaviour
     }
     private void OnTriggerExit(Collider collision)
     {
-        //if (collision.gameObject.CompareTag("Player")) interactuarFlag = false; 
         if(autoMove) _moveState = State.roaming;
     }
 }

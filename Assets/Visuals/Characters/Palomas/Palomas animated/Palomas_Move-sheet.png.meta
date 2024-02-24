@@ -1,0 +1,5029 @@
+fileFormatVersion: 2
+guid: bcae9bef17f99bc498c6ef651a9a34d4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b96fd79ad431ff46be6e6ce7f2797ab
+      internalID: 1416247577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a0b1011de0dec4abaf3ce7e3cc010f
+      internalID: 161673307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6a66a6147413a4a98a09842774e162
+      internalID: 67581946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c269656644d590f49a9ebec4cf0a0612
+      internalID: -1071126911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6208ae8f24954546af106fe4f6a6c61
+      internalID: -1172977828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a15847052d3fe54d8f50af57fb0dc11
+      internalID: -1726865149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6eb6bd685af0eb41a3d675c4e7164c1
+      internalID: -1618655917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5074cdf02d2a73743b5dffec6a7d60b2
+      internalID: -509214638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a16a1d260298844a0c4876a070594f
+      internalID: -78169455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c44fffb618e5ad43aa1cbeaece923a2
+      internalID: 1325314327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581d2d35b4123d3459dd654a675e0f49
+      internalID: -293741859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b29c7776c86d054186802fd82b9bd58
+      internalID: 2038168475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4ea79758a004e4ca391646a5a78804
+      internalID: -1723057503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a1a56f7639bfd4b9cc7e1c40b2a291
+      internalID: 1227592889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d4ca632f8f49c419bf675e351f01a3
+      internalID: 2093352707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a7a30780efe82469f442dfb031ee47
+      internalID: -1206865072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d53bb2abd2cf064b83c9fd3c86f9600
+      internalID: 1513181048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda86ff4f2b1be0498548ecb5bb00bf6
+      internalID: 1647586846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e21bdd6495ff144eb91c9cd556a1186
+      internalID: -1803414944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9e3d56d89068947854c27d7e3ae634
+      internalID: -964943419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c135e339ea8fdd14b93c10a2a9f48bbe
+      internalID: 63058519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd66f996144aa54fb84392df4341d08
+      internalID: -1845289400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5964900173ec056449a232bad75a79c9
+      internalID: -1166634673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b4ba3cfb61e2c4f9053b1ea079b5ef
+      internalID: 71716519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 1032
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1511db61195ec4b489ba62355ccdc596
+      internalID: 2116567281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e088112b2437a4d42b77c3789e4375b8
+      internalID: -354889161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bccaef56926bcf4c8a9d93d14842cb7
+      internalID: -1792510134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9192b504d10624da3c518ad9422d52
+      internalID: 816999031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab18058c6900719449d5b8abf9dc7ae6
+      internalID: 1892763295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9299200146b036d4aa8d05e9b634366f
+      internalID: -1841184576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86c686b53bd60d4eb930ba65b206b75
+      internalID: 1679654559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c243205b196c034dac175b03ff7f8a6
+      internalID: 300915455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dedc9309b335942bcf48026c1dcefa
+      internalID: -1002115949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9617bf41da5814bbb4dee6f67e10aa
+      internalID: -501370519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3df9c68ea99c8f4f97b353fa4bb7752
+      internalID: 969109419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb8afa7accd6e04bba8efa178e78fcc
+      internalID: -870941215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f766241fdfdac49bc0f215cf1c351d
+      internalID: 1094171498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacd47a0bd5d8e14883eacf0d575d2b4
+      internalID: -1248295519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9177204d45e9739498adc9c5a6ea4997
+      internalID: -2026772178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b84af7782e0c94d94b7f3d44694efa
+      internalID: 1086557713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa32780360c12984096c0e3a3471e45a
+      internalID: -408087362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_41
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff28829da61ba024696348a66ed8bded
+      internalID: -925638319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_42
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4892367b803e90e42b22ad5eb407086f
+      internalID: -1136098451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9403a0a3cf5c9a42bcf2854ed777668
+      internalID: -670950888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_44
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71096940c6d63a42a56767097dd557e
+      internalID: -1593818174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_45
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f380053e21d6a54449f6d719d53fa75b
+      internalID: 203415864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360bde4add47f6348a0149843d252d8c
+      internalID: 164753185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f401c1fb501e82d4f945848f24a242e1
+      internalID: 1803433439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_48
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3865e379b9e643a4c8211c07a96a1f0b
+      internalID: 688102042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_49
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 903
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec53daf3e3cc104b95539aecdd82d1c
+      internalID: 700750239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53ef3b18a9c3484e9209fcbbc179aae
+      internalID: 275089001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_51
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82ea479aa8a19544ad5465e177d8633
+      internalID: 1574192717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_52
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0809ffb7e7853964a86be6556881732f
+      internalID: 592135418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_53
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0111a03f649d8e547a37ef59cda6fd11
+      internalID: 544582073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_54
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377e6fad5ab5f13449f21ebd4cba45e8
+      internalID: -558136958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_55
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439c262b233182549b29d33699efe07d
+      internalID: -159170846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_56
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400a6269dfbcba94d8f957ac3998330b
+      internalID: -1787027381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_57
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4499c2327810034db5699e15d3a0e4e
+      internalID: -139432672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_58
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51770552b2ccf74382682f746c2b8c8
+      internalID: -1463528718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_59
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213b0af2dd1b81b428de81d4e7e95f6c
+      internalID: 630786763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_60
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863f6e676d10f2a47b4bf706a81cf0c7
+      internalID: 1214818807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d067bdbc309cca147bc4fb46357b6f77
+      internalID: 2005603394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c1b3c2b808dde40881d3c568276ead
+      internalID: -1475962481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06194e57179c4004ea7eb9d8b27f15ac
+      internalID: -2025098628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_64
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0022d1368cf9bc942854e77dd07c5914
+      internalID: 175208111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_65
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc93411185685c44bacc10c7f5c003c
+      internalID: -1255787121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_66
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c805011de1fc63d40a4ef101c84952fd
+      internalID: -245553666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_67
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cebb34610e29a641844c4c857d4a9ad
+      internalID: -1288348138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_68
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7f5d715f9f6a340a4946cffceb588b
+      internalID: 1168757023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_69
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da98ac29e7c2394ebe37a4191bd4383
+      internalID: 254172870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_70
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100471c25aea25346b2b8082bf53b147
+      internalID: -511383459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_71
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443dc451fde5c3a498a950f25fcf4d5c
+      internalID: -2051371365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_72
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cec9c0fe4291349b7ba17b31d3c783
+      internalID: 1756515009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_73
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8406f25807d26b4c8535b444eb280a3
+      internalID: -1907079854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_74
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 774
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948399978b874eb46804eec03c16361f
+      internalID: 479138336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a834107586d82a14ba632f31301ab81e
+      internalID: 1990348982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_76
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62e984fd468e1d479ef0098836c5b0a
+      internalID: 933968474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_77
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678881f0a2873b84b98a6b974ab45fa0
+      internalID: -1856761097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_78
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcff83ae204d944c8cc3de236ef1e1b
+      internalID: 115492024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_79
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552a10d526a2ab549807aeba4d543686
+      internalID: 1639897938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_80
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4db6e81a9c2697408cc23a366caf76c
+      internalID: 239448062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_81
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd269f765105089428954c72dad59f5b
+      internalID: 1335254449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_82
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e097525bb66a6b14b9a075df4fc2afff
+      internalID: -847155122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_83
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f26ec7ce227a0d458b9e29f5690d3ff
+      internalID: -770012313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_84
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba259cef631f8a4eb2d5070a9202d7d
+      internalID: 1231161972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_85
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01427b4819fdf2246a7ed16abc04fbed
+      internalID: -133377756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_86
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136198362b0af09478a1fec5179f30c7
+      internalID: 1315360325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_87
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7410926ef198b7641bda21b177f644ef
+      internalID: 154519606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_88
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e5b055155e6f645b0ab8da7b78ab48
+      internalID: 1991648814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_89
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ff0eef116d63c47a7e0713ecfa1630
+      internalID: 521184032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_90
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2163e0921da14498b8ef157c92f55b
+      internalID: 292593376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_91
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7d24817346e8547b13f88318a6dbda
+      internalID: -198256109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_92
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b19269a6a73f145844d7159fc7ec58
+      internalID: -505744332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_93
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4506d5c45e08a13478acda3def803a39
+      internalID: 1358311132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_94
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3fe3847cb16e54eae713faffcfbd0e
+      internalID: -2127518861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_95
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628210d897c5c5a4d9f697b234b42270
+      internalID: -1537579395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_96
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed0c18e9e1abee4abb2b5402672cea8
+      internalID: -1051059590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_97
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59237d0e717ca947a63ab1df6d29900
+      internalID: -790389732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_98
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2584b51325759024789bdaeb7c095ec7
+      internalID: -1350517420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_99
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 645
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3686c08182202f24aa752f0d57baec0f
+      internalID: -724914240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf4633970a653342ae8f824b42e8a39
+      internalID: -1638218874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_101
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94d1569cae90df419ce36c697203336
+      internalID: 906848503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_102
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641f39565ddb75f43bf36cc761a792fe
+      internalID: 1793530538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_103
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cbd73b55ac16144bcab3a499778308
+      internalID: 1771810525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_104
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae97d1f14addfc740a86660e01ad98c0
+      internalID: 1793423174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_105
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0388062a1df4d840b107b2124d20085
+      internalID: 144146031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_106
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715bb034aa61b7c4186af6fd56c99f50
+      internalID: -1435142151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_107
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59db3410460067b4793ba2c6de55704a
+      internalID: 1109190467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_108
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2423d029f082b6145b532a23ff268bab
+      internalID: 417592299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_109
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5402558d513ab4db96e479180f1f87
+      internalID: -1946137156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_110
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a601ca6a8cfd67446af1a0917f6e2acc
+      internalID: -277054013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_111
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2df43d41d4a384fab6b042d4837632
+      internalID: -1761157648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_112
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff65db5333ac1234697ae7746e0e842f
+      internalID: -653814728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_113
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef7a5aca089f24489d228fdd1f7fb46
+      internalID: 351329204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_114
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45995b72272ab9488d762a40ba9bea8
+      internalID: -1762817160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_115
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39f9a2375a356b4d849875f030a74c2
+      internalID: 966683637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_116
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230c3d683b35bb84fb1590a89e091013
+      internalID: 1204110843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_117
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1cd2611d0bbd24ba841e7ea047553c
+      internalID: -1912997106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_118
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ea8be610cb291498fd60016172312a
+      internalID: 1500553710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_119
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db6a429a72f0e040aa2257650706e4e
+      internalID: 506068316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_120
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5642305d2a4101b40a56fe5d0e76b2b1
+      internalID: -2099936197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_121
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3eb395eabe5b704a89deaea26f8bb04
+      internalID: 1937282630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_122
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0160d7c5e00e920429e2cfead4d1899e
+      internalID: -652104311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_123
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65132cafa4e8a5448cedda2571cc49f
+      internalID: -2057427332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_124
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 516
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158488c89ff5289409b44b99c618a70a
+      internalID: 1693785048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243bfdc5dc86efa4092d039c4e0b3d30
+      internalID: 329385499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_126
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f42f500d1b8ffa4fb9725261e428665
+      internalID: -1335751245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_127
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2cdfcec8eced3448af4ae7acc0e6a13
+      internalID: 220839726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_128
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8542d7ee23abe4d8678b1fd6a9f94f
+      internalID: 1332014250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_129
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c88cfa1681b154459c05db29ee4deab
+      internalID: 860612406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_130
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c3c8adeac9fce46a658ddacda1b9d2
+      internalID: 1564199427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_131
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9b08967b1ce944599f353793623e7c
+      internalID: 782330870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_132
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388b638d3853d9842b2afc7ef33222eb
+      internalID: -335992431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_133
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84148453fa4eab04c85eacdbdea5da9d
+      internalID: -681862394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_134
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5796ca94695d7844e9029f81e9467664
+      internalID: 1396187263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_135
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c84bb22ad5e6fb4d91a63a721bcc327
+      internalID: -1768950919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_136
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e209a25b167a7b47b644efb2bf6db7f
+      internalID: 509507836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_137
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c73c89f6e937b9439f02d3f56982051
+      internalID: -1953403456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_138
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd6d3a368a83ef4288ffdb7a8077ff9
+      internalID: 399827398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_139
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc7397be203169438296a2670ec5891
+      internalID: -1711216323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_140
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59123dfd35941b346bdaa9c09bf34777
+      internalID: 22202437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_141
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47a48f24cc332c4ab2c6a29049f455c
+      internalID: 1483331441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_142
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd77b82497dbd04590adec03474dc9e
+      internalID: 1818144213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_143
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e95501f640c69d4097219c31afa0e31
+      internalID: -1114306343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_144
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d936b3379927534aae0dc609c9e47c7
+      internalID: -1551194278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_145
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80b204cf905c064ca1168644d2e600e
+      internalID: -1435370284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_146
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6caa76578abd6524e80f9cc30b16710c
+      internalID: 1804736464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_147
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea017be31b307545a8cd5d89ba25342
+      internalID: -619002377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_148
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0986fa5e74dfbbc429a804f13719ba47
+      internalID: 1160452630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_149
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 387
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da627c0b89ecc9c479aeb2c9af6bbe1e
+      internalID: 808470264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe3f164a082d43489570e81d6ccd292
+      internalID: -641894279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_151
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c951a515a6df594f806e79dadaa6451
+      internalID: -1248190068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_152
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03fc8a7719904d418f48446dd7e294c
+      internalID: -507848085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_153
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65b877ac2d69a34fac33323dea8496a
+      internalID: 1187617221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_154
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64cc73cf0b973943a8ccb13a2ddd347
+      internalID: -972171079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_155
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1882372c6c24d9947919d3354a427298
+      internalID: -109601316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_156
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1548bfa80f913b4db429ba99964ac9c
+      internalID: -978379961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_157
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6babede7e7de23441ac3eff0e7e27b63
+      internalID: 2080601747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_158
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6a126d1e73b484e9adb968f224c8d6
+      internalID: 1479073577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_159
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca07befc38c7b64e91e76e177da1255
+      internalID: 1834633332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_160
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca69dc8de0f0eb04db43afeeaf39fdb5
+      internalID: 1045498161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_161
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf597e26b65ea3b42a1c8de2b5ee1d5f
+      internalID: 1062761205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_162
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35198b10d6b91d748b4dc4e884855412
+      internalID: -716344342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_163
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973bef0d6bcc4b5409c8aeb1d44a9a69
+      internalID: 657616246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_164
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5afb97647dc6f84cb6d2cdfd7adfe40
+      internalID: -1319658452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_165
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eeed8d5a0e4d8441894fe2c846fcb5d
+      internalID: -1872555072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_166
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fa381f5e5ef6742b033ce5adb4d093
+      internalID: 464690948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_167
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5521748d1128bf04593e1acfc70459ad
+      internalID: -817224019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_168
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9e2e91b7d53e945a83570ac604c390
+      internalID: 724723720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_169
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e14ee61c6bac449ae0a2fc5dd91a74
+      internalID: 1778153822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_170
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6295e26d7e78545ab330796c47bbf3
+      internalID: -139387767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_171
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d9bca05cf4ca147b30e91dcf301a56
+      internalID: 1004135518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_172
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f104223f11331b94c98a41b338f3f2f5
+      internalID: -6482355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_173
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c91a9419a8228941bcd38edd7720259
+      internalID: 449130601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_174
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 258
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b1d0c2cba706a4983eeac19291c1e7
+      internalID: -2136329428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924d1c797ac45594eab3ed55a314ccd1
+      internalID: 1305733102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_176
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e95065f8cdec6478e549e67d4652a5
+      internalID: 510912779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_177
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4325166f63fa20a4e87d2203b11bd0a3
+      internalID: -347847537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_178
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6b74f197d4559468079473dd5e343a
+      internalID: -2046192141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_179
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678937a0144b11d4dafeaddecf35c47c
+      internalID: -1307961862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_180
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37d6e281b74b574697909260fa8876d
+      internalID: -458983690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_181
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420ae5fc6c6775148b620bb4cbe6a4ba
+      internalID: 784956310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_182
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd96b01ba951694d820045477ccee97
+      internalID: -906093088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_183
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7402b4ff716ddb44193cda697ca3a9a6
+      internalID: 2133849070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_184
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58bad04a49bfa64bb4b518bc95f0bd2
+      internalID: 1693710078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_185
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3d6114075ddfb44b6d084886b12917
+      internalID: -1720760386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_186
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85297184121b1a438d84f9d7e978a95
+      internalID: -42364469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_187
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a675500a58b3ed4459927916e57f7e58
+      internalID: -305323128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_188
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7926328b6dc62540b667a750b7a756c
+      internalID: -35346728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_189
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e05f36a83abde4eba95139b7f1f4d6
+      internalID: 425333420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_190
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e55b74070d7e2a4283e9bd6f8a9201e
+      internalID: -603901255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_191
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb2b99fc5536f541a56d637d7441d03
+      internalID: 1669948375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_192
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7999ae5c915572247921d7f8ad6222e2
+      internalID: 91755299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_193
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42671af25661254fbf3a1d500f61199
+      internalID: 863070831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_194
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d6f8e4998b0054280db20b79c11968
+      internalID: 1597135605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_195
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4f2c1c113cb364cbb575c0e908542a
+      internalID: -139225958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_196
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b6c22ab4515af4dabdf33cb583c07b
+      internalID: 1889365371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_197
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d351ad60011ba49979358b31d61e42
+      internalID: 479900465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_198
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9b8ff099862e5429dd874c71695b7a
+      internalID: -1271889915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_199
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 129
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e8e54d719f7f84388b1005244e73a4
+      internalID: -1284857324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae71cc1b03a21b4b9cc1dbebeb5aa5d
+      internalID: 1418110055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_201
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4808beff61e97ce4185c944e1f8cac99
+      internalID: 294832398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_202
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe73ee49245e9ce41b8d8b9ea3df968a
+      internalID: -875243626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_203
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f900daf974e36a245a413b0874331d2a
+      internalID: -39741142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_204
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93955e8f1ecb6004cba6d8b2c9814ee3
+      internalID: -2146280460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_205
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53c61b935d681b4690eaeb6d74af2ec
+      internalID: 744271142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_206
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb87c3868ef3faa4c800244450fd898f
+      internalID: -186080969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_207
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f74a2638e4b9d547bfd241c21ed3247
+      internalID: -299743557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_208
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd917d6ad7dfe14aa9e481427fcb7f4
+      internalID: -816907267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_209
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2ee0389dcf3ef4499b6b2d14a4b91c
+      internalID: 1735472360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_210
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8889faebc4c40fc4cbfb71acc08a0333
+      internalID: 955668164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_211
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aa5cf5b1a255c469b74bf021c17751
+      internalID: 1516277456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_212
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57b47e2efdbb3f45968ee4177240727
+      internalID: -2054489310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_213
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a8892c5d6cb624eafa9233727b6eae
+      internalID: 1608106570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_214
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ec11d8c08bfb641a4bdfc2cc043b1c
+      internalID: -1811171339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_215
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921dc3079960650449fa9a04c224e93b
+      internalID: 1398757700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_216
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbc7b271290d6e4b8a24804ea3d1e80
+      internalID: 108479138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_217
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcb014c1e9dc2847987ab683f38d699
+      internalID: 1928291110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_218
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e23b3e4d0526441ae848d4f18896cf
+      internalID: 1653985450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_219
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1664bb1ba1e856840be6a93f71c5c99e
+      internalID: 1268228968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_220
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b535b52f8b52c2b4eb85b8da39556a41
+      internalID: -1953766510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_221
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6644cff0c031fea4a99710c72c7d15f6
+      internalID: -517382558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palomas_Move-sheet_222
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 0
+        width: 134
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d204989397bc874a9bc5cd368203719
+      internalID: 1797234844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f6763c9456e51f3418df4af3e28710fa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Palomas_Move-sheet_0: 1416247577
+      Palomas_Move-sheet_1: 161673307
+      Palomas_Move-sheet_10: -293741859
+      Palomas_Move-sheet_100: -1638218874
+      Palomas_Move-sheet_101: 906848503
+      Palomas_Move-sheet_102: 1793530538
+      Palomas_Move-sheet_103: 1771810525
+      Palomas_Move-sheet_104: 1793423174
+      Palomas_Move-sheet_105: 144146031
+      Palomas_Move-sheet_106: -1435142151
+      Palomas_Move-sheet_107: 1109190467
+      Palomas_Move-sheet_108: 417592299
+      Palomas_Move-sheet_109: -1946137156
+      Palomas_Move-sheet_11: 2038168475
+      Palomas_Move-sheet_110: -277054013
+      Palomas_Move-sheet_111: -1761157648
+      Palomas_Move-sheet_112: -653814728
+      Palomas_Move-sheet_113: 351329204
+      Palomas_Move-sheet_114: -1762817160
+      Palomas_Move-sheet_115: 966683637
+      Palomas_Move-sheet_116: 1204110843
+      Palomas_Move-sheet_117: -1912997106
+      Palomas_Move-sheet_118: 1500553710
+      Palomas_Move-sheet_119: 506068316
+      Palomas_Move-sheet_12: -1723057503
+      Palomas_Move-sheet_120: -2099936197
+      Palomas_Move-sheet_121: 1937282630
+      Palomas_Move-sheet_122: -652104311
+      Palomas_Move-sheet_123: -2057427332
+      Palomas_Move-sheet_124: 1693785048
+      Palomas_Move-sheet_125: 329385499
+      Palomas_Move-sheet_126: -1335751245
+      Palomas_Move-sheet_127: 220839726
+      Palomas_Move-sheet_128: 1332014250
+      Palomas_Move-sheet_129: 860612406
+      Palomas_Move-sheet_13: 1227592889
+      Palomas_Move-sheet_130: 1564199427
+      Palomas_Move-sheet_131: 782330870
+      Palomas_Move-sheet_132: -335992431
+      Palomas_Move-sheet_133: -681862394
+      Palomas_Move-sheet_134: 1396187263
+      Palomas_Move-sheet_135: -1768950919
+      Palomas_Move-sheet_136: 509507836
+      Palomas_Move-sheet_137: -1953403456
+      Palomas_Move-sheet_138: 399827398
+      Palomas_Move-sheet_139: -1711216323
+      Palomas_Move-sheet_14: 2093352707
+      Palomas_Move-sheet_140: 22202437
+      Palomas_Move-sheet_141: 1483331441
+      Palomas_Move-sheet_142: 1818144213
+      Palomas_Move-sheet_143: -1114306343
+      Palomas_Move-sheet_144: -1551194278
+      Palomas_Move-sheet_145: -1435370284
+      Palomas_Move-sheet_146: 1804736464
+      Palomas_Move-sheet_147: -619002377
+      Palomas_Move-sheet_148: 1160452630
+      Palomas_Move-sheet_149: 808470264
+      Palomas_Move-sheet_15: -1206865072
+      Palomas_Move-sheet_150: -641894279
+      Palomas_Move-sheet_151: -1248190068
+      Palomas_Move-sheet_152: -507848085
+      Palomas_Move-sheet_153: 1187617221
+      Palomas_Move-sheet_154: -972171079
+      Palomas_Move-sheet_155: -109601316
+      Palomas_Move-sheet_156: -978379961
+      Palomas_Move-sheet_157: 2080601747
+      Palomas_Move-sheet_158: 1479073577
+      Palomas_Move-sheet_159: 1834633332
+      Palomas_Move-sheet_16: 1513181048
+      Palomas_Move-sheet_160: 1045498161
+      Palomas_Move-sheet_161: 1062761205
+      Palomas_Move-sheet_162: -716344342
+      Palomas_Move-sheet_163: 657616246
+      Palomas_Move-sheet_164: -1319658452
+      Palomas_Move-sheet_165: -1872555072
+      Palomas_Move-sheet_166: 464690948
+      Palomas_Move-sheet_167: -817224019
+      Palomas_Move-sheet_168: 724723720
+      Palomas_Move-sheet_169: 1778153822
+      Palomas_Move-sheet_17: 1647586846
+      Palomas_Move-sheet_170: -139387767
+      Palomas_Move-sheet_171: 1004135518
+      Palomas_Move-sheet_172: -6482355
+      Palomas_Move-sheet_173: 449130601
+      Palomas_Move-sheet_174: -2136329428
+      Palomas_Move-sheet_175: 1305733102
+      Palomas_Move-sheet_176: 510912779
+      Palomas_Move-sheet_177: -347847537
+      Palomas_Move-sheet_178: -2046192141
+      Palomas_Move-sheet_179: -1307961862
+      Palomas_Move-sheet_18: -1803414944
+      Palomas_Move-sheet_180: -458983690
+      Palomas_Move-sheet_181: 784956310
+      Palomas_Move-sheet_182: -906093088
+      Palomas_Move-sheet_183: 2133849070
+      Palomas_Move-sheet_184: 1693710078
+      Palomas_Move-sheet_185: -1720760386
+      Palomas_Move-sheet_186: -42364469
+      Palomas_Move-sheet_187: -305323128
+      Palomas_Move-sheet_188: -35346728
+      Palomas_Move-sheet_189: 425333420
+      Palomas_Move-sheet_19: -964943419
+      Palomas_Move-sheet_190: -603901255
+      Palomas_Move-sheet_191: 1669948375
+      Palomas_Move-sheet_192: 91755299
+      Palomas_Move-sheet_193: 863070831
+      Palomas_Move-sheet_194: 1597135605
+      Palomas_Move-sheet_195: -139225958
+      Palomas_Move-sheet_196: 1889365371
+      Palomas_Move-sheet_197: 479900465
+      Palomas_Move-sheet_198: -1271889915
+      Palomas_Move-sheet_199: -1284857324
+      Palomas_Move-sheet_2: 67581946
+      Palomas_Move-sheet_20: 63058519
+      Palomas_Move-sheet_200: 1418110055
+      Palomas_Move-sheet_201: 294832398
+      Palomas_Move-sheet_202: -875243626
+      Palomas_Move-sheet_203: -39741142
+      Palomas_Move-sheet_204: -2146280460
+      Palomas_Move-sheet_205: 744271142
+      Palomas_Move-sheet_206: -186080969
+      Palomas_Move-sheet_207: -299743557
+      Palomas_Move-sheet_208: -816907267
+      Palomas_Move-sheet_209: 1735472360
+      Palomas_Move-sheet_21: -1845289400
+      Palomas_Move-sheet_210: 955668164
+      Palomas_Move-sheet_211: 1516277456
+      Palomas_Move-sheet_212: -2054489310
+      Palomas_Move-sheet_213: 1608106570
+      Palomas_Move-sheet_214: -1811171339
+      Palomas_Move-sheet_215: 1398757700
+      Palomas_Move-sheet_216: 108479138
+      Palomas_Move-sheet_217: 1928291110
+      Palomas_Move-sheet_218: 1653985450
+      Palomas_Move-sheet_219: 1268228968
+      Palomas_Move-sheet_22: -1166634673
+      Palomas_Move-sheet_220: -1953766510
+      Palomas_Move-sheet_221: -517382558
+      Palomas_Move-sheet_222: 1797234844
+      Palomas_Move-sheet_23: 71716519
+      Palomas_Move-sheet_24: 2116567281
+      Palomas_Move-sheet_25: -354889161
+      Palomas_Move-sheet_26: -1792510134
+      Palomas_Move-sheet_27: 816999031
+      Palomas_Move-sheet_28: 1892763295
+      Palomas_Move-sheet_29: -1841184576
+      Palomas_Move-sheet_3: -1071126911
+      Palomas_Move-sheet_30: 1679654559
+      Palomas_Move-sheet_31: 300915455
+      Palomas_Move-sheet_32: -1002115949
+      Palomas_Move-sheet_33: -501370519
+      Palomas_Move-sheet_34: 969109419
+      Palomas_Move-sheet_35: -870941215
+      Palomas_Move-sheet_36: 1094171498
+      Palomas_Move-sheet_37: -1248295519
+      Palomas_Move-sheet_38: -2026772178
+      Palomas_Move-sheet_39: 1086557713
+      Palomas_Move-sheet_4: -1172977828
+      Palomas_Move-sheet_40: -408087362
+      Palomas_Move-sheet_41: -925638319
+      Palomas_Move-sheet_42: -1136098451
+      Palomas_Move-sheet_43: -670950888
+      Palomas_Move-sheet_44: -1593818174
+      Palomas_Move-sheet_45: 203415864
+      Palomas_Move-sheet_46: 164753185
+      Palomas_Move-sheet_47: 1803433439
+      Palomas_Move-sheet_48: 688102042
+      Palomas_Move-sheet_49: 700750239
+      Palomas_Move-sheet_5: -1726865149
+      Palomas_Move-sheet_50: 275089001
+      Palomas_Move-sheet_51: 1574192717
+      Palomas_Move-sheet_52: 592135418
+      Palomas_Move-sheet_53: 544582073
+      Palomas_Move-sheet_54: -558136958
+      Palomas_Move-sheet_55: -159170846
+      Palomas_Move-sheet_56: -1787027381
+      Palomas_Move-sheet_57: -139432672
+      Palomas_Move-sheet_58: -1463528718
+      Palomas_Move-sheet_59: 630786763
+      Palomas_Move-sheet_6: -1618655917
+      Palomas_Move-sheet_60: 1214818807
+      Palomas_Move-sheet_61: 2005603394
+      Palomas_Move-sheet_62: -1475962481
+      Palomas_Move-sheet_63: -2025098628
+      Palomas_Move-sheet_64: 175208111
+      Palomas_Move-sheet_65: -1255787121
+      Palomas_Move-sheet_66: -245553666
+      Palomas_Move-sheet_67: -1288348138
+      Palomas_Move-sheet_68: 1168757023
+      Palomas_Move-sheet_69: 254172870
+      Palomas_Move-sheet_7: -509214638
+      Palomas_Move-sheet_70: -511383459
+      Palomas_Move-sheet_71: -2051371365
+      Palomas_Move-sheet_72: 1756515009
+      Palomas_Move-sheet_73: -1907079854
+      Palomas_Move-sheet_74: 479138336
+      Palomas_Move-sheet_75: 1990348982
+      Palomas_Move-sheet_76: 933968474
+      Palomas_Move-sheet_77: -1856761097
+      Palomas_Move-sheet_78: 115492024
+      Palomas_Move-sheet_79: 1639897938
+      Palomas_Move-sheet_8: -78169455
+      Palomas_Move-sheet_80: 239448062
+      Palomas_Move-sheet_81: 1335254449
+      Palomas_Move-sheet_82: -847155122
+      Palomas_Move-sheet_83: -770012313
+      Palomas_Move-sheet_84: 1231161972
+      Palomas_Move-sheet_85: -133377756
+      Palomas_Move-sheet_86: 1315360325
+      Palomas_Move-sheet_87: 154519606
+      Palomas_Move-sheet_88: 1991648814
+      Palomas_Move-sheet_89: 521184032
+      Palomas_Move-sheet_9: 1325314327
+      Palomas_Move-sheet_90: 292593376
+      Palomas_Move-sheet_91: -198256109
+      Palomas_Move-sheet_92: -505744332
+      Palomas_Move-sheet_93: 1358311132
+      Palomas_Move-sheet_94: -2127518861
+      Palomas_Move-sheet_95: -1537579395
+      Palomas_Move-sheet_96: -1051059590
+      Palomas_Move-sheet_97: -790389732
+      Palomas_Move-sheet_98: -1350517420
+      Palomas_Move-sheet_99: -724914240
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

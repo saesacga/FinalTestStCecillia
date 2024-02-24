@@ -19,6 +19,7 @@ TagManager:
   - Star
   - Constructible
   - Salida
+  - Palomas
   layers:
   - Default
   - TransparentFX

@@ -28,13 +28,21 @@ public class EjectedMaterial : MonoBehaviour, IEjectable
             Destroy(this.gameObject);
         }
     }
+    
     public void OnCollisionStay(Collision collision)
     {
+        if (collision.collider.CompareTag("Palomas"))
+        {
+            Palomas palomas = collision.collider.GetComponent<Palomas>();
+            palomas.StartEvent(itemData);
+            Destroy(this.gameObject);
+            return;
+        }
+        
         if (!collision.collider.CompareTag("Collector") && !collision.collider.CompareTag("Player"))
         {
             Destroy(this.gameObject);
         }
-        
     }
     private IEnumerator DestroyOnSeconds(int seconds)
     {
