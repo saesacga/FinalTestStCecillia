@@ -23,6 +23,9 @@ public class TheCollector : MonoBehaviour
     private bool _canCollect = false;
     public static event Action<bool> OnMoving;
     
+    private MeshRenderer _moveableMat;
+    private float lerpTime = 1f;
+    
     private void OnEnable()
     {
         ItemsToInventory.OnItemCollected += InfoToEject;
@@ -33,7 +36,6 @@ public class TheCollector : MonoBehaviour
         ItemsToInventory.OnItemCollected -= InfoToEject;
         OnMoving?.Invoke(false);
         _canvas.SetActive(false);
-
     }
 
     private void Start()
@@ -63,16 +65,48 @@ public class TheCollector : MonoBehaviour
                 EjectItems(_currentItemData);
             }
         }
-        else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
-        {
-            //_moveObject = true;
-            MoveObjects();
-        }
         else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
         {
             GetComponentInChildren<Animator>().Play("CollectorIdleanim");
             OnMoving?.Invoke(false);
         }
+
+        #region Movable
+
+        else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
+        {
+            MoveObjects();
+        }
+        
+        Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 15f))
+        {
+            if (hit.transform.CompareTag("Moveable"))
+            { 
+                _moveableMat = hit.collider.gameObject.GetComponent<MeshRenderer>();
+                if (lerpTime <= 1.03f) { lerpTime += 0.003f; }
+                _moveableMat.material.SetFloat("_Scale",  lerpTime);
+            }
+            else
+            {
+                if (_moveableMat != null)
+                {
+                    if (lerpTime >= 0.99f) { lerpTime -= 0.001f; }
+                    _moveableMat.material.SetFloat("_Scale", lerpTime);
+                }
+            }
+        }
+        else 
+        {
+            if (_moveableMat != null)
+            {
+                if (lerpTime >= 0.99f) { lerpTime -= 0.001f; }
+                _moveableMat.material.SetFloat("_Scale", lerpTime);
+            } 
+        }
+
+        #endregion
     }
 
     private void DestroyObjects()
@@ -161,7 +195,6 @@ public class TheCollector : MonoBehaviour
             {
                 GetComponentInChildren<Animator>().Play("MoveCollector");
                 hit.collider.GetComponent<Moveable>().Moving(true);
-                _collectorStep5Completed = true;
             }
             else
             {

@@ -11,6 +11,8 @@ public class Moveable : MonoBehaviour
     [SerializeField] private Transform _objectGrabPoint;
     private static Transform _objectGrabPointStatic;
     [SerializeField] private GameObject _moveable;
+    [SerializeField] MeshRenderer _movableMeshRenderer;
+    [SerializeField] private Material _outlineMaterial;
     private Rigidbody _rigidbody;
     private bool _moving;
 
@@ -18,6 +20,7 @@ public class Moveable : MonoBehaviour
     
     private void OnEnable()
     {
+        _movableMeshRenderer.material = new Material(_outlineMaterial);
         TheCollector.OnMoving += Moving;
         _rigidbody = GetComponent<Rigidbody>();
     }
