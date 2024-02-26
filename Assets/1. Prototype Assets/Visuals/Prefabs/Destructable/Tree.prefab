@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1045778839279646408}
   - component: {fileID: 1045778839279646413}
   - component: {fileID: 1045778839279646410}
-  - component: {fileID: 1045778839279646412}
+  - component: {fileID: 5563111585896974527}
   m_Layer: 14
   m_Name: Tree
   m_TagString: Destructable
@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,9 +126,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.887742, y: 9.068915, z: 0.2}
-  m_Center: {x: -0.89436865, y: 4.5344577, z: 0}
---- !u!114 &1045778839279646412
+  m_Size: {x: 4.8309937, y: 9.068915, z: 0.2}
+  m_Center: {x: -0.56179047, y: 4.5344577, z: 0}
+--- !u!114 &5563111585896974527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,10 +137,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1045778839279646422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
-  uniqueID: 1343434263450332383
-  updateError: 1
-  checkTime: 0.2
+  glowColor: {r: 1, g: 0, b: 0.44705886, a: 0}
+  glowBrightness: 1.8
+  outlineWidth: 1
+  alphaThreshold: 0.01
+  drawOutside: 1
+  enableInstancing: 0

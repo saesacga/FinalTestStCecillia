@@ -45,7 +45,7 @@ namespace SpriteGlow
         }
 
         [Tooltip("Base color of the glow.")]
-        [SerializeField] private Color glowColor = Color.white;
+        public Color glowColor = Color.white;
         [Tooltip("The brightness (power) of the glow."), Range(1, 10)]
         [SerializeField] private float glowBrightness = 2f;
         [Tooltip("Width of the outline, in texels."), Range(0, 10)]
@@ -93,6 +93,8 @@ namespace SpriteGlow
             SetMaterialProperties();
         }
 
+        private void Update() { SetMaterialProperties(); }
+
         private void SetMaterialProperties ()
         {
             if (!Renderer) return;
@@ -108,29 +110,6 @@ namespace SpriteGlow
             materialProperties.SetFloat(alphaThresholdId, AlphaThreshold);
 
             Renderer.SetPropertyBlock(materialProperties);
-        }
-
-        private static Color _glowcolorStatic;
-
-        private void Update()
-        {
-            Color spriteGlowOpacity = GlowColor;
-            spriteGlowOpacity.a = _glowcolorStatic.a;
-            GlowColor = spriteGlowOpacity;
-        }
-        public static IEnumerator ToggleGlow(float fadeTime)
-        {
-            for (float alpha = 0f; alpha <= 1; alpha += 0.001f)
-            {
-                _glowcolorStatic.a = alpha;
-                yield return new WaitForSeconds(fadeTime);
-            }
-            //yield return new WaitForSeconds(10);
-            for (float alpha = 1f; alpha >= 0; alpha -= 0.001f)
-            {
-                _glowcolorStatic.a = alpha;
-                yield return new WaitForSeconds(fadeTime);
-            }
         }
     }
 }

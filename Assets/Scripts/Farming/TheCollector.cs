@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using SpriteGlow;
 
 public class TheCollector : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class TheCollector : MonoBehaviour
     public static event Action<bool> OnMoving;
     
     private MeshRenderer _moveableMat;
+    private SpriteGlowEffect _outlineDest;
+    private SpriteGlowEffect _outlineLoot;
     private float lerpTime = 1f;
     
     private void OnEnable()
@@ -46,11 +49,22 @@ public class TheCollector : MonoBehaviour
     private void Update()
     {
         _stackSizeDisplay.SetText(_stackSize.ToString());
-        
+
+        #region Destruir
+
         if (ActionMapReference.playerMap.Farming.Destroy.IsPressed())
         {
             DestroyObjects();
         }
+        else if (ActionMapReference.playerMap.Farming.Destroy.WasReleasedThisFrame())
+        {
+            GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+        }
+
+        #endregion
+
+        #region Recolectar
+
         else if (ActionMapReference.playerMap.Farming.Collect.IsPressed() || ActionMapReference.playerMap.Farming.Collect.WasReleasedThisFrame())
         {
             if (ActionMapReference.playerMap.Farming.Collect.IsPressed()) { GetComponentInChildren<Animator>().Play("CollectorSuck"); }
@@ -58,6 +72,11 @@ public class TheCollector : MonoBehaviour
             AttractObjects();
             _canCollect = ActionMapReference.playerMap.Farming.Collect.IsPressed();
         }
+
+        #endregion
+
+        #region Eyectar
+
         else if (ActionMapReference.playerMap.Farming.Eject.WasPressedThisFrame())
         {
             if (_currentItemData != null)
@@ -65,21 +84,28 @@ public class TheCollector : MonoBehaviour
                 EjectItems(_currentItemData);
             }
         }
+
+        #endregion
+        
+        #region Mover
+
+        else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
+        {
+            MoveObjects();
+        }
         else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
         {
             GetComponentInChildren<Animator>().Play("CollectorIdleanim");
             OnMoving?.Invoke(false);
         }
 
-        #region Movable
-
-        else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
-        {
-            MoveObjects();
-        }
+        #endregion
         
+        #region Outlines
+
         Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
+        //Outlines para movibles y destruibles
         if (Physics.Raycast(ray, out hit, 15f))
         {
             if (hit.transform.CompareTag("Moveable"))
@@ -96,6 +122,16 @@ public class TheCollector : MonoBehaviour
                     _moveableMat.material.SetFloat("_Scale", lerpTime);
                 }
             }
+            
+            if (hit.transform.CompareTag("Destructable"))
+            {
+                _outlineDest = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
+                _outlineDest.glowColor.a = 1f;
+            }
+            else
+            {
+                if (_outlineDest != null) { _outlineDest.glowColor.a = 0f; }
+            }
         }
         else 
         {
@@ -103,7 +139,26 @@ public class TheCollector : MonoBehaviour
             {
                 if (lerpTime >= 0.99f) { lerpTime -= 0.001f; }
                 _moveableMat.material.SetFloat("_Scale", lerpTime);
-            } 
+            }
+            if (_outlineDest != null) { _outlineDest.glowColor.a = 0f; }
+        }
+        
+        //Outlines para loot
+        if (Physics.SphereCast(ray, _attractRadius, out hit, 15f, _rayCastLayerMaskIgnore))
+        {
+            if (hit.transform.CompareTag("Loot"))
+            {
+                _outlineLoot = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
+                _outlineLoot.glowColor.a = 1f;
+            }
+            else
+            {
+                if (_outlineLoot != null) { _outlineLoot.glowColor.a = 0f; }
+            }
+        }
+        else 
+        {
+            if (_outlineLoot != null) { _outlineLoot.glowColor.a = 0f; }
         }
 
         #endregion
@@ -183,8 +238,7 @@ public class TheCollector : MonoBehaviour
             }
         }
     }
-
-    public static bool _collectorStep5Completed;
+    
     private void MoveObjects()
     {
         Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -206,7 +260,6 @@ public class TheCollector : MonoBehaviour
             GetComponentInChildren<Animator>().Play("CollectorIdleanim");
         }
     }
-
     
     private void InfoToEject(ItemData itemData)
     {
@@ -226,8 +279,7 @@ public class TheCollector : MonoBehaviour
         }
         _currentItemData = itemData;
     }
-
-    public static bool _collectorStep3Completed;
+    
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
