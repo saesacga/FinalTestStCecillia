@@ -19,15 +19,21 @@ public class TheCollector : MonoBehaviour
     [SerializeField] private GameObject _canvas;
     
     private ItemData _currentItemData;
-    private int _stackSize = 0;
+    private int _stackSize;
     [SerializeField] private TextMeshProUGUI _stackSizeDisplay;
-    private bool _canCollect = false;
+    private bool _canCollect;
     public static event Action<bool> OnMoving;
-    
+
+    #region Outlines
+
     private MeshRenderer _moveableMat;
     private SpriteGlowEffect _outlineDest;
     private SpriteGlowEffect _outlineLoot;
-    private float lerpTime = 1f;
+    private float _lerpTimeMove = 1f;
+    private float _lerpTimeDestroy;
+    private float _lerpTimeLoot;
+
+    #endregion
     
     private void OnEnable()
     {
@@ -105,42 +111,67 @@ public class TheCollector : MonoBehaviour
 
         Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
+        
         //Outlines para movibles y destruibles
         if (Physics.Raycast(ray, out hit, 15f))
         {
             if (hit.transform.CompareTag("Moveable"))
-            { 
-                _moveableMat = hit.collider.gameObject.GetComponent<MeshRenderer>();
-                if (lerpTime <= 1.03f) { lerpTime += 0.003f; }
-                _moveableMat.material.SetFloat("_Scale",  lerpTime);
+            {
+                if (_moveableMat != hit.collider.gameObject.GetComponent<MeshRenderer>())
+                {
+                    if (_moveableMat != null) { _moveableMat.material.SetFloat("_Scale", 1f); }
+                    _moveableMat = hit.collider.gameObject.GetComponent<MeshRenderer>();
+                }
+                else
+                {
+                    if (_lerpTimeMove <= 1.03f) { _lerpTimeMove += 0.003f; }
+                    _moveableMat.material.SetFloat("_Scale",  _lerpTimeMove);
+                }
             }
             else
             {
                 if (_moveableMat != null)
                 {
-                    if (lerpTime >= 0.99f) { lerpTime -= 0.001f; }
-                    _moveableMat.material.SetFloat("_Scale", lerpTime);
+                    if (_lerpTimeMove >= 0.99f) { _lerpTimeMove -= 0.001f; }
+                    _moveableMat.material.SetFloat("_Scale", _lerpTimeMove);
                 }
             }
             
             if (hit.transform.CompareTag("Destructable"))
             {
-                _outlineDest = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
-                _outlineDest.glowColor.a = 1f;
+                if (_outlineDest != hit.collider.gameObject.GetComponent<SpriteGlowEffect>())
+                {
+                    if (_outlineDest != null) { _outlineDest.glowColor.a = 0f; }
+                    _outlineDest = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
+                }
+                else
+                {
+                    if (_lerpTimeDestroy <= 1f) { _lerpTimeDestroy += 0.1f; }
+                    _outlineDest.glowColor.a = _lerpTimeDestroy;
+                }
             }
             else
             {
-                if (_outlineDest != null) { _outlineDest.glowColor.a = 0f; }
+                if (_outlineDest != null)
+                {
+                    if (_lerpTimeDestroy >= 0f) { _lerpTimeDestroy -= 0.05f; }
+                    _outlineDest.glowColor.a = _lerpTimeDestroy;
+                }
             }
         }
         else 
         {
             if (_moveableMat != null)
             {
-                if (lerpTime >= 0.99f) { lerpTime -= 0.001f; }
-                _moveableMat.material.SetFloat("_Scale", lerpTime);
+                if (_lerpTimeMove >= 0.99f) { _lerpTimeMove -= 0.001f; }
+                _moveableMat.material.SetFloat("_Scale", _lerpTimeMove);
             }
-            if (_outlineDest != null) { _outlineDest.glowColor.a = 0f; }
+            if (_outlineDest != null) 
+            { 
+                if (_lerpTimeDestroy >= 0f) { _lerpTimeDestroy -= 0.05f; }
+                _outlineDest.glowColor.a = _lerpTimeDestroy; 
+            }
+            
         }
         
         //Outlines para loot
@@ -148,17 +179,25 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Loot"))
             {
-                _outlineLoot = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
-                _outlineLoot.glowColor.a = 1f;
+                if (_outlineLoot != hit.collider.gameObject.GetComponent<SpriteGlowEffect>())
+                {
+                    if (_outlineLoot != null) { _outlineLoot.glowColor.a = 0f; }
+                    _outlineLoot = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
+                }
+                else { if (_lerpTimeLoot <= 1f) { _lerpTimeLoot += 0.1f; } _outlineLoot.glowColor.a = _lerpTimeLoot; }
             }
             else
             {
-                if (_outlineLoot != null) { _outlineLoot.glowColor.a = 0f; }
+                if (_outlineLoot != null) { if (_lerpTimeLoot >= 0f) { _lerpTimeLoot -= 0.05f; } _outlineLoot.glowColor.a = _lerpTimeLoot;  }
             }
         }
         else 
         {
-            if (_outlineLoot != null) { _outlineLoot.glowColor.a = 0f; }
+            if (_outlineLoot != null) 
+            {
+                if (_lerpTimeLoot >= 0f) { _lerpTimeLoot -= 0.05f; } 
+                _outlineLoot.glowColor.a = _lerpTimeLoot;  
+            }
         }
 
         #endregion
@@ -284,7 +323,6 @@ public class TheCollector : MonoBehaviour
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
         {
-            //_collectorStep3Completed = true;
             collider.GetComponent<IAttractable>().CollectOnAttract();
         }
     }

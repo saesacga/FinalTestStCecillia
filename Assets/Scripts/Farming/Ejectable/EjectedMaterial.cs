@@ -19,9 +19,9 @@ public class EjectedMaterial : MonoBehaviour, IEjectable
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPoint, _ejectVelocity * Time.deltaTime);
     }
-    public void OnTriggerEnter(Collider collider)
+    public void OnCollisionEnter(Collision collision)
     {
-        IConstruible construible = collider.GetComponent<IConstruible>();
+        IConstruible construible = collision.gameObject.GetComponent<IConstruible>();
         if (construible != null)
         {
             construible.Consturct(itemData);
