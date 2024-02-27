@@ -7,12 +7,18 @@
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Outline/QuickOutline/Resources/Materials/OutlineFill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Outline/QuickOutline/Resources/Materials/OutlineFill.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dissolve/Dissolve.ShaderGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dissolve/Dissolve.ShaderGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dissolve/DissolveMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dissolve/DissolveMat.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Loot/Madera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Loot/Madera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Loot/Piedra.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Loot/Piedra.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ZonaCombat/ArbolCombat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ZonaCombat/ArbolCombat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Collectible/ItemsToInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Collectible/ItemsToInventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Construible/Constructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Construible/Constructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/IEjectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/IEjectable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,6 +173,7 @@
       <workItem from="1708718015309" duration="17175000" />
       <workItem from="1708830364436" duration="9060000" />
       <workItem from="1708884355546" duration="22393000" />
+      <workItem from="1708978381275" duration="16546000" />
     </task>
     <servers />
   </component>

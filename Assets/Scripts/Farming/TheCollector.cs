@@ -139,21 +139,25 @@ public class TheCollector : MonoBehaviour
             
             if (hit.transform.CompareTag("Destructable"))
             {
-                if (_outlineDest != hit.collider.gameObject.GetComponent<SpriteGlowEffect>())
+                if (hit.collider.gameObject.GetComponent<Destructible>().destroy == false)
                 {
-                    if (_outlineDest != null) { _outlineDest.glowColor.a = 0f; }
-                    _outlineDest = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
+                    if (_outlineDest != hit.collider.gameObject.GetComponent<SpriteGlowEffect>())
+                    {
+                        if (_outlineDest != null) { _outlineDest.glowColor.a = 0f; }
+                        _outlineDest = hit.collider.gameObject.GetComponent<SpriteGlowEffect>();
+                    }
+                    else
+                    {
+                        if (_lerpTimeDestroy <= 1f) { _lerpTimeDestroy += 0.1f; }
+                        _outlineDest.glowColor.a = _lerpTimeDestroy;
+                    }
                 }
-                else
-                {
-                    if (_lerpTimeDestroy <= 1f) { _lerpTimeDestroy += 0.1f; }
-                    _outlineDest.glowColor.a = _lerpTimeDestroy;
-                }
+                else { return; }
             }
             else
             {
                 if (_outlineDest != null)
-                {
+                { 
                     if (_lerpTimeDestroy >= 0f) { _lerpTimeDestroy -= 0.05f; }
                     _outlineDest.glowColor.a = _lerpTimeDestroy;
                 }
@@ -212,8 +216,15 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Destructable"))
             {
-                GetComponentInChildren<Animator>().Play("DestroyCollector");
-                StartCoroutine(hit.collider.gameObject.GetComponent<IDestructible>().Destruct(_damage));
+                if (hit.collider.gameObject.GetComponent<Destructible>().destroy == false)
+                {
+                    GetComponentInChildren<Animator>().Play("DestroyCollector");
+                    StartCoroutine(hit.collider.gameObject.GetComponent<IDestructible>().Destruct(_damage));
+                }
+                else
+                {
+                    GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+                }
             }
             else
             {

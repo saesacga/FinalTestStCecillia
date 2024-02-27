@@ -21,7 +21,7 @@ public class Constructible : MonoBehaviour, IConstruible
 
     private void OnEnable()
     {
-        _dissolveSubs = 0.75f / _amountRequired;
+        _dissolveSubs = 0.7f / _amountRequired;
         _targetObjectMeshR = _targetObject.GetComponent<MeshRenderer>();
         _targetObjectMeshR.material = new Material(_dissolveMaterial);
     }
