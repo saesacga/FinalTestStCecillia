@@ -116,6 +116,7 @@ MonoBehaviour:
   itemData: {fileID: 0}
   targetPoint: {x: 0, y: 0, z: 0}
   _ejectVelocity: 17
+  _particle: {fileID: 5356728151580888989, guid: 744157a1853fdc14cacf98c70893f940, type: 3}
 --- !u!135 &7309695507591637392
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -41,6 +41,5 @@ public class ItemsToInventory : MonoBehaviour, IAttractable
             _dissolveLerp = Mathf.MoveTowards(_dissolveObjectSpriteRenderer.material.GetFloat("_Dissolve"), 0.25f, 1f * Time.deltaTime); 
             _dissolveObjectSpriteRenderer.material.SetFloat("_Dissolve", _dissolveLerp);
         }
-        
     }
 }

@@ -269,15 +269,10 @@ public class TheCollector : MonoBehaviour
             
             #region Objetivo a seguir
         
-            Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); 
-            RaycastHit hit; 
-            Vector3 targetPoint; 
-            if(Physics.Raycast(ray, out hit, 20f)) { targetPoint = hit.point; }
-            else { targetPoint = ray.GetPoint(75); }
+            Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            _ejectedInstances.GetComponent<EjectedMaterial>().targetPoint = ray.GetPoint(75);;
         
             #endregion
-        
-            _ejectedInstances.GetComponent<EjectedMaterial>().targetPoint = targetPoint;
             
             _stackSize--;
             if (_stackSize <= 0)
@@ -329,11 +324,16 @@ public class TheCollector : MonoBehaviour
         }
         _currentItemData = itemData;
     }
-    
+
+    [SerializeField] private GameObject _particle;
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
         {
+            GameObject _particleRef = Instantiate(_particle, transform.position, Quaternion.identity);
+            _particleRef.transform.parent = gameObject.transform;
+            float totalDuration = _particleRef.GetComponent<ParticleSystem>().main.duration + _particleRef.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
+            Destroy(_particleRef, totalDuration);
             collider.GetComponent<IAttractable>().CollectOnAttract();
         }
     }
