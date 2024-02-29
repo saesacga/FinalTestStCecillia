@@ -13,6 +13,7 @@ public class Moveable : MonoBehaviour
     [SerializeField] private GameObject _moveable;
     [SerializeField] MeshRenderer _movableMeshRenderer;
     [SerializeField] private Material _outlineMaterial;
+    [SerializeField] private Material _dissolveMaterial;
     private Rigidbody _rigidbody;
     private bool _moving;
 
@@ -36,6 +37,21 @@ public class Moveable : MonoBehaviour
             _objectGrabPointStatic = _objectGrabPoint;
         }
     }
+    private IEnumerator DestroyWithEffects(GameObject _destroyObject) //Debe pasar de 0 a 1 para desaparecer
+    {
+        MeshRenderer _currentCubeMesh = _destroyObject.GetComponent<MeshRenderer>();
+        Material[] materialsList = _currentCubeMesh.materials;
+        _currentCubeMesh.material = new Material(_dissolveMaterial);
+        Destroy(materialsList[1]);
+        float _dissolveTime;
+        while (_currentCubeMesh.material.GetFloat("_Dissolve") < 1)
+        {
+            _dissolveTime = Mathf.MoveTowards(_currentCubeMesh.material.GetFloat("_Dissolve"), 1f, 1f * Time.deltaTime);
+            _currentCubeMesh.material.SetFloat("_Dissolve", _dissolveTime);
+            yield return null;
+        }
+        Destroy(_destroyObject);
+    }
 
     private void FixedUpdate()
     {
@@ -57,7 +73,7 @@ public class Moveable : MonoBehaviour
         {
             if (gameObject == _cubeInstanceObject)
             {
-                Destroy(_currentCube);
+                StartCoroutine(DestroyWithEffects(_currentCube));
                 _currentCube = _cubeInstanceObject;
                 _cubeInstanceObject = null;
             }
@@ -75,7 +91,7 @@ public class Moveable : MonoBehaviour
             {
                 if (gameObject != _cubeInstanceObject)
                 {
-                    Destroy(gameObject);
+                    StartCoroutine(DestroyWithEffects(gameObject));
                 }
             }
             _moving = false;
@@ -83,6 +99,8 @@ public class Moveable : MonoBehaviour
             _rigidbody.useGravity = true;
         }
     }
+
+    
 
     private void OnCollisionStay(Collision collision)
     {

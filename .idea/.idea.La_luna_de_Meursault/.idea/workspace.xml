@@ -6,15 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Ejected/EjectedObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Ejected/EjectedObject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Matriarca/MatriarcaController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Matriarca/MatriarcaController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/PalomasLlorando.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/PalomasLlorando.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/PalomasScene.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/PalomasScene.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Collectible/ItemsToInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Collectible/ItemsToInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/circle_AB.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/circle_AB.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/circle_ADD.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/circle_ADD.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/glow1_ADD.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/glow1_ADD.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/nova_6x3_spritesheet_ADD.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/nova_6x3_spritesheet_ADD.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/wave3_ADD.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Collect/wave3_ADD.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/Big Circle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/Big Circle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/FirstCircle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/FirstCircle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/Particle.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/Particle.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/Sparkles.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosion/Destroy/Sparkles.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosions/MaterialCollide.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosions/MaterialCollide.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Textures/nova_6x3_spritesheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Textures/nova_6x3_spritesheet.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +189,7 @@
       <workItem from="1709060146003" duration="793000" />
       <workItem from="1709076343768" duration="6269000" />
       <workItem from="1709103761095" duration="1029000" />
+      <workItem from="1709148742226" duration="4049000" />
     </task>
     <servers />
   </component>

@@ -132,3 +132,4 @@ MonoBehaviour:
   _moveable: {fileID: 6335075642453519933}
   _movableMeshRenderer: {fileID: 3208241264612224294}
   _outlineMaterial: {fileID: 2100000, guid: f4a81d3b9d58c564b9d8cc27ad6f42b4, type: 2}
+  _dissolveMaterial: {fileID: 2100000, guid: 9bdb32f77ee9a084093d207b0cc33262, type: 2}
