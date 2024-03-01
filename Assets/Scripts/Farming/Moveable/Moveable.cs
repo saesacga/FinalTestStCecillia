@@ -11,9 +11,8 @@ public class Moveable : MonoBehaviour
     [SerializeField] private Transform _objectGrabPoint;
     private static Transform _objectGrabPointStatic;
     [SerializeField] private GameObject _moveable;
-    [SerializeField] MeshRenderer _movableMeshRenderer;
+    private MeshRenderer _movableMeshRenderer;
     [SerializeField] private Material _outlineMaterial;
-    [SerializeField] private Material _dissolveMaterial;
     private Rigidbody _rigidbody;
     private bool _moving;
 
@@ -21,6 +20,7 @@ public class Moveable : MonoBehaviour
     
     private void OnEnable()
     {
+        _movableMeshRenderer = GetComponent<MeshRenderer>();
         _movableMeshRenderer.material = new Material(_outlineMaterial);
         TheCollector.OnMoving += Moving;
         _rigidbody = GetComponent<Rigidbody>();
@@ -37,12 +37,12 @@ public class Moveable : MonoBehaviour
             _objectGrabPointStatic = _objectGrabPoint;
         }
     }
-    private IEnumerator DestroyWithEffects(GameObject _destroyObject) //Debe pasar de 0 a 1 para desaparecer
+
+    [SerializeField] private Material[] _dissolveMaterials;
+    private IEnumerator DestroyWithEffects(GameObject _destroyObject)
     {
         MeshRenderer _currentCubeMesh = _destroyObject.GetComponent<MeshRenderer>();
-        Material[] materialsList = _currentCubeMesh.materials;
-        _currentCubeMesh.material = new Material(_dissolveMaterial);
-        Destroy(materialsList[1]);
+        _currentCubeMesh.materials = _dissolveMaterials;
         float _dissolveTime;
         while (_currentCubeMesh.material.GetFloat("_Dissolve") < 1)
         {
@@ -99,9 +99,7 @@ public class Moveable : MonoBehaviour
             _rigidbody.useGravity = true;
         }
     }
-
     
-
     private void OnCollisionStay(Collision collision)
     {
         if (collision.collider.CompareTag("Player") && _moving)
