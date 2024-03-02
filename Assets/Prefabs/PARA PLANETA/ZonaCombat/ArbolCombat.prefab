@@ -108,7 +108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071188394486004449}
-  - component: {fileID: 8757890178055676150}
+  - component: {fileID: 2791305606196657911}
   m_Layer: 21
   m_Name: ArbolCombat
   m_TagString: Untagged
@@ -132,8 +132,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8757890178055676150
-BoxCollider:
+--- !u!136 &2791305606196657911
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -142,9 +142,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.2033634, y: 5.120584, z: 0.20000005}
-  m_Center: {x: 0.033406258, y: -2.0571444, z: 0.000003822148}
+  m_Radius: 0.5
+  m_Height: 7.5490565
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.8815582, z: 0}
 --- !u!1 &2329833372730705714
 GameObject:
   m_ObjectHideFlags: 0
