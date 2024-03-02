@@ -40,7 +40,7 @@ TagManager:
   - Moon
   - Boundries
   - Stars
-  - Obstacle/NotWalkable
+  - NotWalkable
   - InvisibleWall
   - Enviroment
   - Moveable

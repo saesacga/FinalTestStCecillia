@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dissolve/3D/DissolveMoveable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Dissolve/3D/DissolveMoveable.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Outline/Moveable.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Outline/Moveable.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/MountainSecond.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/MountainSecond.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/mountain.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/mountain.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/puente.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/puente.fbx.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +171,7 @@
       <workItem from="1709148742226" duration="4476000" />
       <workItem from="1709178319847" duration="2527000" />
       <workItem from="1709241699402" duration="1019000" />
+      <workItem from="1709341912215" duration="1197000" />
     </task>
     <servers />
   </component>
