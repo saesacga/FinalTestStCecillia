@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Suelo Luna/SueloLunaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Suelo Luna/SueloLunaMat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Textures/Cave1Mat.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Textures/Cave1Mat.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Textures/Cave1Mat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Textures/Cave1Mat.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Textures/Untitled.001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Textures/Untitled.001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +19,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afb51423a29947c09a21689e8d96b70a1a000/8a/4421637c/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afb51423a29947c09a21689e8d96b70a1a000/cd/b05fdc65/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/23/bfc0d15f/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Materials/Collider/PlayerProximityPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Magic/StarMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/VisualEffects/ForestLoop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -175,7 +173,7 @@
       <workItem from="1709341912215" duration="1197000" />
       <workItem from="1709415194673" duration="3000" />
       <workItem from="1709415240608" duration="2584000" />
-      <workItem from="1710207152645" duration="1927000" />
+      <workItem from="1710207152645" duration="10381000" />
     </task>
     <servers />
   </component>
