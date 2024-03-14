@@ -30,7 +30,7 @@ public class ForestLoop : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Palomas")) //Modificar esto equis de
+        if (collider.CompareTag("Salida"))
         {
             _playerPos.position = new Vector3(_forestEnter.position.x, _playerPos.position.y, _playerPos.position.z);   
         }

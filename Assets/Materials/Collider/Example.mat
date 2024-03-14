@@ -27,8 +27,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _OutlineWidth: 0.2
-    - _VisibleDistance: 5
+    - _VisibleDistance: 3
     m_Colors:
-    - _OutlineColour: {r: 4.237095, g: 4.237095, b: 0, a: 1}
-    - _PlayerPosition: {r: -100.34637, g: 0.20999897, b: 7.608703, a: 0}
+    - _OutlineColour: {r: 0, g: 0.93171716, b: 8.47419, a: 1}
+    - _PlayerPosition: {r: -137.05896, g: 0.20999897, b: -7.0735803, a: 0}
   m_BuildTextureStacks: []

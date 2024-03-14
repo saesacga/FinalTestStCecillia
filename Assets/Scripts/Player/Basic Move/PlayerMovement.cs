@@ -15,8 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     private Vector3 move;
 
-    public float speed = 12f;
-    public float airSpeedReduction = 7f;
+    private float speed = 12f;
+    [SerializeField] private float _groundSpeed = 12f;
+    [SerializeField] private float airSpeed = 5f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
@@ -24,12 +25,10 @@ public class PlayerMovement : MonoBehaviour
     
     #region For Dash
     
-    [SerializeField] private AnimationCurve _dashSpeedCurve;
-    private float _dashSpeed;
     [SerializeField] private float _dashTime;
     [SerializeField] private float _dashCooldown;
-    private bool _inDash = false;
-    private float _dashContador = 0;
+    private bool _inDash;
+    private float _dashContador;
     [SerializeField] private GameObject _amaGameObject;
     [SerializeField] private Image _dashAvailableImage;
     
@@ -42,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     private Vector3 velocity;
     private bool _isGrounded;
-    private bool inTheAir = false;
 
     #endregion
 
@@ -78,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 if (_inDash)
                 {
                     StopCoroutine(_dashRoutine);
+                    speed = airSpeed;
                     _inDash = false;
                     if (_crossable != null) { _crossable.isTrigger = false; }
                 }
@@ -97,11 +96,10 @@ public class PlayerMovement : MonoBehaviour
 
         #region Jump
         
-        else if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _isGrounded)
+        else if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _isGrounded && _inDash == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            speed -= airSpeedReduction;
-            inTheAir = true;
+            speed = airSpeed;
         }
         
         #endregion
@@ -132,12 +130,14 @@ public class PlayerMovement : MonoBehaviour
         if (_isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
-            if (inTheAir)
-            {
-                speed += airSpeedReduction;
-                inTheAir = false;
-            }
+            speed = _groundSpeed;
         }
+        else if(_inDash == false)
+        {
+            speed = airSpeed;
+        }
+
+        if (velocity.y < -15) { velocity.y = -15f; }
         
         #endregion
         
@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_allowWallJumpInput == false)
         {
-            controller.Move(move * speed * Time.deltaTime); //Movimiento horizontal (Caminar)
+            controller.Move(move * (speed * Time.deltaTime)); //Movimiento horizontal (Caminar)
             controller.Move(velocity * Time.deltaTime); //Movimiento vertical (Salto)
         }
 
@@ -165,15 +165,12 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Dash()
     {
         _inDash = true;
-        float _dashSpeedOverTime = 0f;
+        speed = _groundSpeed;
         float startTime = Time.time;
         
-        while (Time.time <= startTime + _dashTime && move != new Vector3(0f,0f,0f) && _allowWallJumpInput == false)
+        while (Time.time <= startTime + _dashTime && _allowWallJumpInput == false)
         {
             velocity.y = 0;
-            _dashSpeed = _dashSpeedCurve.Evaluate(_dashSpeedOverTime);
-            _dashSpeedOverTime+=0.01f;
-            controller.Move(move * (_dashSpeed * Time.deltaTime));
             _dashContador = 0;
 
             #region Raycast
@@ -193,6 +190,7 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         _inDash = false;
+        speed = airSpeed;
         if (_crossable != null) { _crossable.isTrigger = false; }
     }
 
