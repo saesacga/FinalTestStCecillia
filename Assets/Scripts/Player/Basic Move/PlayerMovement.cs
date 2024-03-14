@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private float _dashContador;
     [SerializeField] private GameObject _amaGameObject;
     [SerializeField] private Image _dashAvailableImage;
+    [SerializeField] private Animator _dashAnimator;
     
     #endregion
 
@@ -77,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     StopCoroutine(_dashRoutine);
                     speed = airSpeed;
+                    _dashAnimator.SetBool("toggleAG", false);
                     _inDash = false;
                     if (_crossable != null) { _crossable.isTrigger = false; }
                 }
@@ -115,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (_amaGameObject.activeInHierarchy) { _dashAvailableImage.color = Color.yellow; }
         }
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown && _amaGameObject.activeInHierarchy)
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown && _amaGameObject.activeInHierarchy && _isGrounded == false)
         {
             _dashRoutine = null;
             _dashRoutine = Dash();
@@ -167,6 +169,7 @@ public class PlayerMovement : MonoBehaviour
         _inDash = true;
         speed = _groundSpeed;
         float startTime = Time.time;
+        _dashAnimator.SetBool("toggleAG", true);
         
         while (Time.time <= startTime + _dashTime && _allowWallJumpInput == false)
         {
@@ -189,6 +192,7 @@ public class PlayerMovement : MonoBehaviour
             
             yield return null;
         }
+        _dashAnimator.SetBool("toggleAG", false);
         _inDash = false;
         speed = airSpeed;
         if (_crossable != null) { _crossable.isTrigger = false; }
