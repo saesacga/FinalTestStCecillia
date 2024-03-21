@@ -8,7 +8,7 @@ public class PlayersLook : MonoBehaviour
     public float mouseSensitivity = 100f;
     [SerializeField] private Transform _playerBody;
     private float xRotation = 0f;
-    
+
     #region Smoothness
 
     private Vector3 currentInputMouseVector;
@@ -26,6 +26,36 @@ public class PlayersLook : MonoBehaviour
     
     void Update()
     {
+        #region Get Rotation Inspector Values
+
+        Vector3 angle = transform.eulerAngles;
+        float x = angle.x;
+        
+        if (Vector3.Dot(transform.up, Vector3.up) >= 0f)
+        {
+            if (angle.x >= 0f && angle.x <= 90f)
+            {
+                x = angle.x;
+            }
+            if (angle.x >= 270f && angle.x <= 360f)
+            {
+                x = angle.x - 360f;
+            }
+        }
+        if (Vector3.Dot(transform.up, Vector3.up) < 0f)
+        {
+            if (angle.x >= 0f && angle.x <= 90f)
+            {
+                x = 180 - angle.x;
+            }
+            if (angle.x >= 270f && angle.x <= 360f)
+            {
+                x = 180 - angle.x;
+            }
+        }
+
+        #endregion
+        
         myMouseInput.x = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().x * mouseSensitivityAimAssist * Time.deltaTime;
         myMouseInput.y = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().y * mouseSensitivityAimAssist * Time.deltaTime;
         
@@ -42,7 +72,7 @@ public class PlayersLook : MonoBehaviour
         else //Igualar la rotación del POV con los movimientos de cámara
         {
             transform.localRotation = Quaternion.Euler(Camera.main.transform.rotation.eulerAngles.x, 0f, 0f);
-            xRotation = UnityEditor.TransformUtils.GetInspectorRotation(transform).x;
+            xRotation = x;
             _playerBody.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
         }
     }

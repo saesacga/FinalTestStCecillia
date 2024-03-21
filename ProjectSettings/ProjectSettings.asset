@@ -135,7 +135,8 @@ PlayerSettings:
     16:9: 1
     Others: 0
   bundleVersion: Beta1.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: b4a21451414aceb47946f5aa124712aa, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -356,6 +357,8 @@ PlayerSettings:
     m_EncodingQuality: 1
   - m_BuildTarget: tvOS
     m_EncodingQuality: 1
+  - m_BuildTarget: Standalone
+    m_EncodingQuality: 2
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetNormalMapEncoding:
   - m_BuildTarget: Android
