@@ -44,7 +44,7 @@ TagManager:
   - InvisibleWall
   - Enviroment
   - Moveable
-  - 
+  - DistortionEffect
   - 
   - 
   - 
@@ -56,4 +56,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HighestLayerForDistortionEffect
+    uniqueID: 3953924077
     locked: 0
