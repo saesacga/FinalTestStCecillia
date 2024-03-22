@@ -132,7 +132,6 @@ public class TeleportArtifact : MonoBehaviour
         
         while (_distortionMat.GetFloat("_DistortionStrenght") > 0f)
         {
-            Debug.Log("aqui");
             _distortionLerp = Mathf.MoveTowards(_distortionMat.GetFloat("_DistortionStrenght"), 0f, 1f * Time.deltaTime); 
             _distortionMat.SetFloat("_DistortionStrenght", _distortionLerp);
             yield return null; 

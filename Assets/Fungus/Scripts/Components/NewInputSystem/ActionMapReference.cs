@@ -19,13 +19,18 @@ public class ActionMapReference : MonoBehaviour
     private static Animator _cinemachineBlend;
     public static bool camTransitioning;
 
+    [SerializeField] private bool _lockCursor;
+    
     private void Start()
     {
         _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
         playerMap = new PlayerMap();
         ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
-        Cursor.lockState = CursorLockMode.Locked;
+        if (_lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void Update()

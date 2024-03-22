@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayersLook : MonoBehaviour
-{
+{ 
     public float mouseSensitivity = 100f;
     [SerializeField] private Transform _playerBody;
     private float xRotation = 0f;
@@ -15,15 +15,9 @@ public class PlayersLook : MonoBehaviour
     private Vector3 smoothInputVelocity;
     private Vector3 myMouseInput;
     [SerializeField] private float smoothInputSpeedForCamera;
-    [HideInInspector] public float mouseSensitivityAimAssist;
 
     #endregion
-    
-    private void Start()
-    {
-        mouseSensitivityAimAssist = mouseSensitivity;
-    }
-    
+
     void Update()
     {
         #region Get Rotation Inspector Values
@@ -56,9 +50,8 @@ public class PlayersLook : MonoBehaviour
 
         #endregion
         
-        myMouseInput.x = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().x * mouseSensitivityAimAssist * Time.deltaTime;
-        myMouseInput.y = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().y * mouseSensitivityAimAssist * Time.deltaTime;
-        
+        myMouseInput.x = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
+        myMouseInput.y = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
         currentInputMouseVector = Vector3.SmoothDamp(currentInputMouseVector, myMouseInput, ref smoothInputVelocity, smoothInputSpeedForCamera);
         
         if (ActionMapReference.camTransitioning == false)

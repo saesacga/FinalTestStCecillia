@@ -25,8 +25,10 @@ public class ProjectileGun : MonoBehaviour
     
     //public TextMeshProUGUI ammunitionDisplay;
     [SerializeField] private PlayersLook _playersLook;
-    [SerializeField] private float _aimAssistValue;
     [SerializeField] private GameObject _canvas;
+    
+    [SerializeField] private float _sensitivityNoAssist = 150;
+    [SerializeField] private float _aimAssistValue = 60;
 
     public bool allowInvoke = true;
     
@@ -38,6 +40,7 @@ public class ProjectileGun : MonoBehaviour
     }
     private void OnDisable()
     {
+        _playersLook.mouseSensitivity = _sensitivityNoAssist;
         _canvas.SetActive(false);
     }
 
@@ -47,16 +50,12 @@ public class ProjectileGun : MonoBehaviour
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
+
+    private bool _aimAssist = true;
     private void Update()
     {
         MyInput();
-        ShootRayCheck();
-        
-        /*Set ammo display
-        if (ammunitionDisplay != null)
-        {
-            ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
-        }*/
+        if (_aimAssist) { ShootRayCheck(); }
     }
     private void MyInput()
     {
@@ -87,7 +86,16 @@ public class ProjectileGun : MonoBehaviour
             Reload();
         }
     }
-    
+
+    public void ChooseSensitivity(float sensitivity)
+    {
+        _sensitivityNoAssist = sensitivity;
+        _playersLook.mouseSensitivity = _sensitivityNoAssist;
+    }
+    public void ToggleAimAssist(bool toggle)
+    {
+        _aimAssist = toggle;
+    }
 
     #region For Shooting
 
@@ -102,17 +110,17 @@ public class ProjectileGun : MonoBehaviour
             targetPoint = hit.point;
             if (hit.collider.CompareTag("Star") || hit.collider.CompareTag("Enemy"))
             {
-                //_playersLook.mouseSensitivityAimAssist =  _playersLook.mouseSensitivity - Mathf.Clamp(_aimAssistValue, 0, (_playersLook.mouseSensitivity - 10));
+                _playersLook.mouseSensitivity =  _aimAssistValue;
             }
             else
             {
-                //_playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
+                _playersLook.mouseSensitivity = _sensitivityNoAssist;
             }
         }
         else
         {
             targetPoint = ray.GetPoint(75);
-            //_playersLook.mouseSensitivityAimAssist = _playersLook.mouseSensitivity;
+            _playersLook.mouseSensitivity = _sensitivityNoAssist;
         }
     }
     
