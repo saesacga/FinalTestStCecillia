@@ -17,7 +17,7 @@ public class TutorialYerbatera : MonoBehaviour
         _currentFlowchart = GetComponentInChildren<Fungus.Flowchart>();
     }
     
-    void Update()
+    /*void Update()
     {
         if (ActionMapReference.playerMap.ChangeSchemes.EnableAdvanceMovement.WasPerformedThisFrame() && _amaStep1Completed == false)
         {
@@ -49,5 +49,5 @@ public class TutorialYerbatera : MonoBehaviour
             _currentFlowchart.StopAllBlocks();
             _currentFlowchart.ExecuteBlock("AMATutorial5");
         }
-    }
+    }*/
 }

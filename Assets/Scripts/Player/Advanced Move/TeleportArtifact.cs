@@ -12,8 +12,7 @@ public class TeleportArtifact : MonoBehaviour
 
     [SerializeField] private Rigidbody _objectToThrow;
 
-    [SerializeField, Range(0.0f, 50.0f)]
-    private float _force;
+    [SerializeField, Range(0.0f, 50.0f)] private float _force;
 
     [SerializeField] private Transform _startPosition;
 
@@ -27,6 +26,7 @@ public class TeleportArtifact : MonoBehaviour
 
     void OnEnable()
     {
+        _distortionMat.SetFloat("_DistortionStrenght", 0f);
         trajectoryPredictor = GetComponent<TrajectoryPredictor>();
 
         if (_startPosition == null)
@@ -35,17 +35,31 @@ public class TeleportArtifact : MonoBehaviour
 
     void Update()
     {
-        if (TeleportProjectile.allowedToTeleport) { _allowedToTeleportUI.color = Color.green; }
-        else { _allowedToTeleportUI.color = Color.red; }
-        
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed()) { Predict(); }
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasReleasedThisFrame()) 
+        if (TeleportProjectile.allowedToTeleport)
         {
-            ThrowObject(); 
+            _allowedToTeleportUI.color = Color.green;
+        }
+        else
+        {
+            _allowedToTeleportUI.color = Color.red;
+        }
+
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed())
+        {
+            Predict();
+        }
+
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasReleasedThisFrame())
+        {
+            ThrowObject();
             trajectoryPredictor.hitMarker.gameObject.SetActive(false);
             GetComponent<LineRenderer>().positionCount = 0;
         }
-        if (ActionMapReference.playerMap.MovimientoAvanzado.ActivarTeleport.WasPerformedThisFrame()) { Teleport(); }
+
+        if (ActionMapReference.playerMap.MovimientoAvanzado.ActivarTeleport.WasPerformedThisFrame() && _allowTP)
+        {
+            StartCoroutine(TeleportRoutine());
+        }
     }
 
     void Predict()
@@ -66,8 +80,7 @@ public class TeleportArtifact : MonoBehaviour
 
         return properties;
     }
-
-    public static bool amaStep4Completed;
+    
     private void ThrowObject()
     {
         if (trajectoryPredictor.allowThrow)
@@ -78,6 +91,7 @@ public class TeleportArtifact : MonoBehaviour
                 TeleportProjectile.allowedToTeleport = false;
                 TeleportProjectile.animatorCanChangeValues = false;
             }
+
             GetComponentInChildren<Animator>().Play("AmaShoot");
             Rigidbody thrownObject = Instantiate(_objectToThrow, _startPosition.position, Quaternion.identity);
             _teleportProjectile = thrownObject.gameObject;
@@ -89,25 +103,40 @@ public class TeleportArtifact : MonoBehaviour
         }
     }
 
-    public static bool amaStep5Completed;
-    private void Teleport()
+    [SerializeField] private Material _distortionMat;
+    [SerializeField] private float _distortionTarget;
+    private float _distortionLerp;
+    private bool _allowTP = true;
+    
+    private IEnumerator TeleportRoutine()
     {
-        if (_teleportProjectile == null || TeleportProjectile.allowedToTeleport == false) { return; } //No hay proyectil o no está preparado para el teleport
+        if (_teleportProjectile == null || TeleportProjectile.allowedToTeleport == false)
+        {
+            yield break;
+        } //No hay proyectil o no está preparado para el teleport
 
+        _allowTP = false;
+        while (_distortionMat.GetFloat("_DistortionStrenght") < _distortionTarget)
+        {
+            _distortionLerp = Mathf.MoveTowards(_distortionMat.GetFloat("_DistortionStrenght"), _distortionTarget, 1f * Time.deltaTime);
+            _distortionMat.SetFloat("_DistortionStrenght", _distortionLerp);
+            yield return null; 
+        }
+        
         TeleportProjectile.allowedToTeleport = false;
         TeleportProjectile.animatorCanChangeValues = false;
         _player.GetComponent<CharacterController>().enabled = false;
         _player.transform.position = _teleportProjectile.transform.position;
         _player.GetComponent<CharacterController>().enabled = true;
         Destroy(_teleportProjectile);
-
-        #region Para planeta
         
-        /*amaStep5Completed = true;
-        _player.transform.position = _teleportProjectile.transform.position;
-        _canThrow = true;
-        Destroy(_teleportProjectile);*/
-
-        #endregion
+        while (_distortionMat.GetFloat("_DistortionStrenght") > 0f)
+        {
+            Debug.Log("aqui");
+            _distortionLerp = Mathf.MoveTowards(_distortionMat.GetFloat("_DistortionStrenght"), 0f, 1f * Time.deltaTime); 
+            _distortionMat.SetFloat("_DistortionStrenght", _distortionLerp);
+            yield return null; 
+        }
+        _allowTP = true;
     }
 }
