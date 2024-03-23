@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 888546605707978222}
-  maxLifeTime: 20
+  maxLifeTime: 10
   _particle: {fileID: 5356728151580888989, guid: 00bbf41ac9c7dc3469649ee03c7308db, type: 3}
 --- !u!96 &-2706299966726930463
 TrailRenderer:

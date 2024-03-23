@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,9 +24,17 @@ public class TeleportArtifact : MonoBehaviour
     [SerializeField] private Image _allowedToTeleportUI;
 
     #endregion
-
+    
+    private void OnDisable()
+    {
+        Application.onBeforeRender -= Predict;
+    }
+    
+    
     void OnEnable()
     {
+        Application.onBeforeRender += Predict;
+        
         _distortionMat.SetFloat("_DistortionStrenght", 0f);
         trajectoryPredictor = GetComponent<TrajectoryPredictor>();
 
@@ -44,11 +53,6 @@ public class TeleportArtifact : MonoBehaviour
             _allowedToTeleportUI.color = Color.red;
         }
 
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed())
-        {
-            Predict();
-        }
-
         if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasReleasedThisFrame())
         {
             ThrowObject();
@@ -62,9 +66,12 @@ public class TeleportArtifact : MonoBehaviour
         }
     }
 
-    void Predict()
+    private void Predict()
     {
-        trajectoryPredictor.PredictTrajectory(ProjectileData());
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed())
+        {
+            trajectoryPredictor.PredictTrajectory(ProjectileData());
+        } 
     }
 
     ProjectileProperties ProjectileData()
