@@ -11,6 +11,8 @@ public class StarMovement : MonoBehaviour
     private float _starVelocityOverTime;
     [SerializeField] private LightRay _lightRay;
     [SerializeField] private Sprite _shineStarSprite;
+    [SerializeField] private GameObject _particleChange;
+    [SerializeField] private GameObject _particleDestroy;
     private bool _activated;
     private bool _finalPositionReached;
 
@@ -37,7 +39,14 @@ public class StarMovement : MonoBehaviour
             }
         }
 
-        if (_lightRay._starsRequired == _lightRay._starsInPosition) { gameObject.SetActive(false); }
+        if (_lightRay._starsRequired == _lightRay._starsInPosition)
+        {
+            _particleDestroy = Instantiate(_particleDestroy, transform.position, Quaternion.identity);
+            float totalDuration = _particleDestroy.GetComponent<ParticleSystem>().main.duration + _particleDestroy.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
+            Destroy(_particleDestroy, totalDuration);
+            //Destroy(this.gameObject);
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -45,6 +54,9 @@ public class StarMovement : MonoBehaviour
         if (collision.collider.CompareTag("Bullet") && _activated == false)
         {
             GetComponent<SpriteRenderer>().sprite = _shineStarSprite;
+            _particleChange = Instantiate(_particleChange, transform.position, Quaternion.identity);
+            float totalDuration = _particleChange.GetComponent<ParticleSystem>().main.duration + _particleChange.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
+            Destroy(_particleChange, totalDuration);
             _lightRay._starsCount++;
             _activated = true;
         }

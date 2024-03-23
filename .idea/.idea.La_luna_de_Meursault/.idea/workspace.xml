@@ -6,14 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Combat/Bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Combat/Bullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Estrella.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Estrella.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/PauseMenu/PauseMenuControl.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/PauseMenu/PauseMenuControl.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ControlBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ControlBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/CustomProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/CustomProjectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/StarMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/StarMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Destroy/Big Circle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Destroy/Big Circle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Destroy/FirstCircle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Destroy/FirstCircle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Destroy/Sparkles.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Destroy/Sparkles.mat.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +194,7 @@
       <workItem from="1710392321716" duration="4631000" />
       <workItem from="1710964286612" duration="5468000" />
       <workItem from="1711065757581" duration="11302000" />
+      <workItem from="1711138660821" duration="6655000" />
     </task>
     <servers />
   </component>
