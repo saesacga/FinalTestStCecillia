@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/StartGlow.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/StartGlow.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TrajectoryPredictor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TrajectoryPredictor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VisualEffects/SpriteBillboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VisualEffects/SpriteBillboard.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +189,7 @@
       <workItem from="1711065757581" duration="11302000" />
       <workItem from="1711138660821" duration="6655000" />
       <workItem from="1711163215931" duration="11007000" />
-      <workItem from="1711325534023" duration="11307000" />
+      <workItem from="1711325534023" duration="12476000" />
     </task>
     <servers />
   </component>
