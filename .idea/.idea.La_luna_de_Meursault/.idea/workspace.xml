@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Magic/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Magic/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TrajectoryPredictor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TrajectoryPredictor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +189,8 @@
       <workItem from="1710964286612" duration="5468000" />
       <workItem from="1711065757581" duration="11302000" />
       <workItem from="1711138660821" duration="6655000" />
-      <workItem from="1711163215931" duration="10944000" />
+      <workItem from="1711163215931" duration="11007000" />
+      <workItem from="1711325534023" duration="11307000" />
     </task>
     <servers />
   </component>

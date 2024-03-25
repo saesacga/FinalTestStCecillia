@@ -21,7 +21,7 @@ public class TrajectoryPredictor : MonoBehaviour
     [SerializeField] private Gradient _canThrowColor;
     [SerializeField] private Gradient _cannotThrowColor;
     #endregion
-
+    
     private void Start()
     {
         if (trajectoryLine == null)
@@ -29,7 +29,7 @@ public class TrajectoryPredictor : MonoBehaviour
 
         SetTrajectoryVisible(true);
     }
-
+    
     public void PredictTrajectory(ProjectileProperties projectile)
     {
         Vector3 velocity = projectile.initialSpeed / projectile.mass * projectile.direction;
@@ -72,7 +72,7 @@ public class TrajectoryPredictor : MonoBehaviour
     
     private void UpdateLineRender(int count, (int point, Vector3 pos) pointPos)
     {
-        trajectoryLine.positionCount = count; 
+        trajectoryLine.positionCount = count;
         trajectoryLine.SetPosition(pointPos.point, pointPos.pos);
     }
 
@@ -96,6 +96,6 @@ public class TrajectoryPredictor : MonoBehaviour
     public void SetTrajectoryVisible(bool visible)
     {
         trajectoryLine.enabled = visible;
-        //hitMarker.gameObject.SetActive(visible);
+        hitMarker.gameObject.SetActive(visible);
     }
 }

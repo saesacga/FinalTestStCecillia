@@ -43,12 +43,11 @@ public class LightRay : MonoBehaviour
         {
             if (_canGoToNextPos)
             {
+                _canGoToNextPos = false;
                 _nextPos++;
                 _lightBeamAnimator.SetInteger("nextPosition", _nextPos);
                 Debug.Log(_nextPos);
-                //_nextPos = true;
             }
-            //_lightBeamAnimator.SetBool("nextPosition", _nextPos);
         }
         
     }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Fungus;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
@@ -22,6 +23,11 @@ public class TeleportArtifact : MonoBehaviour
     [SerializeField] private GameObject _player;
 
     [SerializeField] private Image _allowedToTeleportUI;
+
+    [SerializeField] private Material _lineRendererMaterial;
+    [ColorUsage(true, true)]
+    [SerializeField] private Color _lineRendererTargetColor;
+    private Color _lerpColor;
 
     #endregion
     
@@ -64,14 +70,25 @@ public class TeleportArtifact : MonoBehaviour
         {
             StartCoroutine(TeleportRoutine());
         }
-    }
-
-    private void Predict()
-    {
+        
         if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed())
         {
+            _lerpColor = Color.LerpUnclamped(_lineRendererMaterial.GetColor("_Color"), _lineRendererTargetColor, 10 * Time.deltaTime);
+            _lineRendererMaterial.SetColor("_Color", _lerpColor);
+        }
+        else
+        {
+            _lerpColor = Color.LerpUnclamped(_lineRendererMaterial.GetColor("_Color"), Color.clear, 10 * Time.deltaTime);
+            _lineRendererMaterial.SetColor("_Color", _lerpColor);
+        }
+    }
+    
+    private void Predict()
+    {
+        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed() || _lineRendererMaterial.GetColor("_Color").a > 0.1)
+        {
             trajectoryPredictor.PredictTrajectory(ProjectileData());
-        } 
+        }
     }
 
     ProjectileProperties ProjectileData()
