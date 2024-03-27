@@ -23,6 +23,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Continue()
     {
+        Time.timeScale = 1f;
+        
         pause = false;
         pauseMenuObject.SetActive(false);
         ActionMapReference.ActivateAllMaps();
@@ -41,18 +43,20 @@ public class PauseMenu : MonoBehaviour
         pause = !pause;
         if (pause)
         {
+            Time.timeScale = 0f;
+            
             EventSystem.current.SetSelectedGameObject(_selectButtons[0]);
             pauseMenuObject.SetActive(true);
-            ActionMapReference.playerMap.PauseMap.Inventory.Disable();
             ActionMapReference.ActivateUINavigation();
-            
+
             _firstMenu.SetActive(true);
             foreach (GameObject elemento in _subMenus) { elemento.SetActive(false); }
         }
         else if (pause == false)
         {
+            Time.timeScale = 1f;
+            
             pauseMenuObject.SetActive(false);
-            ActionMapReference.playerMap.PauseMap.Inventory.Enable();
             ActionMapReference.ActivateAllMaps();
         }
     }

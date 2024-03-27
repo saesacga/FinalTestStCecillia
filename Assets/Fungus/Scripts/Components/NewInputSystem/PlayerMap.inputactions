@@ -116,7 +116,7 @@
                     "id": "04e88cf6-3dd8-4e43-94e9-c4cfb1d4aecb",
                     "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.1,y=0.1)",
+                    "processors": "ScaleVector2,DeltaTime",
                     "groups": "Mouse",
                     "action": "Look",
                     "isComposite": false,

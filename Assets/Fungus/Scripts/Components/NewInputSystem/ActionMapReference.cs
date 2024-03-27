@@ -44,7 +44,7 @@ public class ActionMapReference : MonoBehaviour
         playerMap.Combate.Enable();
         playerMap.Movimiento.Look.Enable();
         playerMap.Movimiento.Jumping.Enable();
-        playerMap.Movimiento.Move.Enable(); //Cambiar a disable cuando se vaya a hacer la build
+        //playerMap.Movimiento.Move.Enable(); //ELIMINAR ESTA LÍNEA
         playerMap.ChangeSchemes.EnableCombat.Enable();
         playerMap.Interaccion.Enable();
         playerMap.PauseMap.Enable();
@@ -68,7 +68,7 @@ public class ActionMapReference : MonoBehaviour
         playerMap.Movimiento.Disable();
         playerMap.MovimientoAvanzado.Disable();
         playerMap.ChangeSchemes.Disable();
-        playerMap.PauseMap.Disable();
+        //playerMap.PauseMap.Disable();
         playerMap.UI.Disable();
         if (inCutscene == false) { playerMap.Movimiento.Look.Enable(); }
         playerMap.Interaccion.Enable();
@@ -79,10 +79,12 @@ public class ActionMapReference : MonoBehaviour
         Cursor.visible = true;
         playerMap.Combate.Disable();
         playerMap.Farming.Disable();
-        playerMap.Movimiento.Disable();
+        playerMap.Movimiento.Look.Disable();
+        playerMap.Movimiento.Jumping.Disable();
         playerMap.MovimientoAvanzado.Disable();
         playerMap.ChangeSchemes.Disable();
         playerMap.Interaccion.Disable();
+        playerMap.PauseMap.Enable();
         playerMap.UI.Enable();
     }
 

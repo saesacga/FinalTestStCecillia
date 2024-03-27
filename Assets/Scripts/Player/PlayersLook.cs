@@ -20,6 +20,8 @@ public class PlayersLook : MonoBehaviour
 
     void Update()
     {
+        if (Time.deltaTime == 0) { return; } //Para cuando el juego sea pausado
+        
         #region Get Rotation Inspector Values
 
         Vector3 angle = transform.eulerAngles;
