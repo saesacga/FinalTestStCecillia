@@ -42,7 +42,9 @@ public class ActionMapReference : MonoBehaviour
     {
         Cursor.visible = false;
         playerMap.Combate.Enable();
-        playerMap.Movimiento.Enable();
+        playerMap.Movimiento.Look.Enable();
+        playerMap.Movimiento.Jumping.Enable();
+        playerMap.Movimiento.Move.Enable(); //Cambiar a disable cuando se vaya a hacer la build
         playerMap.ChangeSchemes.EnableCombat.Enable();
         playerMap.Interaccion.Enable();
         playerMap.PauseMap.Enable();
@@ -113,12 +115,12 @@ public class ActionMapReference : MonoBehaviour
             _cinemachineBlend.Play(camBlendName);
             yield return new WaitForSeconds(1.6f);
             camTransitioning = false;
-            playerMap.Movimiento.Look.Enable();
+            playerMap.Movimiento.Enable();
         }
         else
         {
             camTransitioning = true;
-            playerMap.Movimiento.Look.Disable();
+            playerMap.Movimiento.Disable();
             yield return new WaitForSeconds(0.1f);
             _cinemachineBlend.Play(camBlendName);
         }

@@ -13,6 +13,7 @@ public class Moveable : MonoBehaviour
     [SerializeField] private GameObject _moveable;
     private MeshRenderer _movableMeshRenderer;
     [SerializeField] private Material _outlineMaterial;
+    [SerializeField] private Vector3 _instantiatePosition;
     private Rigidbody _rigidbody;
     private bool _moving;
 
@@ -79,7 +80,7 @@ public class Moveable : MonoBehaviour
             }
 
             if (_currentCube == null) { _currentCube = gameObject; }
-            if (_cubeInstanceObject == null) { _cubeInstanceObject = Instantiate(_moveable, new Vector3(0f,50f,0f), Quaternion.identity); }
+            if (_cubeInstanceObject == null) { _cubeInstanceObject = Instantiate(_moveable, _instantiatePosition, Quaternion.identity); }
             
             _moving = true;
             _rigidbody.drag = 10; 
