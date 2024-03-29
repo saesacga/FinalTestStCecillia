@@ -138,7 +138,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""id"": ""04e88cf6-3dd8-4e43-94e9-c4cfb1d4aecb"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2,DeltaTime"",
+                    ""processors"": ""ScaleVector2(x=0.5,y=0.5),DeltaTime"",
                     ""groups"": ""Mouse"",
                     ""action"": ""Look"",
                     ""isComposite"": false,

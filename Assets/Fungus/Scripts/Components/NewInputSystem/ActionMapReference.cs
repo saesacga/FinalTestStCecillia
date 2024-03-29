@@ -44,7 +44,7 @@ public class ActionMapReference : MonoBehaviour
         playerMap.Combate.Enable();
         playerMap.Movimiento.Look.Enable();
         playerMap.Movimiento.Jumping.Enable();
-        //playerMap.Movimiento.Move.Enable(); //ELIMINAR ESTA LÍNEA
+        playerMap.Movimiento.Move.Enable(); //ELIMINAR ESTA LÍNEA
         playerMap.ChangeSchemes.EnableCombat.Enable();
         playerMap.Interaccion.Enable();
         playerMap.PauseMap.Enable();
@@ -122,7 +122,10 @@ public class ActionMapReference : MonoBehaviour
         else
         {
             camTransitioning = true;
-            playerMap.Movimiento.Disable();
+            //if (lockMove == 1)
+            
+                playerMap.Movimiento.Disable();
+            
             yield return new WaitForSeconds(0.1f);
             _cinemachineBlend.Play(camBlendName);
         }

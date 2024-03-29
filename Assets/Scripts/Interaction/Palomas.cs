@@ -46,4 +46,16 @@ public class Palomas : MonoBehaviour
             StartCoroutine(ActionMapReference.ActivateLooking(true, "POVCam"));
         }
     }
+
+    private void ActivateMove(int move)
+    {
+        if (move == 0)
+        {
+            ActionMapReference.playerMap.Movimiento.Move.Enable();
+        }
+        else if (move == 1)
+        {
+            ActionMapReference.playerMap.Movimiento.Move.Disable();
+        }
+    }
 }
