@@ -45,7 +45,7 @@ public class TeleportProjectile : MonoBehaviour
 
     private void Update()
     {
-        if (ActionMapReference.playerMap.MovimientoAvanzado.DestruirTeleport.WasPerformedThisFrame())
+        if (ActionMapReference.playerInput.actions["DestruirTeleport"].WasPerformedThisFrame())
         {
             allowedToTeleport = false;
             animatorCanChangeValues = false;

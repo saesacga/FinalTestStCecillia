@@ -36,7 +36,7 @@ public class PauseMenu : MonoBehaviour
     }
     private void Update()
     {
-        if (ActionMapReference.playerMap.PauseMap.Pause.WasPerformedThisFrame()) { TogglePauseMenu(); }
+        if (ActionMapReference.playerInput.actions["Pause"].WasPerformedThisFrame()) { TogglePauseMenu(); }
     }
     private void TogglePauseMenu()
     {

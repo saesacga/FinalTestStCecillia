@@ -13,7 +13,7 @@ public class Flower : ItemsToInventory, ICollectible
     
     private void Update()
     {
-        if (ActionMapReference.playerMap.Interaccion.Interactuar.WasPressedThisFrame() && _collectButtonFlag)
+        if (ActionMapReference.playerInput.actions["Interactuar"].WasPressedThisFrame() && _collectButtonFlag)
         {
             //GetInventoryValues(flowerData);
         }

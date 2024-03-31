@@ -51,11 +51,11 @@ public class Palomas : MonoBehaviour
     {
         if (move == 0)
         {
-            ActionMapReference.playerMap.Movimiento.Move.Enable();
+            ActionMapReference.playerInput.actions.FindAction("Move").Enable();
         }
         else if (move == 1)
         {
-            ActionMapReference.playerMap.Movimiento.Move.Disable();
+            ActionMapReference.playerInput.actions.FindAction("Move").Disable();
         }
     }
 }

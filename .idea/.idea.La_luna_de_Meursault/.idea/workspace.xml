@@ -6,25 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorParent.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/CollectorAnimation/CollectorParent.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/TheCollectorGraphic.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Collector/TheCollectorGraphic.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/StartGlow.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Artifacts/Gauntlet/GauntletAnimations/StartGlow.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/2Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/2Pos.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/NovelaPalomas.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/NovelaPalomas.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/PalomasScene.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/PalomasScene.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/DialogInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/DialogInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ActionMapReference/MapReference.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ActionMapReference/MapReference.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/FriendlyCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/FriendlyCharacter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Collectible/Collectables/Flower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Collectible/Collectables/Flower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FriendlyNPC.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/InvisibleWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/InvisibleWall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Palomas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Palomas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/Orb/OrbParticles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Particles/Orb/OrbParticles.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Particle.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Materials/Particle.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/StartCutscene.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/StartCutscene.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayersMovementRB.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayersMovementRB.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayersLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,6 +216,7 @@
       <workItem from="1711410792146" duration="8584000" />
       <workItem from="1711489117966" duration="21189000" />
       <workItem from="1711663761293" duration="3107000" />
+      <workItem from="1711677001637" duration="11014000" />
     </task>
     <servers />
   </component>

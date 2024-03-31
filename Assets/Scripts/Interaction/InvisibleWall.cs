@@ -11,7 +11,6 @@ public class InvisibleWall : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            ActionMapReference.EnterInteraction(false);
             _flowchart.ExecuteBlock("InvisibleWallHit");
         }
     }

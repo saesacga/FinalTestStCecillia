@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayersLook : MonoBehaviour
 { 
@@ -15,10 +16,27 @@ public class PlayersLook : MonoBehaviour
     private Vector3 smoothInputVelocity;
     private Vector3 myMouseInput;
     [SerializeField] private float smoothInputSpeedForCamera;
-
+    
+    private bool _IsCurrentDeviceMouse
+		{
+			get
+			{
+				#if ENABLE_INPUT_SYSTEM
+				return ActionMapReference.playerInput.currentControlScheme == "KeyboardMouse";
+#else
+				return false;
+				#endif
+			}
+		}
+    
     #endregion
 
-    void Update()
+    void LateUpdate()
+    {
+        CameraRotation();
+    }
+
+    private void CameraRotation()
     {
         if (Time.deltaTime == 0) { return; } //Para cuando el juego sea pausado
         
@@ -51,9 +69,11 @@ public class PlayersLook : MonoBehaviour
         }
 
         #endregion
+
+        float deltaTimeMultiplier = _IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
         
-        myMouseInput.x = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
-        myMouseInput.y = ActionMapReference.playerMap.Movimiento.Look.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
+        myMouseInput.x = ActionMapReference.playerInput.actions["Look"].ReadValue<Vector2>().x * mouseSensitivity * deltaTimeMultiplier;
+        myMouseInput.y = ActionMapReference.playerInput.actions["Look"].ReadValue<Vector2>().y * mouseSensitivity * deltaTimeMultiplier;
         currentInputMouseVector = Vector3.SmoothDamp(currentInputMouseVector, myMouseInput, ref smoothInputVelocity, smoothInputSpeedForCamera);
         
         if (ActionMapReference.camTransitioning == false)

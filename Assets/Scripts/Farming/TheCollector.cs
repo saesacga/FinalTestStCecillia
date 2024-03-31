@@ -58,11 +58,11 @@ public class TheCollector : MonoBehaviour
 
         #region Destruir
 
-        if (ActionMapReference.playerMap.Farming.Destroy.IsPressed())
+        if (ActionMapReference.playerInput.actions["Destroy"].IsPressed())
         {
             DestroyObjects();
         }
-        else if (ActionMapReference.playerMap.Farming.Destroy.WasReleasedThisFrame())
+        else if (ActionMapReference.playerInput.actions["Destroy"].WasReleasedThisFrame())
         {
             GetComponentInChildren<Animator>().Play("CollectorIdleanim");
         }
@@ -71,19 +71,19 @@ public class TheCollector : MonoBehaviour
 
         #region Recolectar
 
-        else if (ActionMapReference.playerMap.Farming.Collect.IsPressed() || ActionMapReference.playerMap.Farming.Collect.WasReleasedThisFrame())
+        else if (ActionMapReference.playerInput.actions["Collect"].IsPressed() || ActionMapReference.playerInput.actions["Collect"].WasReleasedThisFrame())
         {
-            if (ActionMapReference.playerMap.Farming.Collect.IsPressed()) { GetComponentInChildren<Animator>().Play("CollectorSuck"); }
+            if (ActionMapReference.playerInput.actions["Collect"].IsPressed()) { GetComponentInChildren<Animator>().Play("CollectorSuck"); }
             else { GetComponentInChildren<Animator>().Play("CollectorIdleanim"); }
             AttractObjects();
-            _canCollect = ActionMapReference.playerMap.Farming.Collect.IsPressed();
+            _canCollect = ActionMapReference.playerInput.actions["Collect"].IsPressed();
         }
 
         #endregion
 
         #region Eyectar
 
-        else if (ActionMapReference.playerMap.Farming.Eject.WasPressedThisFrame())
+        else if (ActionMapReference.playerInput.actions["Eject"].WasPressedThisFrame())
         {
             if (_currentItemData != null)
             {
@@ -95,11 +95,11 @@ public class TheCollector : MonoBehaviour
         
         #region Mover
 
-        else if (ActionMapReference.playerMap.Farming.MoveObject.WasPerformedThisFrame())
+        else if (ActionMapReference.playerInput.actions["MoveObject"].WasPerformedThisFrame())
         {
             MoveObjects();
         }
-        else if (ActionMapReference.playerMap.Farming.MoveObject.WasReleasedThisFrame())
+        else if (ActionMapReference.playerInput.actions["MoveObject"].WasReleasedThisFrame())
         {
             GetComponentInChildren<Animator>().Play("CollectorIdleanim");
             OnMoving?.Invoke(false);
@@ -249,7 +249,7 @@ public class TheCollector : MonoBehaviour
                 attractable.GetComponent<Rigidbody>().useGravity = false;
                 attractable.transform.position = Vector3.MoveTowards(attractable.transform.position,this.transform.position,_attractVelocity * Time.deltaTime);
                 
-                if (ActionMapReference.playerMap.Farming.Collect.WasReleasedThisFrame())
+                if (ActionMapReference.playerInput.actions["Collect"].WasReleasedThisFrame())
                 {
                     attractable.GetComponent<Rigidbody>().useGravity = true;
                 }

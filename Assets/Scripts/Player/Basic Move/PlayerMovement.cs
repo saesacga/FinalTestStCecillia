@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(_wallJumpTimerRoutine);
             }
         }
-        if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _allowWallJumpInput)
+        if (ActionMapReference.playerInput.actions["Jumping"].WasPerformedThisFrame() && _allowWallJumpInput)
         {
             WallJump();                
         }
@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
         #region Jump
         
-        else if (ActionMapReference.playerMap.Movimiento.Jumping.WasPerformedThisFrame() && _isGrounded && _inDash == false)
+        else if (ActionMapReference.playerInput.actions["Jumping"].WasPerformedThisFrame() && _isGrounded && _inDash == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             speed = airSpeed;
@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (_amaGameObject.activeInHierarchy) { _dashAvailableImage.color = Color.yellow; }
         }
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Dash.WasPerformedThisFrame() && _dashContador >= _dashCooldown && _amaGameObject.activeInHierarchy && _isGrounded == false)
+        if (ActionMapReference.playerInput.actions["Dash"].WasPerformedThisFrame() && _dashContador >= _dashCooldown && _amaGameObject.activeInHierarchy && _isGrounded == false)
         {
             _dashRoutine = null;
             _dashRoutine = Dash();
@@ -145,8 +145,8 @@ public class PlayerMovement : MonoBehaviour
         
         #region Movimiento
         
-        myInput.x = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().x;
-        myInput.z = ActionMapReference.playerMap.Movimiento.Move.ReadValue<Vector2>().y;
+        myInput.x = ActionMapReference.playerInput.actions["Move"].ReadValue<Vector2>().x;
+        myInput.z = ActionMapReference.playerInput.actions["Move"].ReadValue<Vector2>().y;
 
         currentInputVector = Vector3.SmoothDamp(currentInputVector, myInput, ref smoothInputVelocity, smoothInputSpeed);
         move = transform.right * currentInputVector.x + transform.forward * currentInputVector.z;

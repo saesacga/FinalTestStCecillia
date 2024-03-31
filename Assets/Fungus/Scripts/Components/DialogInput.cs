@@ -50,8 +50,7 @@ namespace Fungus
 
         private void Start()
         {
-            ActionMapReference.playerMap = new PlayerMap();
-            ActionMapReference.playerMap.Interaccion.Enable();
+            
         }
         protected virtual void Awake()
         {
@@ -91,11 +90,7 @@ namespace Fungus
             //VOLVER A ACTIVAR SI ES NECESARIO
             if (writer != null)
             {
-                if (ActionMapReference.playerMap.Interaccion.Aceptar.WasPerformedThisFrame() ||
-                    (ActionMapReference.playerMap.Interaccion.Cancelar.WasPerformedThisFrame()))
-                {
-                    SetNextLineFlag();
-                }
+                
             }
 
             switch (clickMode)
@@ -103,7 +98,7 @@ namespace Fungus
             case ClickMode.Disabled:
                 break;
             case ClickMode.ClickAnywhere:
-                if (ActionMapReference.playerMap.Interaccion.Aceptar.WasPerformedThisFrame())
+                if (true)
                 {
                     SetClickAnywhereClickedFlag();
                 }

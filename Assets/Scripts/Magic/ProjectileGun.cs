@@ -41,13 +41,13 @@ public class ProjectileGun : MonoBehaviour
     private bool _aimAssist = true;
     private void Update()
     {
-        if (readyToShoot && ActionMapReference.playerMap.Combate.Fire.WasPressedThisFrame())
+        if (readyToShoot && ActionMapReference.playerInput.actions["Fire"].WasPressedThisFrame())
         {
             GetComponentInChildren<Animator>().Play("ShootAnimation");
             Shoot();
         }
         
-        if (_aimAssist) { ShootRayCheck(); }
+        ShootRayCheck();
     }
     
     #region For Shooting and Aim Assist
@@ -63,7 +63,7 @@ public class ProjectileGun : MonoBehaviour
             targetPoint = hit.point;
             if (hit.collider.CompareTag("Star") || hit.collider.CompareTag("Enemy"))
             {
-                _playersLook.mouseSensitivity =  _aimAssistValue;
+                if (_aimAssist) { _playersLook.mouseSensitivity =  _aimAssistValue; }
             }
             else
             {

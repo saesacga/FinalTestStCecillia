@@ -59,19 +59,19 @@ public class TeleportArtifact : MonoBehaviour
             _allowedToTeleportUI.color = Color.red;
         }
 
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.WasReleasedThisFrame())
+        if (ActionMapReference.playerInput.actions["Trayectoria"].WasReleasedThisFrame())
         {
             ThrowObject();
             trajectoryPredictor.hitMarker.gameObject.SetActive(false);
             GetComponent<LineRenderer>().positionCount = 0;
         }
 
-        if (ActionMapReference.playerMap.MovimientoAvanzado.ActivarTeleport.WasPerformedThisFrame() && _allowTP)
+        if (ActionMapReference.playerInput.actions["ActivarTeleport"].WasPerformedThisFrame() && _allowTP)
         {
             StartCoroutine(TeleportRoutine());
         }
         
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed())
+        if (ActionMapReference.playerInput.actions["Trayectoria"].IsPressed())
         {
             _lerpColor = Color.LerpUnclamped(_lineRendererMaterial.GetColor("_Color"), _lineRendererTargetColor, 10 * Time.deltaTime);
             _lineRendererMaterial.SetColor("_Color", _lerpColor);
@@ -85,7 +85,7 @@ public class TeleportArtifact : MonoBehaviour
     
     private void Predict()
     {
-        if (ActionMapReference.playerMap.MovimientoAvanzado.Trayectoria.IsPressed() || _lineRendererMaterial.GetColor("_Color").a > 0.1)
+        if (ActionMapReference.playerInput.actions["Trayectoria"].IsPressed() || _lineRendererMaterial.GetColor("_Color").a > 0.1)
         {
             trajectoryPredictor.PredictTrajectory(ProjectileData());
         }
