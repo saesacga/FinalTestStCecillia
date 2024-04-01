@@ -7,47 +7,22 @@
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeArtifacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeArtifacts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/1MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/1MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/2MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/2MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/3MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/3MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/4MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/4MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/5MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/5MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/6MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/6MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/7MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/7MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/8MovMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/8MovMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/aaaaaaaaaaaaaa.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/aaaaaaaaaaaaaa.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/zona2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/zona2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/Untitled.011.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/Untitled.011.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/a.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/a.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/a.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/b.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/b.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/b.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/c.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/c.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Textures/Movimiento/c.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +210,7 @@
       <workItem from="1711489117966" duration="21189000" />
       <workItem from="1711663761293" duration="3107000" />
       <workItem from="1711677001637" duration="11014000" />
-      <workItem from="1711919501874" duration="14621000" />
+      <workItem from="1711919501874" duration="15230000" />
     </task>
     <servers />
   </component>
