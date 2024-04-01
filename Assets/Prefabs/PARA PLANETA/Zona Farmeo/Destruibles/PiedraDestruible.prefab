@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
+  _activateVerticalBillboard: 0
 --- !u!65 &8757890178055676150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lootPrefab: {fileID: 7699822805399918671, guid: 0b3f7657b0186d949800535257f0a21a, type: 3}
   _objectHealth: 40
+  destroy: 0
   _dissolveMaterial: {fileID: 2100000, guid: 3a3730abb49f24e46b3facba63533664, type: 2}
   _dissolveObject: {fileID: 8327467869348067068}
   _lerpTime: 5
@@ -145,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowColor: {r: 1, g: 0, b: 0.44705886, a: 0}
-  glowBrightness: 1.6
-  outlineWidth: 1
+  glowBrightness: 1.8
+  outlineWidth: 10
   alphaThreshold: 0.01
   drawOutside: 1
   enableInstancing: 0
@@ -248,3 +250,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
+  _activateVerticalBillboard: 0

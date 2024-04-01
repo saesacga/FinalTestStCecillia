@@ -12,7 +12,7 @@ public class Destructible : MonoBehaviour, IDestructible
     [SerializeField] private float _objectHealth;
     private float _objectHealthForCode;
     private Vector3 _lootSpawn;
-    public bool destroy;
+    [HideInInspector] public bool destroy;
 
     #region Dissolve
     
