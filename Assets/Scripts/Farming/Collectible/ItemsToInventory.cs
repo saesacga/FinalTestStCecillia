@@ -29,8 +29,8 @@ public class ItemsToInventory : MonoBehaviour, IAttractable
 
     public void CollectOnAttract()
     {
-        Destroy(this.gameObject);
         OnItemCollected?.Invoke(itemData);
+        Destroy(this.gameObject);
     }
 
     private void Update()

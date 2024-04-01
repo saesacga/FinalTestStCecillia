@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9e30630fc7f318647947d4ddbfe914a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f736d3234fce0d0428f68d4154f00138, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
+  _activateVerticalBillboard: 0
 --- !u!114 &3988545652399832511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _lightRay: {fileID: 0}
-  _shineStarSprite: {fileID: 21300000, guid: ecca5893d6f556f4da8a2644568191ba, type: 3}
+  _shineStarSprite: {fileID: 21300000, guid: 825df9a7ae174dd4d88b021089163c16, type: 3}
   _particleChange: {fileID: 5356728151580888989, guid: 9a260ea42d0578345b895dd823347c13, type: 3}
   _particleDestroy: {fileID: 5356728151580888989, guid: 6d0bc26f1b680c542beaf2ac7840f2b4, type: 3}
 --- !u!135 &3162816195384033021

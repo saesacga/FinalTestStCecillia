@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
+  _activateVerticalBillboard: 0
 --- !u!1 &7699822805399918671
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
+  _activateVerticalBillboard: 0
 --- !u!54 &-2765463344691685039
 Rigidbody:
   m_ObjectHideFlags: 0

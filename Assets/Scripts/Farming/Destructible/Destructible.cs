@@ -69,7 +69,7 @@ public class Destructible : MonoBehaviour, IDestructible
             }  
             
             gameObject.SetActive(false);
-            yield return new WaitForSeconds(Random.Range(5f,10f)); // Estaba en 30 a 150
+            yield return new WaitForSeconds(Random.Range(30f,80f));
             gameObject.SetActive(true);
         }
     }

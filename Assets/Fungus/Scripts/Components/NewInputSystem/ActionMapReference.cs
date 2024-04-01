@@ -47,7 +47,7 @@ public class ActionMapReference : MonoBehaviour
         playerInput.actions.FindAction("Look").Enable();
         playerInput.actions.FindAction("Jumping").Enable();
         
-        //playerInput.actions.FindAction("Move").Enable(); //Eliminar esta linea 
+        playerInput.actions.FindAction("Move").Enable(); //Eliminar esta linea 
         
         playerInput.actions.FindActionMap("Combate").Enable();
         playerInput.actions.FindActionMap("Farming").Enable();

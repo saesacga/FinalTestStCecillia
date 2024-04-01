@@ -34,11 +34,14 @@ public class TheCollector : MonoBehaviour
     private float _lerpTimeLoot;
 
     #endregion
+
+    private AudioSource _audioSource;
     
     private void OnEnable()
     {
         ItemsToInventory.OnItemCollected += InfoToEject;
         _canvas.SetActive(true);
+        _audioSource = GetComponent<AudioSource>();
     }
     private void OnDisable()
     {

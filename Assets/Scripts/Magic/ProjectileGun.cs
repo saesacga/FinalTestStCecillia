@@ -26,6 +26,9 @@ public class ProjectileGun : MonoBehaviour
 
     public bool allowInvoke = true;
     
+    [SerializeField] private AudioClip[] _collectSounds;
+    private AudioSource _audioSource;
+    
     #endregion
     
     private void OnDisable()
@@ -35,15 +38,16 @@ public class ProjectileGun : MonoBehaviour
 
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         readyToShoot = true;
     }
 
     private bool _aimAssist = true;
     private void Update()
     {
-        if (readyToShoot && ActionMapReference.playerInput.actions["Fire"].WasPressedThisFrame())
+        if (readyToShoot && ActionMapReference.playerInput.actions["Fire"].IsPressed())
         {
-            GetComponentInChildren<Animator>().Play("ShootAnimation");
+            GetComponentInChildren<Animator>().Play("ShootAnimation", -1, 0f);
             Shoot();
         }
         
@@ -82,8 +86,11 @@ public class ProjectileGun : MonoBehaviour
     {
         readyToShoot = false;
         
+        AudioClip clip = _collectSounds[UnityEngine.Random.Range(0, _collectSounds.Length)];
+        _audioSource.PlayOneShot(clip);
+        
         Vector3 direction = targetPoint - attackPoint.position;
-
+        
         GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
         currentBullet.transform.forward = direction.normalized;
         currentBullet.GetComponent<Rigidbody>().AddForce(direction.normalized * shootForce, ForceMode.Impulse);

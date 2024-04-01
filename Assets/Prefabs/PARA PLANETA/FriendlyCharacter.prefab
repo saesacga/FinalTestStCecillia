@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3057320700717943901}
   - component: {fileID: 3057320700717943900}
   - component: {fileID: 3057320700717943899}
+  - component: {fileID: 6457370152496744961}
   m_Layer: 0
   m_Name: FriendlyCharacter
   m_TagString: Allies
@@ -168,6 +169,19 @@ MonoBehaviour:
   version: 1
   unwrap: 1
   splitAtEveryPortal: 0
+--- !u!114 &6457370152496744961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057320700717943893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4af9a252f3d0f6469f24f0b802a3d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoMove: 1
 --- !u!1 &3057320700892696382
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +307,7 @@ Animator:
   m_GameObject: {fileID: 3057320700892696382}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19f9965d72411d4428d249d2b127b2f1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f21a316b7b1162418b19f1ce13ebefe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -347,6 +361,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.121747
-  m_Height: 3.1236725
+  m_Height: 2.9465706
   m_Direction: 1
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Center: {x: 0, y: 1.5885509, z: 0}
