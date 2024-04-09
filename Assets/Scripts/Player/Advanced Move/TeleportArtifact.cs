@@ -139,6 +139,8 @@ public class TeleportArtifact : MonoBehaviour
             yield break;
         } //No hay proyectil o no está preparado para el teleport
 
+        TeleportProjectile.tpTuto = false;
+
         _allowTP = false;
         while (_distortionMat.GetFloat("_DistortionStrenght") < _distortionTarget)
         {

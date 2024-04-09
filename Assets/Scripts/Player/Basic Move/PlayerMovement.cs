@@ -65,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     private TutorialUI _tutorialUI;
     private bool _tutorialWJUI;
     private bool _tutorialTPUI;
+    private bool _tutorialAntiGravity;
+    [SerializeField] private Image _tpTutoImage;
     
     #endregion
 
@@ -170,16 +172,22 @@ public class PlayerMovement : MonoBehaviour
         
         #endregion
 
-        if (_tutorialWJUI)
+        if (_tutorialWJUI && TeleportProjectile.tpTuto == false)
         {
             _tutorialUI.ShowControlsUI(0);
         }
-        else if (_tutorialTPUI)
+        else if (_tutorialTPUI && TeleportProjectile.tpTuto == false)
         {
-            _tutorialUI.ShowControlsUI(1);            
+            _tutorialUI.ShowControlsUI(1);
+            _tpTutoImage.color = _tutorialUI.imageTutorial.color;
+        }
+        else if (_tutorialAntiGravity && TeleportProjectile.tpTuto == false)
+        {
+            _tutorialUI.ShowControlsUI(2);
         }
         else
         {
+            _tpTutoImage.color = Color.clear;
             _tutorialUI.HideControlsUI();
         }
     }
@@ -263,15 +271,19 @@ public class PlayerMovement : MonoBehaviour
         {
             _tutorialWJUI = true;
         }
-
-        if (collider.CompareTag("TeleportSurface"))
+        else if (collider.CompareTag("TeleportSurface"))
         {
             _tutorialTPUI = true;
+        }
+        else if (collider.CompareTag("AntiGravityTuto"))
+        {
+            _tutorialAntiGravity = true;
         }
     }
     private void OnTriggerExit(Collider collider)
     {
         _tutorialTPUI = false;
         _tutorialWJUI = false;
+        _tutorialAntiGravity = false;
     }
 }

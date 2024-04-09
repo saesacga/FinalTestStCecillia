@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
+  _activateVerticalBillboard: 0
 --- !u!114 &1045778839279646413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lootPrefab: {fileID: 7699822805399918671, guid: a28a974d27d257441bd9895e583f27d8, type: 3}
-  _objectHealth: 20
+  _objectHealth: 10
+  destroy: 0
   _dissolveMaterial: {fileID: 2100000, guid: 3a3730abb49f24e46b3facba63533664, type: 2}
   _dissolveObject: {fileID: 5491749086968591590}
   _lerpTime: 2
@@ -248,3 +250,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
+  _activateVerticalBillboard: 0

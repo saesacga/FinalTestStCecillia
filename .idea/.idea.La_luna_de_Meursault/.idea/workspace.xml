@@ -6,38 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/CinematicaInicial/LightBeamTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/1Pos.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Movement/TeleportProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Movement/TeleportProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/2Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/2Pos.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/InicioLightRay.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/LightRay.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/PlayerMap.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dissolve/3D/DissolvePuente2Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Dissolve/3D/DissolvePuente2Mat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ActionMapReference/MapReference.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ActionMapReference/MapReference.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/UI/MaterialNeedBuble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/UI/MaterialNeedBuble.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cofre.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cofre.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/LightRay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeArtifacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeArtifacts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TrajectoryPredictor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TrajectoryPredictor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Materials/CavernaVox2Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Examples/Materials/CavernaVox2Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/TutorialUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/TutorialUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/HuecosNoBug.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Movimiento/HuecosNoBug.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Casa_1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Casa_1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Fuente.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Fuente.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Jardin_03.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Jardin_03.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Jardin_04.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Jardin_04.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Jardin_1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/Jardin_1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/casa2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/casa2.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/casa3.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/casa3.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/casa4.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Pueblo/casa4.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/UI/spritesheet_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/UI/spritesheet_4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Combat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Combat/FireTree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Enviroment/Combat/FireTree.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/UI/controles1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/UI/controles1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +82,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Builds/Alfa01/La Luna de Meursault.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Builds/VictoriaPresentacion\Tiempos Como Estos.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\samue\Documents\Samuel_U\TDG\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -228,7 +219,8 @@
       <workItem from="1711919501874" duration="15230000" />
       <workItem from="1712018224602" duration="2545000" />
       <workItem from="1712432097469" duration="2665000" />
-      <workItem from="1712604779543" duration="14557000" />
+      <workItem from="1712604779543" duration="21651000" />
+      <workItem from="1712658820833" duration="387000" />
     </task>
     <servers />
   </component>

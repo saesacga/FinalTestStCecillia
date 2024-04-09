@@ -22,6 +22,7 @@ public class ChangeArtifacts : MonoBehaviour
     {
         if (collision.CompareTag("Player") && _activateCollector)
         {
+            GetComponent<Animator>().SetBool("openChest", true);
             _audioSource.Play();
             _gaunletAnimator.SetBool("toggle", false);
             _collectorAnimator.SetBool("toggle", true);
@@ -29,6 +30,7 @@ public class ChangeArtifacts : MonoBehaviour
         }
         else if (collision.CompareTag("Player") && _activateAMA)
         {
+            GetComponent<Animator>().SetBool("openChest", true);
             _audioSource.Play();
             _collectorAnimator.SetBool("toggle", false);
             _amaAnimator.SetBool("toggle", true);

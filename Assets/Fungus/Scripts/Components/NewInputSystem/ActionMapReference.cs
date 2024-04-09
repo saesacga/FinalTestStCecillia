@@ -35,13 +35,13 @@ public class ActionMapReference : MonoBehaviour
  
     void OnControlsChanged(PlayerInput input) {
         isGamepad = input.currentControlScheme.Equals("Gamepad");
-        Debug.Log(isGamepad);
     }
     
     private void Start()
     {
         _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
+        playerInput.actions.FindAction("Move").Disable();
         ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
         if (_lockCursor) { Cursor.lockState = CursorLockMode.Locked; }
     }

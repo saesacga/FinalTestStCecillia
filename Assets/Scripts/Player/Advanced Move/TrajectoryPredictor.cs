@@ -53,7 +53,7 @@ public class TrajectoryPredictor : MonoBehaviour
             {
                 UpdateLineRender(i, (i - 1, hit.point));
                 MoveHitMarker(hit);
-                if (hit.collider.CompareTag("TeleportSurface"))// && TeleportArtifact._canThrow)
+                if (hit.collider.CompareTag("TeleportSurface") || hit.collider.CompareTag("TeleportSurfaceTuto"))// && TeleportArtifact._canThrow)
                 {
                     trajectoryLine.colorGradient = _canThrowColor;
                     allowThrow = true;
