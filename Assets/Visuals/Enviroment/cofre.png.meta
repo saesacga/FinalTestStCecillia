@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9beb0cc1859b97f49bda40c842e9f2be
+guid: 53044a41ee7f86640b0f481c742f22ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -105,211 +105,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_4_0
+      name: cofre_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 118
-        width: 26
-        height: 23
-      alignment: 6
+        x: 0
+        y: 228
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24a9018beae96264db3bfbe665d3c3e3
-      internalID: 1377456851
+      spriteID: 770ecfc7ce7e59041be588583f9fcfc9
+      internalID: -1245572495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4_1
+      name: cofre_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 118
-        width: 26
-        height: 23
-      alignment: 6
+        x: 190
+        y: 228
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a498812d391d69646acac5be1a992de8
-      internalID: 1657675742
+      spriteID: 7850acfd4c7e9dc4ca528d9bc452d40e
+      internalID: -828727553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4_2
+      name: cofre_2
       rect:
         serializedVersion: 2
-        x: 117
-        y: 118
-        width: 26
-        height: 23
-      alignment: 6
+        x: 380
+        y: 228
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4312b2e68319a564f8ffd749bd716836
-      internalID: 1906152540
+      spriteID: 0eb5f4e9d8c25c748b765e9ff248909d
+      internalID: 1063479762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4_3
+      name: cofre_3
       rect:
         serializedVersion: 2
-        x: 168
-        y: 110
-        width: 28
-        height: 40
-      alignment: 6
+        x: 0
+        y: 114
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aeddd719436784418c7c43aa6c34fb3
-      internalID: -2023217228
+      spriteID: 513c3fea20aab4f4aaa338613365e936
+      internalID: -1736280054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4_4
+      name: cofre_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 66
-        width: 26
-        height: 23
-      alignment: 6
+        x: 190
+        y: 114
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ed009cb27419eb4aa5bd6f36f0fb2d5
-      internalID: 106973966
+      spriteID: f30e259bd4fd53640a53766663c7befc
+      internalID: 1537090232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4_5
+      name: cofre_5
       rect:
         serializedVersion: 2
-        x: 65
-        y: 66
-        width: 26
-        height: 23
-      alignment: 6
+        x: 380
+        y: 114
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f38ddaa7b9573f747bece10275fdeab8
-      internalID: -951086236
+      spriteID: 87cc9d659188ed4429aa29ffde22c5f0
+      internalID: -2101388290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4_6
+      name: cofre_6
       rect:
         serializedVersion: 2
-        x: 117
-        y: 66
-        width: 26
-        height: 23
-      alignment: 6
+        x: 0
+        y: 0
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c392847c701e5b4daf0eae26406fa26
-      internalID: 74779923
+      spriteID: 5c10489430909da49a29a20d676fb349
+      internalID: -928945311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4_7
+      name: cofre_7
       rect:
         serializedVersion: 2
-        x: 13
-        y: 14
-        width: 26
-        height: 23
-      alignment: 6
+        x: 190
+        y: 0
+        width: 190
+        height: 114
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b8ce38ff8821854dbe3a190c3ea7a15
-      internalID: -1352610935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_4_8
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 15
-        width: 35
-        height: 23
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48a0c0b9ad829aa43b28da56e5defd4e
-      internalID: 352986687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_4_9
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 6
-        width: 28
-        height: 40
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19b21b14b03224646a4fb4106b89ce01
-      internalID: 938346926
+      spriteID: d926d7a81d633dd4bb21fe12f90eb125
+      internalID: -177984376
       vertices: []
       indices: 
       edges: []
@@ -317,7 +275,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a6bbaf1212764e48af52e667ea3a48e
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -325,16 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheet_4_0: 1377456851
-      spritesheet_4_1: 1657675742
-      spritesheet_4_2: 1906152540
-      spritesheet_4_3: -2023217228
-      spritesheet_4_4: 106973966
-      spritesheet_4_5: -951086236
-      spritesheet_4_6: 74779923
-      spritesheet_4_7: -1352610935
-      spritesheet_4_8: 352986687
-      spritesheet_4_9: 938346926
+      cofre_0: -1245572495
+      cofre_1: -828727553
+      cofre_2: 1063479762
+      cofre_3: -1736280054
+      cofre_4: 1537090232
+      cofre_5: -2101388290
+      cofre_6: -928945311
+      cofre_7: -177984376
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

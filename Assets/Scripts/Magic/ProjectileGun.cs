@@ -2,6 +2,7 @@ using System;
 using SpriteGlow;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class ProjectileGun : MonoBehaviour
@@ -36,19 +37,32 @@ public class ProjectileGun : MonoBehaviour
         _playersLook.mouseSensitivity = _sensitivityNoAssist;
     }
 
+    private TutorialUI _tutorialUI;
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        _tutorialUI = GetComponent<TutorialUI>();
         readyToShoot = true;
     }
 
     private bool _aimAssist = true;
+    private bool _shootCompleted;
+    
     private void Update()
     {
         if (readyToShoot && ActionMapReference.playerInput.actions["Fire"].IsPressed())
         {
             GetComponentInChildren<Animator>().Play("ShootAnimation", -1, 0f);
             Shoot();
+        }
+
+        if (_shootCompleted == false)
+        {
+            _tutorialUI.ShowControlsUI(0);
+        }
+        else
+        {
+            _tutorialUI.HideControlsUI();
         }
         
         ShootRayCheck();
@@ -108,6 +122,8 @@ public class ProjectileGun : MonoBehaviour
             Invoke("ResetShot", timeBetweenShooting);
             allowInvoke = false;
         }
+
+        _shootCompleted = true;
     }
 
     private void ResetShot()

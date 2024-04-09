@@ -11,9 +11,8 @@ public class ActionMapReference : MonoBehaviour
 {
     #region Singleton
     
-    //public static PlayerMap playerMap;
-
     public static PlayerInput playerInput;
+    public static bool isGamepad;
     
     #endregion
 
@@ -24,13 +23,25 @@ public class ActionMapReference : MonoBehaviour
 
     [SerializeField] private bool _lockCursor;
     
+    void OnEnable()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        playerInput.onControlsChanged += OnControlsChanged;
+    }
+ 
+    void OnDisable() {
+        playerInput.onControlsChanged -= OnControlsChanged;
+    }
+ 
+    void OnControlsChanged(PlayerInput input) {
+        isGamepad = input.currentControlScheme.Equals("Gamepad");
+        Debug.Log(isGamepad);
+    }
+    
     private void Start()
     {
         _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
-        
-        playerInput = GetComponent<PlayerInput>();
-        
         ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
         if (_lockCursor) { Cursor.lockState = CursorLockMode.Locked; }
     }
@@ -47,7 +58,7 @@ public class ActionMapReference : MonoBehaviour
         playerInput.actions.FindAction("Look").Enable();
         playerInput.actions.FindAction("Jumping").Enable();
         
-        playerInput.actions.FindAction("Move").Enable(); //Eliminar esta linea 
+        //playerInput.actions.FindAction("Move").Enable(); //Eliminar esta linea 
         
         playerInput.actions.FindActionMap("Combate").Enable();
         playerInput.actions.FindActionMap("Farming").Enable();
@@ -92,7 +103,7 @@ public class ActionMapReference : MonoBehaviour
             _gameplaySchemes[1].SetActive(false);
         }
     }
-
+    
     public static IEnumerator ActivateLooking(bool state, string camBlendName)
     {
         if (state) 

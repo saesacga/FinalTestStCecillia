@@ -59,11 +59,20 @@ public class PlayerMovement : MonoBehaviour
     private bool wallJumpFlag;
     private bool _allowWallJumpInput;
     private GameObject _currentWall;
+    
+    #endregion
 
-    #endregion
+    private TutorialUI _tutorialUI;
+    private bool _tutorialWJUI;
+    private bool _tutorialTPUI;
     
     #endregion
-    
+
+    private void Start()
+    {
+        _tutorialUI = GetComponent<TutorialUI>();
+    }
+
     void Update()
     {
         #region Wall Jump
@@ -160,6 +169,19 @@ public class PlayerMovement : MonoBehaviour
         if (_allowWallJumpInput == false && _inDash == false) { velocity.y += gravity * Time.deltaTime; }
         
         #endregion
+
+        if (_tutorialWJUI)
+        {
+            _tutorialUI.ShowControlsUI(0);
+        }
+        else if (_tutorialTPUI)
+        {
+            _tutorialUI.ShowControlsUI(1);            
+        }
+        else
+        {
+            _tutorialUI.HideControlsUI();
+        }
     }
 
     private static Collider _crossable;
@@ -233,5 +255,23 @@ public class PlayerMovement : MonoBehaviour
             wallJumpFlag = false;
             _allowWallJumpInput = false;
         }
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("WallJump"))
+        {
+            _tutorialWJUI = true;
+        }
+
+        if (collider.CompareTag("TeleportSurface"))
+        {
+            _tutorialTPUI = true;
+        }
+    }
+    private void OnTriggerExit(Collider collider)
+    {
+        _tutorialTPUI = false;
+        _tutorialWJUI = false;
     }
 }

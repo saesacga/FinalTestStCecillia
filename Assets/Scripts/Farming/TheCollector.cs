@@ -50,8 +50,15 @@ public class TheCollector : MonoBehaviour
         _canvas.SetActive(false);
     }
 
+    private TutorialUI _tutorialUI;
+    private bool _alreadyDestroy;
+    private bool _alreadyAttract;
+    private bool _alreadyEject;
+    private bool _alreadyMove;
+    
     private void Start()
     {
+        _tutorialUI = GetComponent<TutorialUI>();
         _currentItemData = null;
     }
 
@@ -120,6 +127,8 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Moveable"))
             {
+                if (_alreadyMove == false) { _tutorialUI.ShowControlsUI(3, Color.white); } //Tuto para mover
+                
                 if (_moveableMat != hit.collider.gameObject.GetComponent<MeshRenderer>())
                 {
                     if (_moveableMat != null) { _moveableMat.material.SetFloat("_Scale", 1f); }
@@ -133,6 +142,8 @@ public class TheCollector : MonoBehaviour
             }
             else
             {
+                _tutorialUI.HideControlsUI(); //Esconder tuto
+                
                 if (_moveableMat != null)
                 {
                     if (_lerpTimeMove >= 0.99f) { _lerpTimeMove -= 0.001f; }
@@ -142,6 +153,8 @@ public class TheCollector : MonoBehaviour
             
             if (hit.transform.CompareTag("Destructable"))
             {
+                if (_alreadyDestroy == false) { _tutorialUI.ShowControlsUI(0, Color.white); } //Tuto para destruir
+                
                 if (hit.collider.gameObject.GetComponent<Destructible>().destroy == false)
                 {
                     if (_outlineDest != hit.collider.gameObject.GetComponent<SpriteGlowEffect>())
@@ -159,15 +172,28 @@ public class TheCollector : MonoBehaviour
             }
             else
             {
+                _tutorialUI.HideControlsUI(); //Esconder tuto
+                
                 if (_outlineDest != null)
                 { 
                     if (_lerpTimeDestroy >= 0f) { _lerpTimeDestroy -= 0.05f; }
                     _outlineDest.glowColor.a = _lerpTimeDestroy;
                 }
             }
+
+            if (hit.transform.CompareTag("Constructible")) //Solo para tutorial
+            {
+                if (_alreadyEject == false) { _tutorialUI.ShowControlsUI(2, Color.white); } //Tuto para Construir
+            }
+            else
+            {
+                _tutorialUI.HideControlsUI(); //Esconder tuto
+            }
         }
         else 
         {
+            _tutorialUI.HideControlsUI(); //Esconder tuto
+            
             if (_moveableMat != null)
             {
                 if (_lerpTimeMove >= 0.99f) { _lerpTimeMove -= 0.001f; }
@@ -178,7 +204,6 @@ public class TheCollector : MonoBehaviour
                 if (_lerpTimeDestroy >= 0f) { _lerpTimeDestroy -= 0.05f; }
                 _outlineDest.glowColor.a = _lerpTimeDestroy; 
             }
-            
         }
         
         //Outlines para loot
@@ -186,6 +211,8 @@ public class TheCollector : MonoBehaviour
         {
             if (hit.transform.CompareTag("Loot"))
             {
+                if (_alreadyAttract == false) { _tutorialUI.ShowControlsUI(1, Color.white); } //Tuto atraer
+                
                 if (_outlineLoot != hit.collider.gameObject.GetComponent<SpriteGlowEffect>())
                 {
                     if (_outlineLoot != null) { _outlineLoot.glowColor.a = 0f; }
@@ -195,11 +222,15 @@ public class TheCollector : MonoBehaviour
             }
             else
             {
+                _tutorialUI.HideControlsUI(); //Esconder tuto
+                
                 if (_outlineLoot != null) { if (_lerpTimeLoot >= 0f) { _lerpTimeLoot -= 0.05f; } _outlineLoot.glowColor.a = _lerpTimeLoot;  }
             }
         }
         else 
         {
+            _tutorialUI.HideControlsUI(); //Esconder tuto
+            
             if (_outlineLoot != null) 
             {
                 if (_lerpTimeLoot >= 0f) { _lerpTimeLoot -= 0.05f; } 
@@ -252,6 +283,7 @@ public class TheCollector : MonoBehaviour
                 attractable.GetComponent<Rigidbody>().useGravity = false;
                 attractable.transform.position = Vector3.MoveTowards(attractable.transform.position,this.transform.position,_attractVelocity * Time.deltaTime);
                 
+                _alreadyDestroy = true;
                 if (ActionMapReference.playerInput.actions["Collect"].WasReleasedThisFrame())
                 {
                     attractable.GetComponent<Rigidbody>().useGravity = true;
@@ -284,6 +316,8 @@ public class TheCollector : MonoBehaviour
                 _objectToEjectSelected.sprite = null;
                 _objectToEjectSelected.enabled = false;
             }
+
+            _alreadyEject = true;
         }
     }
     
@@ -297,6 +331,7 @@ public class TheCollector : MonoBehaviour
             {
                 GetComponentInChildren<Animator>().Play("MoveCollector");
                 hit.collider.GetComponent<Moveable>().Moving(true);
+                _alreadyMove = true;
             }
             else
             {
@@ -333,6 +368,7 @@ public class TheCollector : MonoBehaviour
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
         {
+            _alreadyAttract = true;
             GameObject _particleRef = Instantiate(_particle, transform.position, Quaternion.identity);
             _particleRef.transform.parent = gameObject.transform;
             float totalDuration = _particleRef.GetComponent<ParticleSystem>().main.duration + _particleRef.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;

@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class LightRay : MonoBehaviour
 {
     #region Members
 
-    [SerializeField] private Collider _invisibleWall;
+    [SerializeField] private GameObject _door;
     [SerializeField] private GameObject _personajes;
 
     [HideInInspector] public int _starsCount;
@@ -18,6 +19,9 @@ public class LightRay : MonoBehaviour
     private Animator _lightBeamAnimator;
     private PlayableDirector _lightBeamTimeline;
 
+    [SerializeField] private Image _moveUIImage;
+    [SerializeField] private Sprite[] _moveSprites;
+
     #endregion
     
     private void OnEnable()
@@ -28,11 +32,19 @@ public class LightRay : MonoBehaviour
 
     private void Update()
     {
+        if (ActionMapReference.isGamepad) 
+        { 
+            _moveUIImage.sprite = _moveSprites[0];
+        }
+        else 
+        { 
+            _moveUIImage.sprite = _moveSprites[1]; 
+        }
+        
         if (_starsRequired == _starsInPosition && _starsInPositionHasRun == false)
         {
             _lightBeamAnimator.SetBool("activateRay", true);
             _lightBeamTimeline.Play();
-            _invisibleWall.isTrigger = true;
             _starsInPositionHasRun = true;
         }
     }
@@ -70,5 +82,10 @@ public class LightRay : MonoBehaviour
     private void ActivateCharacters()
     {
         _personajes.SetActive(true);
+    }
+
+    private void DestroyGate()
+    {
+        _door.SetActive(false);
     }
 }

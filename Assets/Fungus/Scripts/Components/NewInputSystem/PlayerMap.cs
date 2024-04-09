@@ -84,7 +84,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -95,7 +95,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -106,7 +106,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -117,7 +117,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -139,7 +139,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
                     ""processors"": ""ScaleVector2(x=0.1,y=0.1)"",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -161,7 +161,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Jumping"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -209,7 +209,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -231,7 +231,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Recargar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -288,7 +288,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Interactuar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -310,7 +310,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Aceptar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -321,7 +321,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Aceptar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -343,7 +343,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/backspace"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Cancelar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -418,7 +418,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Destroy"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -440,7 +440,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Collect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -462,7 +462,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Eject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -484,7 +484,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""MoveObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -506,7 +506,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""DropObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -879,7 +879,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""*/{Submit}"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad;MouseN'Keyboard"",
+                    ""groups"": ""Gamepad;MouseNKeyboard"",
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1081,7 +1081,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1103,7 +1103,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1158,7 +1158,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1191,7 +1191,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Trayectoria"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1213,7 +1213,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""ActivarTeleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1235,7 +1235,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""DestruirTeleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1292,7 +1292,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""EnableCombat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1314,7 +1314,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""EnableFarming"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1336,7 +1336,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/3"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""MouseN'Keyboard"",
+                    ""groups"": ""MouseNKeyboard"",
                     ""action"": ""EnableAdvanceMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1357,8 +1357,8 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""MouseN'Keyboard"",
-            ""bindingGroup"": ""MouseN'Keyboard"",
+            ""name"": ""MouseNKeyboard"",
+            ""bindingGroup"": ""MouseNKeyboard"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Mouse>"",
@@ -2053,7 +2053,7 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     {
         get
         {
-            if (m_MouseNKeyboardSchemeIndex == -1) m_MouseNKeyboardSchemeIndex = asset.FindControlSchemeIndex("MouseN'Keyboard");
+            if (m_MouseNKeyboardSchemeIndex == -1) m_MouseNKeyboardSchemeIndex = asset.FindControlSchemeIndex("MouseNKeyboard");
             return asset.controlSchemes[m_MouseNKeyboardSchemeIndex];
         }
     }

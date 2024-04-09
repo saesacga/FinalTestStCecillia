@@ -54,7 +54,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smothness: 0
-    - _SpiralStrength: 30
+    - _SpiralStrength: 20
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
