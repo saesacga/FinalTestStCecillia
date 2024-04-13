@@ -81,7 +81,7 @@ public class ProjectileGun : MonoBehaviour
             targetPoint = hit.point;
             if (hit.collider.CompareTag("Star") || hit.collider.CompareTag("Enemy"))
             {
-                if (_aimAssist) { _playersLook.mouseSensitivity =  _aimAssistValue; }
+                if (_aimAssist && ActionMapReference.isGamepad) { _playersLook.mouseSensitivity =  _aimAssistValue; }
             }
             else
             {

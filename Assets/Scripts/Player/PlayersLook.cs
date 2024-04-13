@@ -9,6 +9,18 @@ public class PlayersLook : MonoBehaviour
     public float mouseSensitivity = 100f;
     [SerializeField] private Transform _playerBody;
     private float xRotation = 0f;
+    
+    private bool _IsCurrentDeviceMouse
+    { 
+        get 
+        {
+            #if ENABLE_INPUT_SYSTEM
+                return ActionMapReference.playerInput.currentControlScheme == "MouseNKeyboard";
+            #else
+				return false;
+            #endif
+        }
+    }
 
     #region Smoothness
 
@@ -16,18 +28,6 @@ public class PlayersLook : MonoBehaviour
     private Vector3 smoothInputVelocity;
     private Vector3 myMouseInput;
     [SerializeField] private float smoothInputSpeedForCamera;
-    
-    private bool _IsCurrentDeviceMouse
-		{
-			get
-			{
-				#if ENABLE_INPUT_SYSTEM
-				return ActionMapReference.playerInput.currentControlScheme == "KeyboardMouse";
-#else
-				return false;
-				#endif
-			}
-		}
     
     #endregion
 
@@ -71,7 +71,7 @@ public class PlayersLook : MonoBehaviour
         #endregion
 
         float deltaTimeMultiplier = _IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
-        
+
         myMouseInput.x = ActionMapReference.playerInput.actions["Look"].ReadValue<Vector2>().x * mouseSensitivity * deltaTimeMultiplier;
         myMouseInput.y = ActionMapReference.playerInput.actions["Look"].ReadValue<Vector2>().y * mouseSensitivity * deltaTimeMultiplier;
         currentInputMouseVector = Vector3.SmoothDamp(currentInputMouseVector, myMouseInput, ref smoothInputVelocity, smoothInputSpeedForCamera);
