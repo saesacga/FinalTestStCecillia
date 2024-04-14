@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
-    private bool pause = false;
+    private bool pause;
     public GameObject pauseMenuObject;
     
     [SerializeField] private List<GameObject> _selectButtons = new List<GameObject>();
@@ -15,11 +15,12 @@ public class PauseMenu : MonoBehaviour
 
     public void ReloadScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void BackToMainMenu()
+    public void QuitGame()
     {
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
     public void Continue()
     {
@@ -31,8 +32,9 @@ public class PauseMenu : MonoBehaviour
     }
     public void SetSelectObject(int i) 
     {
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(_selectButtons[i]);
+        EventSystem.current.SetSelectedGameObject(null); 
+        if (ActionMapReference.isGamepad) { EventSystem.current.SetSelectedGameObject(_selectButtons[i]); }
+        else { EventSystem.current.SetSelectedGameObject(_selectButtons[3]); }
     }
     private void Update()
     {
@@ -45,7 +47,8 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0f;
             
-            EventSystem.current.SetSelectedGameObject(_selectButtons[0]);
+            if (ActionMapReference.isGamepad) { EventSystem.current.SetSelectedGameObject(_selectButtons[0]); }
+            else { EventSystem.current.SetSelectedGameObject(_selectButtons[3]); }
             pauseMenuObject.SetActive(true);
             ActionMapReference.ActivateUINavigation();
 

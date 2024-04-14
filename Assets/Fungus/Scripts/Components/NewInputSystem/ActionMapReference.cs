@@ -112,11 +112,13 @@ public class ActionMapReference : MonoBehaviour
             yield return new WaitForSeconds(1.6f);
             camTransitioning = false;
             playerInput.actions.FindActionMap("Movimiento").Enable();
+            playerInput.actions.FindAction("Move").Enable();
         }
         else
         {
             camTransitioning = true;
             playerInput.actions.FindActionMap("Movimiento").Disable();
+            playerInput.actions.FindAction("Move").Disable();
             yield return new WaitForSeconds(0.1f);
             _cinemachineBlend.Play(camBlendName);
         }

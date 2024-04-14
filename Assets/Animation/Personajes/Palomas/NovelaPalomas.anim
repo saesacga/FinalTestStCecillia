@@ -746,7 +746,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 27.75
+  - time: 26
     functionName: ControlCameraBlends
     data: 
     objectReferenceParameter: {fileID: 0}

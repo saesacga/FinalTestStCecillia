@@ -68,7 +68,6 @@ public class LightRay : MonoBehaviour
     {
         if (moving == 0) //El rayo se está moviendo
         {
-            //_nextPos = false;
             _canGoToNextPos = false;
             StartCoroutine(ActionMapReference.ActivateLooking(false, "LightBeamCam"));
         }
