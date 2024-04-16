@@ -42,8 +42,8 @@ public class ActionMapReference : MonoBehaviour
         _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
         playerInput.actions.FindAction("Move").Disable();
-        ActivateAllMaps(); //BORRAR ESTO DESPUÉS DE TESTEO
-        if (_lockCursor) { Cursor.lockState = CursorLockMode.Locked; }
+        ActivateAllMaps();
+        if (_lockCursor) { Cursor.lockState = CursorLockMode.Locked; } //Solo funciona en el editor, mantener el CursorLockMode desactivado para la build final
     }
 
     private void Update()

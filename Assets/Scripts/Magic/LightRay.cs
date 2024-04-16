@@ -28,6 +28,7 @@ public class LightRay : MonoBehaviour
     {
         _lightBeamAnimator = GetComponent<Animator>();
         _lightBeamTimeline = GetComponent<PlayableDirector>();
+        _door.SetActive(true);
     }
 
     private void Update()
