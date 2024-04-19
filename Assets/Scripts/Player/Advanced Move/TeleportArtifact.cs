@@ -29,6 +29,9 @@ public class TeleportArtifact : MonoBehaviour
     [SerializeField] private Color _lineRendererTargetColor;
     private Color _lerpColor;
 
+    [SerializeField] private AudioClip[] _throwSounds;
+    [SerializeField] private AudioClip[] _TPSounds;
+    
     #endregion
     
     private void OnDisable()
@@ -117,6 +120,7 @@ public class TeleportArtifact : MonoBehaviour
             }
 
             GetComponentInChildren<Animator>().Play("AmaShoot");
+            SoundManager.PlaySoundOneShot(_throwSounds);
             Rigidbody thrownObject = Instantiate(_objectToThrow, _startPosition.position, Quaternion.identity);
             _teleportProjectile = thrownObject.gameObject;
             thrownObject.AddForce(_startPosition.forward * _force, ForceMode.Impulse);
@@ -142,6 +146,7 @@ public class TeleportArtifact : MonoBehaviour
         TeleportProjectile.tpTuto = false;
 
         _allowTP = false;
+        SoundManager.PlaySoundOneShot(_TPSounds);
         while (_distortionMat.GetFloat("_DistortionStrenght") < _distortionTarget)
         {
             _distortionLerp = Mathf.MoveTowards(_distortionMat.GetFloat("_DistortionStrenght"), _distortionTarget, 1f * Time.deltaTime);

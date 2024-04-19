@@ -27,7 +27,7 @@ public class ProjectileGun : MonoBehaviour
 
     public bool allowInvoke = true;
     
-    [SerializeField] private AudioClip[] _collectSounds;
+    [SerializeField] private AudioClip[] _shootSounds;
     private AudioSource _audioSource;
     
     #endregion
@@ -100,8 +100,7 @@ public class ProjectileGun : MonoBehaviour
     {
         readyToShoot = false;
         
-        AudioClip clip = _collectSounds[UnityEngine.Random.Range(0, _collectSounds.Length)];
-        _audioSource.PlayOneShot(clip);
+        SoundManager.PlaySoundOneShot(_shootSounds, _audioSource);
         
         Vector3 direction = targetPoint - attackPoint.position;
         

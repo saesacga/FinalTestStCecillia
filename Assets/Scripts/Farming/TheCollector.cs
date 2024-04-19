@@ -35,6 +35,8 @@ public class TheCollector : MonoBehaviour
 
     #endregion
 
+    [SerializeField] private AudioClip[] _collectSounds;
+    [SerializeField] private AudioClip[] _ejectSounds;
     private AudioSource _audioSource;
     
     private void OnEnable()
@@ -296,6 +298,8 @@ public class TheCollector : MonoBehaviour
     {
         if (_stackSize > 0)
         {
+            SoundManager.PlaySoundOneShot(_ejectSounds);
+            
             GameObject _ejectedInstances = Instantiate(_ejectedObject, transform.position, transform.rotation); 
             _ejectedInstances.GetComponent<SpriteRenderer>().sprite = itemData.icon; 
             _ejectedInstances.GetComponent<SpriteRenderer>().enabled = true; 
@@ -368,6 +372,8 @@ public class TheCollector : MonoBehaviour
     {
         if (collider.GetComponent<IAttractable>() != null && _canCollect)
         {
+            SoundManager.PlaySoundOneShot(_collectSounds);
+            
             _alreadyAttract = true;
             GameObject _particleRef = Instantiate(_particle, transform.position, Quaternion.identity);
             _particleRef.transform.parent = gameObject.transform;

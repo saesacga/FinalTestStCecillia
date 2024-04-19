@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
     private bool wallJumpFlag;
     private bool _allowWallJumpInput;
     private GameObject _currentWall;
+    [SerializeField] private AudioClip[] _wallJumpsSounds;
     
     #endregion
 
@@ -94,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
                     if (_crossable != null) { _crossable.isTrigger = false; }
                 }
                 velocity.y = 0f;
+                SoundManager.PlaySoundOneShot(_wallJumpsSounds);
                 _allowWallJumpInput = true;
                 _wallJumpTimerRoutine = null;
                 _wallJumpTimerRoutine = WallJumpTimer(1.5f);

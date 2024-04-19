@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7309695507591637388}
-  - component: {fileID: 7309695507591637394}
-  - component: {fileID: 7309695507591637389}
-  - component: {fileID: 7309695507591637395}
-  - component: {fileID: 7309695507591637392}
-  - component: {fileID: 7309695507591637393}
+  - component: {fileID: 1102176310419106874}
+  - component: {fileID: 397088605140235243}
+  - component: {fileID: 6208753256806507706}
+  - component: {fileID: 8197431612895282243}
+  - component: {fileID: 1249233284717820903}
   m_Layer: 9
   m_Name: EjectedObject
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7309695507591637394
+--- !u!212 &1102176310419106874
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7309695507591637389
+--- !u!114 &397088605140235243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateBillboard: 1
---- !u!114 &7309695507591637395
+  _activateVerticalBillboard: 0
+--- !u!114 &6208753256806507706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,7 +118,17 @@ MonoBehaviour:
   targetPoint: {x: 0, y: 0, z: 0}
   _ejectVelocity: 17
   _particle: {fileID: 5356728151580888989, guid: 744157a1853fdc14cacf98c70893f940, type: 3}
---- !u!135 &7309695507591637392
+  _materialDestroySounds:
+  - {fileID: 8300000, guid: 10235d23219ce4940a445b1b002ae7c3, type: 3}
+  - {fileID: 8300000, guid: ee2f684b097bcfc49907c1d786d382dd, type: 3}
+  - {fileID: 8300000, guid: e2f4fd672e215eb49a4385e195728237, type: 3}
+  - {fileID: 8300000, guid: 5eb8b48cd28357541a388c13f3334644, type: 3}
+  - {fileID: 8300000, guid: 4b32932b4a0f72749a6dcaf10bfe94e2, type: 3}
+  - {fileID: 8300000, guid: a41a29fc6b6a9bc4e84febd22205c183, type: 3}
+  - {fileID: 8300000, guid: 3f1162eb514ce82438a7a032e46cf4a8, type: 3}
+  - {fileID: 8300000, guid: f6d59c8cadcc1ce44a651fb6374aa2c1, type: 3}
+  _audioSource: {fileID: 0}
+--- !u!135 &8197431612895282243
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +141,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.30083922
   m_Center: {x: 0, y: 0.0046122884, z: 2.3013843e-11}
---- !u!54 &7309695507591637393
+--- !u!54 &1249233284717820903
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

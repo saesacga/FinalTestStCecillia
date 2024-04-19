@@ -7429,6 +7429,16 @@ MonoBehaviour:
   _allowedToTeleportUI: {fileID: 330593927}
   _lineRendererMaterial: {fileID: 2100000, guid: 4bde811a1ba099948a445c2af7f335c4, type: 2}
   _lineRendererTargetColor: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
+  _throwSounds:
+  - {fileID: 8300000, guid: 4f612e908430461439d0df17660b1670, type: 3}
+  - {fileID: 8300000, guid: ceb3c9aef7d202b49a9b839261020f8a, type: 3}
+  - {fileID: 8300000, guid: 26606e3bf49ae2644bfe8d10e7bf799a, type: 3}
+  - {fileID: 8300000, guid: 07722bb465c1b9042840e1c8568658b5, type: 3}
+  - {fileID: 8300000, guid: c89f2e9d917120c4baa89eb92d0b4284, type: 3}
+  _TPSounds:
+  - {fileID: 8300000, guid: 3f2d03cda4942c34aa66fba5bc471e92, type: 3}
+  - {fileID: 8300000, guid: b41ce5e6c6ea2e5449d722f6e8e79d5c, type: 3}
+  - {fileID: 8300000, guid: fd81269ccaf2fd2408dd6651dc1374f5, type: 3}
   _distortionMat: {fileID: 2100000, guid: ecbd52c6095e9844dbdba4a1e588455e, type: 2}
   _distortionTarget: 0.5
 --- !u!114 &383736476
@@ -11406,7 +11416,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32610
+  m_Name: pb_Mesh32558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20716,6 +20726,38 @@ MonoBehaviour:
     m_Bits: 2048
   _canvas: {fileID: 1345543906}
   _stackSizeDisplay: {fileID: 1875178247}
+  _collectSounds:
+  - {fileID: 8300000, guid: 2fa9122f23affdf49a404aac2e79bfb1, type: 3}
+  - {fileID: 8300000, guid: 8a41d772842d70c4b9a50df1c53c0404, type: 3}
+  - {fileID: 8300000, guid: 5a3879b3d1b72bf40965477a3f7c5c80, type: 3}
+  - {fileID: 8300000, guid: bbd374c52f935fe499c6547441e12a97, type: 3}
+  - {fileID: 8300000, guid: b6a0dd858119fd24d8ae516b1a034ec1, type: 3}
+  - {fileID: 8300000, guid: be6fe614302a9964ca28eafdc91d82d4, type: 3}
+  - {fileID: 8300000, guid: c3dce43b709b5bf458d064664a1c113e, type: 3}
+  - {fileID: 8300000, guid: 6054db9c34db3ad498b0112b11a124e3, type: 3}
+  - {fileID: 8300000, guid: f06807085a408954b9d0a0f1c100058f, type: 3}
+  - {fileID: 8300000, guid: ec3619414940b2e438d1a8d18fadc359, type: 3}
+  - {fileID: 8300000, guid: 124a9f70c20a1de4ba723ba4c77dc5ae, type: 3}
+  - {fileID: 8300000, guid: 58ff397ff428b284fa932e03b774fcac, type: 3}
+  - {fileID: 8300000, guid: 1b0cb489e96a6e04e8719ae027f3000d, type: 3}
+  - {fileID: 8300000, guid: e2fb28cca552898408529ea0e6a8f884, type: 3}
+  - {fileID: 8300000, guid: c717c2e4128b5db46a1a849f78f67eae, type: 3}
+  _ejectSounds:
+  - {fileID: 8300000, guid: a127e0ca1643d4b4b89894713f172213, type: 3}
+  - {fileID: 8300000, guid: 1ea39ea8c8c756d4cafb91f851599e0a, type: 3}
+  - {fileID: 8300000, guid: fcc00676bc4ae6f4fb72a566c492759d, type: 3}
+  - {fileID: 8300000, guid: 9e6e91947a3746c43a18575a68ec655c, type: 3}
+  - {fileID: 8300000, guid: 55b35c9b2c6273648918c11c819acd44, type: 3}
+  - {fileID: 8300000, guid: e834c6e78e304be40b1c20d8608adc7e, type: 3}
+  - {fileID: 8300000, guid: 3e4a8b60c282d664b8c0b36f54416a3b, type: 3}
+  - {fileID: 8300000, guid: be4978269cfcb4f48bf6ed1568442616, type: 3}
+  - {fileID: 8300000, guid: 655581de349660c4293182b19f3b0aef, type: 3}
+  - {fileID: 8300000, guid: 731ab15edfdf6154cba44f6b48897caf, type: 3}
+  - {fileID: 8300000, guid: 9039f6ec0b3ec5d4dbb07932603c419c, type: 3}
+  - {fileID: 8300000, guid: 7a955a9b9c7f58c4ea76a3cee9c85de8, type: 3}
+  - {fileID: 8300000, guid: f245f0f7cfd95e848a1c5a81dd6c90f8, type: 3}
+  - {fileID: 8300000, guid: eb62a8140c3d5c34ca5f664337f57c13, type: 3}
+  - {fileID: 8300000, guid: 2fa45eb24274c48448d70fa0d09374a8, type: 3}
   _particle: {fileID: 5356728151580888989, guid: df391e5f66ee0a9489f7f5daefd35992, type: 3}
 --- !u!136 &721100323
 CapsuleCollider:
@@ -32613,7 +32655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &812734984
 Transform:
   m_ObjectHideFlags: 0
@@ -33912,7 +33954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 888546605707978223, guid: e609dca096c59be48b549224389432dd, type: 3}
   _magicParticles: {fileID: 5356728151580888989, guid: 2a85ef2e707bbab4e8b527dbcde9b737, type: 3}
-  shootForce: 15
+  shootForce: 20
   timeBetweenShooting: 0.3
   fpsCam: {fileID: 963194227}
   attackPoint: {fileID: 1434787754}
@@ -33923,7 +33965,7 @@ MonoBehaviour:
   _sensitivityNoAssist: 150
   _aimAssistValue: 45
   allowInvoke: 1
-  _collectSounds:
+  _shootSounds:
   - {fileID: 8300000, guid: b15bae95ba9293e49b263492951fba8f, type: 3}
   - {fileID: 8300000, guid: 8c56b024e018a374985f01b863746b9c, type: 3}
   - {fileID: 8300000, guid: dd8d85db14c03b14bbded7633ee93f43, type: 3}
@@ -46556,6 +46598,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4194368
   smoothInputSpeed: 0.1
+  _wallJumpsSounds:
+  - {fileID: 8300000, guid: 8c8794909f8ae9146a0e40c475ec900e, type: 3}
+  - {fileID: 8300000, guid: d93dc686863f5e14d86158eb37e08c72, type: 3}
+  - {fileID: 8300000, guid: a021f1fb209276e4f9868d08ec211bb1, type: 3}
+  - {fileID: 8300000, guid: 53a2a0bf1d93edb44b48d295693dc9ac, type: 3}
+  - {fileID: 8300000, guid: a578e901649eda144b37603f4fcbc3c9, type: 3}
+  - {fileID: 8300000, guid: 1f1d4c208e3c4594c80c699b1b754fa9, type: 3}
+  - {fileID: 8300000, guid: 047e952987d10c84f8a0d7a3d65f0fdf, type: 3}
+  - {fileID: 8300000, guid: 588c1b1333eb3f246beea86774201e5f, type: 3}
+  - {fileID: 8300000, guid: 1753e5cff89416e468bd39d075adfc4d, type: 3}
+  - {fileID: 8300000, guid: d84c21c4601d79242bed1b03ee4b01d4, type: 3}
   _tpTutoImage: {fileID: 60319188}
 --- !u!136 &1335997092
 CapsuleCollider:
@@ -67212,6 +67265,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3522502949641836076, guid: 95afdf536801b4c46981637b9ae51ef3, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522502949641836076, guid: 95afdf536801b4c46981637b9ae51ef3, type: 3}
+      propertyPath: _lockCursor
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3522502949641836076, guid: 95afdf536801b4c46981637b9ae51ef3, type: 3}

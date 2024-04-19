@@ -12,20 +12,22 @@ public class EjectedMaterial : MonoBehaviour, IEjectable
     [SerializeField] private float _ejectVelocity;
 
     [SerializeField] private GameObject _particle;
+    [SerializeField] private AudioClip[] _materialDestroySounds;
+    [SerializeField] private AudioSource _audioSource;
 
     private void OnEnable()
     {
         StartCoroutine(DestroyOnSeconds(6));
-        
     }
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPoint, _ejectVelocity * Time.deltaTime);
     }
 
-    private void Destroy()
+    private void Destroyer()
     {
         _particle = Instantiate(_particle, transform.position, Quaternion.identity);
+        SoundManager.PlaySoundOneShot(_materialDestroySounds, _particle.GetComponent<AudioSource>());
         float totalDuration = _particle.GetComponent<ParticleSystem>().main.duration + _particle.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
         Destroy(_particle, totalDuration);
         Destroy(this.gameObject);
@@ -37,7 +39,7 @@ public class EjectedMaterial : MonoBehaviour, IEjectable
         if (construible != null)
         {
             construible.Consturct(itemData);
-            Destroy();
+            Destroyer();
         }
     }
     
@@ -47,18 +49,18 @@ public class EjectedMaterial : MonoBehaviour, IEjectable
         {
             Palomas palomas = collision.collider.GetComponent<Palomas>();
             palomas.StartEvent(itemData);
-            Destroy();
+            Destroyer();
             return;
         }
         
         if (!collision.collider.CompareTag("Collector") && !collision.collider.CompareTag("Player"))
         {
-            Destroy();
+            Destroyer();
         }
     }
     private IEnumerator DestroyOnSeconds(int seconds)
     {
         yield return new WaitForSeconds(seconds);
-        Destroy();
+        Destroyer();
     }
 }
