@@ -41,7 +41,7 @@ public class ActionMapReference : MonoBehaviour
     {
         _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
-        //playerInput.actions.FindAction("Move").Disable();
+        playerInput.actions.FindAction("Move").Disable();
         ActivateAllMaps();
         if (_lockCursor) { Cursor.lockState = CursorLockMode.Locked; } //Solo funciona en el editor, mantener el CursorLockMode desactivado para la build final
     }
@@ -58,7 +58,7 @@ public class ActionMapReference : MonoBehaviour
         playerInput.actions.FindAction("Look").Enable();
         playerInput.actions.FindAction("Jumping").Enable();
         
-        playerInput.actions.FindAction("Move").Enable(); //Eliminar esta linea 
+        //playerInput.actions.FindAction("Move").Enable(); //Eliminar esta linea 
         
         playerInput.actions.FindActionMap("Combate").Enable();
         playerInput.actions.FindActionMap("Farming").Enable();
@@ -118,9 +118,9 @@ public class ActionMapReference : MonoBehaviour
         {
             camTransitioning = true;
             playerInput.actions.FindActionMap("Movimiento").Disable();
-            playerInput.actions.FindAction("Move").Disable();
             yield return new WaitForSeconds(0.1f);
             _cinemachineBlend.Play(camBlendName);
+            playerInput.actions.FindAction("Move").Disable();
         }
     }
 }

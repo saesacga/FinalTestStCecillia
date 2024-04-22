@@ -6,35 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Ejected/EjectedObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Ejected/EjectedObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/CharacterGraphics.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/CharacterGraphics.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Magic/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Magic/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ActionMapReference/MapReference.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/ActionMapReference/MapReference.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Ejectable/EjectedMaterial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/CustomProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/CustomProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Magic/ProjectileGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Advanced Move/TeleportArtifact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (1).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (1).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (2).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (2).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (3).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (3).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (4).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (4).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (5).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/SuperCollect/Collect/CollectSound (5).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/zapsplat_cartoon_anime_electronic_power_receive_use_71423.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Artifacts/zapsplat_cartoon_anime_electronic_power_receive_use_71423.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosions/MaterialCollide.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Particles/ParticleNova/Explosions/MaterialCollide.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +219,7 @@
       <workItem from="1713289935421" duration="3566000" />
       <workItem from="1713294030712" duration="126000" />
       <workItem from="1713559089495" duration="7697000" />
+      <workItem from="1713807713793" duration="13359000" />
     </task>
     <servers />
   </component>

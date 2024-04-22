@@ -14,6 +14,8 @@ public class Moveable : MonoBehaviour
     private MeshRenderer _movableMeshRenderer;
     [SerializeField] private Material _outlineMaterial;
     [SerializeField] private Vector3 _instantiatePosition;
+    [SerializeField] private AudioClip[] _moveSound;
+    private AudioSource _audioSource;
     private Rigidbody _rigidbody;
     private bool _moving;
 
@@ -25,6 +27,7 @@ public class Moveable : MonoBehaviour
         _movableMeshRenderer.material = new Material(_outlineMaterial);
         TheCollector.OnMoving += Moving;
         _rigidbody = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
     }
     private void OnDisable()
     {
@@ -85,6 +88,9 @@ public class Moveable : MonoBehaviour
             _moving = true;
             _rigidbody.drag = 10; 
             _rigidbody.useGravity = false; 
+            
+            SoundManager.PlayOnLoop(_moveSound, _audioSource);
+            StartCoroutine(SoundManager.Fade(_audioSource, 0.5f, 0.7f));
         }
         else
         {
@@ -98,6 +104,8 @@ public class Moveable : MonoBehaviour
             _moving = false;
             _rigidbody.drag = 1;
             _rigidbody.useGravity = true;
+
+            StartCoroutine(SoundManager.Fade(_audioSource, 0.5f, 0f));
         }
     }
     

@@ -38,6 +38,8 @@ public class TheCollector : MonoBehaviour
     [SerializeField] private AudioClip[] _collectSounds;
     [SerializeField] private AudioClip[] _ejectSounds;
     private AudioSource _audioSource;
+
+    public static bool destroying;
     
     private void OnEnable()
     {
@@ -76,9 +78,9 @@ public class TheCollector : MonoBehaviour
         }
         else if (ActionMapReference.playerInput.actions["Destroy"].WasReleasedThisFrame())
         {
-            GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+            GetComponentInChildren<Animator>().Play("CollectorIdleanim"); destroying = false;
         }
-
+        
         #endregion
 
         #region Recolectar
@@ -242,7 +244,7 @@ public class TheCollector : MonoBehaviour
 
         #endregion
     }
-
+    
     private void DestroyObjects()
     {
         Ray ray = _fpsCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -256,20 +258,24 @@ public class TheCollector : MonoBehaviour
                 {
                     GetComponentInChildren<Animator>().Play("DestroyCollector");
                     StartCoroutine(hit.collider.gameObject.GetComponent<IDestructible>().Destruct(_damage));
+                    destroying = true;
                 }
                 else
                 {
                     GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+                    destroying = false;
                 }
             }
             else
             {
                 GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+                destroying = false;
             }
         }
         else
         {
             GetComponentInChildren<Animator>().Play("CollectorIdleanim");
+            destroying = false;
         }
     }
     

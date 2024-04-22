@@ -14,6 +14,11 @@ public class Destructible : MonoBehaviour, IDestructible
     private Vector3 _lootSpawn;
     [HideInInspector] public bool destroy;
 
+    [SerializeField] private AudioClip[] _destroySounds;
+    private AudioSource _audioSource;
+    private bool _playSoundOnce = true;
+    private bool _soundStopped;
+
     #region Dissolve
     
     [SerializeField] private Material _dissolveMaterial;
@@ -42,10 +47,20 @@ public class Destructible : MonoBehaviour, IDestructible
         _dissolveNumber = 0.25f;
         _dissolveAdd = 10f / _objectHealth;
         _spriteGlow = GetComponent<SpriteGlowEffect>();
+
+        _audioSource = GetComponent<AudioSource>();
     }
     
     public IEnumerator Destruct(int damage)
     {
+        if (_playSoundOnce)
+        {
+            SoundManager.PlayOnLoop(_destroySounds, _audioSource);
+            StartCoroutine(SoundManager.Fade(_audioSource, 0.3f, 1f));
+            _playSoundOnce = false;
+            _soundStopped = false;
+        }
+        
         _objectHealthForCode -= damage*Time.deltaTime;
         _dissolveNumber += _dissolveAdd*Time.deltaTime;
         
@@ -88,6 +103,13 @@ public class Destructible : MonoBehaviour, IDestructible
         {
             _dissolveLerp = Mathf.LerpUnclamped(_dissolveObjectSpriteRenderer.material.GetFloat("_Dissolve"), _dissolveNumber, _lerpTime * Time.deltaTime); 
             _dissolveObjectSpriteRenderer.material.SetFloat("_Dissolve", _dissolveLerp);
+        }
+
+        if (TheCollector.destroying == false &&  _soundStopped == false)
+        {
+            StartCoroutine(SoundManager.Fade(_audioSource, 0.3f, 0f)); 
+            _soundStopped = true;
+            _playSoundOnce = true;
         }
     }
 }

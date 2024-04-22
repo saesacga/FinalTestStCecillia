@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MoonSharp.VsCodeDebugger.SDK;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -21,5 +22,48 @@ public class SoundManager : MonoBehaviour
     {
         AudioClip clip = sounds[UnityEngine.Random.Range(0, sounds.Length)];
         _audioSource.PlayOneShot(clip);
+    }
+
+    public static void PlayOnLoop(AudioClip[] sounds, AudioSource source)
+    {
+        source.Stop();
+        AudioClip clip = sounds[UnityEngine.Random.Range(0, sounds.Length)];
+        source.clip = clip;
+        source.loop = true;
+        source.Play();
+    }
+
+    public static IEnumerator Fade(AudioSource source, float duration, float targetVolume)
+    {
+        float time = 0f;
+        float startVolume = source.volume;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            source.volume = Mathf.Lerp(startVolume, targetVolume, time / duration);
+            yield return null;
+        }
+        
+        yield break;
+    }
+    public static IEnumerator Fade(bool fadeOut, float duration, float targetVolume)
+    {
+        if (fadeOut)
+        {
+            double lenghtOfSource = (double)_audioSource.clip.samples / _audioSource.clip.frequency;
+            yield return new WaitForSecondsRealtime((float)lenghtOfSource - duration);
+        }
+        
+        float time = 0f;
+        float startVolume = _audioSource.volume;
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            _audioSource.volume = Mathf.Lerp(startVolume, targetVolume, time / duration);
+            yield return null;
+        }
+        
+        yield break;
     }
 }
