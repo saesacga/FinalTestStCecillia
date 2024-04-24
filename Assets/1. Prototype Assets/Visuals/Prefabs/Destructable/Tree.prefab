@@ -125,6 +125,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dcc8364f2cb9a3b4e9b9e9cd165f12bd, type: 3}
   - {fileID: 8300000, guid: b37d2aa19298e75488562e7801465583, type: 3}
   - {fileID: 8300000, guid: d8ab60953b16ae8448120f9a03d293f6, type: 3}
+  _destroyedSound:
+  - {fileID: 8300000, guid: 0df636246dffffb479a1e3f4493f654f, type: 3}
   _dissolveMaterial: {fileID: 2100000, guid: 3a3730abb49f24e46b3facba63533664, type: 2}
   _dissolveObject: {fileID: 5491749086968591590}
   _lerpTime: 2

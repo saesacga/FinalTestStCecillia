@@ -7,20 +7,14 @@
     <list default="true" id="354b7263-7663-4240-a448-0ec373edbcf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.La_luna_de_Meursault/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1. Prototype Assets/Visuals/Prefabs/Destructable/Tree.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LightRay/3Pos.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/CharacterGraphics.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Personajes/Palomas/CharacterGraphics.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NewInputSystem/ActionMapReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Collider/BoundriesMontanaMat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LinePrefict.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Destruibles/PiedraDestruible.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PARA PLANETA/Zona Farmeo/Moveable.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Destructible/Destructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/Moveable/Moveable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Farming/TheCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Basic Move/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/3D Models/Materials/Movimiento/RainbowMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visuals/Skybox/SkyboxMat.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,26 +47,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\samue\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\samue\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\samue\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\samue\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\samue\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\samue\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Builds/MenuTest\Tiempos Como Estos.exe" />
@@ -220,6 +215,8 @@
       <workItem from="1713294030712" duration="126000" />
       <workItem from="1713559089495" duration="7697000" />
       <workItem from="1713807713793" duration="13359000" />
+      <workItem from="1713900218490" duration="319000" />
+      <workItem from="1713900613619" duration="2312000" />
     </task>
     <servers />
   </component>

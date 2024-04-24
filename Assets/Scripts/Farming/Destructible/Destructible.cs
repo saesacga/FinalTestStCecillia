@@ -15,6 +15,7 @@ public class Destructible : MonoBehaviour, IDestructible
     [HideInInspector] public bool destroy;
 
     [SerializeField] private AudioClip[] _destroySounds;
+    [SerializeField] private AudioClip[] _destroyedSound;
     private AudioSource _audioSource;
     private bool _playSoundOnce = true;
     private bool _soundStopped;
@@ -67,6 +68,7 @@ public class Destructible : MonoBehaviour, IDestructible
         if(_objectHealthForCode<=0)
         {
             destroy = true;
+            SoundManager.PlaySoundOneShot(_destroyedSound, _audioSource);
             GetComponent<Collider>().enabled = false;
             int _lootAmount = Random.Range(4, 10);
             for (int i = 0; i <= _lootAmount; i++)

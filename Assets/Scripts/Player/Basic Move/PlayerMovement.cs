@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject _amaGameObject;
     [SerializeField] private Image _dashAvailableImage;
     [SerializeField] private Animator _dashAnimator;
+    [SerializeField] private AudioClip[] _antiGravitySounds;
+    private AudioSource _audioSource;
     
     #endregion
 
@@ -74,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _tutorialUI = GetComponent<TutorialUI>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -89,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
                 if (_inDash)
                 {
                     StopCoroutine(_dashRoutine);
+                    StartCoroutine(SoundManager.Fade(_audioSource, 0.5f, 0f));
                     speed = airSpeed;
                     _dashAnimator.SetBool("toggleAG", false);
                     _inDash = false;
@@ -202,7 +206,10 @@ public class PlayerMovement : MonoBehaviour
         speed = _groundSpeed;
         float startTime = Time.time;
         _dashAnimator.SetBool("toggleAG", true);
-        
+         
+        SoundManager.PlayOnLoop(_antiGravitySounds, _audioSource);
+        StartCoroutine(SoundManager.Fade(_audioSource, 0.2f, 0.8f));
+         
         while (Time.time <= startTime + _dashTime && _allowWallJumpInput == false)
         {
             velocity.y = 0;
@@ -224,6 +231,7 @@ public class PlayerMovement : MonoBehaviour
             
             yield return null;
         }
+        StartCoroutine(SoundManager.Fade(_audioSource, 0.5f, 0f));
         _dashAnimator.SetBool("toggleAG", false);
         _inDash = false;
         speed = airSpeed;
