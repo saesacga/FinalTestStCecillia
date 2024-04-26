@@ -47,23 +47,4 @@ public class SoundManager : MonoBehaviour
         
         yield break;
     }
-    public static IEnumerator Fade(bool fadeOut, float duration, float targetVolume)
-    {
-        if (fadeOut)
-        {
-            double lenghtOfSource = (double)_audioSource.clip.samples / _audioSource.clip.frequency;
-            yield return new WaitForSecondsRealtime((float)lenghtOfSource - duration);
-        }
-        
-        float time = 0f;
-        float startVolume = _audioSource.volume;
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            _audioSource.volume = Mathf.Lerp(startVolume, targetVolume, time / duration);
-            yield return null;
-        }
-        
-        yield break;
-    }
 }

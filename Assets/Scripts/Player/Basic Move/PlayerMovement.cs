@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 move;
 
     private float speed = 12f;
-    [SerializeField] private float _groundSpeed = 12f;
-    [SerializeField] private float airSpeed = 5f;
+    public float _groundSpeed = 12f;
+    public float airSpeed = 5f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 

@@ -16,6 +16,8 @@ public class StarMovement : MonoBehaviour
     private bool _activated;
     private bool _finalPositionReached;
 
+    [SerializeField] private AudioClip[] _starsInPositionSound;
+
     private void Update()
     {
         if (_lightRay._starsCount == _lightRay._starsRequired)
@@ -35,7 +37,8 @@ public class StarMovement : MonoBehaviour
             if (Vector3.Distance(transform.position, _finalPosition) < 1f && _finalPositionReached == false)
             {
                 _lightRay._starsInPosition++;
-                _finalPositionReached = true;               
+                _finalPositionReached = true;   
+                SoundManager.PlaySoundOneShot(_starsInPositionSound);
             }
         }
 

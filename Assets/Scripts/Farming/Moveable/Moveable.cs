@@ -90,7 +90,7 @@ public class Moveable : MonoBehaviour
             _rigidbody.useGravity = false; 
             
             SoundManager.PlayOnLoop(_moveSound, _audioSource);
-            StartCoroutine(SoundManager.Fade(_audioSource, 0.5f, 0.7f));
+            StartCoroutine(SoundManager.Fade(_audioSource, 0.5f, 1f));
         }
         else
         {

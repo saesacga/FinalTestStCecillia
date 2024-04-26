@@ -11,6 +11,11 @@ public class ChangeArtifacts : MonoBehaviour
     [SerializeField] private bool _activateCollector;
     [SerializeField] private bool _activateAMA;
     [SerializeField] private bool _deactivateAMA;
+    [SerializeField] private AudioSource _stringsMusic;
+    [SerializeField] private AudioSource _drumsMusic;
+    [SerializeField] private AudioSource _bassMusic;
+    [SerializeField] private AudioSource _melodyMusic;
+    [SerializeField] private PlayerMovement _playerMovement;
     private AudioSource _audioSource;
 
     private void OnEnable()
@@ -27,6 +32,8 @@ public class ChangeArtifacts : MonoBehaviour
             _gaunletAnimator.SetBool("toggle", false);
             _collectorAnimator.SetBool("toggle", true);
             _activateCollector = false;
+
+           StartCoroutine(SoundManager.Fade(_drumsMusic, 0.2f, 0.15f));
         }
         else if (collision.CompareTag("Player") && _activateAMA)
         {
@@ -35,11 +42,24 @@ public class ChangeArtifacts : MonoBehaviour
             _collectorAnimator.SetBool("toggle", false);
             _amaAnimator.SetBool("toggle", true);
             _activateAMA = false;
+            
+            StartCoroutine(SoundManager.Fade(_stringsMusic, 0.2f, 0f));
+            StartCoroutine(SoundManager.Fade(_drumsMusic, 1f, 0.03f));
+            StartCoroutine(SoundManager.Fade(_bassMusic, 0.2f, 0.25f));
+            StartCoroutine(SoundManager.Fade(_melodyMusic, 0.2f, 0.08f));
         }
         else if (collision.CompareTag("Player") && _deactivateAMA)
         {
             _amaAnimator.SetBool("toggle", false);
             _deactivateAMA = false;
+
+            _playerMovement._groundSpeed = 8f;
+            _playerMovement.airSpeed = 4f;
+            
+            StartCoroutine(SoundManager.Fade(_stringsMusic, 0.2f, 0.2f));
+            StartCoroutine(SoundManager.Fade(_drumsMusic, 0.2f, 0.2f));
+            StartCoroutine(SoundManager.Fade(_bassMusic, 0.2f, 0.2f));
+            StartCoroutine(SoundManager.Fade(_melodyMusic, 0.2f, 0.2f));
         }
     }
 }
