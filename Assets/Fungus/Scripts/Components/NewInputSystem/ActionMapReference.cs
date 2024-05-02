@@ -22,6 +22,8 @@ public class ActionMapReference : MonoBehaviour
     public static bool camTransitioning;
 
     [SerializeField] private bool _lockCursor;
+    [SerializeField] private bool _canMove;
+    private static bool _canMoveStatic;
     
     void OnEnable()
     {
@@ -41,7 +43,10 @@ public class ActionMapReference : MonoBehaviour
     {
         _cinemachineBlend = _cinemachineBlendRef;
         Cursor.visible = false;
-        playerInput.actions.FindAction("Move").Disable();
+
+        _canMoveStatic = _canMove;
+        if (_canMoveStatic == false) { playerInput.actions.FindAction("Move").Disable(); }
+        
         ActivateAllMaps();
         if (_lockCursor) { Cursor.lockState = CursorLockMode.Locked; } //Solo funciona en el editor, mantener el CursorLockMode desactivado para la build final
     }
@@ -57,8 +62,8 @@ public class ActionMapReference : MonoBehaviour
         
         playerInput.actions.FindAction("Look").Enable();
         playerInput.actions.FindAction("Jumping").Enable();
-        
-        //playerInput.actions.FindAction("Move").Enable(); //Eliminar esta linea 
+
+        if (_canMoveStatic) { playerInput.actions.FindAction("Move").Enable(); }
         
         playerInput.actions.FindActionMap("Combate").Enable();
         playerInput.actions.FindActionMap("Farming").Enable();
