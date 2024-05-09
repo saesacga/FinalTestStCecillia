@@ -221,9 +221,27 @@
             "id": "8ed91e15-b6a7-4015-bf8d-bcbe9335553b",
             "actions": [
                 {
-                    "name": "Interactuar",
+                    "name": "NextSlide",
+                    "type": "Button",
+                    "id": "383c7f30-7319-43a0-9443-7fb9563e5de9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousSlide",
                     "type": "Button",
                     "id": "fde5382b-109e-4ddc-85ae-22ff7d9b2d9f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ExitDiapos",
+                    "type": "Button",
+                    "id": "5cd101d9-c9b3-4489-9666-6d8afd038ec0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -251,23 +269,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "a6bb32d7-7535-43f8-b034-eeebdf9c8665",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Interactuar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "12004901-ea4c-41b6-837e-6bd0cf4746c0",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "MouseNKeyboard",
-                    "action": "Interactuar",
+                    "action": "PreviousSlide",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -323,6 +330,28 @@
                     "processors": "",
                     "groups": "MouseNKeyboard",
                     "action": "Cancelar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8169a0cf-82f9-49dd-88a4-6dfe2477198d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseNKeyboard",
+                    "action": "NextSlide",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c60581ef-c9a8-4f19-8349-5dd6bad1ea32",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseNKeyboard",
+                    "action": "ExitDiapos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

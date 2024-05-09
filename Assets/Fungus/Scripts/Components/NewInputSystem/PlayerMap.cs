@@ -243,9 +243,27 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             ""id"": ""8ed91e15-b6a7-4015-bf8d-bcbe9335553b"",
             ""actions"": [
                 {
-                    ""name"": ""Interactuar"",
+                    ""name"": ""NextSlide"",
+                    ""type"": ""Button"",
+                    ""id"": ""383c7f30-7319-43a0-9443-7fb9563e5de9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PreviousSlide"",
                     ""type"": ""Button"",
                     ""id"": ""fde5382b-109e-4ddc-85ae-22ff7d9b2d9f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ExitDiapos"",
+                    ""type"": ""Button"",
+                    ""id"": ""5cd101d9-c9b3-4489-9666-6d8afd038ec0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -273,23 +291,12 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""a6bb32d7-7535-43f8-b034-eeebdf9c8665"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Interactuar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""12004901-ea4c-41b6-837e-6bd0cf4746c0"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseNKeyboard"",
-                    ""action"": ""Interactuar"",
+                    ""action"": ""PreviousSlide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -345,6 +352,28 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""MouseNKeyboard"",
                     ""action"": ""Cancelar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8169a0cf-82f9-49dd-88a4-6dfe2477198d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseNKeyboard"",
+                    ""action"": ""NextSlide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c60581ef-c9a8-4f19-8349-5dd6bad1ea32"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseNKeyboard"",
+                    ""action"": ""ExitDiapos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1385,7 +1414,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         m_Combate_Recargar = m_Combate.FindAction("Recargar", throwIfNotFound: true);
         // Interaccion
         m_Interaccion = asset.FindActionMap("Interaccion", throwIfNotFound: true);
-        m_Interaccion_Interactuar = m_Interaccion.FindAction("Interactuar", throwIfNotFound: true);
+        m_Interaccion_NextSlide = m_Interaccion.FindAction("NextSlide", throwIfNotFound: true);
+        m_Interaccion_PreviousSlide = m_Interaccion.FindAction("PreviousSlide", throwIfNotFound: true);
+        m_Interaccion_ExitDiapos = m_Interaccion.FindAction("ExitDiapos", throwIfNotFound: true);
         m_Interaccion_Aceptar = m_Interaccion.FindAction("Aceptar", throwIfNotFound: true);
         m_Interaccion_Cancelar = m_Interaccion.FindAction("Cancelar", throwIfNotFound: true);
         // Farming
@@ -1599,14 +1630,18 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     // Interaccion
     private readonly InputActionMap m_Interaccion;
     private List<IInteraccionActions> m_InteraccionActionsCallbackInterfaces = new List<IInteraccionActions>();
-    private readonly InputAction m_Interaccion_Interactuar;
+    private readonly InputAction m_Interaccion_NextSlide;
+    private readonly InputAction m_Interaccion_PreviousSlide;
+    private readonly InputAction m_Interaccion_ExitDiapos;
     private readonly InputAction m_Interaccion_Aceptar;
     private readonly InputAction m_Interaccion_Cancelar;
     public struct InteraccionActions
     {
         private @PlayerMap m_Wrapper;
         public InteraccionActions(@PlayerMap wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Interactuar => m_Wrapper.m_Interaccion_Interactuar;
+        public InputAction @NextSlide => m_Wrapper.m_Interaccion_NextSlide;
+        public InputAction @PreviousSlide => m_Wrapper.m_Interaccion_PreviousSlide;
+        public InputAction @ExitDiapos => m_Wrapper.m_Interaccion_ExitDiapos;
         public InputAction @Aceptar => m_Wrapper.m_Interaccion_Aceptar;
         public InputAction @Cancelar => m_Wrapper.m_Interaccion_Cancelar;
         public InputActionMap Get() { return m_Wrapper.m_Interaccion; }
@@ -1618,9 +1653,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_InteraccionActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_InteraccionActionsCallbackInterfaces.Add(instance);
-            @Interactuar.started += instance.OnInteractuar;
-            @Interactuar.performed += instance.OnInteractuar;
-            @Interactuar.canceled += instance.OnInteractuar;
+            @NextSlide.started += instance.OnNextSlide;
+            @NextSlide.performed += instance.OnNextSlide;
+            @NextSlide.canceled += instance.OnNextSlide;
+            @PreviousSlide.started += instance.OnPreviousSlide;
+            @PreviousSlide.performed += instance.OnPreviousSlide;
+            @PreviousSlide.canceled += instance.OnPreviousSlide;
+            @ExitDiapos.started += instance.OnExitDiapos;
+            @ExitDiapos.performed += instance.OnExitDiapos;
+            @ExitDiapos.canceled += instance.OnExitDiapos;
             @Aceptar.started += instance.OnAceptar;
             @Aceptar.performed += instance.OnAceptar;
             @Aceptar.canceled += instance.OnAceptar;
@@ -1631,9 +1672,15 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IInteraccionActions instance)
         {
-            @Interactuar.started -= instance.OnInteractuar;
-            @Interactuar.performed -= instance.OnInteractuar;
-            @Interactuar.canceled -= instance.OnInteractuar;
+            @NextSlide.started -= instance.OnNextSlide;
+            @NextSlide.performed -= instance.OnNextSlide;
+            @NextSlide.canceled -= instance.OnNextSlide;
+            @PreviousSlide.started -= instance.OnPreviousSlide;
+            @PreviousSlide.performed -= instance.OnPreviousSlide;
+            @PreviousSlide.canceled -= instance.OnPreviousSlide;
+            @ExitDiapos.started -= instance.OnExitDiapos;
+            @ExitDiapos.performed -= instance.OnExitDiapos;
+            @ExitDiapos.canceled -= instance.OnExitDiapos;
             @Aceptar.started -= instance.OnAceptar;
             @Aceptar.performed -= instance.OnAceptar;
             @Aceptar.canceled -= instance.OnAceptar;
@@ -2070,7 +2117,9 @@ public partial class @PlayerMap: IInputActionCollection2, IDisposable
     }
     public interface IInteraccionActions
     {
-        void OnInteractuar(InputAction.CallbackContext context);
+        void OnNextSlide(InputAction.CallbackContext context);
+        void OnPreviousSlide(InputAction.CallbackContext context);
+        void OnExitDiapos(InputAction.CallbackContext context);
         void OnAceptar(InputAction.CallbackContext context);
         void OnCancelar(InputAction.CallbackContext context);
     }

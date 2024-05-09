@@ -13,8 +13,8 @@ public class TheCollector : MonoBehaviour
     [SerializeField] private float _attractRadius;
     [SerializeField] private Image _objectToEjectSelected;
     [SerializeField] private GameObject _ejectedObject;
-    [Range(0f,15f)]
-    [SerializeField] private float _attractVelocity;
+    [Range(0f,50f)]
+    [SerializeField] private float _attractVelocity = 15f;
     [SerializeField] private LayerMask _rayCastLayerMaskIgnore;
     [SerializeField] private GameObject _canvas;
     
@@ -150,7 +150,7 @@ public class TheCollector : MonoBehaviour
                 
                 if (_moveableMat != null)
                 {
-                    if (_lerpTimeMove >= 0.99f) { _lerpTimeMove -= 0.001f; }
+                    if (_lerpTimeMove > 1) { _lerpTimeMove -= 0.001f; }
                     _moveableMat.material.SetFloat("_Scale", _lerpTimeMove);
                 }
             }
@@ -200,7 +200,7 @@ public class TheCollector : MonoBehaviour
             
             if (_moveableMat != null)
             {
-                if (_lerpTimeMove >= 0.99f) { _lerpTimeMove -= 0.001f; }
+                if (_lerpTimeMove > 1) { _lerpTimeMove -= 0.001f; }
                 _moveableMat.material.SetFloat("_Scale", _lerpTimeMove);
             }
             if (_outlineDest != null) 

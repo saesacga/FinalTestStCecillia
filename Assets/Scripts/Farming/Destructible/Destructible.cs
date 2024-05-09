@@ -10,6 +10,8 @@ public class Destructible : MonoBehaviour, IDestructible
 {
     [SerializeField] private GameObject _lootPrefab;
     [SerializeField] private float _objectHealth;
+    [SerializeField] private int minLoot = 4, maxLoot = 10;
+    [SerializeField] private float minTime = 30f, maxTime = 80f;
     private float _objectHealthForCode;
     private Vector3 _lootSpawn;
     [HideInInspector] public bool destroy;
@@ -70,7 +72,7 @@ public class Destructible : MonoBehaviour, IDestructible
             destroy = true;
             SoundManager.PlaySoundOneShot(_destroyedSound, _audioSource);
             GetComponent<Collider>().enabled = false;
-            int _lootAmount = Random.Range(4, 10);
+            int _lootAmount = Random.Range(minLoot, maxLoot);
             for (int i = 0; i <= _lootAmount; i++)
             {
                 #region Loot Spawn Declaration
@@ -86,7 +88,7 @@ public class Destructible : MonoBehaviour, IDestructible
             }  
             
             gameObject.SetActive(false);
-            yield return new WaitForSeconds(Random.Range(30f,80f));
+            yield return new WaitForSeconds(Random.Range(minTime, maxTime));
             gameObject.SetActive(true);
         }
     }

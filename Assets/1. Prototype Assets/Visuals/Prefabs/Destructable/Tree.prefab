@@ -118,6 +118,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lootPrefab: {fileID: 7699822805399918671, guid: a28a974d27d257441bd9895e583f27d8, type: 3}
   _objectHealth: 10
+  minLoot: 4
+  maxLoot: 10
+  minTime: 30
+  maxTime: 80
   destroy: 0
   _destroySounds:
   - {fileID: 8300000, guid: 5bd9c3bb722744e4fa8a0f2c65693362, type: 3}
@@ -217,7 +221,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.7
+      value: 0.4
       inSlope: 0
       outSlope: 0
       tangentMode: 0

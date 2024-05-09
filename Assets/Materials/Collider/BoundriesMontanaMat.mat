@@ -31,5 +31,5 @@ Material:
     m_Colors:
     - _Color: {r: 0, g: 0.10175705, b: 1, a: 0.019607844}
     - _OutlineColour: {r: 0, g: 0.65882355, b: 5.992157, a: 1}
-    - _PlayerPosition: {r: 581.70557, g: 56.70001, b: -92.73444, a: 0}
+    - _PlayerPosition: {r: -38.907417, g: -0.09000003, b: -99.88489, a: 0}
   m_BuildTextureStacks: []
